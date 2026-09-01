@@ -5,6 +5,7 @@ This repository contains my resume, CV, and abstract, all built with LaTeX.
 ## Documents
 
 - [Resume (2 pages)](https://github.com/bubnicbf/job_search/raw/master/output/resume.pdf)
+- ATS resume (2 pages): `output/pdf/resume_ats.pdf`
 - [Abstract (1 page)](https://github.com/bubnicbf/job_search/raw/master/output/abstract.pdf)
 - [Full CV (4 pages)](https://github.com/bubnicbf/job_search/raw/master/output/cv.pdf)
 
@@ -31,6 +32,7 @@ From the repository root:
 ```bash
   make cv
   make resume
+  make resume-ats
   make abstract
 ```
 
@@ -38,6 +40,7 @@ From the repository root:
 ```bash
   make -B cv
   make -B resume
+  make -B resume-ats
   make -B abstract
 ```
 
@@ -58,6 +61,6 @@ From the repository root:
 
 ### Outputs
 
-- PDFs are written to the `output/` directory.
+- Standard PDFs are written to `output/`; the ATS resume is written to `output/pdf/`.
 
-- Auxiliary build artifacts (`.aux`, `.log`, `.out`, etc.) are written to `build_artifact/`.
+- Auxiliary build artifacts (`.aux`, `.log`, `.out`, etc.) are written alongside the PDFs and removed by `make clean`.

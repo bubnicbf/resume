@@ -1,0 +1,120 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,left=0.62in,right=0.62in,top=0.50in,bottom=0.50in]{geometry}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\setmainfont[
+  Path=/System/Library/Fonts/Supplemental/,
+  UprightFont=Arial.ttf,
+  BoldFont=Arial Bold.ttf,
+  ItalicFont=Arial Italic.ttf,
+  BoldItalicFont=Arial Bold Italic.ttf
+]{Arial}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlist[itemize]{leftmargin=0.18in,itemsep=0.6pt,topsep=0.5pt,parsep=0pt,partopsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newcommand{\contactsep}{\enspace\textbar\enspace}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill #2\\
+  \textbf{#3}\\[-1pt]
+  \textit{Technologies: #4}\par
+}
+\newcommand{\subrole}[2]{%
+  \textbf{#1} \hfill #2\par
+}
+
+\begin{document}
+
+{\LARGE\bfseries Ben Bubnick}\\[2pt]
+{\large\bfseries Senior Healthcare Data Consultant}\\[3pt]
+Email: \href{mailto:ben.bubnick@gmail.com}{ben.bubnick@gmail.com}\contactsep
+Phone: (216) 556-1612\\
+LinkedIn: \href{https://www.linkedin.com/in/benbubnick}{linkedin.com/in/benbubnick}\contactsep
+GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}
+
+\section{Professional Summary}
+
+Senior Healthcare Data Consultant with 10+ years designing ETL and ELT pipelines, cloud data platforms, analytics models, and data quality frameworks across clinical, payer, revenue cycle, and operational domains. Hands on experience with SQL, Python, Snowflake, dbt, SQLMesh, AWS, Azure, Spark, and healthcare interoperability standards including HL7 and FHIR. Leads requirements gathering, source to target mapping, data governance, reconciliation, stakeholder delivery, and technical documentation in HIPAA regulated environments.
+
+\section{Technical Skills}
+
+\textbf{Data Engineering:} SQL, Python, Snowflake, dbt, SQLMesh, Spark, Hadoop/HDFS, Hive, Impala, Kafka, ETL, ELT, data integration, data warehouses, data lakes\\
+\textbf{Cloud and DevOps:} AWS (S3, Athena, Redshift, Glue), Azure (Data Factory, Blob Storage, Functions, SQL Database, Synapse Analytics), Docker, Git/GitHub, GitHub Actions, Jenkins, Azure DevOps\\
+\textbf{Healthcare Data:} Revenue cycle, payer and eligibility data, clinical and financial data, HL7 v2/v3, FHIR, EDI/837, HEDIS, EHR/EMR, HIPAA, HITRUST\\
+\textbf{Analytics and BI:} pandas, Jupyter, Power BI, Tableau, reconciliation, root cause analysis, statistical modeling, data visualization\\
+\textbf{Governance and Delivery:} Data quality, source to target mapping, metadata and lineage, business requirements, acceptance criteria, QA, audit controls, Jira, Confluence, stakeholder engagement
+
+\section{Professional Experience}
+
+\role{HHAeXchange}{Oct. 2025 - Jun. 2026}{Healthcare Data Integration Consultant - Contract via Veersa Technologies}{Snowflake, dbt, SQL/Jinja, Python, Snowpark, pandas, Liquibase, GitHub Actions, FHIR/Aidbox}
+Led healthcare source analysis, data quality investigation, and Snowflake modeling to produce trusted, standardized datasets for reporting and downstream use.
+\begin{itemize}
+  \item Engineered unified and analytics Snowflake/dbt models spanning 55 tables across two organizations and two source system configurations, reducing client onboarding time by 67\%.
+  \item Implemented reusable SQL/Jinja transformation logic for lifecycle states, null handling, sentinel dates, and source system variations across organization, office, caregiver, and patient domains.
+  \item Created or materially redesigned 30 automated SQL/dbt data quality tests covering nulls, duplicates, referential integrity, business rules, lifecycle logic, and source to target reconciliation.
+  \item Translated ambiguous business requirements into documented mappings, acceptance criteria, onboarding standards, and 12 data quality investigation runbooks.
+\end{itemize}
+
+\role{Adonis}{Mar. 2025 - Jul. 2025}{Healthcare Revenue Cycle Data Consultant - Contract via Health Data Movers}{AWS S3, Snowflake, SQLMesh, SQL, Python, Docker}
+Translated payer and revenue cycle source data into standardized Snowflake models for repeatable client onboarding, analytics, and reporting.
+\begin{itemize}
+  \item Built, documented, validated, and maintained 54 SQLMesh models supporting revenue-cycle analytics for a provider serving 4,598 families across 113 locations and processing 86,388 annual authorizations.
+  \item Implemented automated row count, uniqueness, and not null audits across 54 models, achieving a 100\% pass rate across 117+ configured audit applications at final delivery.
+  \item Diagnosed undocumented source key versioning and implemented composite business grains with SHA-256 surrogate keys across 10 charge and payment models, eliminating duplicate key failures.
+  \item Authored implementation playbooks, technical handoff documentation, and a QA runbook for a repeatable healthcare data validation workflow.
+\end{itemize}
+
+\role{GrowData Analytics}{Sep. 2024 - Oct. 2025}{Independent Data Automation and Analytics Consultant}{Ruby, RSpec, OCR, LLM APIs, audit logging, automated testing}
+\begin{itemize}
+  \item Built and validated a preproduction document to data MVP that converted semi structured invoices into auditable transaction records, achieving 95\% field level accuracy across a stratified 500 invoice test suite.
+  \item Instrumented the MVP with automated tests, audit logging, retry controls, and confidence routing, achieving 88\% straight through processing and under 1\% system failure.
+\end{itemize}
+
+\role{Arkos Health}{Jun. 2023 - Jan. 2025}{Senior Data Analyst}{AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power BI, Tableau}
+\begin{itemize}
+  \item Architected a greenfield AWS data lake integrating 18 source systems through approximately 200 scheduled data assets and 200 dbt models, supporting six analysts across six state markets.
+  \item Integrated Jupyter based analytics and authored platform, architecture, and operating documentation, enabling six analysts to independently use the governed data lake for recurring, executive, and BI reporting.
+\end{itemize}
+
+\role{Merative}{Jul. 2022 - Mar. 2023}{Senior Data Scientist}{Azure Data Factory, Blob Storage, Functions, SQL Database, Synapse Analytics, Python, SQL, Azure DevOps}
+\begin{itemize}
+  \item Engineered a seven layer Python and SQL migration acceptance suite covering partition reconciliation, schema compatibility, null handling, duplicates, field level comparisons, aggregates, and business rules, achieving exact HDFS to Azure fidelity.
+  \item Led HIPAA compliant deidentification validation across demographic, encounter, and coded clinical data representing approximately 300 million patient lives, achieving a 100\% pass rate before sign off.
+\end{itemize}
+
+\textbf{IBM} \hfill Jun. 2015 - Jul. 2022\\
+Advanced through five roles delivering healthcare analytics, data architecture, client integration, data quality, and large scale migration validation.\\[-1pt]
+\textit{Technologies: Spark, Hadoop/HDFS, Hive, Impala, Kafka, Python, SQL, PostgreSQL, Docker, Jenkins, Tableau, HL7}
+\begin{itemize}
+  \item \textbf{Senior Data Scientist, Nov. 2021 - Jul. 2022:} Developed a surgical scheduling optimizer and CNN/RNN case card prediction proof of concept. Engineered a reusable analytics framework powering 50+ prior authorization reports.
+  \item \textbf{Senior Data Architect, Dec. 2020 - Nov. 2021:} Architected Spark and Hadoop pipelines integrating more than 100 billion clinical records. Replaced static mappings with metadata driven instruction sets across approximately 200 source integrations.
+  \item \textbf{Data Architect, Nov. 2017 - Dec. 2020:} Designed SQL validation frameworks and client review gates across approximately 100 integrations, reducing validation rework by 25\% and mapping rework by 45\%. Led delivery across 70+ EHR sources.
+  \item \textbf{Software Developer and Data Scientist, Nov. 2015 - Nov. 2017:} Engineered an HL7 v2/v3 parsing pipeline that eliminated \$30,000 in annual vendor costs. Directed 36 client integrations while coordinating 12 remote contractors and establishing code review, QA, and issue resolution standards.
+\end{itemize}
+
+\section{Education and Credentials}
+
+\textbf{Master of Science, Astrophysics,} University of Cincinnati, 2010\\
+\textbf{Certificate of Specialization, Data Science,} Johns Hopkins University, 2015\\
+\textbf{IBM Data Science Professional Certificate,} IBM, 2022
+
+\end{document}

@@ -22,7 +22,7 @@ COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all cv abstract resume resume-ats resume-arcadia cover cover-arcadia clean distclean open
+.PHONY: all cv abstract resume resume-ats master-career-history resume-arcadia cover cover-arcadia clean distclean open
 
 all: $(PDFS)
 
@@ -30,6 +30,7 @@ cv: $(OUT_DIR)/cv.pdf
 abstract: $(OUT_DIR)/abstract.pdf
 resume: $(OUT_DIR)/resume.pdf
 resume-ats: $(ATS_OUT_DIR)/resume_ats.pdf
+master-career-history: $(ATS_OUT_DIR)/master_career_history.pdf
 resume-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf
 cover: $(OUT_DIR)/cover.pdf
 cover-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf
@@ -57,6 +58,13 @@ $(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
+
+$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex
+	@mkdir -p "$(ATS_OUT_DIR)"
+	@echo "==> Building master career history"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
+	@echo "==> Wrote $(ATS_OUT_DIR)/master_career_history.pdf"
 
 $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf: $(SRC_DIR)/resume_arcadia.tex
 	@mkdir -p "$(ATS_OUT_DIR)"

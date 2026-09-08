@@ -16,6 +16,15 @@
   ItalicFont=Arial Italic.ttf,
   BoldItalicFont=Arial Bold Italic.ttf
 ]{Arial}
+% Arial maps its shared semicolon glyph back to U+037E in XeTeX PDF extraction.
+% Use a Latin-only fallback for semicolons so ATS/copy-paste receives U+003B.
+\newfontfamily\ATSsemicolonfont[
+  Path=/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/,
+  UprightFont=lmsans10-regular.otf,
+  BoldFont=lmsans10-bold.otf,
+  ItalicFont=lmsans10-oblique.otf,
+  BoldItalicFont=lmsans10-boldoblique.otf
+]{Latin Modern Sans}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -43,6 +52,9 @@
 }
 
 \begin{document}
+
+\catcode`\;=\active
+\protected\def;{{\ATSsemicolonfont\char"003B}}
 
 {\LARGE\bfseries Ben Bubnick}\\[2pt]
 {\large\bfseries Senior Healthcare Data Consultant}\\[3pt]

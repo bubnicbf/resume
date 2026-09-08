@@ -97,36 +97,62 @@ Led healthcare source analysis, data-quality investigation, and Snowflake modeli
   \item Implemented reusable SQL/Jinja transformation logic for lifecycle states, null handling, sentinel dates, and source-system variations across organization, office, caregiver, and patient domains.
   \item Created or materially redesigned 30 automated SQL/dbt data-quality tests covering nulls, duplicates, referential integrity, business rules, lifecycle logic, and source-to-target reconciliation.
   \item Translated ambiguous business requirements into documented mappings, acceptance criteria, onboarding standards, and 12 data-quality investigation runbooks.
+  \item Conducted feasibility analysis of source-system structures and implementation constraints to shape integration scope, modeling strategy, and delivery approach.
+  \item Structured target models using FHIR-like concepts where appropriate to improve consistency and extensibility for downstream integration and analytics.
+  \item Defined surrogate-key, natural-key, and crosswalk strategies supporting stable identity resolution across related source systems.
+  \item Resolved data-quality and mapping issues through targeted test-case analysis and review of failing source and target records.
+  \item Collaborated with client and internal stakeholders to resolve source ambiguity, refine requirements, and translate business needs into production-ready data assets.
+  \item Established reusable patterns for onboarding additional sources and extending integration workflows.
 \end{itemize}
 
-\role{Adonis}{Mar. 2025 - Jul. 2025}{Healthcare Revenue Cycle Data Consultant - Contract via Health Data Movers}{AWS S3, Snowflake, SQLMesh, SQL, Python, Docker}
+\role{Adonis}{Mar. 2025 - Jul. 2025}{Healthcare Revenue Cycle Data Consultant - Contract via Health Data Movers}{AWS S3, Snowflake, SQLMesh, SQL, Python, Docker, GitHub Actions}
 Translated payer and revenue-cycle source data into standardized Snowflake models for repeatable client onboarding, analytics, and reporting.
 \begin{itemize}
   \item Built, documented, validated, and maintained 54 SQLMesh models supporting revenue-cycle analytics for a provider serving 4,598 families across 113 locations and processing 86,388 annual authorizations.
   \item Implemented automated row-count, uniqueness, and not-null audits across 54 models, achieving a 100\% pass rate across 117+ configured audit applications at final delivery.
   \item Diagnosed undocumented source-key versioning and implemented composite business grains with SHA-256 surrogate keys across 10 charge and payment models, eliminating duplicate-key failures.
   \item Authored implementation playbooks, technical handoff documentation, and a QA runbook for a repeatable healthcare-data validation workflow.
+  \item Built a reusable SQLMesh/Snowflake ingestion and transformation framework using templated models, data contracts, CI checks, and promotion gates.
+  \item Added schema-drift alerts, parity checks, reconciliation logs, deterministic rerun procedures, and incident-handling guidance for UNIX-like environments.
+  \item Packaged a lightweight operations forecasting and alerting pattern as a tested Python and Docker service with GitHub Actions deployment automation.
+  \item Standardized transformation logic across clients and translated business requirements into technical specifications to improve delivery predictability.
 \end{itemize}
 
-\role{GrowData Analytics}{Sep. 2024 - Oct. 2025}{Independent Data Automation and Analytics Consultant}{Ruby, RSpec, OCR, LLM APIs, audit logging, automated testing}
+\role{GrowData Analytics}{Sep. 2024 - Oct. 2025}{Independent Data Automation and Analytics Consultant}{Python, Ruby, RSpec, Tesseract OCR, LLM APIs, Docker, AWS, GitHub Actions}
 \begin{itemize}
   \item Built and validated a preproduction document-to-data MVP that converted semi-structured invoices into auditable transaction records, achieving 95\% field-level accuracy across a stratified 500-invoice test suite.
   \item Instrumented the MVP with automated tests, audit logging, retry controls, and confidence routing, achieving 88\% straight-through processing and under 1\% system failure.
+  \item Productized Tesseract OCR and rule-based post-processing as a small Python/Ruby service with containerized deployments and versioned configuration.
+  \item Added schema checks, cross-field validation, reconciliation, idempotent reruns, fixtures, golden-file tests, linting, and release automation.
+  \item Documented runbooks and failure modes covering timeouts, low-confidence OCR, and retries.
+  \item Built a lightweight analytics layer tracking usage, error categories, latency, and throughput to guide feature tuning and cost control.
+  \item Managed infrastructure as code for a minimal AWS footprint using S3, Lambda or scheduled jobs, and CloudWatch alerts through Bash/Zsh and Makefile workflows.
   \item Managed the business's bookkeeping, accounting, and tax obligations.
   \item Led marketing and client acquisition, including creating promotional materials for the business.
 \end{itemize}
 
 \role{Arkos Health}{Jun. 2023 - Jan. 2025}{Senior Data Analyst}{AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power BI, Tableau}
 \begin{itemize}
-  \item Architected a greenfield AWS data lake integrating 18 source systems through approximately 200 scheduled data assets and 200 dbt models, supporting six analysts across six state markets.
-  \item Integrated Jupyter-based analytics and authored platform, architecture, and operating documentation, enabling six analysts to independently use the governed data lake for recurring, executive, and BI reporting.
+  \item Architected a greenfield AWS data lake integrating 18 source systems through approximately 200 scheduled data assets and 200 dbt models, supporting six analysts across six state markets; CI/CD and targeted model refactoring reduced deployment time by approximately 50\% and improved query performance.
+  \item Integrated Jupyter-based analytics and authored platform, architecture, and operating documentation, enabling six analysts to independently use the governed data lake for recurring, executive, and BI reporting; recorded notes attributed a 30\% increase in stakeholder satisfaction and a 40\% reduction in new-team-member onboarding time to this work.
   \item Instrumented scheduled pipelines with monitoring, alerting, and more than 10 failure classifications; authored three AWS/dbt incident runbooks supporting rapid detection and recovery.
+  \item Mentored engineers on code review, testing, and pipeline design and authored internal delivery standards.
+  \item Implemented Jira and GitHub workflows; recorded notes attributed a 25\% improvement in task tracking and team coordination within three months to the change.
+  \item Expanded cross-departmental collaboration; recorded notes attributed a 15\% increase in data-driven decision-making within six months to this work.
+  \item Mentored junior team members; recorded notes attributed a 30\% improvement in their performance metrics within six months to this support.
+  \item Led goal-setting sessions; recorded notes attributed a 30\% improvement in goal alignment and tracking accuracy during the first quarter.
+  \item Initiated stakeholder-feedback sessions; recorded notes attributed a 25\% improvement in deliverable relevance and accuracy within three months.
 \end{itemize}
 
 \role{Merative}{Jul. 2022 - Mar. 2023}{Senior Data Scientist}{Azure Data Factory, Blob Storage, Functions, SQL Database, Synapse Analytics, Python, SQL, Azure DevOps}
 \begin{itemize}
   \item Engineered a seven-layer Python and SQL migration-acceptance suite covering partition reconciliation, schema compatibility, null handling, duplicates, field-level comparisons, aggregates, and business rules, achieving exact HDFS-to-Azure fidelity.
   \item Led HIPAA-compliant deidentification validation across demographic, encounter, and coded clinical data representing approximately 300 million patient lives, achieving a 100\% pass rate before sign-off.
+  \item Designed and implemented automated ETL testing and regression suites that detected schema drift and transformation errors early in the migration lifecycle.
+  \item Validated end-to-end Azure Data Factory pipelines, Blob Storage configurations, and downstream Synapse integrations during the transition from HDFS to Azure.
+  \item Collaborated with multidisciplinary engineering teams to refine architectural designs and preserve workflow continuity and data fidelity.
+  \item Documented test plans, platform-migration procedures, and onboarding guidance for future quality-assurance engineers.
+  \item Enforced data-governance and security protocols supporting audit-risk reduction and HITRUST readiness.
 \end{itemize}
 
 \textbf{IBM} \hfill Jun. 2015 - Jul. 2022\\
@@ -141,46 +167,87 @@ Advanced through five roles delivering healthcare analytics, data architecture, 
 
 \subrole{Senior Data Scientist}{Nov. 2021 - Jul. 2022}
 \begin{itemize}
-  \item Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction proof of concept, automating case-card generation and resource allocation across operating rooms, time slots, and personnel.
+  \item Served as a lead member of Provider Analytics, integrating disparate and centralized sources into data marts and supporting data mining, statistical-model development, and advanced analytics.
+  \item Worked with senior leaders and colleagues to identify opportunities, define objectives, and formulate analytics strategies that produced measurable impact.
+  \item Served as technical lead across electronic health records, insurance claims, scheduling and financial data, social determinants of health, and other relevant sources.
+  \item Project note: HDP Data Migration.
+  \item Project note: Phytel Support.
+  \item Project note: HIE P3N.
+  \item Project note: Explorys Decommissioning.
+  \item Project note: GP Support for CCF.
+  \item Project note: Phytel Configuration Training.
+  \item Project note: Jira Migration Validation.
+  \item Project note: Azure REACH.
+  \item Led delivery of a tailored analytics and reporting project using client administrative data.
+  \item Developed data-migration validation analysis spanning more than 150 billion patient records.
   \item Engineered a Spark, Hive, and Impala analytics framework powering 50+ prior-authorization lag-time and approval-bottleneck reports with daily operational and periodic regulatory and financial snapshots.
 \end{itemize}
 
 \subrole{Senior Data Architect}{Dec. 2020 - Nov. 2021}
 \begin{itemize}
+  \item Served as a senior member of Data Onboarding \& Governance, integrating healthcare data, enriching metadata, and configuring data models, analytics, reports, and visualizations.
+  \item Served as a subject-matter expert to project data architects and delivery, analytics, and integration teams; directed configuration of the data-onboarding platform and supporting infrastructure.
+  \item Led a cross-functional team as the clinical data analyst for the 2020/2021 measure-updates project.
+  \item Created a machine-learning COVID-19 tool that reduced the time required to identify the need for hospitalization by up to two weeks.
+  \item Developed a topic-modeling project using nearly six million semi-structured provider notes.
+  \item Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction proof of concept that was being evaluated as a potential new offering.
   \item Architected Spark and Hadoop pipelines integrating more than 100 billion structured and semi-structured clinical records, supporting four EPM applications, 30+ risk models, and hundreds of measures and registries.
+  \item Led a HIPAA patient-deidentification project drawing from more than 100 data sources for content analytics and measures.
   \item Replaced static mappings with metadata-driven instruction sets across approximately 200 source integrations, standardizing EDI batch schemas while enabling Python/Jupyter lineage tracing and end-to-end validation gates.
+  \item Served in an advisory capacity for development of a new data platform.
+  \item Closed project-documentation gaps by organizing material from more than 100 past projects.
 \end{itemize}
 
 \subrole{Data Architect}{Nov. 2017 - Dec. 2020}
 \begin{itemize}
   \item Designed SQL validation frameworks and client-review gates across approximately 100 integrations, reducing Jira-tracked validation rework by 25\% and mapping rework by 45\%.
   \item Led a multi-organization healthcare integration spanning 70+ EHR sources, implementing provider-scoped patient filtering to enforce data-sharing rules and coordinating delivery with engineering teams.
+  \item Built the data-onboarding platform and associated infrastructure, remediated UAT data issues, and reported on data health during onboarding.
+  \item Earned AI certification to peer-review patient-matching algorithm tuning and reviewed more than 50\% of projects during the final two quarters of the period recorded in the original notes.
+  \item Curated 25 pages of AI-workflow documentation and mentored new hires in the AI-tuning process.
+  \item Spearheaded a new-hire mentoring program associated with an approximately 4,500-hour increase in total billable time.
+  \item Received the Lab Services Award for coordinating internal project teams to deliver client needs on time.
+  \item Received a GDP bonus for improving revenue per SaaS client by at least 1.34\%.
 \end{itemize}
 
 \subrole{Software Developer, Data Platform}{Sep. 2016 - Nov. 2017}
 \begin{itemize}
   \item Engineered an HL7 v2/v3 parsing pipeline in Pig for approximately 30 internal users, replacing a Mirth-based workflow and eliminating \$30,000 in annual vendor costs.
-  \item Built a Python, Ruby, and SQL extraction tool that reduced total client-integration effort by 28\%, measured through eliminated story points and lower average engineering hours per implementation.
+  \item Reduced time spent on knowledge transfer by approximately 80\% by rewriting and reorganizing project documentation.
+  \item Reduced cost per hire by \$5,210 by redeveloping the employee education program.
+  \item Received the Eminence and Excellence Award in 2017 for an analytics project.
+  \item Received a GDP bonus for improving revenue per SaaS client by at least 1.17\%.
 \end{itemize}
 
 \subrole{Data Scientist}{Nov. 2015 - Sep. 2016}
 \begin{itemize}
   \item Directed technical delivery across 36 client data integrations, coordinating 12 remote contractors and establishing code-review, QA, and issue-resolution standards.
+  \item Served as principal integration specialist on more than 60 projects for 20 clients across the broader 2015--2018 data-ingestion period.
   \item Authored 125+ technical knowledge-base articles, approximately 30\% of the team's published content, to standardize integration development and troubleshooting practices.
+  \item Built a Python, Ruby, and SQL extraction tool that reduced total client-integration effort by 28\%, measured through eliminated story points and lower average engineering hours per implementation.
+  \item Eliminated an average of three weeks from employee onboarding.
 \end{itemize}
 
 \role{Explorys, an IBM Company}{Jun. 2015 - Nov. 2015}{Data Science Consultant - Contract via Randstad USA}{Hadoop/HDFS, Ruby, Pig, React, Node.js, JavaScript, SQL, Oracle, Jenkins}
 Supported clinical-data integration and population analytics across more than 10 client data warehouses. IBM acquired Explorys in 2015; the overlap with the IBM tenure reflects the acquisition and transition rather than two unrelated concurrent roles.
 \begin{itemize}
   \item Diagnosed Hadoop and Oracle production-ingestion failures and implemented Jenkins-backed scheduling and recovery controls across 10+ client data warehouses.
+  \item Identified and extracted data from heterogeneous client systems; led technical requirements gathering, discovery, documentation, and implementation; and coordinated acquisition, installation, and configuration of VPN hardware supporting client integrations.
+  \item Developed a cron-based control for defining blackout periods around client data pulls.
 \end{itemize}
 
-\role{AmTrust Financial Services}{Mar. 2014 - Jun. 2015}{Application Development Consultant - Contract via TEKsystems}{VB.NET, ASP.NET, C\#, Web APIs, CSS, JavaScript, HTML5, SQL, PL/SQL}
+\role{AmTrust Financial Services}{Mar. 2014 - Jun. 2015}{Application Development Consultant - Contract via TEKsystems}{VB.NET, ASP.NET, C\#, Web APIs, CSS, JavaScript, HTML5, SQL, PL/SQL, R}
 Developed ISO-based web forms, multi-tier MVC components, Web APIs, and user interfaces for commercial insurance policy software.
 \begin{itemize}
-  \item Led development work for insurance policy software, a new product offering, and the business integration of acquisitions.
-  \item Analyzed more than 65 rating forms to identify and resolve performance bottlenecks.
-  \item Introduced C\# unit testing for multi-tier MVC components and helped train new staff while coordinating daily work allocation.
+  \item Designed, developed, tested, and maintained full-stack commercial-insurance applications spanning VB.NET and ASP.NET interfaces, multi-tier components, Web APIs, and SQL data services.
+  \item Implemented a new line of business in VB.NET and Microsoft SQL Server, served as principal developer for a new product offering, and contributed to two major software-architecture initiatives in 2015.
+  \item Evaluated the advantages, risks, and implementation costs of requested features and recommended maintainable solutions grounded in object-oriented design principles.
+  \item Served as the working liaison between business analysts and developers, translating requirements, reporting progress, and helping prioritize delivery needs.
+  \item Coordinated developer schedules and troubleshot production problems across multiple application environments.
+  \item Created a unit- and integration-test suite for multi-tier MVC components, improving regression coverage and establishing stronger team testing practices.
+  \item Developed more than 65 ISO rating-based web forms and analyzed page timings in R to identify optimization targets and improve application performance.
+  \item Refactored and maintained the existing VB.NET insurance-rating codebase to improve readability, performance, and long-term maintainability.
+  \item Supported the technical integration of acquired businesses into the commercial policy platform.
 \end{itemize}
 
 \role{PPG Industries}{Apr. 2012 - Aug. 2013}{Color Scientist}{VB.NET, C\#, SQL, C++, FORTRAN, JMP, spectrophotometry, numerical methods}
@@ -190,6 +257,16 @@ Developed software and radiative-transfer models for automotive paint formulatio
   \item Built cross-instrument correlation software in VB.NET and JMP to improve measurement consistency and support statistical risk analysis.
   \item Debugged a VB.NET and FORTRAN optimization routine for a numerical radiative-transfer solution.
   \item Wrote a Visual C++ and VB.NET DLL wrapper for a loaned spectroscopic instrument and developed formulation methods for an automated color-matching facility.
+  \item Led cross-functional color-science and marketing initiatives from concept through on-time, in-full delivery for the Automotive Refinish business.
+  \item Served as business owner for color data-management software, directing its global development, launch, training, adoption, and application.
+  \item Managed relationships with third-party equipment and software suppliers, acting as the primary contact for technical coordination and issue resolution.
+  \item Managed a portfolio of color-related intellectual property and supported the translation of research into operational tools and practices.
+  \item Served as the global liaison among Color, Technical, Operations, and IT teams, translating color-science requirements into consistent systems, workflows, and communications.
+  \item Designed and standardized color workflows and best practices for internal operations and external customers, leading the change-management efforts required for adoption.
+  \item Evaluated color processes, instrumentation, and data flows to identify technical and operational risks and develop practical mitigation strategies.
+  \item Developed statistical models from established theory, experimental data, and novel approaches to improve color measurement, matching, and process decisions.
+  \item Championed a more science-centered organizational approach to color by introducing analytical methods, shared standards, and evidence-based decision-making.
+  \item Informed marketing strategy and communications by connecting customer needs with technical capabilities and broad operational insight.
 \end{itemize}
 
 \section{Teaching and Academic Research}
@@ -204,7 +281,15 @@ Developed software and radiative-transfer models for automotive paint formulatio
 \record{University of Cincinnati Learning Communities Program}{Jun. 2006 - Aug. 2008}{\textbf{Peer Leader} - Connected first-year students with faculty, academic advisers, program staff, and campus resources; mentored their transition to university life and introduced academic tools, time-management, study, and community-building skills.}
 \record{Private Tutoring}{Jun. 2006 - Aug. 2008}{\textbf{Private Tutor} - Tutored honors and introductory physics students in course concepts and problem-solving techniques.}
 
-Across these institutions, used interactive, peer-led, and just-in-time teaching methods; produced more than 70 hours of recorded lectures, along with laboratory materials; and exceeded evaluation benchmarks by 16--17\% year over year.
+Across these institutions, used interactive, peer-led, and just-in-time teaching methods.
+\begin{itemize}
+  \item Exceeded institutional student-evaluation benchmarks by an average of 16\% in 2017 and 17\% in 2018.
+  \item Reduced reported student confusion by 28\% by reorganizing online instructional materials and reducing the need for clarification during office hours.
+  \item Developed and published more than 70 hours of recorded lectures and laboratory content to support flexible, on-demand learning.
+  \item Used Just-in-Time Teaching strategies with underperforming students; recorded notes attributed an average 18\% end-of-term grade improvement to this work.
+  \item Designed interactive physics-laboratory lectures using the Interactive Lecture Demonstration method to increase engagement and concept retention.
+  \item Used Peer Instruction and Interactive Lecture Demonstration techniques to address student misconceptions in real time.
+\end{itemize}
 
 \record{University of Cincinnati}{Sep. 2006 - Sep. 2010}{\textbf{Research Assistant, Department of Physics} - Conducted near-infrared astronomical research using observations from the 0.8--5.4 micrometer SpeX spectrograph at the NASA Infrared Telescope Facility.}
 \begin{itemize}
@@ -266,7 +351,6 @@ The customer-facing and operations roles included opening and closing, training 
 \record{\href{https://github.com/bubnicbf/farm-invoice-parser}{farm-invoice-parser}}{2025}{Ruby, RubyLLM, OCR, and model APIs; converts handwritten farm invoices into structured transaction records.}
 \record{\href{https://github.com/bubnicbf/cfd_snow_fence}{cfd\_snow\_fence}}{2025}{Python applied-modeling project combining measured wind data, Navier-Stokes pressure calculations, and XGBoost classification to identify potential snow-drift locations.}
 \record{\href{https://github.com/bubnicbf/healthcare-dbt-demo}{healthcare-dbt-demo}}{2025}{Runnable Data Vault 2.0 demonstration for healthcare claims data using dbt and DuckDB/PostgreSQL.}
-\record{\href{https://github.com/bubnicbf/tuva-postgres}{tuva-postgres}}{2025}{Python and PostgreSQL utilities for converting and validating Tuva seed data.}
 \record{\href{https://github.com/bubnicbf/claims_case_study}{claims\_case\_study}}{2023}{Healthcare staffing-demand analysis using data-quality assessment, Parquet transformation, exploratory analysis, and ARIMA forecasting; delivered a written report and stakeholder presentation.}
 \record{\href{https://github.com/bubnicbf/HL7-ingestion}{HL7-ingestion}}{2023}{Java and Docker healthcare-interoperability project converting HL7 messages into longitudinal patient records.}
 \record{\href{https://github.com/bubnicbf/quality_measures_engine}{quality\_measures\_engine}}{2023}{Python project for healthcare quality-measure processing and evaluation workflows.}
@@ -275,18 +359,27 @@ The customer-facing and operations roles included opening and closing, training 
 \record{\href{https://github.com/bubnicbf/gamma_rays}{gamma\_rays}}{2019}{Python and Jupyter experiments in gamma-ray classification, energy reconstruction, and deep learning, with disseminated analysis outputs.}
 \record{\href{https://github.com/bubnicbf/Star-Chart}{Star-Chart}}{2015}{JavaScript web application displaying the night sky for a selected location and date using stellar catalog data.}
 
+\newpage
 \section{Publications and Research Outputs}
+\begingroup
+\raggedright
 
-\record{Reproducible Postgres Load of Tuva Seed Datasets}{Aug. 2025}{Reusable load and validation workflow for Tuva healthcare seed datasets.}
-\record{Surgical Scheduling Optimization and Procedure Duration Prediction}{Dec. 2020}{Optimization and prediction work improving on fixed-ratio methods for estimating total procedure time.}
-\record{Process and Requirements for CCD Data Integration}{Oct. 2017}{Processes and requirements for addressing challenges in CCD data curation.}
-\record{AI Paint Formula Prediction from Spectroscopic Measurements}{May 2015}{Naive Bayesian approach to color and effects matching for complex automotive paint formulas.}
-\record{Characterization of Surface Coatings Using RT Models for Color Matching}{Feb. 2013}{Approximation of a Chandrasekhar radiative-transfer model applied to atmospheric scattering and color matching.}
-\record{Massive Stellar Clusters in the Disk of the Milky Way Galaxy}{Dec. 2010}{Master's thesis presenting spectroscopic and photometric analysis of two open clusters in the Galactic plane.}
-\record{The B Stars of Westerlund 1}{2009 - 2010}{Near-infrared stellar-classification research manuscript prepared with M. M. Hanson; listed in contemporaneous resumes as in preparation.}
-\record{VizieR Online Data Catalog: JHK Photometry in Cluster [BDS2003] 107}{May 2008}{Near-infrared photometric catalog associated with observations of the Galactic cluster.}
-\record{Near-Infrared Spectroscopy of Candidate Members of Galactic Cluster [BDS2003] 107}{Feb. 2008}{Classification spectra for nine candidate cluster members, published in Publications of the Astronomical Society of the Pacific, 120(864), 150--159.}
-\record{A Novel Method for Low-Toxic Photo-Etch Printing}{Fall/Winter 2003}{Published by the Mid America Print Council (MAPC), Volume 11, Number 2; presented undergraduate research applying aquatint etching techniques to photo-etch procedures.}
+\textbf{Journal Articles and Data Catalogs}\par
+Bubnick, B. (2015). \textit{AI paint formula prediction from spectroscopic measurements} (Version 1.2) [Interactive web application]. shinyapps.io.\par
+Bubnick, B. F. (2010). \textit{Massive stellar clusters in the disk of the Milky Way Galaxy} [Master's thesis, University of Cincinnati]. OhioLINK Electronic Theses and Dissertations Center. \href{https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=ucin1288378106\&disposition=inline}{OhioLINK record}\par
+Hanson, M. M., \& Bubnick, B. F. (2008). \textit{JHK photometry in cluster [BDS2003] 107} [Data set]. VizieR Online Data Catalog (Catalog J/PASP/120/150). \url{https://doi.org/10.26093/cds/vizier.61200150}\par
+Hanson, M. M., \& Bubnick, B. F. (2008). Near-infrared spectroscopy of candidate members of the Galactic cluster [BDS2003] 107. \textit{Publications of the Astronomical Society of the Pacific, 120}(864), 150--159. \linebreak\mbox{\href{https://doi.org/10.1086/527403}{https://doi.org/10.1086/527403}}\par
+Bubnick, Ben. ``A Novel Method for Low-Toxic Photo-Etch Printing.'' \textit{MAPC Journal}, vol. 11, no. 2, Fall/Winter 2003, pp. 13-14.
+
+\smallskip
+\textbf{Applied Research and Technical Writing}\par
+Bubnick, B. (2025). ``Reproducible Postgres load of Tuva seed datasets.'' Internal applied research series, GrowData Analytics/HSEA. Document tracking no. 20250401-A. Internally published by HSEA, Aug. 2025. \href{https://github.com/bubnicbf/tuva-postgres/blob/dev/report.pdf}{Author's version, Apr. 1, 2025}.\par
+Ben Bubnick. (2020). ``Surgical Scheduling Optimization and Procedure Duration Prediction.'' Internal project report, IBM. Document tracking no. RC25712.\par
+Ben Bubnick. (2017). ``Process and Requirements for CCD Data Integration.'' Internal white paper, IBM. Document tracking no. RC25043.\par
+Ben Bubnick. (2013). ``Characterization of Surface Coatings Using RT Models for Color Matching.'' Internal technical memorandum, PPG Industries. Ref. 1284 - February 2013.\par
+Ben Bubnick. (2010). ``The B Stars of Westerlund 1.'' Internal applied research series, University of Cincinnati MASSCLEAN Project. \url{https://doi.org/10.1088/0004-6256/138/6/1724}
+\par
+\endgroup
 
 \section{Speaking and Knowledge Sharing}
 
@@ -303,7 +396,7 @@ The customer-facing and operations roles included opening and closing, training 
 \compactrecord{Special Recognition, Health Data Movers - client delivery}{2025}
 \compactrecord{Arkos Health BI Star - Salesforce Trailhead Expeditioner}{2023}
 \compactrecord{Manager Recognition for Transition Leadership, Merative - systems migration}{2022}
-\compactrecord{Gold Champion, IBM - earned 43 continuing education certificates}{2018 - 2022}
+\compactrecord{Gold Champion, IBM}{2018 - 2022}
 \compactrecord{Lab Services Award, IBM - cross-team delivery coordination}{2018}
 \compactrecord{Eminence and Excellence Award, IBM - data-curation tool development}{2017}
 \compactrecord{Color Lab Automation Award, PPG Industries - expanded reporting}{2012}

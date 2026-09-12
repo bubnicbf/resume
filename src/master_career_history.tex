@@ -11,6 +11,7 @@
 \usepackage{fontspec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
+\usepackage{fancyhdr}
 
 \setmainfont[
   Path=/System/Library/Fonts/Supplemental/,
@@ -28,7 +29,17 @@
   ItalicFont=lmsans10-oblique.otf,
   BoldItalicFont=lmsans10-boldoblique.otf
 ]{Latin Modern Sans}
-\pagestyle{plain}
+\newcommand{\documentversion}{1.0}
+\newcommand{\lastupdated}{Sep. 12, 2026}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{8}{9}\selectfont Ben Bubnick \textbar\ Master Career History}
+\fancyhead[R]{\fontsize{8}{9}\selectfont Version \documentversion\ \textbar\ Updated \lastupdated}
+\fancyfoot[C]{\fontsize{8}{9}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{11pt}
+\setlength{\headsep}{5pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{3.5em}
@@ -78,9 +89,20 @@
 Email: \href{mailto:ben.bubnick@gmail.com}{ben.bubnick@gmail.com}\contactsep
 Phone: (216) 556-1612\\
 LinkedIn: \href{https://www.linkedin.com/in/benbubnick}{linkedin.com/in/benbubnick}\contactsep
-GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}
+GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}\\
+\textbf{Version \documentversion} \contactsep Last updated \lastupdated
+
+\smallskip
+{\small\textbf{Contents:}
+\hyperref[sec:profile]{Profile and skills} (p.~\pageref{sec:profile}) \contactsep
+\hyperref[sec:professional]{Professional experience} (p.~\pageref{sec:professional}) \contactsep
+\hyperref[sec:teaching]{Teaching, research, and academic service} (p.~\pageref{sec:teaching})\\
+\hyperref[sec:additional]{Additional work, service, leadership, and arts} (p.~\pageref{sec:additional}) \contactsep
+\hyperref[sec:outputs]{Projects, publications, and speaking} (p.~\pageref{sec:outputs}) \contactsep
+\hyperref[sec:recognition]{Recognition, credentials, and education} (p.~\pageref{sec:recognition})}
 
 \section{Career Overview}
+\label{sec:profile}
 
 Comprehensive working record spanning healthcare data consulting, data engineering, analytics, software development, scientific computing, entrepreneurship, higher education, academic research, farm operations, and community service. Combines hands-on delivery with technical leadership, documentation, teaching, stakeholder engagement, business administration, and quality-focused practices. Maintained as a source for targeted resumes, biographies, applications, and future career pivots.
 
@@ -102,6 +124,7 @@ Comprehensive working record spanning healthcare data consulting, data engineeri
 \textbf{Business and Creative Tools:} \textit{Current/Core:} Microsoft Office, bookkeeping, accounting, tax compliance, marketing, client acquisition, promotional-material development; \textit{Working Knowledge:} Adobe Illustrator, Adobe Photoshop, GIMP; \textit{Historical/Academic:} AutoCAD
 
 \section{Professional Experience}
+\label{sec:professional}
 
 \role{HHAeXchange}{Oct. 2025 - Jun. 2026}{Healthcare Data Integration Consultant - Contract via Veersa Technologies}{Snowflake, dbt, SQL/Jinja, Python, Snowpark, pandas, Liquibase, GitHub Actions, FHIR/Aidbox}
 Led healthcare source analysis, data-quality investigation, and Snowflake modeling to produce trusted, standardized datasets for reporting and downstream use.
@@ -285,6 +308,7 @@ Developed software and radiative-transfer models for automotive paint formulatio
 
 \newpage
 \section{Teaching and Academic Research}
+\label{sec:teaching}
 
 Across these institutions, used interactive, peer-led, and just-in-time teaching methods.
 
@@ -379,6 +403,7 @@ Supported group recitations in freshman engineering physics through demonstratio
 \end{itemize}
 
 \section{Property Operations and Manual Labor}
+\label{sec:additional}
 
 \record{Doodlebug Farms}{Sep. 2024 - Present}{\textbf{Family Farm Operator} - Establishes and operates a pre-production orchard with 72 American plum and Chickasaw plum trees.}
 \begin{itemize}
@@ -531,6 +556,7 @@ Supported group recitations in freshman engineering physics through demonstratio
 \record{Ohio University School of Art Commission}{2003 - 2004}{\textbf{Commissioned Artist} - Created an original print for the School of Art president; the exact commission date and recipient name are not recorded.}
 
 \section{Selected Independent Projects}
+\label{sec:outputs}
 
 \record{\href{https://github.com/bubnicbf/iphone-cam-lite}{iphone-cam-lite}}{2025 - 2026}{Native Swift/SwiftUI macOS menu-bar app that selects and verifies iPhone Continuity Camera devices in Zoom and Microsoft Teams; includes permission-aware onboarding, diagnostics, persistent settings, automated tests, CI, and release packaging.}
 \record{\href{https://github.com/bubnicbf/farm-invoice-parser}{farm-invoice-parser}}{2025}{Ruby, RubyLLM, OCR, and model APIs; converts handwritten farm invoices into structured transaction records.}
@@ -569,9 +595,6 @@ Bubnick, Ben. (2010). ``The B Stars of Westerlund 1.'' Unpublished internal stel
 
 \presentation{Surgical Scheduling Optimization and Procedure Duration Prediction}{IBM AI Hackathon}{Dec. 2020}{Presented an approach using historical utilization and current wait-list information to predict surgery duration.}
 \presentation{IBM Watson Care Insights}{IBM REACH Initiative}{2019}{Presented the use of patient records and real-time HL7 feeds to integrate insights into clinical workflows.}
-\newpage
-\section{Speaking and Knowledge Sharing (continued)}
-
 \presentation{Machine Learning with Real-World Health Data}{Content and Data Analytics Learning Exchange}{2018}{Introduced machine-learning implementation using real-world health-data analytics.}
 \presentation{Natural-Language Processing for Unstructured Data Lakes}{Innovation Research Interchange Fall Networks Conference}{Sep. 2018}{Presented natural-language processing for extracting insight from unstructured data lakes.}
 \presentation{Hadoop Ingestion and Data-Lake Concepts}{Cross-Team Training Series}{2016}{Led a seven-part series on Hadoop ingestion and data-lake concepts.}
@@ -579,6 +602,7 @@ Bubnick, Ben. (2010). ``The B Stars of Westerlund 1.'' Unpublished internal stel
 \presentation{Astronomical Research Using 2MASS Data}{2MASS Research Poster Session}{2008}{Presented a poster on astronomical research using Two Micron All Sky Survey (2MASS) data.}
 
 \section{Professional Recognition}
+\label{sec:recognition}
 
 \compactrecord{Special Recognition, Health Data Movers - client delivery}{2025}
 \compactrecord{Arkos Health BI Star - Salesforce Trailhead Expeditioner}{2023}
@@ -621,6 +645,7 @@ Windows Forms; quantitative finance; information risk; computer networks; comput
   \item \textbf{Analytics, AI, and security:} CRM Analytics, correlation and regression, data-analytics fundamentals, natural-language processing, generative and responsible AI, Agentforce, and data security.
 \end{itemize}
 
+\enlargethispage{2\baselineskip}
 \section{Education}
 
 \textbf{M.S. Physics, Astrophysics concentration,} University of Cincinnati, Dec. 2010 - thesis option; GPA 3.3/4.0\\

@@ -1,0 +1,128 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+% Comprehensive source document for future targeted resumes, applications, and bios.
+% Keep more detail here than would normally appear in a submitted resume.
+
+\documentclass[10pt,a4paper]{article}
+
+% ---- Path setup for the new layout ----
+% Make \input{} / \include{} look in ../content and class/packages in ../styles
+\makeatletter
+\def\input@path{{../content/}{../styles/}}
+\makeatother
+
+\usepackage[a4paper,left=0.62in,right=0.62in,top=0.70in,bottom=0.60in]{geometry}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\setmainfont[
+  Path=/System/Library/Fonts/Supplemental/,
+  UprightFont=Arial.ttf,
+  BoldFont=Arial Bold.ttf,
+  ItalicFont=Arial Italic.ttf,
+  BoldItalicFont=Arial Bold Italic.ttf
+]{Arial}
+% Arial maps its shared semicolon glyph back to U+037E in XeTeX PDF extraction.
+% Use a Latin-only fallback for semicolons so ATS/copy-paste receives U+003B.
+\newfontfamily\ATSsemicolonfont[
+  Path=/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/,
+  UprightFont=lmsans10-regular.otf,
+  BoldFont=lmsans10-bold.otf,
+  ItalicFont=lmsans10-oblique.otf,
+  BoldItalicFont=lmsans10-boldoblique.otf
+]{Latin Modern Sans}
+\newcommand{\documentversion}{1.0}
+\newcommand{\lastupdated}{Sep. 12, 2026}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{8}{9}\selectfont Ben Bubnick \textbar\ Master Career History}
+\fancyhead[R]{\fontsize{8}{9}\selectfont Version \documentversion\ \textbar\ Updated \lastupdated}
+\fancyfoot[C]{\fontsize{8}{9}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{11pt}
+\setlength{\headsep}{5pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3.5em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlist[itemize]{leftmargin=0.18in,itemsep=0.3pt,topsep=0.5pt,parsep=0pt,partopsep=0pt}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\newcommand{\contactsep}{\enspace\textbar\enspace}
+\newcommand{\role}[4]{%
+  \textbf{#1} \hfill #2\\
+  \textbf{#3}\\[-1pt]
+  \textit{Technologies: #4}\par
+}
+\newcommand{\subrole}[2]{%
+  \textbf{#1} \hfill #2\par
+}
+\newcommand{\record}[3]{%
+  \par\noindent\begin{minipage}{\linewidth}%
+  \textbf{#1} \hfill #2\\[-1pt]
+  #3
+  \end{minipage}\par
+}
+\newcommand{\compactrecord}[2]{%
+  \par\noindent\textbf{#1} \hfill #2\par
+}
+\newcommand{\presentation}[4]{%
+  \par\noindent\begin{minipage}{\linewidth}%
+  \textbf{#1 - #2 - #3}\\[-1pt]
+  #4
+  \end{minipage}\par
+}
+\begin{document}
+
+\catcode`\;=\active
+\protected\def;{{\ATSsemicolonfont\char"003B}}
+
+{\LARGE\bfseries Ben Bubnick}\\[2pt]
+{\large\bfseries Master Career History}\\[3pt]
+Email: \href{mailto:ben.bubnick@gmail.com}{ben.bubnick@gmail.com}\contactsep
+Phone: (216) 556-1612\\
+LinkedIn: \href{https://www.linkedin.com/in/benbubnick}{linkedin.com/in/benbubnick}\contactsep
+GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}\\
+\textbf{Version \documentversion} \contactsep Last updated \lastupdated
+
+\smallskip
+{\small\textbf{Contents:}
+\hyperref[sec:profile]{Profile and skills} (p.~\pageref{sec:profile}) \contactsep
+\hyperref[sec:professional]{Professional experience} (p.~\pageref{sec:professional}) \contactsep
+\hyperref[sec:teaching]{Teaching, research, and academic service} (p.~\pageref{sec:teaching})\\
+\hyperref[sec:additional]{Additional work, service, leadership, and arts} (p.~\pageref{sec:additional}) \contactsep
+\hyperref[sec:outputs]{Projects, publications, and speaking} (p.~\pageref{sec:outputs}) \contactsep
+\hyperref[sec:recognition]{Recognition, credentials, and education} (p.~\pageref{sec:recognition})}
+
+\input{master_career_history/career_overview.tex}
+\input{master_career_history/skills_and_domains.tex}
+\input{master_career_history/professional_experience.tex}
+\input{master_career_history/teaching_and_academic_research.tex}
+\input{master_career_history/academic_services.tex}
+\input{master_career_history/property_operations_and_manual_labor.tex}
+\input{master_career_history/sales_and_customer_service.tex}
+\input{master_career_history/food_service_and_hospitality.tex}
+\input{master_career_history/volunteer_and_community_experience.tex}
+\input{master_career_history/leadership_memberships_and_activities.tex}
+\input{master_career_history/creative_and_visual_arts.tex}
+\input{master_career_history/selected_independent_projects.tex}
+\input{master_career_history/publications_and_research_outputs.tex}
+\input{master_career_history/speaking_and_knowledge_sharing.tex}
+\input{master_career_history/professional_recognition.tex}
+\input{master_career_history/credentials_and_continuing_education.tex}
+\input{master_career_history/education.tex}
+
+\end{document}

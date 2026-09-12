@@ -1,0 +1,183 @@
+\section{Professional Experience}
+\label{sec:professional}
+
+\role{HHAeXchange}{Oct. 2025 - Jun. 2026}{Healthcare Data Integration Consultant - Contract via Veersa Technologies}{Snowflake, dbt, SQL/Jinja, Python, Snowpark, pandas, Liquibase, GitHub Actions, FHIR/Aidbox}
+Led healthcare source analysis, data-quality investigation, and Snowflake modeling to produce trusted, standardized datasets for reporting and downstream use.
+\begin{itemize}
+  \item Engineered unified and analytics Snowflake/dbt models spanning 55 tables across two organizations and two source-system configurations, establishing reusable patterns for faster client onboarding.
+  \item Implemented reusable SQL/Jinja transformation logic for lifecycle states, null handling, sentinel dates, and source-system variations across organization, office, caregiver, and patient domains.
+  \item Created or materially redesigned 30 automated SQL/dbt data-quality tests covering nulls, duplicates, referential integrity, business rules, lifecycle logic, and source-to-target reconciliation.
+  \item Translated ambiguous business requirements into documented mappings, acceptance criteria, onboarding standards, and 12 data-quality investigation runbooks.
+  \item Conducted feasibility analysis of source-system structures and implementation constraints to shape integration scope, modeling strategy, and delivery approach.
+  \item Structured target models using FHIR-like concepts where appropriate to improve consistency and extensibility for downstream integration and analytics.
+  \item Defined surrogate-key, natural-key, and crosswalk strategies supporting stable identity resolution across related source systems.
+  \item Resolved data-quality and mapping issues through targeted test-case analysis and review of failing source and target records.
+  \item Collaborated with client and internal stakeholders to resolve source ambiguity, refine requirements, and translate business needs into production-ready data assets.
+  \item Established reusable patterns for onboarding additional sources and extending integration workflows.
+\end{itemize}
+
+\role{Adonis}{Mar. 2025 - Jul. 2025}{Healthcare Revenue Cycle Data Consultant - Contract via Health Data Movers}{AWS S3, Snowflake, SQLMesh, SQL, Python, Docker, GitHub Actions}
+Translated payer and revenue-cycle source data into standardized Snowflake models for repeatable client onboarding, analytics, and reporting.
+\begin{itemize}
+  \item Built, documented, validated, and maintained 54 SQLMesh models that delivered standardized revenue-cycle datasets for a provider whose network served 4,598 families across 113 locations and processed 86,388 annual authorizations.
+  \item Implemented automated row-count, uniqueness, and not-null audits across 54 models, achieving a 100\% pass rate across 117+ configured audit applications at final delivery.
+  \item Diagnosed undocumented source-key versioning and implemented composite business grains with SHA-256 surrogate keys across 10 charge and payment models, eliminating duplicate-key failures.
+  \item Authored implementation playbooks, technical handoff documentation, and a QA runbook for a repeatable healthcare-data validation workflow.
+  \item Built a reusable SQLMesh/Snowflake ingestion and transformation framework using templated models, data contracts, CI checks, and promotion gates.
+  \item Added schema-drift alerts, parity checks, reconciliation logs, deterministic rerun procedures, and incident-handling guidance for UNIX-like environments.
+  \item Packaged a lightweight operations forecasting and alerting pattern as a tested Python and Docker service with GitHub Actions deployment automation.
+  \item Standardized transformation logic across clients and translated business requirements into technical specifications to improve delivery predictability.
+\end{itemize}
+
+\role{GrowData Analytics}{Sep. 2024 - Oct. 2025}{Independent Data Automation and Analytics Consultant}{Python, Ruby, RubyLLM, RSpec, RuboCop, Tesseract OCR, LLM APIs, Docker, AWS, GitHub Actions}
+Built and operated an independent consultancy focused on converting semi-structured documents into validated, auditable data products.
+\begin{itemize}
+  \item Built and validated a preproduction document-to-data MVP that converted semi-structured invoices into auditable transaction records, achieving 95\% field-level accuracy across a stratified 500-invoice test suite.
+  \item Instrumented the MVP with automated tests, audit logging, retry controls, and confidence routing, achieving 88\% straight-through processing and under 1\% system failure.
+  \item Productized Tesseract OCR and rule-based post-processing as a small Python/Ruby service with containerized deployments and versioned configuration.
+  \item Added schema checks, cross-field validation, reconciliation, idempotent reruns, fixtures, golden-file tests, linting, and release automation.
+  \item Documented runbooks and failure modes covering timeouts, low-confidence OCR, and retries.
+  \item Built a lightweight analytics layer tracking usage, error categories, latency, and throughput to guide feature tuning and cost control.
+  \item Managed infrastructure as code for a minimal AWS footprint using S3, Lambda or scheduled jobs, and CloudWatch alerts through Bash/Zsh and Makefile workflows.
+  \item Managed the business's bookkeeping, accounting, and tax obligations.
+  \item Led marketing and client acquisition, including creating promotional materials for the business.
+\end{itemize}
+
+\role{Arkos Health}{Jun. 2023 - Jan. 2025}{Senior Data Analyst}{AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power BI, Tableau}
+Delivered healthcare analytics, recurring reporting, and data-quality investigations while improving the governed data foundation used by the BI team.
+\begin{itemize}
+  \item Architected a greenfield AWS data lake integrating 18 source systems through approximately 200 scheduled data assets and 200 dbt models, supporting six analysts across six state markets; automated CI/CD and targeted model refactoring accelerated deployments and improved query performance.
+  \item Integrated Jupyter-based analytics and authored platform, architecture, and operating documentation, enabling six analysts to independently use the governed data lake for recurring, executive, and BI reporting.
+  \item Instrumented scheduled pipelines with monitoring, alerting, and more than 10 failure classifications; authored three AWS/dbt incident runbooks supporting rapid detection and recovery.
+  \item Mentored engineers on code review, testing, and pipeline design and authored internal delivery standards.
+  \item Implemented Jira and GitHub workflows to centralize task tracking and improve coordination across the analytics team.
+  \item Expanded cross-departmental collaboration to bring operational context into analytics decisions.
+  \item Mentored junior team members in code review, testing, pipeline design, and delivery practices.
+  \item Led goal-setting sessions to establish shared objectives and a consistent tracking cadence.
+  \item Initiated recurring stakeholder-feedback sessions to refine deliverables against business needs.
+\end{itemize}
+
+\role{Merative}{Jul. 2022 - Mar. 2023}{Senior Data Scientist}{Microsoft Azure, Azure Data Factory, Blob Storage, Azure Functions, SQL Database, Synapse Analytics, Python, SQL, Azure DevOps}
+\begin{itemize}
+  \item Engineered a seven-layer Python and SQL migration-acceptance suite with zero unresolved discrepancies at sign-off across tested record counts, partitions, schemas, nulls, duplicates, field values, aggregates, and business rules.
+  \item Led HIPAA-compliant deidentification validation across demographic, encounter, and coded clinical data representing approximately 300 million patient lives, achieving a 100\% pass rate before sign-off.
+  \item Designed and implemented automated ETL testing and regression suites that detected schema drift and transformation errors early in the migration lifecycle.
+  \item Validated end-to-end Azure Data Factory pipelines, Blob Storage configurations, and downstream Synapse integrations during the transition from HDFS to Azure.
+  \item Collaborated with multidisciplinary engineering teams to refine architectural designs and preserve workflow continuity and data fidelity.
+  \item Documented test plans, platform-migration procedures, and onboarding guidance for future quality-assurance engineers.
+  \item Enforced data-governance and security protocols supporting audit-risk reduction and HITRUST readiness.
+\end{itemize}
+
+\textbf{IBM} \hfill Jun. 2015 - Jul. 2022\\
+Advanced through five roles delivering healthcare analytics, data architecture, client integration, data-quality improvement, and large-scale migration validation.\\[-1pt]
+\textit{Technologies: Spark, Hadoop/HDFS, Hive, Impala, Kafka, Python, SQL, PostgreSQL, Docker, Jenkins, Tableau, HL7}
+\begin{itemize}
+  \item Supported employee onboarding from 2016 to 2018, helping new colleagues learn team practices, systems, and technical workflows.
+  \item Served on tiger teams supporting the HDFS-to-Azure data-platform upgrade and participated on the data-governance team.
+  \item Participated in internal coding jams, hackathons, and cross-team delivery initiatives.
+  \item Played a central role in the REACH cross-team training initiative, teaching SQL fundamentals to nontechnical colleagues and ETL, architecture, data-science, and predictive-modeling practices to technical colleagues.
+\end{itemize}
+
+\subrole{Senior Data Scientist}{Nov. 2021 - Jul. 2022}
+\begin{itemize}
+  \item Served as a lead member of Provider Analytics, integrating disparate and centralized sources into data marts and supporting data mining, statistical-model development, and advanced analytics.
+  \item Worked with senior leaders and colleagues to identify opportunities, define objectives, and formulate analytics strategies that produced measurable impact.
+  \item Served as technical lead across electronic health records, insurance claims, scheduling and financial data, social determinants of health, and other relevant sources.
+  \item Developed migration-validation analysis spanning more than 150 billion deidentified health records, reconciling source and target schemas, partitions, values, aggregates, and business rules during the transition from legacy HDFS infrastructure to Azure.
+  \item Provided production and configuration support for Phytel population-health applications, troubleshooting data and operational issues affecting provider configuration, care-gap identification, patient outreach, and quality-reporting workflows.
+  \item Supported data and integration work for Pennsylvania's statewide P3N health-information exchange, encompassing master patient identity, provider directories, clinical-document discovery, patient consent, and real-time ADT encounter notifications.
+  \item Supported the controlled decommissioning of legacy Explorys capabilities by analyzing downstream dependencies and validating continuity across normalized clinical, claims, laboratory, billing, and operational datasets.
+  \item Supported Cleveland Clinic Foundation's accelerated SuperMart migration from MySQL to Greenplum by assessing dashboard dependencies and defining the changes required to preserve reporting continuity.
+  \item Created and delivered Phytel configuration training covering provider activation, system changes, support procedures, and the clinical-data workflows underlying proactive population-health management.
+  \item Performed postmigration validation for an enterprise Jira transition, reconciling projects, issues, workflows, custom fields, permissions, histories, and relationships and documenting discrepancies for remediation before cutover.
+  \item Developed and delivered peer-led Azure instruction through the REACH initiative, translating cloud architecture, storage, data integration, security, and analytics concepts into practical guidance for technical colleagues.
+  \item Led delivery of a tailored analytics and reporting project using client administrative data.
+  \item Engineered a Spark, Hive, and Impala analytics framework powering 50+ prior-authorization lag-time and approval-bottleneck reports with daily operational and periodic regulatory and financial snapshots.
+\end{itemize}
+
+\subrole{Senior Data Architect}{Dec. 2020 - Nov. 2021}
+\begin{itemize}
+  \item Served as a senior member of Data Onboarding \& Governance, integrating healthcare data, enriching metadata, and configuring data models, analytics, reports, and visualizations.
+  \item Served as a subject-matter expert to project data architects and delivery, analytics, and integration teams; directed configuration of the data-onboarding platform and supporting infrastructure.
+  \item Led a cross-functional team as the clinical data analyst for the 2020/2021 measure-updates project.
+  \item Created an exploratory machine-learning COVID-19 prototype to surface hospitalization-risk signals for retrospective analyst review.
+  \item Developed a topic-modeling project using nearly six million semi-structured provider notes.
+  \item Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction proof of concept that was being evaluated as a potential new offering.
+  \item Architected Spark and Hadoop pipelines integrating more than 100 billion structured and semi-structured clinical records, supporting four EPM applications, 30+ risk models, and hundreds of measures and registries.
+  \item Led a HIPAA patient-deidentification project drawing from more than 100 data sources for content analytics and measures.
+  \item Replaced static mappings with metadata-driven instruction sets across approximately 200 source integrations, standardizing EDI batch schemas while enabling Python/Jupyter lineage tracing and end-to-end validation gates.
+  \item Served in an advisory capacity for development of a new data platform.
+  \item Closed project-documentation gaps by organizing material from more than 100 past projects.
+\end{itemize}
+
+\subrole{Data Architect}{Nov. 2017 - Dec. 2020}
+\begin{itemize}
+  \item Designed SQL validation frameworks and client-review gates across approximately 100 integrations, reducing Jira-tracked validation rework by 25\% and mapping rework by 45\%.
+  \item Led a multi-organization healthcare integration spanning 70+ EHR sources, implementing provider-scoped patient filtering to enforce data-sharing rules and coordinating delivery with engineering teams.
+  \item Built the data-onboarding platform and associated infrastructure, remediated UAT data issues, and reported on data health during onboarding.
+  \item Earned AI certification and peer-reviewed patient-matching algorithm tuning across the project portfolio.
+  \item Curated 25 pages of AI-workflow documentation and mentored new hires in the AI-tuning process.
+  \item Spearheaded a new-hire mentoring program that standardized technical ramp-up and prepared colleagues to contribute to billable client delivery.
+  \item Received the Lab Services Award for coordinating internal project teams to deliver client needs on time.
+  \item Received a GDP bonus for improving revenue per SaaS client by at least 1.34\%.
+\end{itemize}
+
+\subrole{Software Developer, Data Platform}{Sep. 2016 - Nov. 2017}
+\begin{itemize}
+  \item Engineered an HL7 v2/v3 parsing pipeline in Pig for approximately 30 internal users, replacing a Mirth-based workflow and eliminating \$30,000 in annual vendor costs.
+  \item Rewrote and reorganized project documentation to streamline knowledge transfer.
+  \item Redeveloped the employee education program to make new-hire training more efficient and repeatable.
+  \item Received the Eminence and Excellence Award in 2017 for an analytics project.
+  \item Received a GDP bonus for improving revenue per SaaS client by at least 1.17\%.
+\end{itemize}
+
+\subrole{Data Scientist}{Nov. 2015 - Sep. 2016}
+\begin{itemize}
+  \item Directed technical delivery across 36 client data integrations, coordinating 12 remote contractors and establishing code-review, QA, and issue-resolution standards.
+  \item Served as principal integration specialist on more than 60 projects for 20 clients across the broader 2015--2018 data-ingestion period.
+  \item Authored 125+ technical knowledge-base articles, approximately 30\% of the team's published content, to standardize integration development and troubleshooting practices.
+  \item Built a Python, Ruby, and SQL extraction tool that eliminated unnecessary story points and reduced average engineering hours per client integration.
+  \item Eliminated an average of three weeks from employee onboarding.
+\end{itemize}
+
+\role{Explorys, an IBM Company}{Jun. 2015 - Nov. 2015}{Data Science Consultant - Contract via Randstad USA}{Hadoop/HDFS, Ruby, Pig, React, Node.js, JavaScript, SQL, Oracle, Jenkins}
+Supported clinical-data integration and population analytics across more than 10 client data warehouses. IBM acquired Explorys in 2015; the overlap with the IBM tenure reflects the acquisition and transition rather than two unrelated concurrent roles.
+\begin{itemize}
+  \item Diagnosed Hadoop and Oracle production-ingestion failures and implemented Jenkins-backed scheduling and recovery controls across 10+ client data warehouses.
+  \item Identified and extracted data from heterogeneous client systems; led technical requirements gathering, discovery, documentation, and implementation; and coordinated acquisition, installation, and configuration of VPN hardware supporting client integrations.
+  \item Developed a cron-based control for defining blackout periods around client data pulls.
+\end{itemize}
+
+\role{AmTrust Financial Services}{Mar. 2014 - Jun. 2015}{Application Development Consultant - Contract via TEKsystems}{VB.NET, ASP.NET, C\#, Web APIs, CSS, JavaScript, HTML5, SQL, PL/SQL, R}
+Developed ISO-based web forms, multi-tier MVC components, Web APIs, and user interfaces for commercial insurance policy software.
+\begin{itemize}
+  \item Designed, developed, tested, and maintained full-stack commercial-insurance applications spanning VB.NET and ASP.NET interfaces, multi-tier components, Web APIs, and SQL data services.
+  \item Implemented a new line of business in VB.NET and Microsoft SQL Server, served as principal developer for a new product offering, and contributed to two major software-architecture initiatives in 2015.
+  \item Evaluated the advantages, risks, and implementation costs of requested features and recommended maintainable solutions grounded in object-oriented design principles.
+  \item Served as the working liaison between business analysts and developers, translating requirements, reporting progress, and helping prioritize delivery needs.
+  \item Coordinated developer schedules and troubleshot production problems across multiple application environments.
+  \item Created a unit- and integration-test suite for multi-tier MVC components, improving regression coverage and establishing stronger team testing practices.
+  \item Developed more than 65 ISO rating-based web forms and analyzed page timings in R to identify optimization targets and improve application performance.
+  \item Refactored and maintained the existing VB.NET insurance-rating codebase to improve readability, performance, and long-term maintainability.
+  \item Supported the technical integration of acquired businesses into the commercial policy platform.
+\end{itemize}
+
+\role{PPG Industries}{Apr. 2012 - Aug. 2013}{Color Scientist}{VB.NET, C\#, SQL, C++, FORTRAN, JMP, spectrophotometry, numerical methods}
+Developed software and radiative-transfer models for automotive paint formulation, spectroscopic profile analysis, and technology-risk assessment.
+\begin{itemize}
+  \item Improved color-matching classification accuracy using numerical integration methods.
+  \item Built cross-instrument correlation software in VB.NET and JMP to improve measurement consistency and support statistical risk analysis.
+  \item Debugged a VB.NET and FORTRAN optimization routine for a numerical radiative-transfer solution.
+  \item Wrote a Visual C++ and VB.NET DLL wrapper for a loaned spectroscopic instrument and developed formulation methods for an automated color-matching facility.
+  \item Led cross-functional color-science and marketing initiatives from concept through on-time, in-full delivery for the Automotive Refinish business.
+  \item Served as business owner for color data-management software, directing its global development, launch, training, adoption, and application.
+  \item Managed relationships with third-party equipment and software suppliers, acting as the primary contact for technical coordination and issue resolution.
+  \item Managed a portfolio of color-related intellectual property and supported the translation of research into operational tools and practices.
+  \item Served as the global liaison among Color, Technical, Operations, and IT teams, translating color-science requirements into consistent systems, workflows, and communications.
+  \item Designed and standardized color workflows and best practices for internal operations and external customers, leading the change-management efforts required for adoption.
+  \item Evaluated color processes, instrumentation, and data flows to identify technical and operational risks and develop practical mitigation strategies.
+  \item Developed statistical models from established theory, experimental data, and novel approaches to improve color measurement, matching, and process decisions.
+  \item Championed a more science-centered organizational approach to color by introducing analytical methods, shared standards, and evidence-based decision-making.
+  \item Informed marketing strategy and communications by connecting customer needs with technical capabilities and broad operational insight.
+\end{itemize}
+

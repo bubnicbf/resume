@@ -19,6 +19,25 @@ SRC_FILES := $(wildcard src/*.tex)
 
 COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
 
+MASTER_CAREER_HISTORY_CONTENT := \
+               content/master_career_history/career_overview.tex \
+               content/master_career_history/skills_and_domains.tex \
+               content/master_career_history/professional_experience.tex \
+               content/master_career_history/teaching_and_academic_research.tex \
+               content/master_career_history/academic_services.tex \
+               content/master_career_history/property_operations_and_manual_labor.tex \
+               content/master_career_history/sales_and_customer_service.tex \
+               content/master_career_history/food_service_and_hospitality.tex \
+               content/master_career_history/volunteer_and_community_experience.tex \
+               content/master_career_history/leadership_memberships_and_activities.tex \
+               content/master_career_history/creative_and_visual_arts.tex \
+               content/master_career_history/selected_independent_projects.tex \
+               content/master_career_history/publications_and_research_outputs.tex \
+               content/master_career_history/speaking_and_knowledge_sharing.tex \
+               content/master_career_history/professional_recognition.tex \
+               content/master_career_history/credentials_and_continuing_education.tex \
+               content/master_career_history/education.tex
+
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
@@ -59,7 +78,7 @@ $(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
 
-$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex
+$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(MASTER_CAREER_HISTORY_CONTENT)
 	@mkdir -p "$(ATS_OUT_DIR)"
 	@echo "==> Building master career history"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"

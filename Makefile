@@ -33,7 +33,7 @@ MASTER_CAREER_HISTORY_CONTENT := \
                content/master_career_history/creative_and_visual_arts.tex \
                content/master_career_history/selected_independent_projects.tex \
                content/master_career_history/publications_and_research_outputs.tex \
-               content/master_career_history/speaking_and_knowledge_sharing.tex \
+               content/master_career_history/speaking_engagements.tex \
                content/master_career_history/professional_recognition.tex \
                content/master_career_history/credentials_and_continuing_education.tex \
                content/master_career_history/education.tex

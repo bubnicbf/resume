@@ -6,6 +6,7 @@ This repository contains my resume, CV, and abstract, all built with LaTeX.
 
 - [Resume (2 pages)](https://github.com/bubnicbf/job_search/raw/master/output/resume.pdf)
 - ATS resume (2 pages): `output/pdf/resume_ats.pdf`
+- Master career history (comprehensive working document): `output/pdf/master_career_history.pdf`
 - [Abstract (1 page)](https://github.com/bubnicbf/job_search/raw/master/output/abstract.pdf)
 - [Full CV (4 pages)](https://github.com/bubnicbf/job_search/raw/master/output/cv.pdf)
 
@@ -33,6 +34,7 @@ From the repository root:
   make cv
   make resume
   make resume-ats
+  make master-career-history
   make abstract
 ```
 
@@ -41,6 +43,7 @@ From the repository root:
   make -B cv
   make -B resume
   make -B resume-ats
+  make -B master-career-history
   make -B abstract
 ```
 
@@ -61,6 +64,6 @@ From the repository root:
 
 ### Outputs
 
-- Standard PDFs are written to `output/`; the ATS resume is written to `output/pdf/`.
+- Standard PDFs are written to `output/`; the ATS resume and master career history are written to `output/pdf/`.
 
 - Auxiliary build artifacts (`.aux`, `.log`, `.out`, etc.) are written alongside the PDFs and removed by `make clean`.

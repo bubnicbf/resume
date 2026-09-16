@@ -21,7 +21,7 @@ Translated payer and revenue-cycle source data into standardized Snowflake model
 \begin{itemize}
   \item Built, documented, validated, and maintained 54 SQLMesh models that delivered standardized revenue-cycle datasets for a provider whose network served 4,598 families across 113 locations and processed 86,388 annual authorizations.
   \item Implemented automated row-count, uniqueness, and not-null audits across 54 models, achieving a 100\% pass rate across 117+ configured audit applications at final delivery.
-  \item Diagnosed undocumented source-key versioning and implemented composite business grains with SHA-256 surrogate keys across 10 charge and payment models, eliminating duplicate-key failures.
+  \item Diagnosed undocumented source-key versioning and implemented composite business grains with surrogate keys across 10 charge and payment models, eliminating duplicate-key failures.
   \item Authored implementation playbooks, technical handoff documentation, and a QA runbook for a repeatable healthcare-data validation workflow.
   \item Built a reusable SQLMesh/Snowflake ingestion and transformation framework using templated models, data contracts, CI checks, and promotion gates.
   \item Added schema-drift alerts, parity checks, reconciliation logs, deterministic rerun procedures, and incident-handling guidance for UNIX-like environments.

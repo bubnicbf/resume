@@ -1,0 +1,32 @@
+---
+- id: arkos-01
+  text_tex: Architected a greenfield AWS data lake integrating 18 source systems through
+    approximately 200 scheduled data assets and 200 dbt models, supporting six analysts
+    across six state markets; automated CI/CD and targeted model refactoring accelerated
+    deployments and improved query performance.
+- id: arkos-02
+  text_tex: Integrated Jupyter-based analytics and authored platform, architecture,
+    and operating documentation, enabling six analysts to independently use the governed
+    data lake for recurring, executive, and BI reporting.
+- id: arkos-03
+  text_tex: Instrumented scheduled pipelines with monitoring, alerting, and more than
+    10 failure classifications; authored three AWS/dbt incident runbooks supporting
+    rapid detection and recovery.
+- id: arkos-04
+  text_tex: Mentored engineers on code review, testing, and pipeline design and authored
+    internal delivery standards.
+- id: arkos-05
+  text_tex: Implemented Jira and GitHub workflows to centralize task tracking and
+    improve coordination across the analytics team.
+- id: arkos-06
+  text_tex: Expanded cross-departmental collaboration to bring operational context
+    into analytics decisions.
+- id: arkos-07
+  text_tex: Mentored junior team members in code review, testing, pipeline design,
+    and delivery practices.
+- id: arkos-08
+  text_tex: Led goal-setting sessions to establish shared objectives and a consistent
+    tracking cadence.
+- id: arkos-09
+  text_tex: Initiated recurring stakeholder-feedback sessions to refine deliverables
+    against business needs.

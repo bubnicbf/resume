@@ -1,69 +1,43 @@
-# Job Search
+# Job Search Documents
 
-This repository contains my resume, CV, and abstract, all built with LaTeX.
+LaTeX résumé, CV, ATS résumé, abstract, cover letter, and comprehensive master career history.
 
-## Documents
+## Layout
 
-- [Resume (2 pages)](https://github.com/bubnicbf/job_search/raw/master/output/resume.pdf)
-- ATS resume (2 pages): `output/pdf/resume_ats.pdf`
-- Master career history (comprehensive working document): `output/pdf/master_career_history.pdf`
-- [Abstract (1 page)](https://github.com/bubnicbf/job_search/raw/master/output/abstract.pdf)
-- [Full CV (4 pages)](https://github.com/bubnicbf/job_search/raw/master/output/cv.pdf)
+- `src/*.tex`: top-level LaTeX documents.
+- `src/content/`: hand-written sections still used by the established résumé, CV, and other documents.
+- `src/styles/` and `src/fonts/`: LaTeX class, packages, and fonts.
+- `src/data/roles/`: one YAML record per professional role, imported from the master career history.
+- `src/data/achievements/`: reusable achievement statements, with stable IDs.
+- `src/profiles/`: ordered selections of roles and achievements for particular documents.
+- `build/generated/`: generated LaTeX; do not edit it directly.
+- `build/pdf/`: final and preview PDFs.
+- `private/`: local evidence and notes; excluded from Git.
+- `proofs/`: retained page images used for visual review.
 
----
+The professional-experience part of the master career history is now rendered from YAML. Its previous TeX section remains at `src/content/master_career_history/professional_experience.tex` as an import snapshot, not an active source. The other master-history sections remain hand-written TeX. The established résumé and CV still build from their original sections so their submitted content is preserved during migration; YAML-driven profile builds are available alongside them.
 
-## Build Instructions
+## Build
 
-This project includes a `Makefile` to simplify building all documents with **XeLaTeX**.
+Requires XeLaTeX, `make`, and Ruby (with its built-in YAML library).
 
-### Requirements
-- [XeLaTeX](https://tug.org/xetex/) (available through TeX Live or MiKTeX)
-- `make` (built in on macOS/Linux, installable on Windows via WSL or Git Bash)
-
-### Usage
-
-From the repository root:
-
-- **Build everything (CV, resume, abstract):**
-```bash
-  make
+```sh
+make                         # established CV, résumé, abstract, and cover letter
+make resume cv resume-ats
+make master-career-history   # professional experience comes from YAML
+make profile PROFILE=healthcare-data-resume
+make profile PROFILE=healthcare-data-cv
 ```
 
-- **Build a specific document:**
-```bash
-  make cv
-  make resume
-  make resume-ats
-  make master-career-history
-  make abstract
-```
+All PDFs are in `build/pdf/`. The two profile examples produce `healthcare-data-resume.pdf` and `healthcare-data-cv.pdf` without replacing `resume.pdf` or `cv.pdf`. `make clean` removes auxiliary files; `make distclean` also removes PDFs.
 
-- **Force Build a specific document:**
-```bash
-  make -B cv
-  make -B resume
-  make -B resume-ats
-  make -B master-career-history
-  make -B abstract
-```
+## Tailor a document
 
-- **Open the résumé PDF (macOS only):**
-```bash
-  make open
-```
+1. Find the role in `src/data/roles/<role-id>.yaml`. Its `achievement_ids` list is the complete inventory for that role.
+2. Read the matching statements in `src/data/achievements/<role-id>.yaml`. The `text_tex` field permits LaTeX markup such as `\%` and `\&` and is inserted as LaTeX, so edit it carefully.
+3. Copy a profile in `src/profiles/`, give it a new lowercase, hyphenated filename, and choose role order and achievement IDs. A role can use `achievements: all` or omit that field to include every achievement. Optional top-level `headline_tex` and `summary_tex` fields replace the template's headline and summary for that profile.
+4. Run `make profile PROFILE=<filename-without-.yaml>` and inspect the PDF.
 
-- **Clean build artifacts (logs, aux files, etc.), keep PDFs:**
-```bash
-  make clean
-```
+The `document` field in a profile is `resume` or `cv`. Profile rendering validates role and achievement IDs before creating LaTeX. The initial YAML inventory was mechanically imported from the master history with `scripts/import_master_experience.rb`; do not rerun that one-time import after editing the YAML, because YAML is now the professional-experience source of truth. The master history profile is `src/profiles/master-career-history.yaml`.
 
-- **Clean build artifacts and PDFs:**
-```bash
-  make distclean
-```
-
-### Outputs
-
-- Standard PDFs are written to `output/`; the ATS resume and master career history are written to `output/pdf/`.
-
-- Auxiliary build artifacts (`.aux`, `.log`, `.out`, etc.) are written alongside the PDFs and removed by `make clean`.
+The established résumé/CV layouts still use hand-written sections in `src/content/experience/`. New structured role data lives under `src/data/roles/`.

@@ -10,6 +10,8 @@
 
 # PDF outputs
 src/*.pdf
+build/generated/
+build/pdf/healthcare-data-*.pdf
 
 # OS-specific
 .DS_Store
@@ -22,3 +24,4 @@ Thumbs.db
 cover.pdf
 cover.tex
 private/
+tmp/

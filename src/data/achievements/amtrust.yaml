@@ -1,0 +1,32 @@
+---
+- id: amtrust-01
+  text_tex: Designed, developed, tested, and maintained full-stack commercial-insurance
+    applications spanning VB.NET and ASP.NET interfaces, multi-tier components, Web
+    APIs, and SQL data services.
+- id: amtrust-02
+  text_tex: Implemented a new line of business in VB.NET and Microsoft SQL Server,
+    served as principal developer for a new product offering, and contributed to two
+    major software-architecture initiatives in 2015.
+- id: amtrust-03
+  text_tex: Evaluated the advantages, risks, and implementation costs of requested
+    features and recommended maintainable solutions grounded in object-oriented design
+    principles.
+- id: amtrust-04
+  text_tex: Served as the working liaison between business analysts and developers,
+    translating requirements, reporting progress, and helping prioritize delivery
+    needs.
+- id: amtrust-05
+  text_tex: Coordinated developer schedules and troubleshot production problems across
+    multiple application environments.
+- id: amtrust-06
+  text_tex: Created a unit- and integration-test suite for multi-tier MVC components,
+    improving regression coverage and establishing stronger team testing practices.
+- id: amtrust-07
+  text_tex: Developed more than 65 ISO rating-based web forms and analyzed page timings
+    in R to identify optimization targets and improve application performance.
+- id: amtrust-08
+  text_tex: Refactored and maintained the existing VB.NET insurance-rating codebase
+    to improve readability, performance, and long-term maintainability.
+- id: amtrust-09
+  text_tex: Supported the technical integration of acquired businesses into the commercial
+    policy platform.

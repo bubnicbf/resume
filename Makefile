@@ -1,47 +1,33 @@
 ENGINE   := xelatex
 SRC_DIR  := src
-OUT_DIR  := output
-ATS_OUT_DIR := $(OUT_DIR)/pdf
+OUT_DIR  := build/pdf
+ATS_OUT_DIR := $(OUT_DIR)
 
 DOCS     := cv abstract resume cover
 PDFS     := $(DOCS:%=$(OUT_DIR)/%.pdf)
 
-CONTENT_TEX := $(wildcard content/*.tex) \
-               $(wildcard content/summary/*.tex) \
-               $(wildcard content/exerience/*.tex) \
-               $(wildcard content/education/*.tex) \
-               $(wildcard content/publication/*.tex)
+CONTENT_TEX := $(wildcard src/content/*.tex) \
+               $(wildcard src/content/summary/*.tex) \
+               $(wildcard src/content/experience/*.tex) \
+               $(wildcard src/content/education/*.tex) \
+               $(wildcard src/content/publication/*.tex)
 
-STYLE_FILES := $(wildcard styles/*.cls) \
-               $(wildcard styles/*.sty)
+STYLE_FILES := $(wildcard src/styles/*.cls) \
+               $(wildcard src/styles/*.sty)
 
 SRC_FILES := $(wildcard src/*.tex)
+DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
+PROFILE ?= healthcare-data-resume
 
 COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
 
 MASTER_CAREER_HISTORY_CONTENT := \
-               content/master_career_history/career_overview.tex \
-               content/master_career_history/skills_and_domains.tex \
-               content/master_career_history/professional_experience.tex \
-               content/master_career_history/teaching_and_academic_research.tex \
-               content/master_career_history/academic_services.tex \
-               content/master_career_history/property_operations_and_manual_labor.tex \
-               content/master_career_history/sales_and_customer_service.tex \
-               content/master_career_history/food_service_and_hospitality.tex \
-               content/master_career_history/volunteer_and_community_experience.tex \
-               content/master_career_history/leadership_memberships_and_activities.tex \
-               content/master_career_history/creative_and_visual_arts.tex \
-               content/master_career_history/selected_independent_projects.tex \
-               content/master_career_history/publications_and_research_outputs.tex \
-               content/master_career_history/speaking_engagements.tex \
-               content/master_career_history/professional_recognition.tex \
-               content/master_career_history/credentials_and_continuing_education.tex \
-               content/master_career_history/education.tex
+               $(wildcard src/content/master_career_history/*.tex)
 
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all cv abstract resume resume-ats master-career-history resume-arcadia cover cover-arcadia clean distclean open
+.PHONY: all cv abstract resume resume-ats master-career-history resume-arcadia cover cover-arcadia profile clean distclean open
 
 all: $(PDFS)
 
@@ -53,6 +39,14 @@ master-career-history: $(ATS_OUT_DIR)/master_career_history.pdf
 resume-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf
 cover: $(OUT_DIR)/cover.pdf
 cover-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf
+
+# Preview a YAML-driven resume or CV without replacing the established PDFs.
+# Example: make profile PROFILE=healthcare-data-resume
+profile:
+	@ruby scripts/render_profile.rb "$(PROFILE)"
+	@mkdir -p "$(ATS_OUT_DIR)"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
 
 open: $(OUT_DIR)/resume.pdf
 	open "$(OUT_DIR)/resume.pdf"
@@ -78,8 +72,9 @@ $(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
 
-$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(MASTER_CAREER_HISTORY_CONTENT)
+$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(MASTER_CAREER_HISTORY_CONTENT) $(DATA_YAML) src/profiles/master-career-history.yaml scripts/render_profile.rb
 	@mkdir -p "$(ATS_OUT_DIR)"
+	@ruby scripts/render_profile.rb master-career-history
 	@echo "==> Building master career history"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
@@ -124,13 +119,7 @@ clean:
 	       $(OUT_DIR)/*.snm \
 	       $(OUT_DIR)/*.fls \
 	       $(OUT_DIR)/*.fdb_latexmk
-	@rm -f $(ATS_OUT_DIR)/*.aux \
-	       $(ATS_OUT_DIR)/*.log \
-	       $(ATS_OUT_DIR)/*.out \
-	       $(ATS_OUT_DIR)/*.toc \
-	       $(ATS_OUT_DIR)/*.synctex.gz
 
 distclean: clean
 	@echo "==> Removing PDFs from $(OUT_DIR)"
 	@rm -f $(OUT_DIR)/*.pdf
-	@rm -f $(ATS_OUT_DIR)/*.pdf

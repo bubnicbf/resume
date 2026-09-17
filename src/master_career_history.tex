@@ -7,9 +7,9 @@
 \documentclass[10pt,a4paper]{article}
 
 % ---- Path setup for the new layout ----
-% Make \input{} / \include{} look in ../content and class/packages in ../styles
+% Find shared sections under src/content.
 \makeatletter
-\def\input@path{{../content/}{../styles/}}
+\def\input@path{{content/}{styles/}}
 \makeatother
 
 \usepackage[a4paper,left=0.62in,right=0.62in,top=0.70in,bottom=0.60in]{geometry}
@@ -121,7 +121,7 @@ GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}\\
 
 \input{master_career_history/career_overview.tex}
 \input{master_career_history/skills_and_domains.tex}
-\input{master_career_history/professional_experience.tex}
+\input{../build/generated/master-career-history-experience.tex}
 \input{master_career_history/selected_independent_projects.tex}
 \input{master_career_history/professional_recognition.tex}
 \input{master_career_history/teaching_and_academic_research.tex}

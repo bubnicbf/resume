@@ -1,0 +1,15 @@
+---
+id: ibm-data-scientist
+kind: subrole
+employer: IBM
+title_tex: Data Scientist
+dates: Nov. 2015 - Sep. 2016
+tools_tex: ''
+summary_tex: ''
+source: master_career_history/professional_experience.tex:135
+achievement_ids:
+- ibm-data-scientist-01
+- ibm-data-scientist-02
+- ibm-data-scientist-03
+- ibm-data-scientist-04
+- ibm-data-scientist-05

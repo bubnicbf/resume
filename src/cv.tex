@@ -4,17 +4,17 @@
 %-------------------------------------------------------------------------------
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
-\documentclass[11pt, letterpaper]{../styles/cv}
+\documentclass[11pt, letterpaper]{styles/cv}
 
 % ---- Path setup for the new layout ----
-% Make \input{} / \include{} look in ../content and class/packages in ../styles
+% Find shared sections and the class under src/.
 \makeatletter
-\def\input@path{{../content/}{../styles/}}
+\def\input@path{{content/}{styles/}}
 \makeatother
 
 % Graphics search path (if you use images under content/)
 \usepackage{graphicx}
-\graphicspath{{../content/}{../content/assets/}}
+\graphicspath{{content/}{content/assets/}}
 
 \usepackage{changepage}
 \usepackage[none]{hyphenat}
@@ -66,7 +66,7 @@
 
 
 %-------------------------------------------------------------------------------
-% INIT (shared content—now found via ../content thanks to \input@path)
+% Shared content definitions
 %-------------------------------------------------------------------------------
 \input{accomplishments.tex}
 \input{dates.tex}
@@ -85,10 +85,9 @@
 \input{summary/sumshort.tex}
 % \input{summary/core_skills.tex}
 
-% If your folder is actually "experience", fix the next two lines accordingly:
-\input{exerience/cvexp.tex}
-\input{exerience/oex.tex}
-\input{exerience/vol.tex}
+\input{experience/cvexp.tex}
+\input{experience/oex.tex}
+\input{experience/vol.tex}
 
 % \pagebreak
 \input{summary/recognition.tex}

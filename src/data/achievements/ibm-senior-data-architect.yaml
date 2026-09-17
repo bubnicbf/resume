@@ -1,0 +1,37 @@
+---
+- id: ibm-senior-data-architect-01
+  text_tex: Served as a senior member of Data Onboarding \& Governance, integrating
+    healthcare data, enriching metadata, and configuring data models, analytics, reports,
+    and visualizations.
+- id: ibm-senior-data-architect-02
+  text_tex: Served as a subject-matter expert to project data architects and delivery,
+    analytics, and integration teams; directed configuration of the data-onboarding
+    platform and supporting infrastructure.
+- id: ibm-senior-data-architect-03
+  text_tex: Led a cross-functional team as the clinical data analyst for the 2020/2021
+    measure-updates project.
+- id: ibm-senior-data-architect-04
+  text_tex: Created an exploratory machine-learning COVID-19 prototype to surface
+    hospitalization-risk signals for retrospective analyst review.
+- id: ibm-senior-data-architect-05
+  text_tex: Developed a topic-modeling project using nearly six million semi-structured
+    provider notes.
+- id: ibm-senior-data-architect-06
+  text_tex: Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction
+    proof of concept that was being evaluated as a potential new offering.
+- id: ibm-senior-data-architect-07
+  text_tex: Architected Spark and Hadoop pipelines integrating more than 100 billion
+    structured and semi-structured clinical records, supporting four EPM applications,
+    30+ risk models, and hundreds of measures and registries.
+- id: ibm-senior-data-architect-08
+  text_tex: Led a HIPAA patient-deidentification project drawing from more than 100
+    data sources for content analytics and measures.
+- id: ibm-senior-data-architect-09
+  text_tex: Replaced static mappings with metadata-driven instruction sets across
+    approximately 200 source integrations, standardizing EDI batch schemas while enabling
+    Python/Jupyter lineage tracing and end-to-end validation gates.
+- id: ibm-senior-data-architect-10
+  text_tex: Served in an advisory capacity for development of a new data platform.
+- id: ibm-senior-data-architect-11
+  text_tex: Closed project-documentation gaps by organizing material from more than
+    100 past projects.

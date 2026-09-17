@@ -1,0 +1,28 @@
+---
+- id: adonis-01
+  text_tex: Built, documented, validated, and maintained 54 SQLMesh models that delivered
+    standardized revenue-cycle datasets for a provider whose network served 4,598
+    families across 113 locations and processed 86,388 annual authorizations.
+- id: adonis-02
+  text_tex: Implemented automated row-count, uniqueness, and not-null audits across
+    54 models, achieving a 100\% pass rate across 117+ configured audit applications
+    at final delivery.
+- id: adonis-03
+  text_tex: Diagnosed undocumented source-key versioning and implemented composite
+    business grains with surrogate keys across 10 charge and payment models, eliminating
+    duplicate-key failures.
+- id: adonis-04
+  text_tex: Authored implementation playbooks, technical handoff documentation, and
+    a QA runbook for a repeatable healthcare-data validation workflow.
+- id: adonis-05
+  text_tex: Built a reusable SQLMesh/Snowflake ingestion and transformation framework
+    using templated models, data contracts, CI checks, and promotion gates.
+- id: adonis-06
+  text_tex: Added schema-drift alerts, parity checks, reconciliation logs, deterministic
+    rerun procedures, and incident-handling guidance for UNIX-like environments.
+- id: adonis-07
+  text_tex: Packaged a lightweight operations forecasting and alerting pattern as
+    a tested Python and Docker service with GitHub Actions deployment automation.
+- id: adonis-08
+  text_tex: Standardized transformation logic across clients and translated business
+    requirements into technical specifications to improve delivery predictability.

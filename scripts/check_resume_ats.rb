@@ -38,8 +38,12 @@ profile.fetch('roles').each do |selection|
 end
 
 expect_line.call('Education')
-expect_line.call('Master of Science in Astrophysics, University of Cincinnati, 2010')
-expect_line.call('Bachelor of Fine Arts in Printmaking, Ohio University, 2004')
+education = YAML.load_file(File.join(root, 'src/data/sections/education.yaml'))
+education_by_id = education.fetch('blocks').to_h { |record| [record.fetch('id'), record] }
+profile.fetch('education').each do |id|
+  record = education_by_id.fetch(id)
+  expect_line.call("#{record.fetch('degree_tex')}, #{record.fetch('institution_tex')}, #{record.fetch('dates_tex')}")
+end
 expect_line.call('Certifications')
 expect_line.call('Certificate of Specialization in Data Science, Johns Hopkins University, 2015')
 expect_line.call('IBM Data Science Professional Certificate, IBM, 2022')

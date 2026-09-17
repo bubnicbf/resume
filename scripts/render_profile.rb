@@ -9,6 +9,7 @@ GENERATED = File.join(ROOT, 'build/generated')
 PROFILES = File.join(ROOT, 'src/profiles')
 SECTION_FIELDS = {
   'record' => %w[name_tex dates_tex description_tex],
+  'degree' => %w[degree_tex institution_tex dates_tex description_tex],
   'compactrecord' => %w[name_tex dates_tex],
   'presentation' => %w[title_tex venue_tex dates_tex description_tex],
   'subrole' => %w[title_tex dates_tex]
@@ -199,11 +200,22 @@ if kind == 'ats'
   skills = profile.fetch('skills').map do |skill|
     "\\textbf{#{skill.fetch('label_tex')}:} #{skill.fetch('text_tex')}\\par"
   end
+  education = load_yaml(File.join(DATA, 'sections', 'education.yaml'))
+  education_by_id = education.fetch('blocks').to_h { |block| [block.fetch('id'), block] }
+  education_ids = profile.fetch('education')
+  raise 'Duplicate ATS education records' unless education_ids.uniq == education_ids
+  education_lines = education_ids.map do |id|
+    record = education_by_id.fetch(id) { raise "Unknown ATS education record: #{id}" }
+    raise "ATS education record is not a degree: #{id}" unless record.fetch('kind') == 'degree'
+    "\\textbf{#{record.fetch('degree_tex')}}, #{record.fetch('institution_tex')}, #{record.fetch('dates_tex')}\\par"
+  end
   content = ["\\section{Professional Summary}", profile.fetch('summary_tex'),
              "\\section{Technical Skills}", skills.join("\n"),
              "\\section{Professional Experience}", entries.join("\n\n")].join("\n\n")
   File.write(File.join(GENERATED, "#{name}-content.tex"),
              "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{content}\n")
+  File.write(File.join(GENERATED, "#{name}-education.tex"),
+             "% Generated from src/data/sections/education.yaml and src/profiles/#{name}.yaml; do not edit.\n#{education_lines.join("\n")}\n")
   puts "Rendered #{name} (#{selections.length} role records)."
   exit
 end

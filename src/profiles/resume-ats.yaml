@@ -15,6 +15,7 @@ skills:
   - label_tex: Platforms and tools
     text_tex: SQL, Python, Snowflake, dbt, SQLMesh, AWS, Azure, Spark/Hadoop,
       Power BI
+education: [m-s-astrophysics-university-of-cincinnati, b-f-a-printmaking-ohio-university]
 roles:
   - id: hhax
     title_tex: Healthcare Data Integration Consultant

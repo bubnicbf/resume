@@ -63,7 +63,7 @@ $(OUT_DIR)/resume.pdf: $(SRC_DIR)/resume.tex $(COMMON_DEPS)
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
 	@echo "==> Wrote $(OUT_DIR)/resume.pdf"
 
-$(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
+$(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/data/sections/education.yaml src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
 	@mkdir -p "$(ATS_OUT_DIR)"
 	@ruby scripts/render_profile.rb resume-ats
 	@echo "==> Building ATS resume"

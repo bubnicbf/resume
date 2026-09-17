@@ -9,20 +9,22 @@ prefix_tex: |+
   \label{sec:education}
 
 blocks:
-- id: m-s-physics-university-of-cincinnati
-  kind: record
+- id: m-s-astrophysics-university-of-cincinnati
+  kind: degree
   leading_tex: ''
-  name_tex: M.S. Physics, University of Cincinnati
+  degree_tex: M.S. Astrophysics
+  institution_tex: University of Cincinnati
   dates_tex: Dec. 2010
-  description_tex: Astrophysics research focus. Completed the thesis \textit{Massive
+  description_tex: Completed the thesis \textit{Massive
     Stellar Clusters in the Disk of the Milky Way Galaxy}, using near-infrared photometry
     and spectroscopy to identify and characterize two dust-obscured Galactic disk
     star clusters.
   tail_tex: "\n"
 - id: b-f-a-printmaking-ohio-university
-  kind: record
+  kind: degree
   leading_tex: ''
-  name_tex: B.F.A. Printmaking, Ohio University
+  degree_tex: B.F.A. Printmaking
+  institution_tex: Ohio University
   dates_tex: Aug. 2004
   description_tex: Studio focus in intaglio, relief, and screenprint. Completed a
     senior thesis exhibition and faculty-endorsed Provost's Undergraduate Research

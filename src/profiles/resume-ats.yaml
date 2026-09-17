@@ -16,15 +16,13 @@ skills:
     text_tex: SQL, Python, Snowflake, dbt, SQLMesh, AWS, Azure, Spark/Hadoop,
       Power BI
 education: [m-s-astrophysics-university-of-cincinnati, b-f-a-printmaking-ohio-university]
+certifications: [certificate-of-specialization-data-science-johns-hopkins-universi,
+  ibm-data-science-professional-certificate]
 roles:
   - id: hhax
-    title_tex: Healthcare Data Integration Consultant
-    context_tex: Contract via Veersa Technologies
     achievements: [hhax-01, hhax-05, hhax-04, hhax-03]
     tools_tex: Snowflake, dbt, SQL/Jinja, FHIR
   - id: adonis
-    title_tex: Healthcare Revenue Cycle Data Consultant
-    context_tex: Contract via Health Data Movers
     achievements: [adonis-03, adonis-01, adonis-02, adonis-05]
     tools_tex: Snowflake, SQLMesh, SQL, AWS
   - id: growdata
@@ -48,7 +46,5 @@ roles:
   - id: ibm-data-scientist
     achievements: [ibm-data-scientist-01, ibm-data-scientist-04]
   - id: explorys
-    title_tex: Data Science Consultant
-    context_tex: Contract via Randstad USA
     achievements: [explorys-02]
     tools_tex: Hadoop/HDFS, Oracle, Jenkins, SQL

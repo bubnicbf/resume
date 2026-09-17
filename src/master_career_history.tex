@@ -35,11 +35,12 @@
   ItalicFont=lmsans10-oblique.otf,
   BoldItalicFont=lmsans10-boldoblique.otf
 ]{Latin Modern Sans}
+\input{../build/generated/contact.tex}
 \newcommand{\documentversion}{1.4}
 \newcommand{\lastupdated}{\today}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\fontsize{8}{9}\selectfont Ben Bubnick \textbar\ Master Career History}
+\fancyhead[L]{\fontsize{8}{9}\selectfont \contactname\ \textbar\ Master Career History}
 \fancyhead[R]{\fontsize{8}{9}\selectfont Version \documentversion\ \textbar\ Updated \lastupdated}
 \fancyfoot[C]{\fontsize{8}{9}\selectfont \thepage}
 \renewcommand{\headrulewidth}{0.3pt}
@@ -81,6 +82,7 @@
 \newcommand{\compactrecord}[2]{%
   \par\noindent\textbf{#1} \hfill #2\par
 }
+\newcommand{\certification}[3]{\compactrecord{#1 - #2}{#3}}
 \newcommand{\presentation}[4]{%
   \par\noindent\begin{minipage}{\linewidth}%
   \textbf{#1 - #2 - #3}\\[-1pt]
@@ -92,12 +94,9 @@
 \catcode`\;=\active
 \protected\def;{{\ATSsemicolonfont\char"003B}}
 
-{\LARGE\bfseries Ben Bubnick}\\[2pt]
+{\LARGE\bfseries\contactname}\\[2pt]
 {\large\bfseries Master Career History}\\[3pt]
-Email: \href{mailto:ben.bubnick@gmail.com}{ben.bubnick@gmail.com}\contactsep
-Phone: (216) 556-1612\\
-LinkedIn: \href{https://www.linkedin.com/in/benbubnick}{linkedin.com/in/benbubnick}\contactsep
-GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}\\
+\contactdetails\\
 \textbf{Version \documentversion} \contactsep Last updated \lastupdated
 
 \smallskip

@@ -9,7 +9,8 @@ LaTeX résumé, CV, ATS résumé, abstract, cover letter, and comprehensive mast
 - `src/styles/` and `src/fonts/`: LaTeX class, packages, and fonts.
 - `src/data/roles/`: one YAML record per professional role, imported from the master career history.
 - `src/data/achievements/`: reusable achievement statements, with stable IDs.
-- `src/data/sections/`: one YAML file per other master-history section; records and bullet items have stable IDs. Education records are also shared with the ATS résumé.
+- `src/data/contact.yaml`: shared name and contact details for the ATS résumé and master career history.
+- `src/data/sections/`: one YAML file per other master-history section; records and bullet items have stable IDs. Education and selected certification records are also shared with the ATS résumé.
 - `src/profiles/`: ordered selections of sections, records, roles, and bullet items.
 - `src/profiles/resume-ats.yaml`: the ATS résumé's summary, compact skills, role selections, and short technology lists.
 - `build/generated/`: generated LaTeX; do not edit it directly.
@@ -51,4 +52,4 @@ The established résumé/CV layouts still use hand-written sections in `src/cont
 
 ## ATS résumé default
 
-Edit `src/profiles/resume-ats.yaml` to change the summary, skills, short technology lists, selected achievement IDs, or selected education IDs. `achievement_order_from` automatically presents the selected IDs in the order of the master career history, so the ATS résumé does not need a second hand-maintained bullet order. The ATS and master career history both read degree and institution wording from `src/data/sections/education.yaml`. `src/resume_ats.tex` supplies the plain, single-column layout, contact details, and certifications. `make resume-ats` regenerates the experience and education and checks the PDF's extracted page count, section order, employer/title/date sequence, bullet count, and HSEA omission. The checker uses a generated Swift module cache under `build/generated/`.
+Edit `src/profiles/resume-ats.yaml` to change the summary, skills, short technology lists, or selected achievement, education, and certification IDs. `achievement_order_from` automatically presents the selected achievement IDs in the order of the master career history, so the ATS résumé does not need a second hand-maintained bullet order. Both documents read contact details from `src/data/contact.yaml`, role titles from `src/data/roles/`, education from `src/data/sections/education.yaml`, and certification wording from `src/data/sections/credentials_and_continuing_education.yaml`. `src/resume_ats.tex` supplies the plain, single-column layout. `make resume-ats` regenerates the experience, education, and certifications and checks the PDF's extracted page count, section order, employer/title/date sequence, bullet count, and HSEA omission. The checker uses a generated Swift module cache under `build/generated/`.

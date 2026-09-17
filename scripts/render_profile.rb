@@ -10,6 +10,7 @@ PROFILES = File.join(ROOT, 'src/profiles')
 SECTION_FIELDS = {
   'record' => %w[name_tex dates_tex description_tex],
   'degree' => %w[degree_tex institution_tex dates_tex description_tex],
+  'certification' => %w[credential_tex issuer_tex dates_tex],
   'compactrecord' => %w[name_tex dates_tex],
   'presentation' => %w[title_tex venue_tex dates_tex description_tex],
   'subrole' => %w[title_tex dates_tex]
@@ -65,10 +66,8 @@ end
 
 def ats_entry(role, selection)
   raise "ATS profile requires individual roles: #{role['id']}" if role.fetch('kind') == 'company'
-  title = selection.fetch('title_tex', role.fetch('title_tex'))
-  lines = ["\\atsrole#{braces(role.fetch('employer'))}#{braces(title)}#{braces(role.fetch('dates'))}"]
+  lines = ["\\atsrole#{braces(role.fetch('employer'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}"]
   details = []
-  details << selection.fetch('context_tex') if selection.key?('context_tex')
   details << "Technologies: #{selection.fetch('tools_tex')}" if selection.key?('tools_tex')
   lines << "\\textit{#{details.join('\\contactsep ')}}\\par" unless details.empty?
   texts = selected_items(role, selection)
@@ -176,6 +175,17 @@ if kind == 'ats'
 end
 
 FileUtils.mkdir_p(GENERATED)
+contact = load_yaml(File.join(DATA, 'contact.yaml'))
+contact_tex = <<~TEX
+  % Generated from src/data/contact.yaml; do not edit.
+  \\newcommand{\\contactname}{#{contact.fetch('name_tex')}}
+  \\newcommand{\\contactdetails}{%
+  Email: \\href{mailto:#{contact.fetch('email')}}{#{contact.fetch('email')}}\\contactsep
+  Phone: #{contact.fetch('phone_tex')}\\\\
+  LinkedIn: \\href{#{contact.fetch('linkedin_url')}}{#{contact.fetch('linkedin_display_tex')}}\\contactsep
+  GitHub: \\href{#{contact.fetch('github_url')}}{#{contact.fetch('github_display_tex')}}}
+TEX
+File.write(File.join(GENERATED, 'contact.tex'), contact_tex)
 entries = selections.map do |selection|
   selection = { 'id' => selection } if selection.is_a?(String)
   id = selection.fetch('id')
@@ -209,6 +219,15 @@ if kind == 'ats'
     raise "ATS education record is not a degree: #{id}" unless record.fetch('kind') == 'degree'
     "\\textbf{#{record.fetch('degree_tex')}}, #{record.fetch('institution_tex')}, #{record.fetch('dates_tex')}\\par"
   end
+  credentials = load_yaml(File.join(DATA, 'sections', 'credentials_and_continuing_education.yaml'))
+  credentials_by_id = credentials.fetch('blocks').to_h { |block| [block.fetch('id'), block] }
+  certification_ids = profile.fetch('certifications')
+  raise 'Duplicate ATS certifications' unless certification_ids.uniq == certification_ids
+  certification_lines = certification_ids.map do |id|
+    record = credentials_by_id.fetch(id) { raise "Unknown ATS certification: #{id}" }
+    raise "ATS credential is not a certification: #{id}" unless record.fetch('kind') == 'certification'
+    "\\textbf{#{record.fetch('credential_tex')}}, #{record.fetch('issuer_tex')}, #{record.fetch('dates_tex')}\\par"
+  end
   content = ["\\section{Professional Summary}", profile.fetch('summary_tex'),
              "\\section{Technical Skills}", skills.join("\n"),
              "\\section{Professional Experience}", entries.join("\n\n")].join("\n\n")
@@ -216,6 +235,8 @@ if kind == 'ats'
              "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{content}\n")
   File.write(File.join(GENERATED, "#{name}-education.tex"),
              "% Generated from src/data/sections/education.yaml and src/profiles/#{name}.yaml; do not edit.\n#{education_lines.join("\n")}\n")
+  File.write(File.join(GENERATED, "#{name}-certifications.tex"),
+             "% Generated from src/data/sections/credentials_and_continuing_education.yaml and src/profiles/#{name}.yaml; do not edit.\n#{certification_lines.join("\n")}\n")
   puts "Rendered #{name} (#{selections.length} role records)."
   exit
 end

@@ -24,7 +24,7 @@ contact = YAML.load_file(File.join(root, 'src/data/contact.yaml'))
 end
 footer_date = Date.today.strftime('%B %-d, %Y').upcase
 (1..page_count.delete_prefix('PAGE_COUNT=').to_i).each do |page|
-  footer = "#{footer_date} #{contact.fetch('name_tex')} · Résumé #{page}"
+  footer = "#{footer_date} #{contact.fetch('name_tex')} #{page}"
   abort "Missing or duplicate footer on page #{page}" unless lines.count(footer) == 1
 end
 

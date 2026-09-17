@@ -9,9 +9,7 @@
 *.fdb_latexmk
 
 # PDF outputs
-src/*.pdf
 build/generated/
-build/pdf/*.pdf
 
 # OS-specific
 .DS_Store

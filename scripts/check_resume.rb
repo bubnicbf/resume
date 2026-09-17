@@ -1,13 +1,13 @@
 #!/usr/bin/env ruby
-# Check the built ATS PDF's extracted reading order against its YAML profile.
+# Check the built résumé PDF's extracted reading order against its YAML profile.
 require 'yaml'
 require 'open3'
 require 'fileutils'
 require 'date'
 
 root = File.expand_path('..', __dir__)
-pdf = File.join(root, 'build/pdf/resume_ats.pdf')
-profile = YAML.load_file(File.join(root, 'src/profiles/resume-ats.yaml'))
+pdf = File.join(root, 'build/pdf/resume.pdf')
+profile = YAML.load_file(File.join(root, 'src/profiles/resume.yaml'))
 cache = File.join(root, 'build/generated/swift-cache')
 FileUtils.mkdir_p(cache)
 env = { 'CLANG_MODULE_CACHE_PATH' => cache, 'SWIFT_MODULECACHE_PATH' => cache }
@@ -15,8 +15,8 @@ output, errors, status = Open3.capture3(env, 'swift', File.join(root, 'scripts/e
 abort "PDF text extraction failed: #{errors}" unless status.success?
 
 page_count, *lines = output.lines.map(&:strip)
-abort "ATS resume must be two pages, got #{page_count}" unless page_count == 'PAGE_COUNT=2'
-abort 'HSEA must not appear in ATS resume' if output.include?('HSEA')
+abort "Resume must be two pages, got #{page_count}" unless page_count == 'PAGE_COUNT=2'
+abort 'HSEA must not appear in resume' if output.include?('HSEA')
 abort 'PDF contains mis-mapped semicolon glyph' if output.include?("\u037E")
 contact = YAML.load_file(File.join(root, 'src/data/contact.yaml'))
 %w[name_tex email phone_tex linkedin_display_tex github_display_tex].each do |field|
@@ -80,4 +80,4 @@ expected_bullets = profile.fetch('roles').sum { |selection| selection.fetch('ach
 actual_bullets = lines.count { |line| line.start_with?('•') }
 abort "Expected #{expected_bullets} bullets, extracted #{actual_bullets}" unless actual_bullets == expected_bullets
 
-puts "Verified ATS PDF: 2 pages, #{profile.fetch('roles').length} ordered roles, #{actual_bullets} bullets, clean extraction."
+puts "Verified resume PDF: 2 pages, #{profile.fetch('roles').length} ordered roles, #{actual_bullets} bullets, clean extraction."

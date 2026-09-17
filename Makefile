@@ -7,24 +7,24 @@ DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all resume-ats master-career-history clean distclean open
+.PHONY: all resume master-career-history clean distclean open
 
-all: resume-ats master-career-history
+all: resume master-career-history
 
-resume-ats: $(OUT_DIR)/resume_ats.pdf
+resume: $(OUT_DIR)/resume.pdf
 master-career-history: $(OUT_DIR)/master_career_history.pdf
 
-open: $(OUT_DIR)/resume_ats.pdf
-	open "$(OUT_DIR)/resume_ats.pdf"
+open: $(OUT_DIR)/resume.pdf
+	open "$(OUT_DIR)/resume.pdf"
 
-$(OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
+$(OUT_DIR)/resume.pdf: $(SRC_DIR)/resume.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/resume.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume.rb scripts/extract_pdf_text.swift
 	@mkdir -p "$(OUT_DIR)"
-	@ruby scripts/render_profile.rb resume-ats
-	@echo "==> Building ATS resume"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume_ats.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume_ats.tex"
-	@ruby scripts/check_resume_ats.rb
-	@echo "==> Wrote $(OUT_DIR)/resume_ats.pdf"
+	@ruby scripts/render_profile.rb resume
+	@echo "==> Building resume"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
+	@ruby scripts/check_resume.rb
+	@echo "==> Wrote $(OUT_DIR)/resume.pdf"
 
 $(OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/data/contact.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb
 	@mkdir -p "$(OUT_DIR)"

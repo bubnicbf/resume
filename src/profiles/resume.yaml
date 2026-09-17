@@ -1,3 +1,4 @@
+# Default résumé profile; rendered with the parser-conscious ATS layout.
 document: ats
 achievement_order_from: master-career-history
 summary_tex: >-

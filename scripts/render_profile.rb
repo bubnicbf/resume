@@ -23,12 +23,19 @@ def braces(value)
   "{#{value}}"
 end
 
+def apply_order(ids, order, context)
+  return ids unless order
+  raise "#{context} order must list each selected ID exactly once" unless order.length == ids.length && order.sort == ids.sort
+  order
+end
+
 def selected_items(role, selection)
   records = load_yaml(File.join(DATA, 'achievements', "#{role.fetch('id')}.yaml"))
   by_id = records.to_h { |record| [record.fetch('id'), record.fetch('text_tex')] }
   ids = selection.fetch('achievements', 'all')
   ids = role.fetch('achievement_ids') if ids == 'all'
   raise "Duplicate achievements in #{role['id']}" unless ids.uniq == ids
+  ids = apply_order(ids, selection['achievement_order'], role['id'])
   ids.map do |id|
     raise "#{id} does not belong to #{role['id']}" unless role.fetch('achievement_ids').include?(id)
     by_id.fetch(id) { raise "Missing achievement #{id}" }
@@ -87,6 +94,7 @@ def render_block(block, selection)
   selected = selection.fetch('items', 'all')
   selected = items.map { |item| item.fetch('id') } if selected == 'all'
   raise "Duplicate items in #{block['id']}" unless selected.uniq == selected
+  selected = apply_order(selected, selection['item_order'], block['id'])
   by_id = items.to_h { |item| [item.fetch('id'), item] }
   text += block.fetch('before_items_tex')
   unless selected.empty?
@@ -112,10 +120,13 @@ def render_section(selection)
   chosen = chosen.map { |entry| entry.is_a?(String) ? { 'id' => entry } : entry }
   ids = chosen.map { |entry| entry.fetch('id') }
   raise "Duplicate blocks in #{id}" unless ids.uniq == ids
+  item_orders = selection.fetch('item_order', {})
+  raise "Unknown item-order block in #{id}" unless (item_orders.keys - ids).empty?
   by_id = blocks.to_h { |block| [block.fetch('id'), block] }
   section.fetch('prefix_tex') + chosen.map do |entry|
     block = by_id.fetch(entry.fetch('id')) { raise "Unknown block #{entry['id']} in #{id}" }
-    render_block(block, entry)
+    order = item_orders[entry.fetch('id')]
+    render_block(block, order ? entry.merge('item_order' => order) : entry)
   end.join + section.fetch('suffix_tex')
 end
 

@@ -44,26 +44,6 @@ def selected_items(role, selection)
   end
 end
 
-def cv_entry(role, selection)
-  texts = selected_items(role, selection)
-  tools = selection.fetch('show_tools', false) ? role.fetch('tools_tex') : ''
-  case role.fetch('kind')
-  when 'company'
-    lines = ["\\cvshortheader#{braces(role.fetch('employer'))}#{braces(tools)}"]
-    lines << "\\cvcompanydescription#{braces(role.fetch('summary_tex'))}" unless role.fetch('summary_tex').empty?
-    lines
-  when 'subrole'
-    items = texts.map { |text| "    \\item #{braces(text)}" }.join("\n")
-    ["\\cvsubentryitems#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}{}{\n#{items}\n}"]
-  else
-    body = []
-    summary = role.fetch('summary_tex')
-    body << "\\begin{cvparagraph}#{summary}\\end{cvparagraph}" unless summary.empty?
-    body << "\\begin{cvitems}\n#{texts.map { |text| "  \\item #{braces(text)}" }.join("\n")}\n\\end{cvitems}" unless texts.empty?
-    ["\\cventry#{braces(role.fetch('employer'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}#{braces(tools)}#{braces(body.join("\n"))}"]
-  end
-end
-
 def ats_entry(role, selection)
   raise "ATS profile requires individual roles: #{role['id']}" if role.fetch('kind') == 'company'
   raise "ATS technologies must come from the role record: #{role['id']}" if selection.key?('tools_tex')
@@ -158,7 +138,7 @@ name = ARGV.fetch(0) { abort 'Usage: ruby scripts/render_profile.rb PROFILE_NAME
 abort 'Profile name must use lowercase letters, numbers and hyphens' unless name.match?(/\A[a-z0-9-]+\z/)
 profile = load_yaml(File.join(PROFILES, "#{name}.yaml"))
 kind = profile.fetch('document')
-abort "Unsupported document: #{kind}" unless %w[resume cv master ats].include?(kind)
+abort "Unsupported document: #{kind}" unless %w[master ats].include?(kind)
 selections = profile.fetch('roles', [])
 if kind == 'master'
   section_ids = profile.fetch('sections').map { |selection| selection.is_a?(String) ? selection : selection.fetch('id') }
@@ -205,11 +185,7 @@ entries = selections.map do |selection|
     order = master_orders.fetch(id) { raise "No master achievement order for #{id}" }
     selection = selection.merge('achievement_order' => order.select { |achievement_id| selected.include?(achievement_id) })
   end
-  lines = case kind
-          when 'master' then master_entry(role, selection)
-          when 'ats' then ats_entry(role, selection)
-          else cv_entry(role, selection)
-          end
+  lines = kind == 'master' ? master_entry(role, selection) : ats_entry(role, selection)
   lines.join("\n")
 end
 
@@ -249,50 +225,28 @@ if kind == 'ats'
 end
 
 fragment = File.join(GENERATED, "#{name}-experience.tex")
-prefix = kind == 'master' ? "\\section{Professional Experience}\n\\phantomsection\n\\label{sec:professional}\n" : "\\cvsection{Experience}\n\\begin{cventries}\n"
-suffix = kind == 'master' ? '' : "\\end{cventries}\n"
-File.write(fragment, "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{prefix}#{entries.join("\n\n")}\n#{suffix}")
+prefix = "\\section{Professional Experience}\n\\phantomsection\n\\label{sec:professional}\n"
+File.write(fragment, "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{prefix}#{entries.join("\n\n")}\n")
 
-if kind == 'master'
-  sections = profile.fetch('sections')
-  section_ids = sections.map { |selection| selection.is_a?(String) ? selection : selection.fetch('id') }
-  rendered_sections = sections.map do |selection|
-    id = selection.is_a?(String) ? selection : selection.fetch('id')
-    id == 'professional_experience' ? File.read(fragment) : render_section(selection)
-  end
-  File.write(File.join(GENERATED, "#{name}-sections.tex"), rendered_sections.join)
-  toc_entries = sections.map do |selection|
-    id = selection.is_a?(String) ? selection : selection.fetch('id')
-    if id == 'professional_experience'
-      ['sec:professional', 'Professional Experience']
-    else
-      section = load_yaml(File.join(DATA, 'sections', "#{id}.yaml"))
-      [section.fetch('label'), section.fetch('title_tex')]
-    end
-  end
-  toc = "{\\small\\textbf{Contents:}\n" + toc_entries.map { |label, title| "\\contentsentry{#{label}}{#{title}}" }.join(" \\contactsep\n") + "}\n"
-  File.write(File.join(GENERATED, "#{name}-toc.tex"), toc)
-  template = File.read(File.join(ROOT, 'src/master_career_history.tex'))
-  template = template.sub('master-career-history-toc.tex', "#{name}-toc.tex")
-  template = template.sub('master-career-history-sections.tex', "#{name}-sections.tex")
-  File.write(File.join(GENERATED, "#{name}.tex"), "% Generated from src/master_career_history.tex; do not edit.\n#{template}")
+sections = profile.fetch('sections')
+rendered_sections = sections.map do |selection|
+  id = selection.is_a?(String) ? selection : selection.fetch('id')
+  id == 'professional_experience' ? File.read(fragment) : render_section(selection)
 end
-
-if kind != 'master'
-  template = File.read(File.join(ROOT, 'src', "#{kind}.tex"))
-  old_input = kind == 'resume' ? '\\input{experience/resexp.tex}' : '\\input{experience/cvexp.tex}'
-  raise "Template does not contain #{old_input}" unless template.include?(old_input)
-  template = template.sub(old_input, "\\input{../build/generated/#{name}-experience.tex}")
-  if profile.key?('headline_tex')
-    raise 'Missing document start' unless template.include?('\\begin{document}')
-    template = template.sub('\\begin{document}', "\\position{#{profile.fetch('headline_tex')}}\n\\begin{document}")
+File.write(File.join(GENERATED, "#{name}-sections.tex"), rendered_sections.join)
+toc_entries = sections.map do |selection|
+  id = selection.is_a?(String) ? selection : selection.fetch('id')
+  if id == 'professional_experience'
+    ['sec:professional', 'Professional Experience']
+  else
+    section = load_yaml(File.join(DATA, 'sections', "#{id}.yaml"))
+    [section.fetch('label'), section.fetch('title_tex')]
   end
-  if profile.key?('summary_tex')
-    original_summary = '\\input{summary/sumshort.tex}'
-    raise "Template does not contain #{original_summary}" unless template.include?(original_summary)
-    summary = "\\cvsection{Summary}\n\\begin{cvcenterlist}\n\\cvparagraph{#{profile.fetch('summary_tex')}}\n\\end{cvcenterlist}"
-    template = template.sub(original_summary, summary)
-  end
-  File.write(File.join(GENERATED, "#{name}.tex"), "% Generated from src/#{kind}.tex; do not edit.\n#{template}")
 end
+toc = "{\\small\\textbf{Contents:}\n" + toc_entries.map { |label, title| "\\contentsentry{#{label}}{#{title}}" }.join(" \\contactsep\n") + "}\n"
+File.write(File.join(GENERATED, "#{name}-toc.tex"), toc)
+template = File.read(File.join(ROOT, 'src/master_career_history.tex'))
+template = template.sub('master-career-history-toc.tex', "#{name}-toc.tex")
+template = template.sub('master-career-history-sections.tex', "#{name}-sections.tex")
+File.write(File.join(GENERATED, "#{name}.tex"), "% Generated from src/master_career_history.tex; do not edit.\n#{template}")
 puts "Rendered #{name} (#{selections.length} role records)."

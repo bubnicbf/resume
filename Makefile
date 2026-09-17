@@ -3,7 +3,7 @@ SRC_DIR  := src
 OUT_DIR  := build/pdf
 ATS_OUT_DIR := $(OUT_DIR)
 
-DOCS     := cv abstract resume cover
+DOCS     := abstract cover
 PDFS     := $(DOCS:%=$(OUT_DIR)/%.pdf)
 
 CONTENT_TEX := $(wildcard src/content/*.tex) \
@@ -18,50 +18,34 @@ STYLE_FILES := $(wildcard src/styles/*.cls) \
 SRC_FILES := $(wildcard src/*.tex)
 ROLE_DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
 DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
-PROFILE ?= healthcare-data-resume
+PROFILE ?= selected-career-history
 
 COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
 
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all cv abstract resume resume-ats master-career-history resume-arcadia cover cover-arcadia profile clean distclean open
+.PHONY: all abstract resume-ats master-career-history resume-arcadia cover cover-arcadia profile clean distclean open
 
-all: $(PDFS)
+all: $(PDFS) resume-ats
 
-cv: $(OUT_DIR)/cv.pdf
 abstract: $(OUT_DIR)/abstract.pdf
-resume: $(OUT_DIR)/resume.pdf
 resume-ats: $(ATS_OUT_DIR)/resume_ats.pdf
 master-career-history: $(ATS_OUT_DIR)/master_career_history.pdf
 resume-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf
 cover: $(OUT_DIR)/cover.pdf
 cover-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf
 
-# Preview a YAML-driven resume or CV without replacing the established PDFs.
-# Example: make profile PROFILE=healthcare-data-resume
+# Preview a YAML-driven career history without replacing the main PDF.
+# Example: make profile PROFILE=selected-career-history
 profile:
 	@ruby scripts/render_profile.rb "$(PROFILE)"
 	@mkdir -p "$(ATS_OUT_DIR)"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
 
-open: $(OUT_DIR)/resume.pdf
-	open "$(OUT_DIR)/resume.pdf"
-
-$(OUT_DIR)/cv.pdf: $(SRC_DIR)/cv.tex $(COMMON_DEPS)
-	@mkdir -p "$(OUT_DIR)"
-	@echo "==> Building cv"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "cv.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "cv.tex"
-	@echo "==> Wrote $(OUT_DIR)/cv.pdf"
-
-$(OUT_DIR)/resume.pdf: $(SRC_DIR)/resume.tex $(COMMON_DEPS)
-	@mkdir -p "$(OUT_DIR)"
-	@echo "==> Building resume"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
-	@echo "==> Wrote $(OUT_DIR)/resume.pdf"
+open: $(ATS_OUT_DIR)/resume_ats.pdf
+	open "$(ATS_OUT_DIR)/resume_ats.pdf"
 
 $(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
 	@mkdir -p "$(ATS_OUT_DIR)"

@@ -1,0 +1,21 @@
+---
+id: growdata
+kind: role
+employer: GrowData Analytics
+title_tex: Independent Data Automation and Analytics Consultant
+dates: Sep. 2024 - Oct. 2025
+tools_tex: Python, Ruby, RubyLLM, RSpec, RuboCop, Tesseract OCR, LLM APIs, Docker,
+  AWS, GitHub Actions
+summary_tex: Built and operated an independent consultancy focused on converting semi-structured
+  documents into validated, auditable data products.
+source: master_career_history/professional_experience.tex:20
+achievement_ids:
+- growdata-01
+- growdata-02
+- growdata-03
+- growdata-04
+- growdata-05
+- growdata-06
+- growdata-07
+- growdata-08
+- growdata-09

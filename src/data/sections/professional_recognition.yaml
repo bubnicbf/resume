@@ -1,0 +1,104 @@
+---
+id: professional_recognition
+title_tex: Professional Recognition
+label: sec:recognition
+source: src/content/master_career_history/professional_recognition.tex
+prefix_tex: |+
+  \section{Professional Recognition}
+  \phantomsection
+  \label{sec:recognition}
+
+blocks:
+- id: special-recognition-health-data-movers-client-delivery
+  kind: record
+  leading_tex: ''
+  name_tex: Special Recognition, Health Data Movers - Client Delivery
+  dates_tex: '2025'
+  description_tex: Recognized for diagnosing undocumented source-key versioning in
+    a revenue-cycle integration and implementing composite business grains with deterministic
+    surrogate keys across 10 charge and payment models, eliminating duplicate-key
+    failures and stabilizing client delivery.
+  tail_tex: "\n"
+- id: arkos-health-bi-star
+  kind: record
+  leading_tex: ''
+  name_tex: Arkos Health BI Star
+  dates_tex: '2023'
+  description_tex: Internal Business Intelligence recognition received during a period
+    marked by establishing the team's GitHub workflow, delivering 27 BI reports, creating
+    the Arkos Power BI theme and visual standards, and strengthening PHI deidentification
+    and analytics documentation supporting value-based-care operations.
+  tail_tex: "\n"
+- id: manager-recognition-for-transition-leadership-merative-systems-mi
+  kind: record
+  leading_tex: ''
+  name_tex: Manager Recognition for Transition Leadership, Merative - Systems Migration
+  dates_tex: '2022'
+  description_tex: 'Recognized by management for transition leadership while assuring
+    the HDFS-to-Azure platform migration: built a seven-layer Python and SQL acceptance
+    suite, validated Azure Data Factory, Blob Storage, and Synapse workflows, and
+    led HIPAA-compliant deidentification testing across data representing approximately
+    300 million patient lives, reaching sign-off with zero unresolved discrepancies.'
+  tail_tex: "\n"
+- id: ibm-champion-learner
+  kind: record
+  leading_tex: ''
+  name_tex: IBM Champion Learner
+  dates_tex: 2016 - 2022
+  description_tex: Progressed from Bronze in 2016 to Silver in 2017, then earned Gold
+    annually from 2018 through 2022 through IBM Your Learning continuing education,
+    completing 1,477 learning hours and earning 43 credentials. Gold recognition required
+    at least 200 annual learning hours and three new badges or certifications.
+  tail_tex: "\n"
+- id: lab-services-award-ibm-cross-team-delivery-coordination
+  kind: record
+  leading_tex: ''
+  name_tex: Lab Services Award, IBM - Cross-Team Delivery Coordination
+  dates_tex: '2018'
+  description_tex: Recognized for leading a multi-organization healthcare integration
+    spanning more than 70 EHR sources, implementing provider-scoped patient filtering
+    to enforce data-sharing rules, and coordinating engineering and delivery teams
+    to meet client commitments.
+  tail_tex: "\n"
+- id: eminence-and-excellence-award-ibm-data-curation-tool-development
+  kind: record
+  leading_tex: ''
+  name_tex: Eminence and Excellence Award, IBM - Data-Curation Tool Development
+  dates_tex: '2017'
+  description_tex: Recognized for engineering an Apache Pig pipeline that parsed HL7
+    v2 and v3 data for approximately 30 internal users, replacing a Mirth-based workflow
+    and eliminating \$30,000 in annual vendor costs.
+  tail_tex: "\n"
+- id: color-lab-automation-award-ppg-industries-expanded-reporting
+  kind: record
+  leading_tex: ''
+  name_tex: Color Lab Automation Award, PPG Industries - Expanded Reporting
+  dates_tex: '2012'
+  description_tex: Recognized as part of the Color R\&D team supporting PPG's new
+    computer-controlled automotive-refinish color-matching laboratory in Cleveland;
+    expanded automated data collection and analysis reporting used to evaluate pigments
+    and increase formulation throughput, precision, and operational efficiency.
+  tail_tex: "\n"
+- id: mary-j-hanna-research-fellowship-university-of-cincinnati
+  kind: record
+  leading_tex: ''
+  name_tex: Mary J. Hanna Research Fellowship, University of Cincinnati
+  dates_tex: '2010'
+  description_tex: Department of Physics fellowship providing financial support for
+    completion of M.S. research using near-infrared photometry and spectroscopy to
+    identify and characterize two dust-obscured Galactic disk star clusters.
+  tail_tex: "\n"
+- id: academic-scholarships-and-honors
+  kind: record
+  leading_tex: ''
+  name_tex: Academic Scholarships and Honors
+  dates_tex: 2000 - 2010
+  description_tex: Received University Graduate Scholarships supporting physics study
+    from 2008 to 2010; earned University of Cincinnati Dean's List recognition from
+    2005 to 2007; received Ohio University's faculty-endorsed Provost's Undergraduate
+    Research Fund grant for the 2003 low-toxic photo-etch project and earned Dean's
+    List recognition from 2002 to 2004; received the Ohio Proficiency Scholarship
+    in 2000 after passing all five sections of the state's twelfth-grade proficiency
+    examination.
+  tail_tex: "\n"
+suffix_tex: ''

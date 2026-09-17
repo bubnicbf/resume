@@ -9,7 +9,7 @@
 *.fdb_latexmk
 
 # PDF outputs
-src/*.pdf
+build/generated/
 
 # OS-specific
 .DS_Store
@@ -22,3 +22,5 @@ Thumbs.db
 cover.pdf
 cover.tex
 private/
+proofs/
+tmp/

@@ -6,12 +6,6 @@
 
 \documentclass[10pt,a4paper]{article}
 
-% ---- Path setup for the new layout ----
-% Make \input{} / \include{} look in ../content and class/packages in ../styles
-\makeatletter
-\def\input@path{{../content/}{../styles/}}
-\makeatother
-
 \usepackage[a4paper,left=0.62in,right=0.62in,top=0.70in,bottom=0.60in]{geometry}
 \usepackage{enumitem}
 \usepackage{fontspec}
@@ -35,11 +29,12 @@
   ItalicFont=lmsans10-oblique.otf,
   BoldItalicFont=lmsans10-boldoblique.otf
 ]{Latin Modern Sans}
-\newcommand{\documentversion}{1.3}
+\input{../build/generated/contact.tex}
+\newcommand{\documentversion}{1.4}
 \newcommand{\lastupdated}{\today}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\fontsize{8}{9}\selectfont Ben Bubnick \textbar\ Master Career History}
+\fancyhead[L]{\fontsize{8}{9}\selectfont \contactname\ \textbar\ Master Career History}
 \fancyhead[R]{\fontsize{8}{9}\selectfont Version \documentversion\ \textbar\ Updated \lastupdated}
 \fancyfoot[C]{\fontsize{8}{9}\selectfont \thepage}
 \renewcommand{\headrulewidth}{0.3pt}
@@ -77,9 +72,11 @@
   #3
   \end{minipage}\par
 }
+\newcommand{\degree}[4]{\record{#1, #2}{#3}{#4}}
 \newcommand{\compactrecord}[2]{%
   \par\noindent\textbf{#1} \hfill #2\par
 }
+\newcommand{\certification}[3]{\compactrecord{#1 - #2}{#3}}
 \newcommand{\presentation}[4]{%
   \par\noindent\begin{minipage}{\linewidth}%
   \textbf{#1 - #2 - #3}\\[-1pt]
@@ -91,50 +88,14 @@
 \catcode`\;=\active
 \protected\def;{{\ATSsemicolonfont\char"003B}}
 
-{\LARGE\bfseries Ben Bubnick}\\[2pt]
+{\LARGE\bfseries\contactname}\\[2pt]
 {\large\bfseries Master Career History}\\[3pt]
-Email: \href{mailto:ben.bubnick@gmail.com}{ben.bubnick@gmail.com}\contactsep
-Phone: (216) 556-1612\\
-LinkedIn: \href{https://www.linkedin.com/in/benbubnick}{linkedin.com/in/benbubnick}\contactsep
-GitHub: \href{https://github.com/bubnicbf}{github.com/bubnicbf}\\
+\contactdetails\\
 \textbf{Version \documentversion} \contactsep Last updated \lastupdated
 
 \smallskip
-{\small\textbf{Contents:}
-\contentsentry{sec:profile}{Career Overview} \contactsep
-\contentsentry{sec:skills_and_domains}{Skills and Domains} \contactsep
-\contentsentry{sec:professional}{Professional Experience} \contactsep
-\contentsentry{sec:outputs}{Selected Independent Projects} \contactsep
-\contentsentry{sec:recognition}{Professional Recognition} \contactsep
-\contentsentry{sec:teaching}{Teaching and Academic Research} \contactsep
-\contentsentry{sec:publications_and_research_outputs}{Publications and Research Outputs} \contactsep
-\contentsentry{sec:speaking_engagements}{Speaking Engagements} \contactsep
-\contentsentry{sec:creative_and_visual_arts}{Creative and Visual Arts} \contactsep
-\contentsentry{sec:volunteer_and_community_experience}{Volunteer and Community Experience} \contactsep
-\contentsentry{sec:leadership_memberships_and_activities}{Leadership, Memberships, and Activities} \contactsep
-\contentsentry{sec:academic_services}{Academic Services} \contactsep
-\contentsentry{sec:additional}{Property Operations and Manual Labor} \contactsep
-\contentsentry{sec:sales_and_customer_service}{Sales and Customer Service} \contactsep
-\contentsentry{sec:food_service_and_hospitality}{Food Service and Hospitality} \contactsep
-\contentsentry{sec:credentials_and_continuing_education}{Credentials and Continuing Education} \contactsep
-\contentsentry{sec:education}{Education}}
+\input{../build/generated/master-career-history-toc.tex}
 
-\input{master_career_history/career_overview.tex}
-\input{master_career_history/skills_and_domains.tex}
-\input{master_career_history/professional_experience.tex}
-\input{master_career_history/selected_independent_projects.tex}
-\input{master_career_history/professional_recognition.tex}
-\input{master_career_history/teaching_and_academic_research.tex}
-\input{master_career_history/publications_and_research_outputs.tex}
-\input{master_career_history/speaking_engagements.tex}
-\input{master_career_history/creative_and_visual_arts.tex}
-\input{master_career_history/volunteer_and_community_experience.tex}
-\input{master_career_history/leadership_memberships_and_activities.tex}
-\input{master_career_history/academic_services.tex}
-\input{master_career_history/property_operations_and_manual_labor.tex}
-\input{master_career_history/sales_and_customer_service.tex}
-\input{master_career_history/food_service_and_hospitality.tex}
-\input{master_career_history/credentials_and_continuing_education.tex}
-\input{master_career_history/education.tex}
+\input{../build/generated/master-career-history-sections.tex}
 
 \end{document}

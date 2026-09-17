@@ -1,0 +1,152 @@
+---
+id: academic_services
+title_tex: Academic Services
+label: sec:academic_services
+source: src/content/master_career_history/academic_services.tex
+prefix_tex: |+
+  \section{Academic Services}
+  \phantomsection
+  \label{sec:academic_services}
+
+blocks:
+- id: huntington-learning-center
+  kind: record
+  leading_tex: ''
+  name_tex: Huntington Learning Center
+  dates_tex: Feb. 2012 - Aug. 2013
+  description_tex: "\\textbf{Math/Science Exam Prep Teacher} - Provided individualized
+    tutoring and test preparation, specializing in ACT and SAT exams while also supporting
+    students in math, science, and other academic areas."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: huntington-learning-center-01
+    prefix_tex: "  \\item "
+    text_tex: Taught exam content and test-taking strategies through targeted practice,
+      helping students strengthen subject knowledge, pacing, and confidence for the
+      ACT and SAT.
+    ending_tex: "\n"
+  - id: huntington-learning-center-02
+    prefix_tex: "  \\item "
+    text_tex: Adapted instruction to individual learning needs across math, science,
+      and additional coursework beyond college-entrance exam preparation.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: university-of-cincinnati-geology-math-physics-library
+  kind: record
+  leading_tex: ''
+  name_tex: University of Cincinnati Geology Math Physics Library
+  dates_tex: Mar. 2006 - Sep. 2008
+  description_tex: "\\textbf{Student Librarian} - Supported research and collection
+    operations for a specialized university library."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: university-of-cincinnati-geology-math-physics-library-01
+    prefix_tex: "  \\item "
+    text_tex: Assisted students, faculty, and other patrons with research and reference
+      needs and helped locate relevant materials.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-geology-math-physics-library-02
+    prefix_tex: "  \\item "
+    text_tex: Maintained Library of Congress-classified collections, conducted inventory,
+      and investigated missing items.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: university-of-cincinnati-learning-communities-program
+  kind: record
+  leading_tex: ''
+  name_tex: University of Cincinnati Learning Communities Program
+  dates_tex: Jun. 2006 - Aug. 2008
+  description_tex: "\\textbf{Peer Leader} - Facilitated a learning community for approximately
+    25 first-year students co-enrolled in multiple courses, supporting their academic,
+    social, and professional transition to university life."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: university-of-cincinnati-learning-communities-program-01
+    prefix_tex: "  \\item "
+    text_tex: Prepared and facilitated twice-weekly meetings on course assignments,
+      study strategies, time management, academic expectations, campus resources,
+      and first-year transition needs.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-learning-communities-program-02
+    prefix_tex: "  \\item "
+    text_tex: Provided individual and small-group mentoring, helping students form
+      study networks, navigate university systems, and connect with faculty, advisers,
+      and academic-support services.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-learning-communities-program-03
+    prefix_tex: "  \\item "
+    text_tex: Planned community-building activities and coordinated with faculty,
+      advisers, program staff, and campus organizations to strengthen belonging, peer
+      accountability, and academic engagement.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: private-tutoring
+  kind: record
+  leading_tex: ''
+  name_tex: Private Tutoring
+  dates_tex: Jun. 2006 - Aug. 2007
+  description_tex: "\\textbf{Private Tutor} - Provided sustained one-on-one instruction
+    to a student completing the calculus-based introductory physics sequence, PHYS
+    201--203."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: private-tutoring-01
+    prefix_tex: "  \\item "
+    text_tex: Adapted short lectures, demonstrations, and representative worked problems
+      to the student's individual learning needs and progress across the three-course
+      sequence.
+    ending_tex: "\n"
+  - id: private-tutoring-02
+    prefix_tex: "  \\item "
+    text_tex: Taught a repeatable problem-solving framework built around diagrams,
+      governing physical principles, dimensional analysis, estimation, and interpretation
+      of calculated results.
+    ending_tex: "\n"
+  - id: private-tutoring-03
+    prefix_tex: "  \\item "
+    text_tex: Diagnosed misconceptions through guided questioning and targeted practice,
+      reinforcing difficult concepts with step-by-step explanations and alternative
+      solution strategies.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: university-of-cincinnati
+  kind: record
+  leading_tex: ''
+  name_tex: University of Cincinnati
+  dates_tex: Summer 2006
+  description_tex: "\\textbf{Supplemental Instruction Leader} - Supported an intensive
+    summer program in which academically advanced incoming students completed the
+    full calculus-based introductory physics sequence, PHYS 201--203, before beginning
+    the regular academic year."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: university-of-cincinnati-01
+    prefix_tex: "  \\item "
+    text_tex: Delivered focused problem-solving lectures between formal class meetings,
+      working representative problems step by step and demonstrating efficient solution
+      strategies.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-02
+    prefix_tex: "  \\item "
+    text_tex: Helped students connect concepts across the compressed three-course
+      sequence through diagrams, dimensional analysis, estimation, and physical interpretation
+      of calculated results.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-03
+    prefix_tex: "  \\item "
+    text_tex: Planned and led collaborative review sessions for groups of up to 12
+      students, integrating physics content with transferable learning strategies,
+      addressing misconceptions, and modeling successful student behaviors.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: ''
+suffix_tex: ''

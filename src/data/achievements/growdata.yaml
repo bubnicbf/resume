@@ -1,0 +1,29 @@
+---
+- id: growdata-01
+  text_tex: Built and validated a preproduction document-to-data MVP that converted
+    semi-structured invoices into auditable transaction records, achieving 95\% field-level
+    accuracy across a stratified 500-invoice test suite.
+- id: growdata-02
+  text_tex: Instrumented the MVP with automated tests, audit logging, retry controls,
+    and confidence routing, achieving 88\% straight-through processing and under 1\%
+    system failure.
+- id: growdata-03
+  text_tex: Productized Tesseract OCR and rule-based post-processing as a small Python/Ruby
+    service with containerized deployments and versioned configuration.
+- id: growdata-04
+  text_tex: Added schema checks, cross-field validation, reconciliation, idempotent
+    reruns, fixtures, golden-file tests, linting, and release automation.
+- id: growdata-05
+  text_tex: Documented runbooks and failure modes covering timeouts, low-confidence
+    OCR, and retries.
+- id: growdata-06
+  text_tex: Built a lightweight analytics layer tracking usage, error categories,
+    latency, and throughput to guide feature tuning and cost control.
+- id: growdata-07
+  text_tex: Managed infrastructure as code for a minimal AWS footprint using S3, Lambda
+    or scheduled jobs, and CloudWatch alerts through Bash/Zsh and Makefile workflows.
+- id: growdata-08
+  text_tex: Managed the business's bookkeeping, accounting, and tax obligations.
+- id: growdata-09
+  text_tex: Led marketing and client acquisition, including creating promotional materials
+    for the business.

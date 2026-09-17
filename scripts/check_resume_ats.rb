@@ -3,6 +3,7 @@
 require 'yaml'
 require 'open3'
 require 'fileutils'
+require 'date'
 
 root = File.expand_path('..', __dir__)
 pdf = File.join(root, 'build/pdf/resume_ats.pdf')
@@ -20,6 +21,11 @@ abort 'PDF contains mis-mapped semicolon glyph' if output.include?("\u037E")
 contact = YAML.load_file(File.join(root, 'src/data/contact.yaml'))
 %w[name_tex email phone_tex linkedin_display_tex github_display_tex].each do |field|
   abort "Missing contact detail: #{field}" unless output.include?(contact.fetch(field))
+end
+footer_date = Date.today.strftime('%B %-d, %Y').upcase
+(1..page_count.delete_prefix('PAGE_COUNT=').to_i).each do |page|
+  footer = "#{footer_date} #{contact.fetch('name_tex')} · Résumé #{page}"
+  abort "Missing or duplicate footer on page #{page}" unless lines.count(footer) == 1
 end
 
 position = 0

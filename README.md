@@ -9,13 +9,14 @@ LaTeX résumé, CV, ATS résumé, abstract, cover letter, and comprehensive mast
 - `src/styles/` and `src/fonts/`: LaTeX class, packages, and fonts.
 - `src/data/roles/`: one YAML record per professional role, imported from the master career history.
 - `src/data/achievements/`: reusable achievement statements, with stable IDs.
-- `src/profiles/`: ordered selections of roles and achievements for particular documents.
+- `src/data/sections/`: one YAML file per other master-history section; records and bullet items have stable IDs.
+- `src/profiles/`: ordered selections of sections, records, roles, and bullet items.
 - `build/generated/`: generated LaTeX; do not edit it directly.
 - `build/pdf/`: final and preview PDFs.
 - `private/`: local evidence and notes; excluded from Git.
 - `proofs/`: retained page images used for visual review.
 
-The professional-experience part of the master career history is now rendered from YAML. Its previous TeX section remains at `src/content/master_career_history/professional_experience.tex` as an import snapshot, not an active source. The other master-history sections remain hand-written TeX. The established résumé and CV still build from their original sections so their submitted content is preserved during migration; YAML-driven profile builds are available alongside them.
+Every section of the master career history is now rendered from YAML. The original files in `src/content/master_career_history/` remain as import snapshots, not active sources. The established résumé and CV still build from their original sections so their submitted content is preserved during migration; YAML-driven profile builds are available alongside them.
 
 ## Build
 
@@ -24,12 +25,13 @@ Requires XeLaTeX, `make`, and Ruby (with its built-in YAML library).
 ```sh
 make                         # established CV, résumé, abstract, and cover letter
 make resume cv resume-ats
-make master-career-history   # professional experience comes from YAML
+make master-career-history   # all master-history sections come from YAML
 make profile PROFILE=healthcare-data-resume
 make profile PROFILE=healthcare-data-cv
+make profile PROFILE=selected-career-history
 ```
 
-All PDFs are in `build/pdf/`. The two profile examples produce `healthcare-data-resume.pdf` and `healthcare-data-cv.pdf` without replacing `resume.pdf` or `cv.pdf`. `make clean` removes auxiliary files; `make distclean` also removes PDFs.
+All PDFs are in `build/pdf/`. Profile builds do not replace `resume.pdf`, `cv.pdf`, or `master_career_history.pdf`. `make clean` removes auxiliary files; `make distclean` also removes PDFs.
 
 ## Tailor a document
 
@@ -38,6 +40,10 @@ All PDFs are in `build/pdf/`. The two profile examples produce `healthcare-data-
 3. Copy a profile in `src/profiles/`, give it a new lowercase, hyphenated filename, and choose role order and achievement IDs. A role can use `achievements: all` or omit that field to include every achievement. Optional top-level `headline_tex` and `summary_tex` fields replace the template's headline and summary for that profile.
 4. Run `make profile PROFILE=<filename-without-.yaml>` and inspect the PDF.
 
-The `document` field in a profile is `resume` or `cv`. Profile rendering validates role and achievement IDs before creating LaTeX. The initial YAML inventory was mechanically imported from the master history with `scripts/import_master_experience.rb`; do not rerun that one-time import after editing the YAML, because YAML is now the professional-experience source of truth. The master history profile is `src/profiles/master-career-history.yaml`.
+For a tailored long-form history, use `document: master` and list sections in the order you want. A section entry can be its ID (all records) or an object with `id` and `blocks`. A block can similarly be its ID (all bullet items) or an object with `id` and `items`. See `src/profiles/selected-career-history.yaml` for a working example. The master table of contents follows the selected sections automatically. The `resume` and `cv` profile types currently tailor professional experience; their other sections still come from the established LaTeX layouts.
+
+In section YAML, edit `name_tex`, `dates_tex`, `description_tex`, `title_tex`, `text_tex`, or a raw block's `tex`. Fields such as `prefix_tex`, `leading_tex`, and `item_open_tex` preserve LaTeX layout and normally should not need editing. All `*_tex` values are inserted as LaTeX, not automatically escaped. Profile rendering validates selected IDs before creating the document.
+
+The initial YAML inventory was mechanically imported with `scripts/import_master_experience.rb` and `scripts/import_master_sections.rb`. Do not rerun those one-time imports after editing YAML: YAML is now the master-history source of truth.
 
 The established résumé/CV layouts still use hand-written sections in `src/content/experience/`. New structured role data lives under `src/data/roles/`.

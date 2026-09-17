@@ -16,13 +16,10 @@ STYLE_FILES := $(wildcard src/styles/*.cls) \
                $(wildcard src/styles/*.sty)
 
 SRC_FILES := $(wildcard src/*.tex)
-DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
+DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml) $(wildcard src/data/sections/*.yaml)
 PROFILE ?= healthcare-data-resume
 
 COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
-
-MASTER_CAREER_HISTORY_CONTENT := \
-               $(wildcard src/content/master_career_history/*.tex)
 
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
@@ -72,7 +69,7 @@ $(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
 
-$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(MASTER_CAREER_HISTORY_CONTENT) $(DATA_YAML) src/profiles/master-career-history.yaml scripts/render_profile.rb
+$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/profiles/master-career-history.yaml scripts/render_profile.rb
 	@mkdir -p "$(ATS_OUT_DIR)"
 	@ruby scripts/render_profile.rb master-career-history
 	@echo "==> Building master career history"

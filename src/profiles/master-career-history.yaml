@@ -1,4 +1,22 @@
 document: master
+sections:
+  - career_overview
+  - skills_and_domains
+  - professional_experience
+  - selected_independent_projects
+  - professional_recognition
+  - teaching_and_academic_research
+  - publications_and_research_outputs
+  - speaking_engagements
+  - creative_and_visual_arts
+  - volunteer_and_community_experience
+  - leadership_memberships_and_activities
+  - academic_services
+  - property_operations_and_manual_labor
+  - sales_and_customer_service
+  - food_service_and_hospitality
+  - credentials_and_continuing_education
+  - education
 roles:
   - hhax
   - growdata

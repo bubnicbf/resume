@@ -7,6 +7,12 @@ ROOT = File.expand_path('..', __dir__)
 DATA = File.join(ROOT, 'src/data')
 GENERATED = File.join(ROOT, 'build/generated')
 PROFILES = File.join(ROOT, 'src/profiles')
+SECTION_FIELDS = {
+  'record' => %w[name_tex dates_tex description_tex],
+  'compactrecord' => %w[name_tex dates_tex],
+  'presentation' => %w[title_tex venue_tex dates_tex description_tex],
+  'subrole' => %w[title_tex dates_tex]
+}.freeze
 
 def load_yaml(path)
   raise "Missing #{path}" unless File.file?(path)
@@ -71,13 +77,63 @@ def master_entry(role, selection)
   lines
 end
 
+def render_block(block, selection)
+  return block.fetch('tex') if block.fetch('kind') == 'raw'
+  fields = SECTION_FIELDS.fetch(block.fetch('kind'))
+  text = block.fetch('leading_tex') + "\\#{block.fetch('kind')}" + fields.map { |field| braces(block.fetch(field)) }.join
+  return text + block.fetch('tail_tex') if block.key?('tail_tex')
+
+  items = block.fetch('items')
+  selected = selection.fetch('items', 'all')
+  selected = items.map { |item| item.fetch('id') } if selected == 'all'
+  raise "Duplicate items in #{block['id']}" unless selected.uniq == selected
+  by_id = items.to_h { |item| [item.fetch('id'), item] }
+  text += block.fetch('before_items_tex')
+  unless selected.empty?
+    text += block.fetch('item_open_tex')
+    selected.each do |id|
+      item = by_id.fetch(id) { raise "Unknown item #{id} in #{block['id']}" }
+      text += item.fetch('prefix_tex') + item.fetch('text_tex') + item.fetch('ending_tex')
+    end
+    text += block.fetch('item_close_tex')
+  end
+  text + block.fetch('after_items_tex')
+end
+
+def render_section(selection)
+  selection = { 'id' => selection } if selection.is_a?(String)
+  id = selection.fetch('id')
+  raise "Invalid section ID: #{id}" unless id.match?(/\A[a-z0-9_]+\z/)
+  section = load_yaml(File.join(DATA, 'sections', "#{id}.yaml"))
+  raise "Section ID mismatch: #{id}" unless section.fetch('id') == id
+  blocks = section.fetch('blocks')
+  chosen = selection.fetch('blocks', 'all')
+  chosen = blocks.map { |block| block.fetch('id') } if chosen == 'all'
+  chosen = chosen.map { |entry| entry.is_a?(String) ? { 'id' => entry } : entry }
+  ids = chosen.map { |entry| entry.fetch('id') }
+  raise "Duplicate blocks in #{id}" unless ids.uniq == ids
+  by_id = blocks.to_h { |block| [block.fetch('id'), block] }
+  section.fetch('prefix_tex') + chosen.map do |entry|
+    block = by_id.fetch(entry.fetch('id')) { raise "Unknown block #{entry['id']} in #{id}" }
+    render_block(block, entry)
+  end.join + section.fetch('suffix_tex')
+end
+
 name = ARGV.fetch(0) { abort 'Usage: ruby scripts/render_profile.rb PROFILE_NAME' }
 abort 'Profile name must use lowercase letters, numbers and hyphens' unless name.match?(/\A[a-z0-9-]+\z/)
 profile = load_yaml(File.join(PROFILES, "#{name}.yaml"))
 kind = profile.fetch('document')
 abort "Unsupported document: #{kind}" unless %w[resume cv master].include?(kind)
-selections = profile.fetch('roles')
-abort 'Profile has no roles' if selections.empty?
+selections = profile.fetch('roles', [])
+if kind == 'master'
+  section_ids = profile.fetch('sections').map { |selection| selection.is_a?(String) ? selection : selection.fetch('id') }
+  abort 'Master profile has no sections' if section_ids.empty?
+  abort 'Duplicate master sections' unless section_ids.uniq == section_ids
+  abort 'Professional experience requires role selections' if section_ids.include?('professional_experience') && selections.empty?
+  abort 'Roles are present but professional experience is omitted' if !section_ids.include?('professional_experience') && !selections.empty?
+else
+  abort 'Profile has no roles' if selections.empty?
+end
 
 FileUtils.mkdir_p(GENERATED)
 entries = selections.map do |selection|
@@ -93,6 +149,31 @@ fragment = File.join(GENERATED, "#{name}-experience.tex")
 prefix = kind == 'master' ? "\\section{Professional Experience}\n\\phantomsection\n\\label{sec:professional}\n" : "\\cvsection{Experience}\n\\begin{cventries}\n"
 suffix = kind == 'master' ? '' : "\\end{cventries}\n"
 File.write(fragment, "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{prefix}#{entries.join("\n\n")}\n#{suffix}")
+
+if kind == 'master'
+  sections = profile.fetch('sections')
+  section_ids = sections.map { |selection| selection.is_a?(String) ? selection : selection.fetch('id') }
+  rendered_sections = sections.map do |selection|
+    id = selection.is_a?(String) ? selection : selection.fetch('id')
+    id == 'professional_experience' ? File.read(fragment) : render_section(selection)
+  end
+  File.write(File.join(GENERATED, "#{name}-sections.tex"), rendered_sections.join)
+  toc_entries = sections.map do |selection|
+    id = selection.is_a?(String) ? selection : selection.fetch('id')
+    if id == 'professional_experience'
+      ['sec:professional', 'Professional Experience']
+    else
+      section = load_yaml(File.join(DATA, 'sections', "#{id}.yaml"))
+      [section.fetch('label'), section.fetch('title_tex')]
+    end
+  end
+  toc = "{\\small\\textbf{Contents:}\n" + toc_entries.map { |label, title| "\\contentsentry{#{label}}{#{title}}" }.join(" \\contactsep\n") + "}\n"
+  File.write(File.join(GENERATED, "#{name}-toc.tex"), toc)
+  template = File.read(File.join(ROOT, 'src/master_career_history.tex'))
+  template = template.sub('master-career-history-toc.tex', "#{name}-toc.tex")
+  template = template.sub('master-career-history-sections.tex', "#{name}-sections.tex")
+  File.write(File.join(GENERATED, "#{name}.tex"), "% Generated from src/master_career_history.tex; do not edit.\n#{template}")
+end
 
 if kind != 'master'
   template = File.read(File.join(ROOT, 'src', "#{kind}.tex"))

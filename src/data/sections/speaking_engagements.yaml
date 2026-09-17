@@ -1,0 +1,97 @@
+---
+id: speaking_engagements
+title_tex: Speaking Engagements
+label: sec:speaking_engagements
+source: src/content/master_career_history/speaking_engagements.tex
+prefix_tex: |+
+  \section{Speaking Engagements}
+  \phantomsection
+  \label{sec:speaking_engagements}
+
+blocks:
+- id: surgical-scheduling-optimization-and-procedure-duration-predictio
+  kind: presentation
+  leading_tex: ''
+  title_tex: Surgical Scheduling Optimization and Procedure Duration Prediction
+  venue_tex: IBM AI Hackathon
+  dates_tex: Dec. 2020
+  description_tex: Presented a prototype that combined historical operating-room utilization
+    and the current surgical wait list to optimize scheduling and improve total procedure-time
+    estimates beyond traditional fixed-ratio methods; outlined CNN/RNN case-card prediction
+    as a path toward a potential new offering.
+  tail_tex: "\n"
+- id: ibm-watson-care-insights
+  kind: presentation
+  leading_tex: ''
+  title_tex: IBM Watson Care Insights
+  venue_tex: IBM REACH Initiative
+  dates_tex: '2019'
+  description_tex: Delivered conceptual and hands-on training with synthetic patient
+    data, explaining how longitudinal records, real-time HL7 feeds, and FHIR configuration
+    support clinical-data integration and the delivery of insights within physicians'
+    EHR workflows.
+  tail_tex: "\n"
+- id: machine-learning-with-real-world-health-data
+  kind: presentation
+  leading_tex: ''
+  title_tex: Machine Learning with Real-World Health Data
+  venue_tex: Content and Data Analytics Learning Exchange
+  dates_tex: '2018'
+  description_tex: Introduced an implementation-oriented approach to applying machine-learning
+    algorithms to real-world health data, connecting clinical-data preparation, model
+    development, evaluation, and interpretation.
+  tail_tex: "\n"
+- id: natural-language-processing-for-unstructured-data-lakes
+  kind: presentation
+  leading_tex: ''
+  title_tex: Natural-Language Processing for Unstructured Data Lakes
+  venue_tex: Innovation Research Interchange Fall Networks Conference
+  dates_tex: Sep. 2018
+  description_tex: Presented a healthcare case study using natural-language processing
+    and topic modeling to turn nearly six million semi-structured provider notes in
+    a data lake into analyzable themes and features.
+  tail_tex: "\n"
+- id: hadoop-ingestion-and-data-lake-concepts
+  kind: presentation
+  leading_tex: ''
+  title_tex: Hadoop Ingestion and Data-Lake Concepts
+  venue_tex: Cross-Team Training Series
+  dates_tex: '2016'
+  description_tex: Designed and led a seven-part series connecting hands-on Hadoop/HDFS
+    ingestion workflows with distributed storage, transformation, validation, troubleshooting,
+    and the use of data lakes for heterogeneous clinical data.
+  tail_tex: "\n"
+- id: massive-stellar-clusters-in-the-disk-of-the-milky-way-galaxy
+  kind: presentation
+  leading_tex: ''
+  title_tex: Massive Stellar Clusters in the Disk of the Milky Way Galaxy
+  venue_tex: M.S. Physics Thesis Defense, University of Cincinnati
+  dates_tex: Jun. 2010
+  description_tex: Defended research using near-infrared broad-band photometry and
+    spectroscopy to identify and characterize two dust-obscured Galactic disk clusters
+    and estimate their distance, age, and approximate mass.
+  tail_tex: "\n"
+- id: astronomical-research-using-2mass-data
+  kind: presentation
+  leading_tex: ''
+  title_tex: Astronomical Research Using 2MASS Data
+  venue_tex: 2MASS Research Poster Session
+  dates_tex: '2008'
+  description_tex: Presented results from combining 2MASS $JHK$ photometry with IRTF/SpeX
+    observations to characterize candidate members of the young Galactic cluster [BDS2003]
+    107, including its stellar population, extinction, distance, age, and approximate
+    mass.
+  tail_tex: "\n"
+- id: a-novel-method-for-low-toxic-photo-etch-printing
+  kind: presentation
+  leading_tex: ''
+  title_tex: A Novel Method for Low-Toxic Photo-Etch Printing
+  venue_tex: Ohio University Research Poster Session
+  dates_tex: '2004'
+  description_tex: Presented Provost's Undergraduate Research Fund-supported work
+    adapting a wintergreen-oil toner-transfer process from lithography to intaglio
+    photo-etch printing, including a low-cost copper- and zinc-plate workflow that
+    replaced xylene- and acetone-based transfer steps and eliminated specialized exposure
+    equipment.
+  tail_tex: "\n"
+suffix_tex: ''

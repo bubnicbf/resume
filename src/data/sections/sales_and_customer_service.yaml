@@ -1,0 +1,79 @@
+---
+id: sales_and_customer_service
+title_tex: Sales and Customer Service
+label: sec:sales_and_customer_service
+source: src/content/master_career_history/sales_and_customer_service.tex
+prefix_tex: |+
+  \section{Sales and Customer Service}
+  \phantomsection
+  \label{sec:sales_and_customer_service}
+
+blocks:
+- id: target
+  kind: record
+  leading_tex: ''
+  name_tex: Target
+  dates_tex: Winter 2010
+  description_tex: "\\textbf{Sales Associate} - Processed customer purchases and cash
+    and credit transactions in a high-volume retail environment."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: target-01
+    prefix_tex: "  \\item "
+    text_tex: Assisted customers, stocked merchandise, supported inventory activities,
+      and helped resolve transaction concerns.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: franklincovey
+  kind: record
+  leading_tex: ''
+  name_tex: FranklinCovey
+  dates_tex: Jun. 2005 - Apr. 2006
+  description_tex: "\\textbf{Productivity Consultant} - Advised customers on planning
+    products, workshops, and productivity needs using detailed product knowledge."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: franklincovey-01
+    prefix_tex: "  \\item "
+    text_tex: Matched products and services to individual customer goals and supported
+      cash and credit transactions.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: dillard-s
+  kind: record
+  leading_tex: ''
+  name_tex: Dillard's
+  dates_tex: Aug. 2004 - Jun. 2005
+  description_tex: "\\textbf{Sales Associate} - Helped customers evaluate merchandise
+    and complete purchases."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: dillard-s-01
+    prefix_tex: "  \\item "
+    text_tex: Supported merchandising, stocking, opening and closing activities, and
+      customer-service issue resolution.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: dialamerica-marketing
+  kind: record
+  leading_tex: ''
+  name_tex: DialAmerica Marketing
+  dates_tex: Winter 2002
+  description_tex: "\\textbf{Marketing Representative} - Supported telephone-based
+    customer outreach and sales operations."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: dialamerica-marketing-01
+    prefix_tex: "  \\item "
+    text_tex: Conducted customer outreach and sales conversations by telephone.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: ''
+suffix_tex: ''

@@ -1,0 +1,53 @@
+document: ats
+achievement_order_from: master-career-history
+summary_tex: >-
+  Healthcare data consultant with 10+ years translating clinical, payer, and
+  revenue-cycle sources into governed analytics platforms. Led an integration
+  spanning 70+ EHR sources, modeled 55 Snowflake/dbt tables, and validated
+  deidentified data representing approximately 300 million patient lives.
+skills:
+  - label_tex: Healthcare data
+    text_tex: Clinical and EHR data, payer claims and eligibility, revenue cycle,
+      population health, HL7 v2/v3, FHIR, EDI/837, HIPAA
+  - label_tex: Architecture and delivery
+    text_tex: Data modeling, source-to-target mapping, data quality, governance,
+      metadata and lineage, deidentification, reconciliation, stakeholder requirements
+  - label_tex: Platforms and tools
+    text_tex: SQL, Python, Snowflake, dbt, SQLMesh, AWS, Azure, Spark/Hadoop,
+      Power BI
+roles:
+  - id: hhax
+    title_tex: Healthcare Data Integration Consultant
+    context_tex: Contract via Veersa Technologies
+    achievements: [hhax-01, hhax-05, hhax-04, hhax-03]
+    tools_tex: Snowflake, dbt, SQL/Jinja, FHIR
+  - id: adonis
+    title_tex: Healthcare Revenue Cycle Data Consultant
+    context_tex: Contract via Health Data Movers
+    achievements: [adonis-03, adonis-01, adonis-02, adonis-05]
+    tools_tex: Snowflake, SQLMesh, SQL, AWS
+  - id: growdata
+    achievements: [growdata-01, growdata-02]
+    tools_tex: Python, Ruby, OCR, AWS
+  - id: arkos
+    achievements: [arkos-01, arkos-02]
+    tools_tex: AWS, dbt, PySpark, Power BI
+  - id: merative
+    achievements: [merative-02, merative-01]
+    tools_tex: Azure Data Factory, Python, SQL, Synapse Analytics
+  - id: ibm-senior-data-scientist
+    achievements: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-13]
+  - id: ibm-senior-data-architect
+    achievements: [ibm-senior-data-architect-02, ibm-senior-data-architect-09,
+      ibm-senior-data-architect-07]
+  - id: ibm-data-architect
+    achievements: [ibm-data-architect-02, ibm-data-architect-01]
+  - id: ibm-software-developer
+    achievements: [ibm-software-developer-01]
+  - id: ibm-data-scientist
+    achievements: [ibm-data-scientist-01, ibm-data-scientist-04]
+  - id: explorys
+    title_tex: Data Science Consultant
+    context_tex: Contract via Randstad USA
+    achievements: [explorys-02]
+    tools_tex: Hadoop/HDFS, Oracle, Jenkins, SQL

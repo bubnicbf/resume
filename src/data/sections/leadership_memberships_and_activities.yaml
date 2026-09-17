@@ -1,0 +1,179 @@
+---
+id: leadership_memberships_and_activities
+title_tex: Leadership, Memberships, and Activities
+label: sec:leadership_memberships_and_activities
+source: src/content/master_career_history/leadership_memberships_and_activities.tex
+prefix_tex: |+
+  \section{Leadership, Memberships, and Activities}
+  \phantomsection
+  \label{sec:leadership_memberships_and_activities}
+
+blocks:
+- id: zygote-press-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Zygote Press, Cleveland, Ohio
+  dates_tex: 2011 - 2014
+  description_tex: Member and independent studio artist working in etching, relief,
+    and screenprint. Zygote is a nonprofit community printmaking studio, gallery,
+    archive, and education center that expands artists' access to affordable professional
+    workspace, instruction, exhibitions, residencies, and collaborative development.
+  tail_tex: "\n"
+- id: detroit-color-council
+  kind: record
+  leading_tex: ''
+  name_tex: Detroit Color Council
+  dates_tex: 2012 - 2013
+  description_tex: Member of a nonprofit industry forum promoting communication and
+    education among engineers, designers, scientists, and other professionals involved
+    in automotive color and appearance. The council advances shared technical knowledge
+    and practices intended to improve the quality of colored and decorative materials.
+  tail_tex: "\n"
+- id: american-institute-of-aeronautics-and-astronautics-cincinnati-stu
+  kind: record
+  leading_tex: ''
+  name_tex: American Institute of Aeronautics and Astronautics Cincinnati Student
+    Chapter
+  dates_tex: 2009 - 2011
+  description_tex: Member of a student chapter connecting participants with the aerospace
+    profession and AIAA's emphasis on innovation, technical excellence, and professional
+    collaboration. Participated in Students for the Exploration and Development of
+    Space in 2009, supporting its mission to advance student involvement in space
+    exploration through educational and engineering projects.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: american-institute-of-aeronautics-and-astronautics-cincinnati-stu-01
+    prefix_tex: "  \\item "
+    text_tex: Vice President, 2010.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: university-of-cincinnati-astronomy-club
+  kind: record
+  leading_tex: ''
+  name_tex: University of Cincinnati Astronomy Club
+  dates_tex: 2008 - 2010
+  description_tex: Founding member in 2008 who helped establish a student community
+    intended to cultivate interest in astronomy through observation, education, and
+    shared exploration of the night sky.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: university-of-cincinnati-astronomy-club-01
+    prefix_tex: "  \\item "
+    text_tex: Secretary, 2009--2010.
+    ending_tex: "\n"
+  - id: university-of-cincinnati-astronomy-club-02
+    prefix_tex: "  \\item "
+    text_tex: Treasurer, 2008--2009.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: additional-academic-activities
+  kind: record
+  leading_tex: ''
+  name_tex: Additional Academic Activities
+  dates_tex: 2006 - 2010
+  description_tex: Participated in the Large Synoptic Survey Telescope seminar group,
+    UC SPARKS, and University of Cincinnati physics departmental seminars, which provided
+    forums for research discussion and scientific exchange. Also participated in the
+    University of Cincinnati Mountaineering Club, which promotes safe wilderness skills,
+    outdoor appreciation, stewardship, and community through instruction and group
+    outings.
+  tail_tex: "\n"
+- id: society-of-physics-students-cincinnati-chapter
+  kind: record
+  leading_tex: ''
+  name_tex: Society of Physics Students Cincinnati Chapter
+  dates_tex: 2005 - 2008
+  description_tex: Helped lead a chapter of the national professional association
+    for physics students, which builds supportive scientific communities and promotes
+    education, research, professional development, outreach, and public understanding
+    of physics.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: society-of-physics-students-cincinnati-chapter-01
+    prefix_tex: "  \\item "
+    text_tex: Treasurer, 2006--2007.
+    ending_tex: "\n"
+  - id: society-of-physics-students-cincinnati-chapter-02
+    prefix_tex: "  \\item "
+    text_tex: Secretary, 2005--2006.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: sigma-theta-epsilon-beta-gamma-chapter
+  kind: record
+  leading_tex: ''
+  name_tex: Sigma Theta Epsilon Beta Gamma Chapter
+  dates_tex: 2006 - 2007
+  description_tex: Member of an interdenominational Christian service fraternity organized
+    around faith, fellowship, service, and meeting unmet human needs.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: sigma-theta-epsilon-beta-gamma-chapter-01
+    prefix_tex: "  \\item "
+    text_tex: Chaplain, 2006--2007 academic year.
+    ending_tex: "\n"
+  - id: sigma-theta-epsilon-beta-gamma-chapter-02
+    prefix_tex: "  \\item "
+    text_tex: Led planning for the Beta Gamma chapter's 10th-anniversary banquet.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: mid-america-print-council
+  kind: record
+  leading_tex: ''
+  name_tex: Mid America Print Council
+  dates_tex: 2003 - 2004
+  description_tex: Student member of an educational and community-based organization
+    that supports traditional and contemporary printmaking through conferences, exhibitions,
+    publications, professional exchange, and research. Its stated values emphasize
+    inclusion, diversity, integrity, and creative expression.
+  tail_tex: "\n"
+- id: southern-graphics-council-now-sgc-international
+  kind: record
+  leading_tex: ''
+  name_tex: Southern Graphics Council (now SGC International)
+  dates_tex: 2002 - 2004
+  description_tex: Student member of an educational nonprofit that advances printmaking
+    and graphic arts through professional exchange, exhibitions, publications, conferences,
+    and recognition of artists. The organization promotes research, public appreciation,
+    creative dialogue, and participation across diverse communities.
+  tail_tex: "\n\n"
+- id: athens-wargamers
+  kind: record
+  leading_tex: "\\begin{samepage}\n"
+  name_tex: Athens Wargamers
+  dates_tex: 2001 - 2004
+  description_tex: Member of an Ohio University student community centered on tabletop
+    wargaming, strategic problem solving, and social play.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: athens-wargamers-01
+    prefix_tex: "  \\item "
+    text_tex: Treasurer, 2002--2003 academic year.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\\end{samepage}\n\n"
+- id: reach-out-on-campus-ohio-university
+  kind: record
+  leading_tex: ''
+  name_tex: Reach Out on Campus, Ohio University
+  dates_tex: Sep. 2000 - Jun. 2004
+  description_tex: Member of a Christian campus ministry at Ohio University focused
+    on fellowship, spiritual growth, campus outreach, and community service.
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: reach-out-on-campus-ohio-university-01
+    prefix_tex: "  \\item "
+    text_tex: Student Leader, 2003--2004 academic year.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: ''
+suffix_tex: ''

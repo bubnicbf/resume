@@ -62,6 +62,23 @@ def cv_entry(role, selection)
   end
 end
 
+def ats_entry(role, selection)
+  raise "ATS profile requires individual roles: #{role['id']}" if role.fetch('kind') == 'company'
+  title = selection.fetch('title_tex', role.fetch('title_tex'))
+  lines = ["\\atsrole#{braces(role.fetch('employer'))}#{braces(title)}#{braces(role.fetch('dates'))}"]
+  details = []
+  details << selection.fetch('context_tex') if selection.key?('context_tex')
+  details << "Technologies: #{selection.fetch('tools_tex')}" if selection.key?('tools_tex')
+  lines << "\\textit{#{details.join('\\contactsep ')}}\\par" unless details.empty?
+  texts = selected_items(role, selection)
+  unless texts.empty?
+    lines << '\\begin{itemize}'
+    texts.each { |item| lines << "  \\item #{item}" }
+    lines << '\\end{itemize}'
+  end
+  lines
+end
+
 def master_entry(role, selection)
   texts = selected_items(role, selection)
   lines = case role.fetch('kind')
@@ -134,7 +151,7 @@ name = ARGV.fetch(0) { abort 'Usage: ruby scripts/render_profile.rb PROFILE_NAME
 abort 'Profile name must use lowercase letters, numbers and hyphens' unless name.match?(/\A[a-z0-9-]+\z/)
 profile = load_yaml(File.join(PROFILES, "#{name}.yaml"))
 kind = profile.fetch('document')
-abort "Unsupported document: #{kind}" unless %w[resume cv master].include?(kind)
+abort "Unsupported document: #{kind}" unless %w[resume cv master ats].include?(kind)
 selections = profile.fetch('roles', [])
 if kind == 'master'
   section_ids = profile.fetch('sections').map { |selection| selection.is_a?(String) ? selection : selection.fetch('id') }
@@ -146,6 +163,17 @@ else
   abort 'Profile has no roles' if selections.empty?
 end
 
+if kind == 'ats'
+  order_source = profile.fetch('achievement_order_from')
+  abort 'Invalid ATS order profile' unless order_source.match?(/\A[a-z0-9-]+\z/)
+  order_profile = load_yaml(File.join(PROFILES, "#{order_source}.yaml"))
+  raise 'ATS order source must be a master profile' unless order_profile.fetch('document') == 'master'
+  master_orders = order_profile.fetch('roles').to_h do |entry|
+    entry = { 'id' => entry } if entry.is_a?(String)
+    [entry.fetch('id'), entry.fetch('achievement_order')]
+  end
+end
+
 FileUtils.mkdir_p(GENERATED)
 entries = selections.map do |selection|
   selection = { 'id' => selection } if selection.is_a?(String)
@@ -153,7 +181,31 @@ entries = selections.map do |selection|
   abort "Invalid role ID: #{id}" unless id.match?(/\A[a-z0-9-]+\z/)
   role = load_yaml(File.join(DATA, 'roles', "#{id}.yaml"))
   raise "Role ID mismatch: #{id}" unless role.fetch('id') == id
-  (kind == 'master' ? master_entry(role, selection) : cv_entry(role, selection)).join("\n")
+  if kind == 'ats'
+    selected = selection.fetch('achievements', 'all')
+    selected = role.fetch('achievement_ids') if selected == 'all'
+    order = master_orders.fetch(id) { raise "No master achievement order for #{id}" }
+    selection = selection.merge('achievement_order' => order.select { |achievement_id| selected.include?(achievement_id) })
+  end
+  lines = case kind
+          when 'master' then master_entry(role, selection)
+          when 'ats' then ats_entry(role, selection)
+          else cv_entry(role, selection)
+          end
+  lines.join("\n")
+end
+
+if kind == 'ats'
+  skills = profile.fetch('skills').map do |skill|
+    "\\textbf{#{skill.fetch('label_tex')}:} #{skill.fetch('text_tex')}\\par"
+  end
+  content = ["\\section{Professional Summary}", profile.fetch('summary_tex'),
+             "\\section{Technical Skills}", skills.join("\n"),
+             "\\section{Professional Experience}", entries.join("\n\n")].join("\n\n")
+  File.write(File.join(GENERATED, "#{name}-content.tex"),
+             "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{content}\n")
+  puts "Rendered #{name} (#{selections.length} role records)."
+  exit
 end
 
 fragment = File.join(GENERATED, "#{name}-experience.tex")

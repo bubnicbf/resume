@@ -16,7 +16,8 @@ STYLE_FILES := $(wildcard src/styles/*.cls) \
                $(wildcard src/styles/*.sty)
 
 SRC_FILES := $(wildcard src/*.tex)
-DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml) $(wildcard src/data/sections/*.yaml)
+ROLE_DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
+DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
 PROFILE ?= healthcare-data-resume
 
 COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
@@ -62,11 +63,13 @@ $(OUT_DIR)/resume.pdf: $(SRC_DIR)/resume.tex $(COMMON_DEPS)
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
 	@echo "==> Wrote $(OUT_DIR)/resume.pdf"
 
-$(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex
+$(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
 	@mkdir -p "$(ATS_OUT_DIR)"
+	@ruby scripts/render_profile.rb resume-ats
 	@echo "==> Building ATS resume"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
+	@ruby scripts/check_resume_ats.rb
 	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
 
 $(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/profiles/master-career-history.yaml scripts/render_profile.rb

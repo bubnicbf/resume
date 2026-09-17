@@ -1,0 +1,243 @@
+---
+id: property_operations_and_manual_labor
+title_tex: Property Operations and Manual Labor
+label: sec:additional
+source: src/content/master_career_history/property_operations_and_manual_labor.tex
+prefix_tex: |+
+  \section{Property Operations and Manual Labor}
+  \phantomsection
+  \label{sec:additional}
+
+blocks:
+- id: doodlebug-farms
+  kind: record
+  leading_tex: ''
+  name_tex: Doodlebug Farms
+  dates_tex: Sep. 2024 - Present
+  description_tex: "\\textbf{Family Farm Operator} - Establishes and operates a pre-production
+    orchard with 72 American plum and Chickasaw plum trees."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: doodlebug-farms-01
+    prefix_tex: "  \\item "
+    text_tex: Manages seasonal tree care, grounds maintenance, supplies and equipment,
+      and physically demanding outdoor work across the developing orchard.
+    ending_tex: "\n"
+  - id: doodlebug-farms-02
+    prefix_tex: "  \\item "
+    text_tex: Plans staged expansion to approximately 216 trees, three times the current
+      planting, while preparing the orchard to transition from establishment into
+      harvest and sales.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: independent-contractor-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Independent Contractor, Cleveland, Ohio
+  dates_tex: Jun. 2003 - Apr. 2015
+  description_tex: "\\textbf{Residential Painter and Maintenance Contractor} - Completed
+    home-improvement and property-maintenance projects."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: independent-contractor-cleveland-ohio-01
+    prefix_tex: "  \\item "
+    text_tex: Prepared interior surfaces, applied paint, protected surrounding finishes,
+      and maintained orderly work areas through project completion.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: cleveland-convention-center-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland Convention Center, Cleveland, Ohio
+  dates_tex: Aug. 2013 - Jan. 2014
+  description_tex: "\\textbf{Event Setup Crew} - Set up and broke down trade-show
+    spaces at downtown convention venues."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: cleveland-convention-center-cleveland-ohio-01
+    prefix_tex: "  \\item "
+    text_tex: Assembled booths, laid carpet, installed pipe and drape, and cleared
+      materials after events.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: cleveland-area-distribution-warehouse
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland-Area Distribution Warehouse
+  dates_tex: Aug. 2013 - Jan. 2014
+  description_tex: "\\textbf{Warehouse Fulfillment Worker} - Picked and packed orders
+    for shipment at a distribution facility south of Cleveland."
+  tail_tex: "\n\n"
+- id: downtown-cleveland-construction-and-redevelopment-sites
+  kind: record
+  leading_tex: ''
+  name_tex: Downtown Cleveland Construction and Redevelopment Sites
+  dates_tex: Jan. 2012 - Mar. 2012
+  description_tex: "\\textbf{General Laborer} - Performed construction cleanup and
+    material handling on downtown projects."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: downtown-cleveland-construction-and-redevelopment-sites-01
+    prefix_tex: "  \\item "
+    text_tex: Cleared debris and moved materials at job sites around Public Square
+      and on the Flats East Bank redevelopment.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: independent-contractor-cleveland-ohio-2
+  kind: record
+  leading_tex: ''
+  name_tex: Independent Contractor, Cleveland, Ohio
+  dates_tex: Summer 2003
+  description_tex: "\\textbf{Concrete Repair Laborer} - Repaired architectural concrete
+    flooring and residential driveways for home-improvement and maintenance projects."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: independent-contractor-cleveland-ohio-2-01
+    prefix_tex: "  \\item "
+    text_tex: Prepared damaged areas, placed and finished repair material, and completed
+      job-site cleanup to restore worn concrete surfaces.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: cleveland-area-metal-stamping-and-parts-supplier
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland-Area Metal-Stamping and Parts Supplier
+  dates_tex: Summer 2003
+  description_tex: "\\textbf{Production Floor Laborer} - Packed finished metal parts
+    and handled scrap on a small industrial production floor."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: cleveland-area-metal-stamping-and-parts-supplier-01
+    prefix_tex: "  \\item "
+    text_tex: Fed scrap bins and kept finished parts moving through packing and material-handling
+      steps.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: brook-park-warehouse-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Brook Park Warehouse, Ohio
+  dates_tex: Winter 2003
+  description_tex: "\\textbf{Truck Loader and Unloader} - Loaded and unloaded trucks
+    at a warehouse near Cleveland Hopkins International Airport."
+  tail_tex: "\n\n"
+- id: cleveland-area-scrapyard-and-harbor-boneyard
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland-Area Scrapyard and Harbor Boneyard
+  dates_tex: Winter 2003
+  description_tex: "\\textbf{Scrap Sorting and Yard Laborer} - Sorted metal at a scrapyard
+    near the Cuyahoga River and performed manual labor at a harbor boneyard."
+  tail_tex: "\n\n"
+- id: cleveland-area-residential-construction-sites
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland-Area Residential Construction Sites
+  dates_tex: Summer 2002
+  description_tex: "\\textbf{Construction Cleanup Laborer} - Cleaned houses under
+    construction in suburban developments including Strongsville and North Royalton."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: cleveland-area-residential-construction-sites-01
+    prefix_tex: "  \\item "
+    text_tex: Hauled scrap drywall, swept finished houses, and loaded dumpsters with
+      construction debris.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: cleveland-area-moving-property-clearance-and-demolition-assignmen
+  kind: record
+  leading_tex: ''
+  name_tex: Cleveland-Area Moving, Property Clearance, and Demolition Assignments
+  dates_tex: Summer 2002
+  description_tex: "\\textbf{General Laborer} - Assisted local movers, cleared foreclosed
+    houses, and worked for several weeks on a crew removing an old plant on Cleveland's
+    East Side."
+  tail_tex: "\n\n"
+- id: gund-arena-and-jacobs-field-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Gund Arena and Jacobs Field, Cleveland, Ohio
+  dates_tex: Summer 2002
+  description_tex: "\\textbf{Event Setup and Teardown Crew} - Prepared venues for
+    concerts and games and cleaned up after large crowds."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: gund-arena-and-jacobs-field-cleveland-ohio-01
+    prefix_tex: "  \\item "
+    text_tex: Moved folding chairs and staging, dismantled event setups, and completed
+      post-event cleanup.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: crown-metal-finishing
+  kind: record
+  leading_tex: ''
+  name_tex: Crown Metal Finishing
+  dates_tex: Summer 2002
+  description_tex: "\\textbf{Production Laborer} - Supported an industrial chrome-plating
+    operation through hands-on material handling and line preparation."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: crown-metal-finishing-01
+    prefix_tex: "  \\item "
+    text_tex: Loaded metal components onto production racks for machine-applied chrome
+      plating, arranging parts for consistent processing and efficient line flow.
+    ending_tex: "\n"
+  - id: crown-metal-finishing-02
+    prefix_tex: "  \\item "
+    text_tex: Sustained production pace during repetitive manual work and followed
+      shop-floor handling and safety procedures around plating equipment.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: gravity-games
+  kind: record
+  leading_tex: ''
+  name_tex: Gravity Games
+  dates_tex: Summer 2002
+  description_tex: "\\textbf{Event Operations Crew} - Supported venue sanitation and
+    waste-handling operations during a large public sporting event."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: gravity-games-01
+    prefix_tex: "  \\item "
+    text_tex: Collected and disposed of waste and recycling throughout the venue and
+      removed litter from high-traffic areas during and after the event.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: "\n"
+- id: fedex
+  kind: record
+  leading_tex: ''
+  name_tex: FedEx
+  dates_tex: Winter 2002
+  description_tex: "\\textbf{Package Handler and Loader} - Performed time-sensitive
+    loading and material-handling work in a high-volume logistics environment."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: fedex-01
+    prefix_tex: "  \\item "
+    text_tex: Completed physically demanding assignments involving repetitive lifting,
+      rapid material movement, and coordination with other handlers.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: ''
+suffix_tex: ''

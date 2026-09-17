@@ -1,0 +1,286 @@
+---
+id: creative_and_visual_arts
+title_tex: Creative and Visual Arts
+label: sec:creative_and_visual_arts
+source: src/content/master_career_history/creative_and_visual_arts.tex
+prefix_tex: |+
+  \section{Creative and Visual Arts}
+  \phantomsection
+  \label{sec:creative_and_visual_arts}
+
+blocks:
+- id: media
+  kind: raw
+  tex: "\\textbf{Media:} Relief printmaking (woodcut and linocut), intaglio (etching,
+    drypoint, photo-print, and aquatint), screenprint, monoprint, monotype, and papermaking;
+    oil and acrylic painting; graphite, pencil, charcoal, ink, marker, pastel, and
+    mixed-media drawing; photography.\n\n"
+- id: text
+  kind: raw
+  tex: "\\smallskip\n"
+- id: selected-exhibitions
+  kind: raw
+  tex: "\\textbf{Selected Exhibitions}\\par\n"
+- id: drawn-and-quartered-vii-hedge-gallery-78th-street-studios-clevela
+  kind: record
+  leading_tex: ''
+  name_tex: Drawn and Quartered VII, HEDGE Gallery, 78th Street Studios, Cleveland,
+    Ohio
+  dates_tex: May 15--Jun. 5, 2015
+  description_tex: "\\textbf{Exhibiting Artist} - Participated in a group exhibition
+    of drawings. \\textbf{Works:} \\textit{Molly I} (graphite and pastel on paper,
+    2013; retained); \\textit{Molly II} (graphite and pastel on paper, 2013; gifted);
+    \\textit{Untitled} (pencil on paper, 2014; retained); \\textit{Untitled} (pencil
+    on paper, 2014; retained); \\textit{Untitled} (marker on paper, 2015; retained);
+    \\textit{Amanda in 6 colors} (pencil on paper, 2014; retained); \\textit{Amanda
+    in 3 colors} (pencil on paper, 2014; retained); \\textit{Keri} (pencil and pastel
+    on paper, 2015; gifted); \\textit{Emily} (pencil and pastel on paper, 2012; retained);
+    \\textit{Student at the CMA} (pencil on paper, 2014; retained); \\textit{Girl
+    from Treehouse} (pencil and pastel on paper, 2013; retained); \\textit{Girl from
+    the Meadow} (pencil and pastel on paper, 2013; retained); \\textit{Chatty Nurse
+    on the Bus} (pencil and pastel on paper, 2013; retained)."
+  tail_tex: "\n"
+- id: 13th-annual-holiday-store-heights-arts-cleveland-heights-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: 13th Annual Holiday Store, Heights Arts, Cleveland Heights, Ohio
+  dates_tex: Nov. 6--Dec. 31, 2014
+  description_tex: "\\textbf{Exhibiting Artist} - Presented limited-edition photography
+    and oil paintings in the annual holiday exhibition and sale. \\textbf{Works:}
+    \\textit{Berea Falls} (photograph, 2014; edition of 20, 2 artist's proofs; 7 sold,
+    remainder retained); \\textit{Road near Boston} (photograph, 2014; edition of
+    15, 1 artist's proof; 4 sold, remainder retained); \\textit{Lakewood Park} (photograph,
+    2013; edition of 12, 1 artist's proof; 3 sold, remainder retained); \\textit{Brandywine
+    Falls} (photograph, 2013; edition of 25, 2 artist's proofs; 9 sold, 1 gifted,
+    remainder retained); \\textit{Rocky River Reservation} (photograph, 2014; edition
+    of 10 sets, 1 artist's-proof set; 2 sets sold, remainder retained); \\textit{CMA
+    Gardens} (photograph, 2013; edition of 10, 1 artist's proof; 2 sold, remainder
+    retained); \\textit{Cardinal I} (photograph, 2013; edition of 12, 1 artist's proof;
+    3 sold, remainder retained); \\textit{Cardinal II} (photograph, 2014; edition
+    of 20, 2 artist's proofs; 7 sold, remainder retained); \\textit{Lake Erie I} (oil
+    on canvas, 2014; retained); \\textit{Lake Erie II} (oil on canvas, 2014; sold);
+    \\textit{Lake Erie III} (oil on canvas, 2014; retained)."
+  tail_tex: "\n"
+- id: holiday-off-the-wall-members-show-and-sale-zygote-press-cleveland
+  kind: record
+  leading_tex: ''
+  name_tex: Holiday Off The Wall Members Show and Sale, Zygote Press, Cleveland, Ohio
+  dates_tex: Dec. 6--7, 2014
+  description_tex: "\\textbf{Exhibiting Artist} - Presented relief prints and monoprints
+    in the annual members' exhibition. \\textbf{Works:} \\textit{Elise} (woodcut,
+    2004; edition of 20, 2 artist's proofs; 2 sold, remainder retained); \\textit{Struggle}
+    (woodcut, 2004; edition of 20, 2 artist's proofs; retained); \\textit{Girl I}
+    (monoprint, 2013; sold); \\textit{Girl II} (monoprint, 2013; retained); \\textit{Girl
+    III} (monoprint, 2013; sold); \\textit{Girl V} (monoprint, 2013; sold)."
+  tail_tex: "\n"
+- id: waterloo-arts-fest-collinwood-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Waterloo Arts Fest, Collinwood, Cleveland, Ohio
+  dates_tex: Jun. 29, 2013
+  description_tex: "\\textbf{Exhibiting Artist and Printmaker} - Presented limited-edition
+    prints and pulled an open-edition festival print on site for visitors. \\textbf{Works:}
+    \\textit{Lake Erie} (linocut, 2013; edition of 25, 2 artist's proofs; 4 sold,
+    remainder retained); \\textit{Lake Erie, Low Water} (woodcut, 2013; edition of
+    12, 1 artist's proof; 3 sold, remainder retained); \\textit{Breakwall} (drypoint,
+    2012; edition of 10; 2 sold, remainder retained); \\textit{Transit} (etching and
+    aquatint, 2012; edition of 15; 2 sold); \\textit{Waterloo (festival print)} (linocut
+    pulled on site, 2013; open edition of roughly 40; given away at the booth)."
+  tail_tex: "\n"
+- id: tremont-artwalk-tremont-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Tremont ArtWalk, Tremont, Cleveland, Ohio
+  dates_tex: '2013'
+  description_tex: "\\textbf{Exhibiting Artist} - Presented relief, intaglio, screenprint,
+    monotype, and charcoal work in a group exhibition. \\textbf{Works:} \\textit{Buckeye
+    Carbon} (woodcut, 2013, first state; edition of 10; 1 gifted, remainder retained);
+    \\textit{Viaduct} (etching, 2013; edition of 12, 1 artist's proof; retained);
+    \\textit{Night Shift, East 30th} (charcoal on paper, 2013; retained); \\textit{Analemma}
+    (screenprint, 2013; edition of 20; retained); \\textit{Steam Plant} (monotype,
+    2013; retained)."
+  tail_tex: "\n"
+- id: holiday-off-the-wall-exhibition-zygote-press-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Holiday Off-the-Wall Exhibition, Zygote Press, Cleveland, Ohio
+  dates_tex: Dec. 1--2, 2012
+  description_tex: "\\textbf{Exhibiting Artist} - Presented relief prints and monoprints
+    in the annual members' exhibition. \\textbf{Works:} \\textit{Elise} (woodcut,
+    2004; edition of 20, 2 artist's proofs; retained); \\textit{Struggle} (woodcut,
+    2004; edition of 20, 2 artist's proofs; retained); \\textit{Girl I} (monoprint,
+    2013; retained); \\textit{Girl II} (monoprint, 2013; retained); \\textit{Girl
+    III} (monoprint, 2013; retained); \\textit{Girl IV} (monoprint, 2013; sold); \\textit{Girl
+    V} (monoprint, 2013; retained)."
+  tail_tex: "\n"
+- id: juried-exhibition-zygote-press-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Juried Exhibition, Zygote Press, Cleveland, Ohio
+  dates_tex: Jun. 1--Jul. 7, 2012
+  description_tex: "\\textbf{Exhibiting Artist} - Presented photo-print etchings in
+    a juried exhibition. \\textbf{Works:} \\textit{Transit of Venus, 5 June 2012}
+    (photo-print etching, 2012; edition of 15, 2 artist's proofs; retained); \\textit{Ephemeris
+    (plate I)} (photo-print etching, 2012; edition of 10, 1 artist's proof; retained)."
+  tail_tex: "\n"
+- id: neighborhood-artists-kennedy-heights-arts-center-cincinnati-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Neighborhood Artists, Kennedy Heights Arts Center, Cincinnati, Ohio
+  dates_tex: '2010'
+  description_tex: "\\textbf{Exhibiting Artist} - Participated in a group exhibition
+    of paintings by neighborhood artists. \\textbf{Works:} \\textit{Montgomery Road,
+    Rain} (oil on panel, 2010; gifted); \\textit{Back Lot, Kennedy Heights} (oil on
+    canvas, 2010; gifted); \\textit{Basin Fog} (oil on canvas, 2009; gifted); \\textit{Ludlow
+    Viaduct} (acrylic on panel, 2009; gifted); \\textit{Night Kitchen} (oil on panel,
+    2010; gifted)."
+  tail_tex: "\n"
+- id: final-friday-open-studios-pendleton-art-center-cincinnati-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Final Friday Open Studios, Pendleton Art Center, Cincinnati, Ohio
+  dates_tex: 2007--2008
+  description_tex: "\\textbf{Studio Artist} - Presented paintings from a shared studio
+    during recurring open-studio events. \\textbf{Works:} \\textit{Mt. Adams from
+    Columbia Parkway} (oil on canvas, 2007; sold); \\textit{Over-the-Rhine Window}
+    (oil on panel, 2007; sold); \\textit{Basin Fog (first version)} (oil on canvas,
+    2007; gifted); \\textit{Eden Park Overlook} (oil on panel, 2008; sold); \\textit{Pendleton
+    Studio, Afternoon} (oil on panel, 2008; gifted); \\textit{Viaduct at Dusk} (acrylic
+    on panel, 2008; gifted)."
+  tail_tex: "\n"
+- id: b-f-a-thesis-exhibition-jennings-house-gallery-ohio-university-at
+  kind: record
+  leading_tex: ''
+  name_tex: B.F.A. Thesis Exhibition, Jennings House Gallery, Ohio University, Athens,
+    Ohio
+  dates_tex: May 2004
+  description_tex: "\\textbf{Exhibiting Artist} - Presented senior printmaking work
+    spanning relief, intaglio, and screenprint. \\textbf{Works:} \\textit{Self Portrait
+    I} (woodcut, 2003; edition of 10, 2 artist's proofs; retained); \\textit{Self
+    Portrait II} (woodcut, 2004; edition of 10, 2 artist's proofs; retained); \\textit{Self
+    Portrait III} (woodcut, 2004; edition of 10, 2 artist's proofs; retained); \\textit{Brick
+    Kiln} (etching and aquatint, 2004; edition of 12, 1 artist's proof; retained);
+    \\textit{Coal Seam} (aquatint and drypoint, 2004; edition of 8, 1 artist's proof;
+    retained); \\textit{Court Street, 2 a.m.} (screenprint, 2004; edition of 20, 2
+    artist's proofs; retained)."
+  tail_tex: "\n"
+- id: grand-opening-lacuna-gallery-athens-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Grand Opening, Lacuna Gallery, Athens, Ohio
+  dates_tex: Apr. 2004
+  description_tex: "\\textbf{Exhibiting Artist} - Displayed an original screenprint
+    in the gallery's opening exhibition. \\textbf{Work:} \\textit{Court Street, 2
+    a.m.} (screenprint, 2004; edition of 20; retained)."
+  tail_tex: "\n"
+- id: undergraduate-juried-exhibition-ohio-university-art-galleries-ath
+  kind: record
+  leading_tex: ''
+  name_tex: Undergraduate Juried Exhibition, Ohio University Art Galleries, Athens,
+    Ohio
+  dates_tex: '2004'
+  description_tex: "\\textbf{Exhibiting Artist} - Presented three prints in the university's
+    juried exhibition. \\textbf{Works:} \\textit{Brick Kiln, Nelsonville} (etching
+    and aquatint, 2004; edition of 12, 1 artist's proof; retained); \\textit{Ridge
+    and Hollow II} (woodcut, 2004; edition of 10, 2 artist's proofs; retained); \\textit{Court
+    Street, 2 a.m.} (screenprint, 2004; edition of 20, 2 artist's proofs; retained)."
+  tail_tex: "\n"
+- id: student-print-exchange-ohio-university-art-galleries-athens-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Student Print Exchange, Ohio University Art Galleries, Athens, Ohio
+  dates_tex: Feb. 2004
+  description_tex: "\\textbf{Organizer and Exhibiting Printmaker} - Organized a student
+    print exchange, editioned a work to the size of the exchange, and exhibited it
+    alongside the received prints. \\textbf{Work:} \\textit{Company Houses (exchange
+    impression)} (etching, 2004; edition of 22 for the exchange, 2 artist's proofs;
+    20 distributed to participants, artist's proof retained)."
+  tail_tex: "\n\n"
+- id: text-2
+  kind: raw
+  tex: "\\smallskip\n"
+- id: print-exchanges-conferences-and-commissions
+  kind: raw
+  tex: "\\textbf{Print Exchanges, Conferences, and Commissions}\\par\n"
+- id: mid-america-print-council-conference-print-city-detroit-2014-wayn
+  kind: record
+  leading_tex: ''
+  name_tex: 'Mid America Print Council Conference Print City: Detroit 2014, Wayne
+    State University, Detroit, Michigan'
+  dates_tex: Sep. 24--27, 2014
+  description_tex: Contributed a woodcut to a conference exchange portfolio. \textbf{Work:}
+    \textit{Buckeye Carbon (exchange impression)} (woodcut, 2014; edition of 30, 2
+    artist's proofs; 28 distributed through the portfolio, artist's proof retained).
+  tail_tex: "\n"
+- id: southern-graphics-council-conference-making-histories-revolution-
+  kind: record
+  leading_tex: ''
+  name_tex: 'Southern Graphics Council Conference Making Histories: Revolution and
+    Representation, Boston, Massachusetts'
+  dates_tex: Apr. 2--5, 2003
+  description_tex: Contributed a linocut to a student exchange portfolio. \textbf{Work:}
+    \textit{Night Loading Dock (exchange impression)} (linocut, 2003; edition of 25,
+    2 artist's proofs; 24 distributed through the student portfolio, artist's proof
+    retained).
+  tail_tex: "\n"
+- id: ohio-university-school-of-art-commission
+  kind: record
+  leading_tex: ''
+  name_tex: Ohio University School of Art Commission
+  dates_tex: '2003'
+  description_tex: "\\textbf{Commissioned Artist} - Created an original woodcut commissioned
+    by the School of Art; a commissioned impression was presented to Raymond Tymas-Jones,
+    Dean of the College of Fine Arts. \\textbf{Work:} \\textit{Tree on Paper} (woodcut,
+    2003; edition of 10, 1 artist's proof; commissioned impression gifted)."
+  tail_tex: "\n\n"
+- id: text-3
+  kind: raw
+  tex: "\\smallskip\n"
+- id: studio-access-workshops-and-visiting-artist-projects
+  kind: raw
+  tex: "\\textbf{Studio Access, Workshops, and Visiting-Artist Projects}\\par\n"
+- id: zygote-press-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Zygote Press, Cleveland, Ohio
+  dates_tex: 2011--2014
+  description_tex: Completed independent studio work in etching, relief, and screenprint.
+  tail_tex: "\n"
+- id: morgan-art-of-papermaking-conservatory-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Morgan Art of Papermaking Conservatory, Cleveland, Ohio
+  dates_tex: '2012'
+  description_tex: Completed a papermaking workshop.
+  tail_tex: "\n"
+- id: manifest-drawing-center-cincinnati-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Manifest Drawing Center, Cincinnati, Ohio
+  dates_tex: 2009--2010
+  description_tex: Participated in open figure-drawing sessions.
+  tail_tex: "\n"
+- id: art-academy-of-cincinnati-community-education
+  kind: record
+  leading_tex: ''
+  name_tex: Art Academy of Cincinnati Community Education
+  dates_tex: '2005'
+  description_tex: Completed oil-painting instruction in Cincinnati, Ohio.
+  tail_tex: "\n"
+- id: debra-fisher-visiting-artist-print-project-ohio-university
+  kind: record
+  leading_tex: ''
+  name_tex: Debra Fisher Visiting-Artist Print Project, Ohio University
+  dates_tex: '2003'
+  description_tex: "\\textbf{Studio Assistant} - Supported plate and chine colle preparation,
+    proofing, and editioning."
+  tail_tex: "\n"
+- id: dan-murphy-visiting-artist-print-project-ohio-university
+  kind: record
+  leading_tex: ''
+  name_tex: Dan Murphy Visiting-Artist Print Project, Ohio University
+  dates_tex: '2003'
+  description_tex: "\\textbf{Studio Assistant} - Supported screen preparation, proofing,
+    and editioning."
+  tail_tex: "\n"
+suffix_tex: ''

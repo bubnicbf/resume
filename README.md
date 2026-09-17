@@ -11,16 +11,17 @@ LaTeX résumé, CV, ATS résumé, abstract, cover letter, and comprehensive mast
 - `src/data/achievements/`: reusable achievement statements, with stable IDs.
 - `src/data/sections/`: one YAML file per other master-history section; records and bullet items have stable IDs.
 - `src/profiles/`: ordered selections of sections, records, roles, and bullet items.
+- `src/profiles/resume-ats.yaml`: the ATS résumé's summary, compact skills, role selections, and short technology lists.
 - `build/generated/`: generated LaTeX; do not edit it directly.
 - `build/pdf/`: final and preview PDFs.
 - `private/`: local evidence and notes; excluded from Git.
 - `proofs/`: retained page images used for visual review.
 
-Every section of the master career history is now rendered from YAML. The original files in `src/content/master_career_history/` remain as import snapshots, not active sources. The established résumé and CV still build from their original sections so their submitted content is preserved during migration; YAML-driven profile builds are available alongside them.
+Every section of the master career history is now rendered from YAML. The original files in `src/content/master_career_history/` remain as import snapshots, not active sources. The ATS résumé now pulls its professional achievements from those same YAML records and follows the master-history bullet order. The established résumé and CV still build from their original sections so their submitted content is preserved during migration; YAML-driven profile builds are available alongside them.
 
 ## Build
 
-Requires XeLaTeX, `make`, and Ruby (with its built-in YAML library).
+Requires XeLaTeX, `make`, and Ruby (with its built-in YAML library). The ATS PDF reading-order check also requires macOS Swift and PDFKit.
 
 ```sh
 make                         # established CV, résumé, abstract, and cover letter
@@ -47,3 +48,7 @@ In section YAML, edit `name_tex`, `dates_tex`, `description_tex`, `title_tex`, `
 The initial YAML inventory was mechanically imported with `scripts/import_master_experience.rb` and `scripts/import_master_sections.rb`. Do not rerun those one-time imports after editing YAML: YAML is now the master-history source of truth.
 
 The established résumé/CV layouts still use hand-written sections in `src/content/experience/`. New structured role data lives under `src/data/roles/`.
+
+## ATS résumé default
+
+Edit `src/profiles/resume-ats.yaml` to change the summary, skills, short technology lists, or selected achievement IDs. `achievement_order_from` automatically presents the selected IDs in the order of the master career history, so the ATS résumé does not need a second hand-maintained bullet order. `src/resume_ats.tex` supplies the plain, single-column layout, contact details, education, and certifications. `make resume-ats` regenerates the experience and checks the PDF's extracted page count, section order, employer/title/date sequence, bullet count, and HSEA omission. The checker uses a generated Swift module cache under `build/generated/`.

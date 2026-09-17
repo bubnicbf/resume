@@ -1,0 +1,31 @@
+---
+id: education
+title_tex: Education
+label: sec:education
+source: src/content/master_career_history/education.tex
+prefix_tex: |+
+  \section{Education}
+  \phantomsection
+  \label{sec:education}
+
+blocks:
+- id: m-s-physics-university-of-cincinnati
+  kind: record
+  leading_tex: ''
+  name_tex: M.S. Physics, University of Cincinnati
+  dates_tex: Dec. 2010
+  description_tex: Astrophysics research focus. Completed the thesis \textit{Massive
+    Stellar Clusters in the Disk of the Milky Way Galaxy}, using near-infrared photometry
+    and spectroscopy to identify and characterize two dust-obscured Galactic disk
+    star clusters.
+  tail_tex: "\n"
+- id: b-f-a-printmaking-ohio-university
+  kind: record
+  leading_tex: ''
+  name_tex: B.F.A. Printmaking, Ohio University
+  dates_tex: Aug. 2004
+  description_tex: Studio focus in intaglio, relief, and screenprint. Completed a
+    senior thesis exhibition and faculty-endorsed Provost's Undergraduate Research
+    Fund work adapting a low-toxic toner-transfer process to intaglio photo-etch printing.
+  tail_tex: "\n"
+suffix_tex: ''

@@ -1,0 +1,89 @@
+---
+id: publications_and_research_outputs
+title_tex: Publications and Research Outputs
+label: sec:publications_and_research_outputs
+source: src/content/master_career_history/publications_and_research_outputs.tex
+prefix_tex: |+
+  \section{Publications and Research Outputs}
+  \phantomsection
+  \label{sec:publications_and_research_outputs}
+  \begingroup
+  \raggedright
+
+blocks:
+- id: applied-research-and-technical-writing
+  kind: raw
+  tex: "\\textbf{Applied Research and Technical Writing}\\par\n"
+- id: text
+  kind: raw
+  tex: 'Bubnick, Ben. (2025). ``Reproducible Postgres load of Tuva seed datasets.''''
+    Internal applied research series, GrowData Analytics/HSEA. Document tracking no.
+    20250401-A. Internally published by HSEA, Aug. 2025. \href{https://github.com/bubnicbf/tuva-postgres/blob/dev/report.pdf}{Author''s
+    version, Apr. 1, 2025}.\par
+
+'
+- id: text-2
+  kind: raw
+  tex: 'Bubnick, Ben. (2020). ``Surgical Scheduling Optimization and Procedure Duration
+    Prediction.'''' Internal project report, IBM. Document tracking no. RC25712.\par
+
+'
+- id: text-3
+  kind: raw
+  tex: 'Bubnick, Ben. (2017). ``Process and Requirements for CCD Data Integration.''''
+    Internal white paper, IBM. Document tracking no. RC25043.\par
+
+'
+- id: text-4
+  kind: raw
+  tex: 'Bubnick, Ben. (2013). ``Characterization of Surface Coatings Using RT Models
+    for Color Matching.'''' Unfiled patent application authored for PPG Industries
+    and retained by the company as a trade secret. Ref. 1284 - February 2013.\par
+
+'
+- id: text-5
+  kind: raw
+  tex: "Bubnick, Ben. (2010). ``The B Stars of Westerlund 1.'' Unpublished internal
+    stellar-spectroscopy analysis, University of Cincinnati.\n\n"
+- id: text-6
+  kind: raw
+  tex: "\\smallskip\n"
+- id: journal-articles-and-data-catalogs
+  kind: raw
+  tex: "\\textbf{Journal Articles and Data Catalogs}\\par\n"
+- id: text-7
+  kind: raw
+  tex: 'Bubnick, Ben. (2015). \textit{AI paint formula prediction from spectroscopic
+    measurements} (Version 1.2) [Interactive web application]. shinyapps.io.\par
+
+'
+- id: text-8
+  kind: raw
+  tex: 'Bubnick, Ben. (2010). \textit{Massive stellar clusters in the disk of the
+    Milky Way Galaxy} [Master''s thesis, University of Cincinnati]. OhioLINK Electronic
+    Theses and Dissertations Center. \href{https://etd.ohiolink.edu/acprod/odb_etd/ws/send_file/send?accession=ucin1288378106\&disposition=inline}{OhioLINK
+    record}\par
+
+'
+- id: text-9
+  kind: raw
+  tex: 'Hanson, M. M., \& Bubnick, Ben. (2008). \textit{JHK photometry in cluster
+    [BDS2003] 107} [Data set]. VizieR Online Data Catalog (Catalog J/PASP/120/150).
+    \url{https://doi.org/10.26093/cds/vizier.61200150}\par
+
+'
+- id: text-10
+  kind: raw
+  tex: 'Hanson, M. M., \& Bubnick, Ben. (2008). Near-infrared spectroscopy of candidate
+    members of the Galactic cluster [BDS2003] 107. \textit{Publications of the Astronomical
+    Society of the Pacific, 120}(864), 150--159. \linebreak\mbox{\href{https://doi.org/10.1086/527403}{https://doi.org/10.1086/527403}}\par
+
+'
+- id: text-11
+  kind: raw
+  tex: |-
+    Bubnick, Ben. ``A Novel Method for Low-Toxic Photo-Etch Printing.'' \textit{MAPC Journal}, vol. 11, no. 2, Fall/Winter 2003, pp. 12-13.
+    \par
+suffix_tex: |2
+
+  \endgroup

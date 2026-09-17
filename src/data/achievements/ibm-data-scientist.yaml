@@ -1,0 +1,16 @@
+---
+- id: ibm-data-scientist-01
+  text_tex: Directed technical delivery across 36 client data integrations, coordinating
+    12 remote contractors and establishing code-review, QA, and issue-resolution standards.
+- id: ibm-data-scientist-02
+  text_tex: Served as principal integration specialist on more than 60 projects for
+    20 clients across the broader 2015--2018 data-ingestion period.
+- id: ibm-data-scientist-03
+  text_tex: Authored 125+ technical knowledge-base articles, approximately 30\% of
+    the team's published content, to standardize integration development and troubleshooting
+    practices.
+- id: ibm-data-scientist-04
+  text_tex: Built a Python, Ruby, and SQL extraction tool that eliminated unnecessary
+    story points and reduced average engineering hours per client integration.
+- id: ibm-data-scientist-05
+  text_tex: Eliminated an average of three weeks from employee onboarding.

@@ -1,0 +1,12 @@
+---
+- id: explorys-01
+  text_tex: Diagnosed Hadoop and Oracle production-ingestion failures and implemented
+    Jenkins-backed scheduling and recovery controls across 10+ client data warehouses.
+- id: explorys-02
+  text_tex: Identified and extracted data from heterogeneous client systems; led technical
+    requirements gathering, discovery, documentation, and implementation; and coordinated
+    acquisition, installation, and configuration of VPN hardware supporting client
+    integrations.
+- id: explorys-03
+  text_tex: Developed a cron-based control for defining blackout periods around client
+    data pulls.

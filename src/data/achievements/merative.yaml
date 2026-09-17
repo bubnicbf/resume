@@ -1,0 +1,24 @@
+---
+- id: merative-01
+  text_tex: Engineered a seven-layer Python and SQL migration-acceptance suite with
+    zero unresolved discrepancies at sign-off across tested record counts, partitions,
+    schemas, nulls, duplicates, field values, aggregates, and business rules.
+- id: merative-02
+  text_tex: Led HIPAA-compliant deidentification validation across demographic, encounter,
+    and coded clinical data representing approximately 300 million patient lives,
+    achieving a 100\% pass rate before sign-off.
+- id: merative-03
+  text_tex: Designed and implemented automated ETL testing and regression suites that
+    detected schema drift and transformation errors early in the migration lifecycle.
+- id: merative-04
+  text_tex: Validated end-to-end Azure Data Factory pipelines, Blob Storage configurations,
+    and downstream Synapse integrations during the transition from HDFS to Azure.
+- id: merative-05
+  text_tex: Collaborated with multidisciplinary engineering teams to refine architectural
+    designs and preserve workflow continuity and data fidelity.
+- id: merative-06
+  text_tex: Documented test plans, platform-migration procedures, and onboarding guidance
+    for future quality-assurance engineers.
+- id: merative-07
+  text_tex: Enforced data-governance and security protocols supporting audit-risk
+    reduction and HITRUST readiness.

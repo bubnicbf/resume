@@ -1,0 +1,146 @@
+---
+id: selected_independent_projects
+title_tex: Selected Independent Projects
+label: sec:outputs
+source: src/content/master_career_history/selected_independent_projects.tex
+prefix_tex: |+
+  \section{Selected Independent Projects}
+  \phantomsection
+  \label{sec:outputs}
+
+blocks:
+- id: iphone-cam-lite
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/iphone-cam-lite}{iphone-cam-lite}"
+  dates_tex: 2025 - 2026
+  description_tex: Native Swift/SwiftUI macOS menu bar application that selects an
+    iPhone Continuity Camera and microphone in Zoom or Microsoft Teams, then reads
+    back the application state to verify that the requested devices were actually
+    selected. Features modular application adapters, permission-aware onboarding,
+    system diagnostics, configurable device and accessibility labels, persistent settings,
+    actionable error reporting, hermetic Swift tests, continuous integration, and
+    scripted application packaging.
+  tail_tex: "\n\n"
+- id: farm-invoice-parser
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/farm-invoice-parser}{farm-invoice-parser}"
+  dates_tex: '2025'
+  description_tex: Ruby command line prototype that converts handwritten or printed
+    farm invoices into structured transaction records. The pipeline extracts text
+    from invoice images with Tesseract OCR, sends the result to configurable language-model
+    providers through RubyLLM, parses the response as JSON, and validates it against
+    a versioned invoice schema. It also provides an OCR-only diagnostic mode and includes
+    RSpec, RuboCop, and GitHub Actions scaffolding.
+  tail_tex: "\n\n"
+- id: cfd-snow-fence
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/cfd_snow_fence}{cfd\\_snow\\_fence}"
+  dates_tex: '2025'
+  description_tex: Python applied modeling experiment for evaluating potential snow
+    fence locations using measured wind data. The project maps wind vectors onto a
+    two-dimensional spatial grid, estimates pressure fields through a finite difference
+    Navier–Stokes/Poisson calculation, and aggregates the resulting simulations. It
+    then trains an XGBoost classifier using position, wind speed, and pressure to
+    identify low wind regions as a proxy for potential snow drift accumulation.
+  tail_tex: |2+
+
+
+    % \record{\href{https://github.com/bubnicbf/healthcare-dbt-demo}{healthcare-dbt-demo}}{2025}{Runnable dbt demonstration of Data Vault 2.0 modeling for synthetic healthcare claims, patient, and provider data. It builds hashed Hubs, relationship Links, and auditable Satellites with load timestamps and source attribution; adds a Business Vault monthly claims rollup; and publishes a BI friendly claims star schema. The project also includes reusable hashing macros and tests for uniqueness, required values, and referential integrity across DuckDB and PostgreSQL compatible workflows.}
+
+- id: claims-case-study
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/claims_case_study}{claims\\_case\\_study}"
+  dates_tex: '2023'
+  description_tex: End to end healthcare workforce planning case study analyzing Cleveland
+    area clinician, facility, and claims data for 2021–2022. The project evaluates
+    source data quality, converts the original workbook into schema preserving Parquet
+    datasets, standardizes the analytical data, and performs exploratory and time
+    series analysis. ARIMA forecasts with error diagnostics project 2023 demand for
+    Internal Medicine, Urology, and Anesthesiology, culminating in a written technical
+    report and stakeholder oriented presentation.
+  tail_tex: "\n\n"
+- id: hl7-ingestion
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/HL7-ingestion}{HL7-ingestion}"
+  dates_tex: '2023'
+  description_tex: Java 21 Spring Boot/Jersey service that accepts HL7 v2 messages
+    as multipart file uploads or plain text and converts them into JSON encoded FHIR
+    R4 collection Bundles using the LinuxForHealth converter. The project packages
+    the service with Docker and a Helm chart for Kubernetes deployment, includes GitHub
+    Actions automation, and exercises transformation and error handling through tests
+    that validate generated Patient, Encounter, Observation, Practitioner, and AllergyIntolerance
+    resources.
+  tail_tex: "\n\n"
+- id: quality-measures-engine
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/quality_measures_engine}{quality\\_measures\\_engine}"
+  dates_tex: '2023'
+  description_tex: Python/PyMongo prototype for defining and evaluating population
+    health quality measures from normalized patient records. It represents measure
+    metadata, parameters, calculated dates, initial populations, denominators, numerators,
+    exceptions, and exclusions as reusable JSON definitions, then translates those
+    definitions into MongoDB queries or map reduce operations. Fixtures and automated
+    tests demonstrate the design using sample NQF cervical cancer screening and pneumonia
+    vaccination measures.
+  tail_tex: "\n\n"
+- id: detl-design-challenge
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/DETL-design-challenge}{DETL-design-challenge}"
+  dates_tex: '2023'
+  description_tex: Architectural design for a dynamic ETL system that transforms heterogeneous
+    clinical research data into the OMOP Common Data Model. The design combines detailed
+    source to target specifications, human readable transformation rules, generated
+    SQL, and explicit review, testing, and debugging stages so that common mappings
+    can be automated without removing expert oversight from complex semantic decisions.
+    It also documents data quality controls, terminology mapping, de-identification
+    considerations, and implementation options involving Apache NiFi, Azure Data Factory,
+    and Python.
+  tail_tex: "\n\n"
+- id: zams-cluster-candidacy
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/zams_cluster_candidacy}{zams\\_cluster\\_candidacy}"
+  dates_tex: 2019 - 2020
+  description_tex: Python scientific computing pipeline for evaluating stellar cluster
+    candidacy from Washington system photometry. The analysis filters observations
+    by photometric uncertainty and cluster radius, incorporates decontamination membership
+    probabilities, and corrects color–magnitude diagrams for reddening and distance.
+    It then traces candidate cluster sequences with kernel density contours and compares
+    them with zero age main sequence and isochrone models across age and metallicity
+    ranges, producing per cluster and aggregate diagnostic plots.
+  tail_tex: "\n\n"
+- id: gamma-rays
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/gamma_rays}{gamma\\_rays}"
+  dates_tex: '2019'
+  description_tex: Python and Jupyter machine learning research project for reconstructing
+    events from high energy gamma ray telescope data. It reads simulated FITS event
+    tables, balances gamma ray and hadronic background samples, and compares random
+    forest, multilayer perceptron, and exploratory neural network classification approaches
+    using confusion matrices, ROC/AUC, Q-factor, and calibration metrics. The project
+    also trains regression models for event energy and direction reconstruction and
+    includes reusable prediction code, persisted models, technical reports, and disseminated
+    notebook analyses.
+  tail_tex: "\n\n"
+- id: star-chart
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/Star-Chart}{Star-Chart}"
+  dates_tex: '2015'
+  description_tex: Browser based HTML, CSS, and JavaScript astronomy application that
+    renders the visible night sky for a selected location and date. It accepts browser
+    geolocation or manually entered coordinates, calculates Julian date and local
+    sidereal time, projects catalog stars according to right ascension, declination,
+    and magnitude, and computes positions for the Sun, Moon, and visible planets.
+    Stars, planets, and optional constellation lines are drawn on an interactive,
+    zoomable canvas.
+  tail_tex: "\n"
+suffix_tex: ''

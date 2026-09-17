@@ -1,93 +1,79 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-\documentclass[11pt, letterpaper]{../styles/cv}
+\documentclass[10pt,letterpaper]{article}
 
-% ---- Path setup for the new layout ----
-% Make \input{} / \include{} look in ../content and class/packages in ../styles
-\makeatletter
-\def\input@path{{../content/}{../styles/}}
-\makeatother
+\usepackage[letterpaper,left=0.62in,right=0.62in,top=0.50in,bottom=0.50in,footskip=0.23in]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
 
-% Graphics search path (if you use images under content/)
-\usepackage{graphicx}
-\graphicspath{{../content/}{../content/assets/}}
+\setmainfont[
+  Path=/System/Library/Fonts/Supplemental/,
+  UprightFont=Arial.ttf,
+  BoldFont=Arial Bold.ttf,
+  ItalicFont=Arial Italic.ttf,
+  BoldItalicFont=Arial Bold Italic.ttf
+]{Arial}
+% Arial maps its shared semicolon glyph back to U+037E in XeTeX PDF extraction.
+% Use a Latin-only fallback for semicolons so ATS/copy-paste receives U+003B.
+\newfontfamily\ATSsemicolonfont[
+  Path=/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/,
+  UprightFont=lmsans10-regular.otf,
+  BoldFont=lmsans10-bold.otf,
+  ItalicFont=lmsans10-oblique.otf,
+  BoldItalicFont=lmsans10-boldoblique.otf
+]{Latin Modern Sans}
+\input{../build/generated/contact.tex}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\fontsize{8}{9}\selectfont\MakeUppercase{\today}}
+\fancyfoot[C]{\fontsize{8}{9}\selectfont\contactname}
+\fancyfoot[R]{\fontsize{8}{9}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlist[itemize]{leftmargin=0.18in,itemsep=1.2pt,topsep=1.2pt,parsep=0pt,partopsep=0pt}
 
-\usepackage{changepage}
-\usepackage[none]{hyphenat}
+\titleformat{\section}
+  {\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{1pt}\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
 
-% Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\newcommand{\contactsep}{\enspace\textbar\enspace}
+\newcommand{\atsrole}[3]{%
+  \par\vspace{3pt}%
+  \textbf{#1} \hfill #3\par
+  \textbf{#2}\par
+}
 
-% Fonts directory: point to ../fonts (awesome-cv-style \fontdir macro)
-\newcommand{\fontdirrel}{fonts/}
-\fontdir[\fontdirrel]
-
-%% Color for highlights
-% Predefined Colors
-%   cv-emerald, cv-skyblue, cv-red, cv-pink, cv-orange, cv-nephritis, cv-concrete, cv-darknight
-\colorlet{highlight}{cv-emerald}
-
-% Colors for text (uncomment for printing true black)
-\definecolor{highlight}{HTML}{000000}
-\definecolor{darktext}{HTML}{000000}
-\definecolor{text}{HTML}{000000}
-\definecolor{graytext}{HTML}{000000}
-\definecolor{lighttext}{HTML}{000000}
-
-% Set false if you don't want to highlight section with highlight color
-\setbool{acvSectionColorHighlight}{true}
-
-% If you would like to change the social information separator from a pipe (|) to something else
-\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
-
-%-------------------------------------------------------------------------------
-% PERSONAL INFORMATION
-%-------------------------------------------------------------------------------
-\name{}{Ben Bubnick}
-\position{Healthcare Data Strategy{\enskip\cdotp\enskip}Data Governance{\enskip\cdotp\enskip}Analytics Delivery}
-\mobile{(216) 556-1612}
-\email{ben.bubnick@gmail.com}
-\github{bubnicbf}
-\linkedin{benbubnick}
-
-%-------------------------------------------------------------------------------
 \begin{document}
+\raggedright
 
-\makecvheader[L]
+\catcode`\;=\active
+\protected\def;{{\ATSsemicolonfont\char"003B}}
 
-\makecvfooter
-  {\today}
-  {Ben Bubnick~~~·~~~Résumé}
-  {\thepage}
+{\LARGE\bfseries\contactname}\\[2pt]
+{\large\bfseries Healthcare Data Consultant - Architecture, Governance, Integration}\\[3pt]
+\contactdetails
 
-%-------------------------------------------------------------------------------
-% INIT (shared content—now found via ../content thanks to \input@path)
-%-------------------------------------------------------------------------------
-\input{accomplishments.tex}
-\input{dates.tex}
-\input{descriptions.tex}
-\input{honors.tex}
-\input{locations.tex}
-\input{orgs.tex}
-\input{positions.tex}
-\input{presentations.tex}
-\input{skills.tex}
-\input{tools.tex}
+\input{../build/generated/resume-content.tex}
 
-%-------------------------------------------------------------------------------
-% CV/RESUME CONTENT
-%-------------------------------------------------------------------------------
-\input{summary/sumshort.tex}
-% \input{summary/core_skills.tex}
+\section{Education}
 
-% If your folder is actually "experience", fix the next two lines accordingly:
-\input{exerience/resexp.tex}
-% \input{exerience/oex.tex}
-\input{education/edu.tex}
+\input{../build/generated/resume-education.tex}
 
-%-------------------------------------------------------------------------------
+\section{Certifications}
+
+\input{../build/generated/resume-certifications.tex}
+
 \end{document}

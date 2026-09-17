@@ -1,0 +1,16 @@
+---
+id: explorys
+kind: role
+employer: Explorys, an IBM Company
+title_tex: Data Science Consultant - Contract via Randstad USA
+dates: Jun. 2015 - Nov. 2015
+tools_tex: Hadoop/HDFS, Ruby, Pig, React, Node.js, JavaScript, SQL, Oracle, Jenkins
+summary_tex: Supported clinical-data integration and population analytics across more
+  than 10 client data warehouses. IBM acquired Explorys in 2015; the overlap with
+  the IBM tenure reflects the acquisition and transition rather than two unrelated
+  concurrent roles.
+source: master_career_history/professional_experience.tex:144
+achievement_ids:
+- explorys-01
+- explorys-02
+- explorys-03

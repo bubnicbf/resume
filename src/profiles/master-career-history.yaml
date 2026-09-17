@@ -1,0 +1,106 @@
+document: master
+sections:
+  - career_overview
+  - skills_and_domains
+  - professional_experience
+  - selected_independent_projects
+  - professional_recognition
+  - id: teaching_and_academic_research
+    item_order:
+      lorain-county-community-college: [lorain-county-community-college-03, lorain-county-community-college-04,
+        lorain-county-community-college-02, lorain-county-community-college-06,
+        lorain-county-community-college-05, lorain-county-community-college-01]
+      cincinnati-state-technical-and-community-college: [cincinnati-state-technical-and-community-college-02,
+        cincinnati-state-technical-and-community-college-01]
+      miami-university: [miami-university-01, miami-university-04, miami-university-02,
+        miami-university-03, miami-university-05]
+      research-assistant-department-of-physics: [research-assistant-department-of-physics-04,
+        research-assistant-department-of-physics-03, research-assistant-department-of-physics-06,
+        research-assistant-department-of-physics-02, research-assistant-department-of-physics-05,
+        research-assistant-department-of-physics-01, research-assistant-department-of-physics-08,
+        research-assistant-department-of-physics-07, research-assistant-department-of-physics-09]
+      teaching-assistant: [teaching-assistant-04, teaching-assistant-01,
+        teaching-assistant-05, teaching-assistant-02, teaching-assistant-03]
+      engineering-teaching-assistant: [engineering-teaching-assistant-02,
+        engineering-teaching-assistant-03, engineering-teaching-assistant-01]
+      ohio-university: [ohio-university-02, ohio-university-01, ohio-university-03]
+  - publications_and_research_outputs
+  - speaking_engagements
+  - creative_and_visual_arts
+  - volunteer_and_community_experience
+  - id: leadership_memberships_and_activities
+    item_order:
+      sigma-theta-epsilon-beta-gamma-chapter: [sigma-theta-epsilon-beta-gamma-chapter-02,
+        sigma-theta-epsilon-beta-gamma-chapter-01]
+  - id: academic_services
+    item_order:
+      huntington-learning-center: [huntington-learning-center-02, huntington-learning-center-01]
+      university-of-cincinnati-learning-communities-program: [university-of-cincinnati-learning-communities-program-02,
+        university-of-cincinnati-learning-communities-program-03,
+        university-of-cincinnati-learning-communities-program-01]
+      private-tutoring: [private-tutoring-03, private-tutoring-02, private-tutoring-01]
+      university-of-cincinnati: [university-of-cincinnati-02, university-of-cincinnati-03,
+        university-of-cincinnati-01]
+  - property_operations_and_manual_labor
+  - sales_and_customer_service
+  - food_service_and_hospitality
+  - id: credentials_and_continuing_education
+    item_order:
+      salesforce-trailhead-coursework-completed-at-arkos-health: [salesforce-trailhead-coursework-completed-at-arkos-health-01,
+        salesforce-trailhead-coursework-completed-at-arkos-health-03,
+        salesforce-trailhead-coursework-completed-at-arkos-health-02]
+      ibm-digital-credentials-and-coursework: [ibm-digital-credentials-and-coursework-02,
+        ibm-digital-credentials-and-coursework-01, ibm-digital-credentials-and-coursework-03,
+        ibm-digital-credentials-and-coursework-04, ibm-digital-credentials-and-coursework-05]
+  - education
+roles:
+  - id: hhax
+    achievement_order: [hhax-01, hhax-05, hhax-04, hhax-07, hhax-06,
+      hhax-02, hhax-03, hhax-09, hhax-08, hhax-10]
+  - id: growdata
+    achievement_order: [growdata-01, growdata-02, growdata-04, growdata-03,
+      growdata-06, growdata-09, growdata-07, growdata-05, growdata-08]
+  - id: adonis
+    achievement_order: [adonis-03, adonis-01, adonis-02, adonis-05,
+      adonis-08, adonis-04, adonis-06, adonis-07]
+  - id: arkos
+    achievement_order: [arkos-01, arkos-02, arkos-03, arkos-06, arkos-09,
+      arkos-04, arkos-08, arkos-05, arkos-07]
+  - id: merative
+    achievement_order: [merative-02, merative-01, merative-07, merative-05,
+      merative-04, merative-03, merative-06]
+  - id: ibm
+    achievement_order: [ibm-02, ibm-04, ibm-01, ibm-03]
+  - id: ibm-senior-data-scientist
+    achievement_order: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-04,
+      ibm-senior-data-scientist-06, ibm-senior-data-scientist-13,
+      ibm-senior-data-scientist-02, ibm-senior-data-scientist-01,
+      ibm-senior-data-scientist-07, ibm-senior-data-scientist-08,
+      ibm-senior-data-scientist-12, ibm-senior-data-scientist-05,
+      ibm-senior-data-scientist-09, ibm-senior-data-scientist-11,
+      ibm-senior-data-scientist-10]
+  - id: ibm-senior-data-architect
+    achievement_order: [ibm-senior-data-architect-02, ibm-senior-data-architect-09,
+      ibm-senior-data-architect-07, ibm-senior-data-architect-08,
+      ibm-senior-data-architect-03, ibm-senior-data-architect-01,
+      ibm-senior-data-architect-10, ibm-senior-data-architect-05,
+      ibm-senior-data-architect-06, ibm-senior-data-architect-04,
+      ibm-senior-data-architect-11]
+  - id: ibm-data-architect
+    achievement_order: [ibm-data-architect-02, ibm-data-architect-01,
+      ibm-data-architect-03, ibm-data-architect-04, ibm-data-architect-08,
+      ibm-data-architect-07, ibm-data-architect-05, ibm-data-architect-06]
+  - id: ibm-software-developer
+    achievement_order: [ibm-software-developer-01, ibm-software-developer-05,
+      ibm-software-developer-04, ibm-software-developer-02, ibm-software-developer-03]
+  - id: ibm-data-scientist
+    achievement_order: [ibm-data-scientist-01, ibm-data-scientist-02,
+      ibm-data-scientist-04, ibm-data-scientist-03, ibm-data-scientist-05]
+  - id: explorys
+    achievement_order: [explorys-02, explorys-01, explorys-03]
+  - id: amtrust
+    achievement_order: [amtrust-02, amtrust-07, amtrust-09, amtrust-04,
+      amtrust-03, amtrust-01, amtrust-06, amtrust-05, amtrust-08]
+  - id: ppg
+    achievement_order: [ppg-06, ppg-08, ppg-12, ppg-11, ppg-10,
+      ppg-07, ppg-05, ppg-01, ppg-02, ppg-09, ppg-13, ppg-04, ppg-03]

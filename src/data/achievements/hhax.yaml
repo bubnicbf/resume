@@ -1,0 +1,34 @@
+---
+- id: hhax-01
+  text_tex: Engineered unified and analytics Snowflake/dbt models spanning 55 tables
+    across two organizations and two source-system configurations, establishing reusable
+    patterns for faster client onboarding.
+- id: hhax-02
+  text_tex: Implemented reusable SQL/Jinja transformation logic for lifecycle states,
+    null handling, sentinel dates, and source-system variations across organization,
+    office, caregiver, and patient domains.
+- id: hhax-03
+  text_tex: Created or materially redesigned 30 automated SQL/dbt data-quality tests
+    covering nulls, duplicates, referential integrity, business rules, lifecycle logic,
+    and source-to-target reconciliation.
+- id: hhax-04
+  text_tex: Translated ambiguous business requirements into documented mappings, acceptance
+    criteria, onboarding standards, and 12 data-quality investigation runbooks.
+- id: hhax-05
+  text_tex: Conducted feasibility analysis of source-system structures and implementation
+    constraints to shape integration scope, modeling strategy, and delivery approach.
+- id: hhax-06
+  text_tex: Structured target models using FHIR-like concepts where appropriate to
+    improve consistency and extensibility for downstream integration and analytics.
+- id: hhax-07
+  text_tex: Defined surrogate-key, natural-key, and crosswalk strategies supporting
+    stable identity resolution across related source systems.
+- id: hhax-08
+  text_tex: Resolved data-quality and mapping issues through targeted test-case analysis
+    and review of failing source and target records.
+- id: hhax-09
+  text_tex: Collaborated with client and internal stakeholders to resolve source ambiguity,
+    refine requirements, and translate business needs into production-ready data assets.
+- id: hhax-10
+  text_tex: Established reusable patterns for onboarding additional sources and extending
+    integration workflows.

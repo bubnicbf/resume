@@ -1,0 +1,27 @@
+---
+- id: ibm-data-architect-01
+  text_tex: Designed SQL validation frameworks and client-review gates across approximately
+    100 integrations, reducing Jira-tracked validation rework by 25\% and mapping
+    rework by 45\%.
+- id: ibm-data-architect-02
+  text_tex: Led a multi-organization healthcare integration spanning 70+ EHR sources,
+    implementing provider-scoped patient filtering to enforce data-sharing rules and
+    coordinating delivery with engineering teams.
+- id: ibm-data-architect-03
+  text_tex: Built the data-onboarding platform and associated infrastructure, remediated
+    UAT data issues, and reported on data health during onboarding.
+- id: ibm-data-architect-04
+  text_tex: Earned AI certification and peer-reviewed patient-matching algorithm tuning
+    across the project portfolio.
+- id: ibm-data-architect-05
+  text_tex: Curated 25 pages of AI-workflow documentation and mentored new hires in
+    the AI-tuning process.
+- id: ibm-data-architect-06
+  text_tex: Spearheaded a new-hire mentoring program that standardized technical ramp-up
+    and prepared colleagues to contribute to billable client delivery.
+- id: ibm-data-architect-07
+  text_tex: Received the Lab Services Award for coordinating internal project teams
+    to deliver client needs on time.
+- id: ibm-data-architect-08
+  text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
+    1.34\%.

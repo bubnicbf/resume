@@ -1,0 +1,24 @@
+---
+id: ppg
+kind: role
+employer: PPG Industries
+title_tex: Color Scientist
+dates: Apr. 2012 - Aug. 2013
+tools_tex: VB.NET, C\#, SQL, C++, FORTRAN, JMP, spectrophotometry, numerical methods
+summary_tex: Developed software and radiative-transfer models for automotive paint
+  formulation, spectroscopic profile analysis, and technology-risk assessment.
+source: master_career_history/professional_experience.tex:166
+achievement_ids:
+- ppg-01
+- ppg-02
+- ppg-03
+- ppg-04
+- ppg-05
+- ppg-06
+- ppg-07
+- ppg-08
+- ppg-09
+- ppg-10
+- ppg-11
+- ppg-12
+- ppg-13

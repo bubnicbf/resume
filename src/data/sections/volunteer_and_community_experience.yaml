@@ -1,0 +1,183 @@
+---
+id: volunteer_and_community_experience
+title_tex: Volunteer and Community Experience
+label: sec:volunteer_and_community_experience
+source: src/content/master_career_history/volunteer_and_community_experience.tex
+prefix_tex: |+
+  \section{Volunteer and Community Experience}
+  \phantomsection
+  \label{sec:volunteer_and_community_experience}
+
+blocks:
+- id: hsea
+  kind: record
+  leading_tex: ''
+  name_tex: HSEA
+  dates_tex: Feb. 2025 - May 2025
+  description_tex: "\\textbf{ETL Brigade Volunteer} - Built a reusable PostgreSQL
+    data model and reproducible loading process for Tuva seed datasets, enabling community-health
+    organizations to prototype analytics using claims, visits, and eligibility data.
+    Added schema setup, normalization, and validation components to make the data
+    consistently loadable and testable."
+  tail_tex: "\n\n"
+- id: csforall
+  kind: record
+  leading_tex: ''
+  name_tex: CSforAll
+  dates_tex: Oct. 2018 - May 2019
+  description_tex: "\\textbf{Instructor} - Supported computer-science instruction
+    for Cleveland Metropolitan School District high-school students as part of a districtwide
+    effort to make rigorous computer-science coursework available in every high school.
+    Helped broaden access for students from underrepresented and low-income populations,
+    with particular attention to learners without reliable computer or Internet access
+    at home."
+  tail_tex: "\n\n"
+- id: hit-in-the-cle
+  kind: record
+  leading_tex: ''
+  name_tex: HIT in the CLE
+  dates_tex: Mar. 2017 - Mar. 2019
+  description_tex: "\\textbf{Coach} - Coached five-student high-school teams through
+    a data-science competition, helping participants analyze a large dataset, develop
+    evidence-based conclusions, and communicate their findings. Introduced students
+    to health-information-technology careers while building data-analysis and presentation
+    skills and supporting a more diverse Northeast Ohio health-IT talent pipeline."
+  tail_tex: |2
+
+
+    % Civic-technology and open-data context verified at:
+    % https://opencleveland.org/blog/
+- id: code-for-america
+  kind: record
+  leading_tex: ''
+  name_tex: Code for America
+  dates_tex: Jan. 2015 - Jun. 2015
+  description_tex: "\\textbf{ETL Guild Volunteer} - Applied ETL and data-science methods
+    to initiatives that made difficult-to-use public records more accessible and machine-readable
+    for research, planning, and civic use. Supported broader efforts to improve government
+    transparency and help residents engage with public information."
+  tail_tex: |2+
+
+    % Organization and volunteer-role context verified at:
+    % https://sainthermans.org/about-us/our-mission/
+    % https://sainthermans.org/serve/
+
+- id: st-herman-house-focus-cleveland-cleveland-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: St. Herman House - FOCUS Cleveland, Cleveland, Ohio
+  dates_tex: 2013 - 2014
+  description_tex: "\\textbf{Daily Meal Program Volunteer} - Supported a year-round
+    meal program providing three meals a day to neighbors in need, helping deliver
+    welcoming, dignity-centered service."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: st-herman-house-focus-cleveland-cleveland-ohio-01
+    prefix_tex: "  \\item "
+    text_tex: Distributed meal tickets, plated food, handed meals to guests, and served
+      water and desserts in the dining room.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: |2
+
+    % Mission and publication context verified at:
+    % https://heightsobserver.org/read/about-the-observer
+    % https://heightsobserver.org/read/news-/arts--entertainment/a--e-news/12
+- id: heights-observer-cleveland-heights-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Heights Observer, Cleveland Heights, Ohio
+  dates_tex: Feb. 2012 - May 2014
+  description_tex: "\\textbf{Volunteer Editor} - Edited resident-submitted reporting
+    for a nonprofit, citizen-produced newspaper serving Cleveland Heights and University
+    Heights, improving accuracy and clarity while preserving each contributor's voice.
+    Also contributed local arts and culture coverage, supporting civic participation,
+    public discourse, and independent community journalism."
+  tail_tex: |2
+
+
+    % Publication history and purpose verified at:
+    % https://magazine.uc.edu/issues/0506/newsrecord1.html
+    % https://www.uc.edu/news/articles/2025/05/ucs-student-newspaper-names-hajra-munir-as-new-editor-in-chief.html
+- id: the-news-record-university-of-cincinnati
+  kind: record
+  leading_tex: ''
+  name_tex: The News Record, University of Cincinnati
+  dates_tex: Feb. 2008 - Sep. 2010
+  description_tex: "\\textbf{Editorial Contributor} - Wrote and edited campus content
+    for the university's independent, student-run newspaper. Helped inform and educate
+    the university community, amplify student perspectives, and maintain accurate,
+    timely coverage of campus life."
+  tail_tex: |2
+
+
+    % School mission verified at:
+    % https://www.tcpworldacademy.us/brochure%204.pdf
+- id: tcp-world-academy
+  kind: record
+  leading_tex: ''
+  name_tex: TCP World Academy
+  dates_tex: Sep. 2008 - May 2009
+  description_tex: "\\textbf{Tutor} - Tutored students in support of TCP World Academy's
+    mission to develop academically engaged, independent learners. Reinforced classroom
+    learning through technology and participatory micro-society activities that connected
+    students' education with meaningful participation in a global society."
+  tail_tex: |2
+
+
+    % Program mission and model verified at:
+    % https://astrosociety.org/education-outreach/k-12-science-teachers/project-astro.html
+- id: project-astro-at-ethel-m-taylor-academy
+  kind: record
+  leading_tex: ''
+  name_tex: Project Astro at Ethel M Taylor Academy
+  dates_tex: '2008'
+  description_tex: "\\textbf{Volunteer Astronomer} - Worked with an educator at Ethel
+    M Taylor Academy to provide hands-on, inquiry-based astronomy and physical-science
+    activities. Helped students investigate scientific questions and engage with astronomy
+    as practicing scientists through the national Project ASTRO educator-astronomer
+    partnership model."
+  tail_tex: |2+
+
+    % Beta Gamma chapter context verified at:
+    % https://web.archive.org/web/20070208021854/http://www.sigmatheta.org/cgi-bin/chapter.cgi?ch_id=103
+
+- id: sigma-theta-epsilon-beta-gamma-chapter-cincinnati-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Sigma Theta Epsilon, Beta Gamma Chapter, Cincinnati, Ohio
+  dates_tex: 2006 - 2007
+  description_tex: "\\textbf{Chapter Volunteer} - Participated in volunteer service
+    through the University of Cincinnati chapter of an interdenominational Christian
+    fraternity."
+  tail_tex: |2+
+
+    % Organizational history and ministry context verified at:
+    % https://reachoutoncampus.com/reach-lore
+    % https://www.ohio.edu/student-affairs/dean-of-students/religious-spiritual-life/university-interfaith-association
+    % Community meals documented on the organization's site in 2004:
+    % https://web.archive.org/web/20040609231615/http://www.ohiou.edu/~reach/photos_meals.html
+
+- id: reach-out-on-campus-ohio-university-athens-ohio
+  kind: record
+  leading_tex: ''
+  name_tex: Reach Out on Campus, Ohio University, Athens, Ohio
+  dates_tex: Sep. 2000 - Jun. 2004
+  description_tex: "\\textbf{Volunteer} - Supported community meal services through
+    the Christian campus ministry during undergraduate study."
+  before_items_tex: "\n"
+  item_open_tex: "\\begin{itemize}\n"
+  items:
+  - id: reach-out-on-campus-ohio-university-athens-ohio-01
+    prefix_tex: "  \\item "
+    text_tex: Routinely served meals and cleaned up at weekly Tuesday community meals
+      at Athens Church of Christ.
+    ending_tex: "\n"
+  - id: reach-out-on-campus-ohio-university-athens-ohio-02
+    prefix_tex: "  \\item "
+    text_tex: Participated in on-campus meal services open to the public.
+    ending_tex: "\n"
+  item_close_tex: "\\end{itemize}\n"
+  after_items_tex: ''
+suffix_tex: ''

@@ -1,0 +1,23 @@
+---
+id: hhax
+kind: role
+employer: HHAeXchange
+title_tex: Healthcare Data Integration Consultant - Contract via Veersa Technologies
+dates: Oct. 2025 - Jun. 2026
+tools_tex: Snowflake, dbt, SQL/Jinja, Python, Snowpark, pandas, Liquibase, GitHub
+  Actions, FHIR/Aidbox
+summary_tex: Led healthcare source analysis, data-quality investigation, and Snowflake
+  modeling to produce trusted, standardized datasets for reporting and downstream
+  use.
+source: master_career_history/professional_experience.tex:5
+achievement_ids:
+- hhax-01
+- hhax-02
+- hhax-03
+- hhax-04
+- hhax-05
+- hhax-06
+- hhax-07
+- hhax-08
+- hhax-09
+- hhax-10

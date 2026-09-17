@@ -1,0 +1,21 @@
+---
+id: amtrust
+kind: role
+employer: AmTrust Financial Services
+title_tex: Application Development Consultant - Contract via TEKsystems
+dates: Mar. 2014 - Jun. 2015
+tools_tex: VB.NET, ASP.NET, C\#, Web APIs, CSS, JavaScript, HTML5, SQL, PL/SQL, LINQ,
+  R
+summary_tex: Developed ISO-based web forms, multi-tier MVC components, Web APIs, and
+  user interfaces for commercial insurance policy software.
+source: master_career_history/professional_experience.tex:152
+achievement_ids:
+- amtrust-01
+- amtrust-02
+- amtrust-03
+- amtrust-04
+- amtrust-05
+- amtrust-06
+- amtrust-07
+- amtrust-08
+- amtrust-09

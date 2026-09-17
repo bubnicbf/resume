@@ -1,0 +1,15 @@
+---
+id: ibm-software-developer
+kind: subrole
+employer: IBM
+title_tex: Software Developer, Data Platform
+dates: Sep. 2016 - Nov. 2017
+tools_tex: ''
+summary_tex: ''
+source: master_career_history/professional_experience.tex:126
+achievement_ids:
+- ibm-software-developer-01
+- ibm-software-developer-02
+- ibm-software-developer-03
+- ibm-software-developer-04
+- ibm-software-developer-05

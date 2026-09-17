@@ -1,0 +1,21 @@
+---
+id: arkos
+kind: role
+employer: Arkos Health
+title_tex: Senior Data Analyst
+dates: Jun. 2023 - Jan. 2025
+tools_tex: AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power BI,
+  Tableau
+summary_tex: Delivered healthcare analytics, recurring reporting, and data-quality
+  investigations while improving the governed data foundation used by the BI team.
+source: master_career_history/professional_experience.tex:47
+achievement_ids:
+- arkos-01
+- arkos-02
+- arkos-03
+- arkos-04
+- arkos-05
+- arkos-06
+- arkos-07
+- arkos-08
+- arkos-09

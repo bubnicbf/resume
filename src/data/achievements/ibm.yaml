@@ -1,0 +1,14 @@
+---
+- id: ibm-01
+  text_tex: Supported employee onboarding from 2016 to 2018, helping new colleagues
+    learn team practices, systems, and technical workflows.
+- id: ibm-02
+  text_tex: Served on tiger teams supporting the HDFS-to-Azure data-platform upgrade
+    and participated on the data-governance team.
+- id: ibm-03
+  text_tex: Participated in internal coding jams, hackathons, and cross-team delivery
+    initiatives.
+- id: ibm-04
+  text_tex: Played a central role in the REACH cross-team training initiative, teaching
+    SQL fundamentals to nontechnical colleagues and ETL, architecture, data-science,
+    and predictive-modeling practices to technical colleagues.

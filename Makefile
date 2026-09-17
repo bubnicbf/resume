@@ -1,96 +1,38 @@
 ENGINE   := xelatex
 SRC_DIR  := src
 OUT_DIR  := build/pdf
-ATS_OUT_DIR := $(OUT_DIR)
-
-DOCS     := abstract cover
-PDFS     := $(DOCS:%=$(OUT_DIR)/%.pdf)
-
-CONTENT_TEX := $(wildcard src/content/*.tex) \
-               $(wildcard src/content/summary/*.tex) \
-               $(wildcard src/content/experience/*.tex) \
-               $(wildcard src/content/education/*.tex) \
-               $(wildcard src/content/publication/*.tex)
-
-STYLE_FILES := $(wildcard src/styles/*.cls) \
-               $(wildcard src/styles/*.sty)
-
-SRC_FILES := $(wildcard src/*.tex)
 ROLE_DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
 DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
-PROFILE ?= selected-career-history
-
-COMMON_DEPS := $(CONTENT_TEX) $(STYLE_FILES)
 
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all abstract resume-ats master-career-history resume-arcadia cover cover-arcadia profile clean distclean open
+.PHONY: all resume-ats master-career-history clean distclean open
 
-all: $(PDFS) resume-ats
+all: resume-ats master-career-history
 
-abstract: $(OUT_DIR)/abstract.pdf
-resume-ats: $(ATS_OUT_DIR)/resume_ats.pdf
-master-career-history: $(ATS_OUT_DIR)/master_career_history.pdf
-resume-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf
-cover: $(OUT_DIR)/cover.pdf
-cover-arcadia: $(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf
+resume-ats: $(OUT_DIR)/resume_ats.pdf
+master-career-history: $(OUT_DIR)/master_career_history.pdf
 
-# Preview a YAML-driven career history without replacing the main PDF.
-# Example: make profile PROFILE=selected-career-history
-profile:
-	@ruby scripts/render_profile.rb "$(PROFILE)"
-	@mkdir -p "$(ATS_OUT_DIR)"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname="$(PROFILE)" -output-directory=../$(ATS_OUT_DIR) "../build/generated/$(PROFILE).tex"
+open: $(OUT_DIR)/resume_ats.pdf
+	open "$(OUT_DIR)/resume_ats.pdf"
 
-open: $(ATS_OUT_DIR)/resume_ats.pdf
-	open "$(ATS_OUT_DIR)/resume_ats.pdf"
-
-$(ATS_OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
-	@mkdir -p "$(ATS_OUT_DIR)"
+$(OUT_DIR)/resume_ats.pdf: $(SRC_DIR)/resume_ats.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/resume-ats.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume_ats.rb scripts/extract_pdf_text.swift
+	@mkdir -p "$(OUT_DIR)"
 	@ruby scripts/render_profile.rb resume-ats
 	@echo "==> Building ATS resume"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "resume_ats.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume_ats.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume_ats.tex"
 	@ruby scripts/check_resume_ats.rb
-	@echo "==> Wrote $(ATS_OUT_DIR)/resume_ats.pdf"
+	@echo "==> Wrote $(OUT_DIR)/resume_ats.pdf"
 
-$(ATS_OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/data/contact.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb
-	@mkdir -p "$(ATS_OUT_DIR)"
+$(OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/data/contact.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb
+	@mkdir -p "$(OUT_DIR)"
 	@ruby scripts/render_profile.rb master-career-history
 	@echo "==> Building master career history"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -output-directory=../$(ATS_OUT_DIR) "master_career_history.tex"
-	@echo "==> Wrote $(ATS_OUT_DIR)/master_career_history.pdf"
-
-$(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf: $(SRC_DIR)/resume_arcadia.tex
-	@mkdir -p "$(ATS_OUT_DIR)"
-	@echo "==> Building Arcadia resume"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname=ben_bubnick_arcadia_resume -output-directory=../$(ATS_OUT_DIR) "resume_arcadia.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname=ben_bubnick_arcadia_resume -output-directory=../$(ATS_OUT_DIR) "resume_arcadia.tex"
-	@echo "==> Wrote $(ATS_OUT_DIR)/ben_bubnick_arcadia_resume.pdf"
-
-$(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf: $(SRC_DIR)/cover_arcadia.tex
-	@mkdir -p "$(ATS_OUT_DIR)"
-	@echo "==> Building Arcadia cover letter"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname=ben_bubnick_arcadia_cover_letter -output-directory=../$(ATS_OUT_DIR) "cover_arcadia.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) -jobname=ben_bubnick_arcadia_cover_letter -output-directory=../$(ATS_OUT_DIR) "cover_arcadia.tex"
-	@echo "==> Wrote $(ATS_OUT_DIR)/ben_bubnick_arcadia_cover_letter.pdf"
-
-$(OUT_DIR)/abstract.pdf: $(SRC_DIR)/abstract.tex $(COMMON_DEPS)
-	@mkdir -p "$(OUT_DIR)"
-	@echo "==> Building abstract"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "abstract.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "abstract.tex"
-	@echo "==> Wrote $(OUT_DIR)/abstract.pdf"
-
-$(OUT_DIR)/cover.pdf: $(SRC_DIR)/cover.tex $(COMMON_DEPS)
-	@mkdir -p "$(OUT_DIR)"
-	@echo "==> Building cover"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "cover.tex"
-	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "cover.tex"
-	@echo "==> Wrote $(OUT_DIR)/cover.pdf"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "master_career_history.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "master_career_history.tex"
+	@echo "==> Wrote $(OUT_DIR)/master_career_history.pdf"
 
 clean:
 	@echo "==> Cleaning aux/log files from $(OUT_DIR)"

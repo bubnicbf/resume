@@ -66,10 +66,17 @@ end
 
 def ats_entry(role, selection)
   raise "ATS profile requires individual roles: #{role['id']}" if role.fetch('kind') == 'company'
+  raise "ATS technologies must come from the role record: #{role['id']}" if selection.key?('tools_tex')
   lines = ["\\atsrole#{braces(role.fetch('employer'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}"]
-  details = []
-  details << "Technologies: #{selection.fetch('tools_tex')}" if selection.key?('tools_tex')
-  lines << "\\textit{#{details.join('\\contactsep ')}}\\par" unless details.empty?
+  tools = role.fetch('tools_tex')
+  lines << "\\textit{Technologies: #{tools}}\\par" unless tools.empty?
+  if selection.key?('company_technologies_from')
+    company_id = selection.fetch('company_technologies_from')
+    raise "Invalid ATS company ID: #{company_id}" unless company_id.match?(/\A[a-z0-9-]+\z/)
+    company = load_yaml(File.join(DATA, 'roles', "#{company_id}.yaml"))
+    raise "ATS technologies source must be the parent company of #{role['id']}" unless company.fetch('kind') == 'company' && company.fetch('employer') == role.fetch('employer')
+    lines << "\\textit{Technologies used across #{company.fetch('employer')} roles: #{company.fetch('tools_tex')}}\\par"
+  end
   texts = selected_items(role, selection)
   unless texts.empty?
     lines << '\\begin{itemize}'

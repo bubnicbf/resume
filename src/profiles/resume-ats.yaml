@@ -21,20 +21,16 @@ certifications: [certificate-of-specialization-data-science-johns-hopkins-univer
 roles:
   - id: hhax
     achievements: [hhax-01, hhax-05, hhax-04, hhax-03]
-    tools_tex: Snowflake, dbt, SQL/Jinja, FHIR
   - id: adonis
     achievements: [adonis-03, adonis-01, adonis-02, adonis-05]
-    tools_tex: Snowflake, SQLMesh, SQL, AWS
   - id: growdata
     achievements: [growdata-01, growdata-02]
-    tools_tex: Python, Ruby, OCR, AWS
   - id: arkos
     achievements: [arkos-01, arkos-02]
-    tools_tex: AWS, dbt, PySpark, Power BI
   - id: merative
     achievements: [merative-02, merative-01]
-    tools_tex: Azure Data Factory, Python, SQL, Synapse Analytics
   - id: ibm-senior-data-scientist
+    company_technologies_from: ibm
     achievements: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-13]
   - id: ibm-senior-data-architect
     achievements: [ibm-senior-data-architect-02, ibm-senior-data-architect-09,
@@ -47,4 +43,3 @@ roles:
     achievements: [ibm-data-scientist-01, ibm-data-scientist-04]
   - id: explorys
     achievements: [explorys-02]
-    tools_tex: Hadoop/HDFS, Oracle, Jenkins, SQL

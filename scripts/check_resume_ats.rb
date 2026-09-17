@@ -38,6 +38,21 @@ profile.fetch('roles').each do |selection|
   heading = "#{role.fetch('employer')} #{role.fetch('dates')}"
   index = expect_line.call(heading)
   abort "Title missing after #{heading}" unless lines[index + 1] == role.fetch('title_tex')
+  tools = role.fetch('tools_tex')
+  if tools.empty?
+    abort "Unexpected technologies after #{heading}" if lines[index + 2]&.start_with?('Technologies:')
+  else
+    normalized_text = lines[index + 2..].join(' ').gsub(/\s+/, ' ')
+    abort "Technologies missing or changed after #{heading}" unless normalized_text.start_with?("Technologies: #{tools}")
+  end
+  if selection.key?('company_technologies_from')
+    company = YAML.load_file(File.join(root, 'src/data/roles', "#{selection.fetch('company_technologies_from')}.yaml"))
+    label = "Technologies used across #{company.fetch('employer')} roles:"
+    expected = "#{label} #{company.fetch('tools_tex')}"
+    normalized_text = lines[index + 2..].join(' ').gsub(/\s+/, ' ')
+    abort "Company technologies missing or changed after #{heading}" unless normalized_text.start_with?(expected)
+    abort "Company technologies appear more than once: #{company.fetch('employer')}" unless output.scan(label).length == 1
+  end
 end
 
 expect_line.call('Education')

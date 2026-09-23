@@ -5,7 +5,9 @@ employer: IBM
 title_tex: Data Architect
 dates: Nov. 2017 - Dec. 2020
 tools_tex: ''
-summary_tex: ''
+summary_tex: Led healthcare-data onboarding and validation across complex multi-EHR
+  integrations, strengthening data-sharing controls, patient-matching quality, and
+  repeatable client delivery.
 source: master_career_history/professional_experience.tex:114
 achievement_ids:
 - ibm-data-architect-01

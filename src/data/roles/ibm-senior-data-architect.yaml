@@ -5,7 +5,9 @@ employer: IBM
 title_tex: Senior Data Architect
 dates: Dec. 2020 - Nov. 2021
 tools_tex: ''
-summary_tex: ''
+summary_tex: Directed data-onboarding architecture and governance for large-scale
+  clinical platforms, combining metadata-driven integration, deidentification, lineage,
+  validation, and applied machine learning.
 source: master_career_history/professional_experience.tex:99
 achievement_ids:
 - ibm-senior-data-architect-01

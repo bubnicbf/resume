@@ -74,7 +74,8 @@ def master_entry(role, selection)
              "#{role.fetch('summary_tex')}\\\\[-1pt]",
              "\\textit{Technologies: #{role.fetch('tools_tex')}}"]
           when 'subrole'
-            ["\\subrole#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}"]
+            ["\\subrole#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}",
+             role.fetch('summary_tex')]
           else
             ["\\role#{braces(role.fetch('employer'))}#{braces(role.fetch('dates'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('tools_tex'))}",
              role.fetch('summary_tex')]

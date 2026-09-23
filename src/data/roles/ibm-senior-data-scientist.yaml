@@ -5,7 +5,9 @@ employer: IBM
 title_tex: Senior Data Scientist
 dates: Nov. 2021 - Jul. 2022
 tools_tex: ''
-summary_tex: ''
+summary_tex: Led healthcare data integration, migration validation, and analytics
+  delivery across clinical, claims, operational, and financial sources, including
+  an HDFS-to-Azure transition spanning more than 150 billion deidentified records.
 source: master_career_history/professional_experience.tex:82
 achievement_ids:
 - ibm-senior-data-scientist-01

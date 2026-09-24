@@ -10,7 +10,7 @@ prefix_tex: |
   % Comprehensive inventory for the master history, not a ready-made targeted resume.
   % Promotion policy for targeted resumes:
   % - Current/Core: recent or recurring applied work; safe to foreground when relevant.
-  % - Working Knowledge: applied experience, but verify depth and recency for a target role.
+  % - Working Knowledge: applied experience or recent structured training; verify depth and recency for a target role.
   % - Historical: earlier applied work; do not promote without explicit role relevance.
   % User-confirmed recollections are included, but do not by themselves establish recency.
   % Person in Charge certification date and current validity are not recorded.
@@ -42,7 +42,8 @@ blocks:
     and lakes, source-system discovery and feasibility analysis, source-to-target
     mapping, dimensional modeling, business-grain definition, natural/composite/surrogate
     keys, identity crosswalks, metadata-driven transformations, data contracts and
-    lineage; \\textit{Working Knowledge:} Spark, Kafka, Data Vault modeling, Parquet,
+    lineage; \\textit{Working Knowledge:} Databricks Lakehouse, Lakeflow Connect,
+    Lakeflow Spark Declarative Pipelines, Spark, Kafka, Data Vault modeling, Parquet,
     OMOP Common Data Model; \\textit{Historical:} Hadoop/HDFS, Pig\\\\\n"
 - id: data-quality-governance-and-migration
   kind: raw
@@ -51,23 +52,28 @@ blocks:
     and business-rule checks, source-to-target and aggregate reconciliation, schema-drift
     detection, parity checks, regression testing, UAT, migration-acceptance testing,
     deidentification validation, idempotent and deterministic reruns, audit logging;
-    \\textit{Working Knowledge:} role-based access control (RBAC) design, terminology
-    mapping, data-sharing and consent constraints\\\\\n"
+    \\textit{Working Knowledge:} Databricks data-governance fundamentals, Unity
+    Catalog interoperability, catalog management and data organization, data privacy,
+    governance at scale, role-based access control (RBAC) design, terminology mapping,
+    data-sharing and consent constraints\\\\\n"
 - id: data-operations-and-reliability
   kind: raw
   tex: "\\textbf{Data Operations and Reliability:} \\textit{Current/Core:} job scheduling,
     workflow orchestration, pipeline and software dependency management, observability,
     monitoring and alerting, incident classification and response, production troubleshooting,
-    runbooks, release and promotion gates, configuration and version management\\\\\n"
+    runbooks, release and promotion gates, configuration and version management;
+    \\textit{Working Knowledge:} Lakeflow Jobs, Databricks workload deployment and
+    performance optimization\\\\\n"
 - id: cloud-devops-and-test-tools
   kind: raw
   tex: "\\textbf{Cloud, DevOps, and Test Tools:} \\textit{Current/Core:} AWS (S3,
     Glue, Lambda, CloudWatch, AWS CLI), Microsoft Azure (Data Factory, Functions,
     Blob Storage), Git/GitHub, GitHub Actions, Docker, CI/CD, automated unit and integration
     testing, test fixtures and golden files, RSpec, RuboCop, Liquibase, Make, CLI
-    environment setup, Python virtual environments; \\textit{Working Knowledge:} hermetic
-    tests, Azure DevOps, Jenkins, Helm/Kubernetes, Gradle, Postman, regular expressions,
-    Tesseract OCR, RubyLLM; \\textit{Historical:} cron\\\\\n"
+    environment setup, Python virtual environments; \\textit{Working Knowledge:} Databricks
+    declarative automation bundles and data-engineering DevOps patterns, hermetic tests,
+    Azure DevOps, Jenkins, Helm/Kubernetes, Gradle, Postman, regular expressions,
+    Tesseract OCR, RubyLLM; \\textit{Historical:} cron\\par\\newpage\n"
 - id: healthcare-data-and-interoperability
   kind: raw
   tex: "\\textbf{Healthcare Data and Interoperability:} \\textit{Current/Core:} clinical,
@@ -76,7 +82,7 @@ blocks:
     HEDIS and other quality measures and registries, prior authorization, health-information
     exchange, ADT notifications, PHI handling and HIPAA-compliant deidentification
     workflows; \\textit{Working Knowledge:} social determinants of health, provider
-    directories, patient consent, HITRUST readiness support\\par\\newpage\n"
+    directories, patient consent, HITRUST readiness support\\\\\n"
 - id: analytics-machine-learning-and-bi
   kind: raw
   tex: "\\textbf{Analytics, Machine Learning, and BI:} \\textit{Current/Core:} data

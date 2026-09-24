@@ -2,7 +2,6 @@
 id: career_overview
 title_tex: Career Overview
 label: sec:profile
-source: src/content/master_career_history/career_overview.tex
 prefix_tex: |+
   \section{Career Overview}
   \phantomsection

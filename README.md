@@ -5,7 +5,6 @@ LaTeX résumé and comprehensive master career history.
 ## Layout
 
 - `src/resume.tex` and `src/master_career_history.tex`: the two document layouts.
-- `src/content/master_career_history/`: original import snapshots, not active sources.
 - `src/data/roles/`: one YAML record per professional role, imported from the master career history.
 - `src/data/achievements/`: reusable achievement statements, with stable IDs.
 - `src/data/contact.yaml`: shared name and contact details for the résumé and master career history.
@@ -42,7 +41,7 @@ The master profile lists sections in display order. A section entry can be its I
 
 In section YAML, edit `name_tex`, `dates_tex`, `description_tex`, `title_tex`, `text_tex`, or a raw block's `tex`. Fields such as `prefix_tex`, `leading_tex`, and `item_open_tex` preserve LaTeX layout and normally should not need editing. All `*_tex` values are inserted as LaTeX, not automatically escaped. Profile rendering validates selected IDs before creating the document.
 
-The initial YAML inventory was mechanically imported with `scripts/import_master_experience.rb` and `scripts/import_master_sections.rb`. Do not rerun those one-time imports after editing YAML: YAML is now the master-history source of truth.
+The YAML inventory is the master-history source of truth. The legacy LaTeX import snapshots and one-time import tooling were removed after migration.
 
 Structured role data lives under `src/data/roles/`.
 

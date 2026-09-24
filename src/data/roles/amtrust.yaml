@@ -8,7 +8,6 @@ tools_tex: VB.NET, ASP.NET, C\#, Web APIs, CSS, JavaScript, HTML5, SQL, PL/SQL, 
   R
 summary_tex: Developed ISO-based web forms, multi-tier MVC components, Web APIs, and
   user interfaces for commercial insurance policy software.
-source: master_career_history/professional_experience.tex:152
 achievement_ids:
 - amtrust-01
 - amtrust-02

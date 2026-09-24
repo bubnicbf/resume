@@ -2,7 +2,6 @@
 id: publications_and_research_outputs
 title_tex: Publications and Research Outputs
 label: sec:publications_and_research_outputs
-source: src/content/master_career_history/publications_and_research_outputs.tex
 prefix_tex: |+
   \section{Publications and Research Outputs}
   \phantomsection

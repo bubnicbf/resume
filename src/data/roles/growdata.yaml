@@ -8,7 +8,6 @@ tools_tex: Python, Ruby, RubyLLM, RSpec, RuboCop, Tesseract OCR, LLM APIs, Docke
   AWS, GitHub Actions
 summary_tex: Built and operated an independent consultancy focused on converting semi-structured
   documents into validated, auditable data products.
-source: master_career_history/professional_experience.tex:20
 achievement_ids:
 - growdata-01
 - growdata-02

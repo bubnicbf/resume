@@ -2,7 +2,6 @@
 id: selected_independent_projects
 title_tex: Selected Independent Projects
 label: sec:outputs
-source: src/content/master_career_history/selected_independent_projects.tex
 prefix_tex: |+
   \section{Selected Independent Projects}
   \phantomsection
@@ -46,10 +45,6 @@ blocks:
     then trains an XGBoost classifier using position, wind speed, and pressure to
     identify low wind regions as a proxy for potential snow drift accumulation.
   tail_tex: |2+
-
-
-    % \record{\href{https://github.com/bubnicbf/healthcare-dbt-demo}{healthcare-dbt-demo}}{2025}{Runnable dbt demonstration of Data Vault 2.0 modeling for synthetic healthcare claims, patient, and provider data. It builds hashed Hubs, relationship Links, and auditable Satellites with load timestamps and source attribution; adds a Business Vault monthly claims rollup; and publishes a BI friendly claims star schema. The project also includes reusable hashing macros and tests for uniqueness, required values, and referential integrity across DuckDB and PostgreSQL compatible workflows.}
-
 - id: claims-case-study
   kind: record
   leading_tex: ''
@@ -102,6 +97,21 @@ blocks:
     It also documents data quality controls, terminology mapping, de-identification
     considerations, and implementation options involving Apache NiFi, Azure Data Factory,
     and Python.
+  tail_tex: "\n\n"
+- id: covid-dataset
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/covid-dataset}{covid-dataset}"
+  dates_tex: '2022'
+  description_tex: Azure Data Factory data engineering project that ingests public
+    ECDC COVID-19 and population data over HTTP and Blob Storage, lands raw data in
+    ADLS Gen2, transforms cases, deaths, and hospital admissions with mapping data
+    flows, and publishes curated snapshots to Azure SQL Database. Implements metadata-driven,
+    scheduled, and event-driven ingestion; country, population, and calendar enrichment;
+    idempotent, failure-safe staged SQL publication with audit records and concurrency
+    controls; managed-identity and least-privilege security; ARM deployment templates;
+    and continuous integration checks for secrets, ADF references, T-SQL, and generated
+    artifacts.
   tail_tex: "\n\n"
 - id: zams-cluster-candidacy
   kind: record

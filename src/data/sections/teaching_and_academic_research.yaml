@@ -2,7 +2,6 @@
 id: teaching_and_academic_research
 title_tex: Teaching and Academic Research
 label: sec:teaching
-source: src/content/master_career_history/teaching_and_academic_research.tex
 prefix_tex: |+
   \section{Teaching and Academic Research}
   \phantomsection

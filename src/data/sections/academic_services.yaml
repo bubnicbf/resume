@@ -2,7 +2,6 @@
 id: academic_services
 title_tex: Academic Services
 label: sec:academic_services
-source: src/content/master_career_history/academic_services.tex
 prefix_tex: |+
   \section{Academic Services}
   \phantomsection

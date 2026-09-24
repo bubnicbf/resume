@@ -2,7 +2,6 @@
 id: speaking_engagements
 title_tex: Speaking Engagements
 label: sec:speaking_engagements
-source: src/content/master_career_history/speaking_engagements.tex
 prefix_tex: |+
   \section{Speaking Engagements}
   \phantomsection

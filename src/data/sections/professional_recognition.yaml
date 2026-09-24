@@ -2,7 +2,6 @@
 id: professional_recognition
 title_tex: Professional Recognition
 label: sec:recognition
-source: src/content/master_career_history/professional_recognition.tex
 prefix_tex: |+
   \section{Professional Recognition}
   \phantomsection

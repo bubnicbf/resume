@@ -2,7 +2,6 @@
 id: education
 title_tex: Education
 label: sec:education
-source: src/content/master_career_history/education.tex
 prefix_tex: |+
   \section{Education}
   \phantomsection

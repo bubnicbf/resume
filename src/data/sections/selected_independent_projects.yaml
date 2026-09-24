@@ -2,7 +2,6 @@
 id: selected_independent_projects
 title_tex: Selected Independent Projects
 label: sec:outputs
-source: src/content/master_career_history/selected_independent_projects.tex
 prefix_tex: |+
   \section{Selected Independent Projects}
   \phantomsection

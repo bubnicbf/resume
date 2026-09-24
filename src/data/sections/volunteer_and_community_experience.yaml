@@ -2,7 +2,6 @@
 id: volunteer_and_community_experience
 title_tex: Volunteer and Community Experience
 label: sec:volunteer_and_community_experience
-source: src/content/master_career_history/volunteer_and_community_experience.tex
 prefix_tex: |+
   \section{Volunteer and Community Experience}
   \phantomsection

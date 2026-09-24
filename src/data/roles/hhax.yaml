@@ -9,7 +9,6 @@ tools_tex: Snowflake, dbt, SQL/Jinja, Python, Snowpark, pandas, Liquibase, GitHu
 summary_tex: Led healthcare source analysis, data-quality investigation, and Snowflake
   modeling to produce trusted, standardized datasets for reporting and downstream
   use.
-source: master_career_history/professional_experience.tex:5
 achievement_ids:
 - hhax-01
 - hhax-02

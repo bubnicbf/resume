@@ -2,7 +2,6 @@
 id: creative_and_visual_arts
 title_tex: Creative and Visual Arts
 label: sec:creative_and_visual_arts
-source: src/content/master_career_history/creative_and_visual_arts.tex
 prefix_tex: |+
   \section{Creative and Visual Arts}
   \phantomsection

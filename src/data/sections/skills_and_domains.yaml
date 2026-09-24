@@ -2,7 +2,6 @@
 id: skills_and_domains
 title_tex: Skills and Domains
 label: sec:skills_and_domains
-source: src/content/master_career_history/skills_and_domains.tex
 prefix_tex: |
   \section{Skills and Domains}
   \phantomsection

@@ -8,7 +8,6 @@ tools_tex: ''
 summary_tex: Directed client data-integration delivery and built reusable extraction
   and QA practices that reduced implementation effort and standardized onboarding
   across dozens of healthcare projects.
-source: master_career_history/professional_experience.tex:135
 achievement_ids:
 - ibm-data-scientist-01
 - ibm-data-scientist-02

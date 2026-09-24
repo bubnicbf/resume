@@ -9,7 +9,6 @@ tools_tex: Spark, Hadoop/HDFS, Hive, Impala, Kafka, Python, SQL, T-SQL, MySQL, P
   HL7
 summary_tex: Advanced through five roles delivering healthcare analytics, data architecture,
   client integration, data-quality improvement, and large-scale migration validation.
-source: master_career_history/professional_experience.tex:72
 achievement_ids:
 - ibm-01
 - ibm-02

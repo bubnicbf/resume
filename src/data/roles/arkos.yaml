@@ -8,7 +8,6 @@ tools_tex: AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power 
   Tableau
 summary_tex: Delivered healthcare analytics, recurring reporting, and data-quality
   investigations while improving the governed data foundation used by the BI team.
-source: master_career_history/professional_experience.tex:47
 achievement_ids:
 - arkos-01
 - arkos-02

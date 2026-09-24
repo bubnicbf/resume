@@ -7,7 +7,6 @@ dates: Mar. 2025 - Jul. 2025
 tools_tex: AWS S3, Snowflake, SQLMesh, SQL, Python, Docker, GitHub Actions
 summary_tex: Translated payer and revenue-cycle source data into standardized Snowflake
   models for repeatable client onboarding, analytics, and reporting.
-source: master_career_history/professional_experience.tex:34
 achievement_ids:
 - adonis-01
 - adonis-02

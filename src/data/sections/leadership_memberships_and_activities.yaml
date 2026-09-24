@@ -2,7 +2,6 @@
 id: leadership_memberships_and_activities
 title_tex: Leadership, Memberships, and Activities
 label: sec:leadership_memberships_and_activities
-source: src/content/master_career_history/leadership_memberships_and_activities.tex
 prefix_tex: |+
   \section{Leadership, Memberships, and Activities}
   \phantomsection

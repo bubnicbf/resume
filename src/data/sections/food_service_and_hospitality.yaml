@@ -2,7 +2,6 @@
 id: food_service_and_hospitality
 title_tex: Food Service and Hospitality
 label: sec:food_service_and_hospitality
-source: src/content/master_career_history/food_service_and_hospitality.tex
 prefix_tex: |+
   \section{Food Service and Hospitality}
   \phantomsection

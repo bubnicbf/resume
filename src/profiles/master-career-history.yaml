@@ -64,8 +64,9 @@ roles:
     achievement_order: [adonis-03, adonis-01, adonis-02, adonis-05,
       adonis-08, adonis-04, adonis-06, adonis-07]
   - id: arkos
-    achievement_order: [arkos-01, arkos-02, arkos-03, arkos-06, arkos-09,
-      arkos-04, arkos-08, arkos-05, arkos-07]
+    achievement_order: [arkos-01, arkos-16, arkos-10, arkos-11, arkos-14,
+      arkos-12, arkos-13, arkos-15, arkos-17, arkos-02, arkos-03, arkos-06,
+      arkos-09, arkos-04, arkos-08, arkos-05, arkos-07]
   - id: merative
     achievement_order: [merative-02, merative-01, merative-07, merative-05,
       merative-04, merative-03, merative-06]

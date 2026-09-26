@@ -30,3 +30,41 @@
 - id: arkos-09
   text_tex: Initiated recurring stakeholder-feedback sessions to refine deliverables
     against business needs.
+- id: arkos-10
+  text_tex: Built multi-market Medicare RAF data-preparation workflows for Arizona,
+    North Dakota, and Illinois that combined enrollment and MMR demographic factors
+    with medical claims, signed EHR diagnoses, and payer encounter and MAO diagnoses;
+    generated member and diagnosis inputs for CMS-HCC scoring and pre-/post-wellness-visit
+    RAF analysis.
+- id: arkos-11
+  text_tex: Implemented diagnosis-submission lineage and acceptance logic covering
+    add/delete activity, repeated submissions, encounter disposition, source and
+    date-of-service preservation, and selection of the latest accepted diagnosis
+    state.
+- id: arkos-12
+  text_tex: Built diagnosis-level HHS-HCC capture analytics that mapped ICD-10 diagnoses
+    from signed face-to-face visits, reconciled them with payer gap reports, classified
+    existing, new, and net-new capture, identified the first capture source, and
+    produced monthly capture and HCC-per-visit measures.
+- id: arkos-13
+  text_tex: Prepared supplemental diagnosis, claims, and member-enrollment datasets
+    for Allwell, NextBlue, Humana, Allymar, and Reveleer workflows, joining claims
+    to the appropriate member, MBI, enrollment period, contract, demographic segment,
+    and member-month and formatting outputs to downstream specifications.
+- id: arkos-14
+  text_tex: Built end-to-end risk-capture reconciliation that traced diagnoses from
+    signed EHR encounters through Waystar claims, supplemental files, and MAO-004-style
+    payer and CMS responses, enabling the risk team to isolate where diagnoses dropped
+    from the submission path.
+- id: arkos-15
+  text_tex: Built a dbt-based Reveleer chart-chase data product across three Medicare
+    contracts, selecting eligible members and encounters, applying market-specific
+    rules, resolving provider and chart-location details, creating stable chase identifiers,
+    and generating separate chase and diagnosis files.
+- id: arkos-16
+  text_tex: Built version-aware AWS Glue and Athena ingestion and normalization pipelines
+    for evolving MAO, HCC, MOR, and related payer files, preserving source lineage
+    and standardizing downstream datasets in partitioned Parquet across the lakehouse.
+- id: arkos-17
+  text_tex: Prepared multi-market member, diagnosis, MOR, payer-gap, and ICD-to-HCC
+    mapping datasets supporting analysis of the CMS-HCC V24-to-V28 transition.

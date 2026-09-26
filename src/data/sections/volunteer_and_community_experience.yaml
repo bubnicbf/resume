@@ -24,9 +24,9 @@ blocks:
   leading_tex: ''
   name_tex: CSforAll
   dates_tex: Oct. 2018 - May 2019
-  description_tex: "\\textbf{Instructor} - Supported computer-science instruction
-    for Cleveland Metropolitan School District high-school students as part of a districtwide
-    effort to make rigorous computer-science coursework available in every high school.
+  description_tex: "\\textbf{Instructor} - Supported computer science instruction
+    for Cleveland Metropolitan School District high school students as part of a district wide
+    effort to make rigorous computer science coursework available in every high school.
     Helped broaden access for students from underrepresented and low-income populations,
     with particular attention to learners without reliable computer or Internet access
     at home."
@@ -36,11 +36,11 @@ blocks:
   leading_tex: ''
   name_tex: HIT in the CLE
   dates_tex: Mar. 2017 - Mar. 2019
-  description_tex: "\\textbf{Coach} - Coached five-student high-school teams through
-    a data-science competition, helping participants analyze a large dataset, develop
+  description_tex: "\\textbf{Coach} - Coached five-student high school teams through
+    a data science competition, helping participants analyze a large dataset, develop
     evidence-based conclusions, and communicate their findings. Introduced students
-    to health-information-technology careers while building data-analysis and presentation
-    skills and supporting a more diverse Northeast Ohio health-IT talent pipeline."
+    to health-information-technology careers while building data analysis and presentation
+    skills and supporting a more diverse Northeast Ohio Health IT talent pipeline."
   tail_tex: |2
 
 
@@ -51,8 +51,8 @@ blocks:
   leading_tex: ''
   name_tex: Code for America
   dates_tex: Jan. 2015 - Jun. 2015
-  description_tex: "\\textbf{ETL Guild Volunteer} - Applied ETL and data-science methods
-    to initiatives that made difficult-to-use public records more accessible and machine-readable
+  description_tex: "\\textbf{ETL Guild Volunteer} - Applied ETL and data science methods
+    to initiatives that made difficult to use public records more accessible and machine-readable
     for research, planning, and civic use. Supported broader efforts to improve government
     transparency and help residents engage with public information."
   tail_tex: |2+
@@ -68,7 +68,7 @@ blocks:
   dates_tex: 2013 - 2014
   description_tex: "\\textbf{Daily Meal Program Volunteer} - Supported a year-round
     meal program providing three meals a day to neighbors in need, helping deliver
-    welcoming, dignity-centered service."
+    welcoming, dignity centered service."
   before_items_tex: "\n"
   item_open_tex: "\\begin{itemize}\n"
   items:
@@ -131,9 +131,9 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Project Astro at Ethel M Taylor Academy
-  dates_tex: '2008'
+  dates_tex: Nov. 2008
   description_tex: "\\textbf{Volunteer Astronomer} - Worked with an educator at Ethel
-    M Taylor Academy to provide hands-on, inquiry-based astronomy and physical-science
+    M Taylor Academy to provide hands-on, inquiry based astronomy and physical science
     activities. Helped students investigate scientific questions and engage with astronomy
     as practicing scientists through the national Project ASTRO educator-astronomer
     partnership model."

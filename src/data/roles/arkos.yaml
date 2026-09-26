@@ -6,11 +6,12 @@ title_tex: Senior Data Analyst
 dates: Jun. 2023 - Jan. 2025
 tools_tex: AWS S3, Athena, Redshift, Glue, dbt, PySpark, Docker, Jupyter, Power BI,
   Tableau
-summary_tex: Delivered healthcare analytics, risk-capture data engineering, recurring
-  reporting, and data-quality investigations while improving the governed data foundation
-  used by the BI team.
+summary_tex: Delivered healthcare analytics and risk-capture SQL/dbt engineering while
+  supporting RAF notebook, workbook, and Tableau dashboard assets and improving the
+  governed data foundation used by the BI team.
 achievement_ids:
 - arkos-01
+- arkos-18
 - arkos-10
 - arkos-11
 - arkos-12

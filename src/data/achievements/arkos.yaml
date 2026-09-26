@@ -1,11 +1,11 @@
 ---
 - id: arkos-01
-  text_tex: Architected a greenfield AWS data lake integrating 18 source systems through
-    approximately 200 scheduled data assets and 200 dbt models, supporting six analysts
-    across six state markets; automated CI/CD and targeted model refactoring accelerated
-    deployments and improved query performance.
+  text_tex: Architected and built a greenfield AWS data-lake foundation integrating
+    18 source systems through approximately 200 scheduled data assets and 200 dbt
+    models, supporting six analysts across six state markets; CI/CD automation and
+    targeted model refactoring accelerated deployments and improved query performance.
 - id: arkos-02
-  text_tex: Integrated Jupyter-based analytics and authored platform, architecture,
+  text_tex: Integrated existing Jupyter-based analytics and authored platform, architecture,
     and operating documentation, enabling six analysts to independently use the governed
     data lake for recurring, executive, and BI reporting.
 - id: arkos-03
@@ -30,41 +30,50 @@
 - id: arkos-09
   text_tex: Initiated recurring stakeholder-feedback sessions to refine deliverables
     against business needs.
+# Risk-adjustment provenance: Ben built the SQL/dbt models. Three RAF notebooks and
+# their companion workbook, along with the Tableau Risk Dashboard, were built by other
+# team members and are described only as work Ben supported.
 - id: arkos-10
-  text_tex: Built multi-market Medicare RAF data-preparation workflows for Arizona,
-    North Dakota, and Illinois that combined enrollment and MMR demographic factors
-    with medical claims, signed EHR diagnoses, and payer encounter and MAO diagnoses;
-    generated member and diagnosis inputs for CMS-HCC scoring and pre-/post-wellness-visit
-    RAF analysis.
+  text_tex: Built SQL/dbt models for multi-market Medicare RAF data preparation in
+    Arizona, North Dakota, and Illinois, combining enrollment and MMR demographic
+    factors with medical claims, signed EHR diagnoses, and payer encounter and MAO
+    diagnoses; generated member and diagnosis inputs supporting CMS-HCC scoring and
+    pre-/post-wellness-visit RAF analysis.
 - id: arkos-11
-  text_tex: Implemented diagnosis-submission lineage and acceptance logic covering
-    add/delete activity, repeated submissions, encounter disposition, source and
-    date-of-service preservation, and selection of the latest accepted diagnosis
-    state.
+  text_tex: Built SQL/dbt models implementing diagnosis-submission lineage and acceptance
+    logic covering add/delete activity, repeated submissions, encounter disposition,
+    source and date-of-service preservation, and selection of the latest accepted
+    diagnosis state.
 - id: arkos-12
-  text_tex: Built diagnosis-level HHS-HCC capture analytics that mapped ICD-10 diagnoses
-    from signed face-to-face visits, reconciled them with payer gap reports, classified
-    existing, new, and net-new capture, identified the first capture source, and
-    produced monthly capture and HCC-per-visit measures.
+  text_tex: Built SQL/dbt models for diagnosis-level HHS-HCC capture analytics that
+    mapped ICD-10 diagnoses from signed face-to-face visits, reconciled them with
+    payer gap reports, classified existing, new, and net-new capture, identified
+    the first capture source, and produced monthly capture and HCC-per-visit measures.
 - id: arkos-13
-  text_tex: Prepared supplemental diagnosis, claims, and member-enrollment datasets
-    for Allwell, NextBlue, Humana, Allymar, and Reveleer workflows, joining claims
-    to the appropriate member, MBI, enrollment period, contract, demographic segment,
-    and member-month and formatting outputs to downstream specifications.
+  text_tex: Built SQL/dbt models and datasets for supplemental diagnosis, claims,
+    and member-enrollment workflows serving Allwell, NextBlue, Humana, Allymar, and
+    Reveleer, joining claims to the appropriate member, MBI, enrollment period, contract,
+    demographic segment, and member-month and formatting outputs to downstream specifications.
 - id: arkos-14
-  text_tex: Built end-to-end risk-capture reconciliation that traced diagnoses from
-    signed EHR encounters through Waystar claims, supplemental files, and MAO-004-style
+  text_tex: Built SQL/dbt reconciliation models that traced diagnoses from signed
+    EHR encounters through Waystar claims, supplemental files, and MAO-004-style
     payer and CMS responses, enabling the risk team to isolate where diagnoses dropped
     from the submission path.
 - id: arkos-15
   text_tex: Built a dbt-based Reveleer chart-chase data product across three Medicare
-    contracts, selecting eligible members and encounters, applying market-specific
-    rules, resolving provider and chart-location details, creating stable chase identifiers,
-    and generating separate chase and diagnosis files.
+    contracts, covering eligible-member and encounter selection, market-specific
+    rules, provider and chart-location resolution, stable chase identifiers, and
+    generation of separate chase and diagnosis files.
 - id: arkos-16
-  text_tex: Built version-aware AWS Glue and Athena ingestion and normalization pipelines
-    for evolving MAO, HCC, MOR, and related payer files, preserving source lineage
-    and standardizing downstream datasets in partitioned Parquet across the lakehouse.
+  text_tex: Built the SQL/dbt ingestion and normalization layer used by version-aware
+    AWS Glue and Athena pipelines for evolving MAO, HCC, MOR, and related payer files,
+    preserving source lineage and standardizing downstream datasets in partitioned
+    Parquet across the lakehouse.
 - id: arkos-17
-  text_tex: Prepared multi-market member, diagnosis, MOR, payer-gap, and ICD-to-HCC
-    mapping datasets supporting analysis of the CMS-HCC V24-to-V28 transition.
+  text_tex: Built multi-market SQL/dbt datasets combining member, diagnosis, MOR,
+    payer-gap, and ICD-to-HCC mapping data to support analysis of the CMS-HCC V24-to-V28
+    transition.
+- id: arkos-18
+  text_tex: Built and maintained the risk-adjustment SQL/dbt model inventory; supported
+    three RAF notebooks, their companion workbook, and the Tableau Risk Dashboard
+    while preserving an auditable record of workflow logic, inputs, outputs, and provenance.

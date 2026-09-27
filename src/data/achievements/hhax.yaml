@@ -32,3 +32,20 @@
 - id: hhax-10
   text_tex: Established reusable patterns for onboarding additional sources and extending
     integration workflows.
+- id: hhax-11
+  text_tex: Diagnosed and remediated a multi-payer EVV dashboard data-loss defect
+    by tracing fact-to-dimension joins across 1.12 billion visit records; quantified
+    214.5 million records (19.2\%) excluded by missing patient, service-code, and
+    payer mappings, isolated 99.2\% of in-scope missing-patient visits to the CareSource
+    feed, and corrected the underlying integration defects.
+- id: hhax-12
+  text_tex: Executed structural, row-level, transformation, and completeness QA for
+    a 156-field Snowflake/dbt EVV visit model; uncovered and corrected defects associated
+    with a 52.23\% source-to-target row-count gap, 73.6\% null patient identifiers,
+    and 105.6 million orphaned visit relationships.
+- id: hhax-13
+  text_tex: Validated and remediated an EVV patient-address model, resolving six
+    documented defects involving deletion handling, multi-address coverage, usage-tag
+    logic, and production data types; verified 1.31 million unique keys, zero missing
+    parent references, and exact 158,084-row parity for the deduplicated parent-matched
+    population.

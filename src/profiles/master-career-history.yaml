@@ -55,8 +55,9 @@ sections:
   - education
 roles:
   - id: hhax
-    achievement_order: [hhax-01, hhax-05, hhax-04, hhax-07, hhax-06,
-      hhax-02, hhax-03, hhax-09, hhax-08, hhax-10]
+    achievement_order: [hhax-01, hhax-11, hhax-12, hhax-13, hhax-05,
+      hhax-04, hhax-07, hhax-06, hhax-02, hhax-03, hhax-09, hhax-08,
+      hhax-10]
   - id: growdata
     achievement_order: [growdata-01, growdata-02, growdata-04, growdata-03,
       growdata-06, growdata-09, growdata-07, growdata-05, growdata-08]

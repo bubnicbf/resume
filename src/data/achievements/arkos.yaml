@@ -4,6 +4,14 @@
     18 source systems through approximately 200 scheduled data assets and 200 dbt
     models, supporting six analysts across six state markets; CI/CD automation and
     targeted model refactoring accelerated deployments and improved query performance.
+- id: arkos-19
+  text_tex: Configured event notifications for the greenfield data-lake CI/CD workflows,
+    routing workflow status and failure events through Amazon SNS for centralized
+    tracking.
+- id: arkos-20
+  text_tex: Established SNS topics and subscriptions for CI/CD workflow notifications,
+    giving the analytics team timely visibility into deployment outcomes and supporting
+    follow-up on failed runs.
 - id: arkos-02
   text_tex: Integrated existing Jupyter-based analytics and authored platform, architecture,
     and operating documentation, enabling six analysts to independently use the governed

@@ -249,7 +249,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Morgan Art of Papermaking Conservatory, Cleveland, Ohio
-  dates_tex: '2012'
+  dates_tex: Summer 2012
   description_tex: Completed a papermaking workshop.
   tail_tex: "\n"
 - id: manifest-drawing-center-cincinnati-ohio
@@ -263,14 +263,14 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Art Academy of Cincinnati Community Education
-  dates_tex: '2005'
+  dates_tex: Summer 2005
   description_tex: Completed oil-painting instruction in Cincinnati, Ohio.
   tail_tex: "\n"
 - id: debra-fisher-visiting-artist-print-project-ohio-university
   kind: record
   leading_tex: ''
   name_tex: Debra Fisher Visiting-Artist Print Project, Ohio University
-  dates_tex: '2003'
+  dates_tex: Summer 2003
   description_tex: "\\textbf{Studio Assistant} - Supported plate and chine colle preparation,
     proofing, and editioning."
   tail_tex: "\n"
@@ -278,7 +278,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Dan Murphy Visiting-Artist Print Project, Ohio University
-  dates_tex: '2003'
+  dates_tex: Summer 2003
   description_tex: "\\textbf{Studio Assistant} - Supported screen preparation, proofing,
     and editioning."
   tail_tex: "\n"

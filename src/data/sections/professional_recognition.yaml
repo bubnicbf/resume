@@ -12,7 +12,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Special Recognition, Health Data Movers - Client Delivery
-  dates_tex: '2025'
+  dates_tex: Jul. 2025
   description_tex: Recognized for diagnosing undocumented source-key versioning in
     a revenue-cycle integration and implementing composite business grains with deterministic
     surrogate keys across 10 charge and payment models, eliminating duplicate-key
@@ -22,7 +22,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Arkos Health BI Star
-  dates_tex: '2023'
+  dates_tex: Nov. 2023
   description_tex: Internal Business Intelligence recognition received during a period
     marked by establishing the team's GitHub workflow, delivering 27 BI reports, creating
     the Arkos Power BI theme and visual standards, and strengthening PHI deidentification
@@ -32,7 +32,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Manager Recognition for Transition Leadership, Merative - Systems Migration
-  dates_tex: '2022'
+  dates_tex: Feb. 2022
   description_tex: 'Recognized by management for transition leadership while assuring
     the HDFS-to-Azure platform migration: built a seven-layer Python and SQL acceptance
     suite, validated Azure Data Factory, Blob Storage, and Synapse workflows, and
@@ -53,7 +53,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Lab Services Award, IBM - Cross-Team Delivery Coordination
-  dates_tex: '2018'
+  dates_tex: Jul. 2018
   description_tex: Recognized for leading a multi-organization healthcare integration
     spanning more than 70 EHR sources, implementing provider-scoped patient filtering
     to enforce data-sharing rules, and coordinating engineering and delivery teams
@@ -63,7 +63,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Eminence and Excellence Award, IBM - Data-Curation Tool Development
-  dates_tex: '2017'
+  dates_tex: Jul. 2017
   description_tex: Recognized for engineering an Apache Pig pipeline that parsed HL7
     v2 and v3 data for approximately 30 internal users, replacing a Mirth-based workflow
     and eliminating \$30,000 in annual vendor costs.
@@ -72,7 +72,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Color Lab Automation Award, PPG Industries - Expanded Reporting
-  dates_tex: '2012'
+  dates_tex: Sep. 2012
   description_tex: Recognized as part of the Color R\&D team supporting PPG's new
     computer-controlled automotive-refinish color-matching laboratory in Cleveland;
     expanded automated data collection and analysis reporting used to evaluate pigments
@@ -82,7 +82,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: Mary J. Hanna Research Fellowship, University of Cincinnati
-  dates_tex: '2010'
+  dates_tex: Aug. 2010
   description_tex: Department of Physics fellowship providing financial support for
     completion of M.S. research using near-infrared photometry and spectroscopy to
     identify and characterize two dust-obscured Galactic disk star clusters.

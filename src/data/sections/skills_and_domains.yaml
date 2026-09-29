@@ -31,7 +31,7 @@ blocks:
 - id: databases-and-query-engines
   kind: raw
   tex: "\\textbf{Databases and Query Engines:} \\textit{Current/Core:} Snowflake,
-    PostgreSQL; \\textit{Working Knowledge:} Amazon Athena, Amazon Redshift, Azure
+    PostgreSQL, Amazon Athena, Amazon Redshift; \\textit{Working Knowledge:} Azure
     Synapse Analytics, Microsoft SQL Server, MySQL, MongoDB/PyMongo, SQL query tuning
     and indexing, partitioning and clustering; \\textit{Historical:} Oracle, Hive,
     Impala, Greenplum\\\\\n"
@@ -39,7 +39,8 @@ blocks:
   kind: raw
   tex: "\\textbf{Data Architecture and Engineering:} \\textit{Current/Core:} dbt,
     SQLMesh, Snowpark, ETL/ELT, data integration and transformation, data warehouses
-    and lakes, source-system discovery and feasibility analysis, source-to-target
+    and lakes, greenfield data-platform architecture, proof-of-concept development
+    and productionization, source-system discovery and feasibility analysis, source-to-target
     mapping, dimensional modeling, business-grain definition, natural/composite/surrogate
     keys, identity crosswalks, metadata-driven transformations, data contracts and
     lineage; \\textit{Working Knowledge:} Databricks Lakehouse, Lakeflow Connect,
@@ -51,7 +52,8 @@ blocks:
     data-quality strategy and automated testing, acceptance criteria, null/duplicate/referential-integrity
     and business-rule checks, source-to-target and aggregate reconciliation, schema-drift
     detection, parity checks, regression testing, UAT, migration-acceptance testing,
-    deidentification validation, idempotent and deterministic reruns, audit logging;
+    deidentification validation, root-cause analysis and defect remediation, idempotent
+    and deterministic reruns, audit logging;
     \\textit{Working Knowledge:} Databricks data-governance fundamentals, Unity
     Catalog interoperability, catalog management and data organization, data privacy,
     governance at scale, role-based access control (RBAC) design, terminology mapping,
@@ -60,29 +62,34 @@ blocks:
   kind: raw
   tex: "\\textbf{Data Operations and Reliability:} \\textit{Current/Core:} job scheduling,
     workflow orchestration, pipeline and software dependency management, observability,
-    monitoring and alerting, incident classification and response, production troubleshooting,
-    runbooks, release and promotion gates, configuration and version management;
+    monitoring and alerting, event-driven workflow notifications, incident classification
+    and response, production troubleshooting, runbooks, release and promotion gates,
+    configuration and version management;
     \\textit{Working Knowledge:} Lakeflow Jobs, Databricks workload deployment and
     performance optimization\\\\\n"
 - id: cloud-devops-and-test-tools
   kind: raw
-  tex: "\\textbf{Cloud, DevOps, and Test Tools:} \\textit{Current/Core:} AWS (S3,
-    Glue, Lambda, CloudWatch, AWS CLI), Microsoft Azure (Data Factory, Functions,
-    Blob Storage), Git/GitHub, GitHub Actions, Docker, CI/CD, automated unit and integration
-    testing, test fixtures and golden files, RSpec, RuboCop, Liquibase, Make, CLI
-    environment setup, Python virtual environments; \\textit{Working Knowledge:} Databricks
+  tex: "\\newpage\\textbf{Cloud, DevOps, and Test Tools:} \\textit{Current/Core:} AWS (S3,
+    Glue, Lambda, SNS, event notifications, CloudWatch, AWS CLI), Microsoft Azure
+    (Data Factory, Functions, Blob Storage), Git/GitHub, GitHub Actions, Docker, CI/CD,
+    automated unit and integration testing, test fixtures and golden files, RSpec,
+    RuboCop, Liquibase, Make, CLI environment setup, Python virtual environments;
+    \\textit{Working Knowledge:} Databricks
     declarative automation bundles and data-engineering DevOps patterns, hermetic tests,
     Azure DevOps, Jenkins, Helm/Kubernetes, Gradle, Postman, regular expressions,
-    Tesseract OCR, RubyLLM; \\textit{Historical:} cron\\par\\newpage\n"
+    Tesseract OCR, RubyLLM; \\textit{Historical:} cron\\par\n"
 - id: healthcare-data-and-interoperability
   kind: raw
-  tex: "\\textbf{Healthcare Data and Interoperability:} \\textit{Current/Core:} clinical,
+  tex: "\\textbf{Healthcare Data, Interoperability, and Risk Adjustment:} \\textit{Current/Core:} clinical,
     payer, eligibility, claims, revenue-cycle, and financial data; EHR/EMR integration;
-    HL7 v2/v3, FHIR, EDI/837; patient/provider identity, population health, care gaps,
-    HEDIS and other quality measures and registries, prior authorization, health-information
-    exchange, ADT notifications, PHI handling and HIPAA-compliant deidentification
-    workflows; \\textit{Working Knowledge:} social determinants of health, provider
-    directories, patient consent, HITRUST readiness support\\\\\n"
+    HL7 v2/v3, FHIR, EDI/837, electronic visit verification (EVV); patient/provider
+    identity, population health, care gaps, HEDIS and other quality measures and registries,
+    prior authorization, health-information exchange, ADT notifications, PHI handling
+    and HIPAA-compliant deidentification workflows; Medicare risk adjustment and risk
+    capture, RAF/HCC workflows, ICD-10-to-HCC mapping, diagnosis-submission lineage,
+    chart-chase data preparation, MMR/MOR/MAO-004 and payer/CMS response reconciliation;
+    \\textit{Working Knowledge:} social determinants of health, provider directories,
+    patient consent, HITRUST readiness support\\\\\n"
 - id: analytics-machine-learning-and-bi
   kind: raw
   tex: "\\textbf{Analytics, Machine Learning, and BI:} \\textit{Current/Core:} data
@@ -95,10 +102,11 @@ blocks:
     SAS/GRAPH\\\\\n"
 - id: scientific-research-and-computing
   kind: raw
-  tex: "\\textbf{Scientific Research and Computing:} \\textit{Working Knowledge:}
-    experimental design, measurement uncertainty, instrument calibration, numerical
-    analysis, linear algebra, mathematical modeling and simulation, finite-difference
-    methods, interpolation, numerical integration and differentiation, error and stability
+  tex: "\\textbf{Scientific Research and Computing:} \\textit{Current/Core:} reproducible
+    analysis and research-data workflows; \\textit{Working Knowledge:} experimental
+    design, measurement uncertainty, instrument calibration, numerical analysis,
+    linear algebra, mathematical modeling and simulation, finite-difference methods,
+    interpolation, numerical integration and differentiation, error and stability
     analysis; \\textit{Historical:} physics and astrophysics research, telescope observing
     plans and logs, laboratory equipment maintenance, infrared spectroscopy and photometry,
     astrometry and source cross-matching, stellar classification and isochrone comparison,
@@ -108,8 +116,10 @@ blocks:
     JMP\\\\\n"
 - id: teaching-and-learning
   kind: raw
-  tex: "\\textbf{Teaching and Learning:} \\textit{Current/Core:} technical writing,
-    documentation, stakeholder communication, mentoring, public speaking and training;
+  tex: "\\textbf{Teaching and Learning:} \\textit{Current/Core:} technical and scientific
+    writing, documentation, stakeholder communication, mentoring, public speaking,
+    training, and translation of complex technical and quantitative concepts for
+    varied audiences;
     \\textit{Working Knowledge:} curriculum and instructional design, recorded/online
     instruction, rubric design, learning-management systems, accommodations and accessibility
     practices (presentation, response, timing, and setting), formal evaluation of

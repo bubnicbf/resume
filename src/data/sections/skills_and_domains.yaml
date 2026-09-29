@@ -18,8 +18,8 @@ blocks:
 - id: programming-and-query-languages
   kind: raw
   tex: "\\textbf{Programming and Query Languages:} \\textit{Current/Core:} SQL, Python,
-    Ruby, Bash/Zsh, SQL/Jinja; \\textit{Working Knowledge:} JavaScript, C\\#, Swift,
-    Java, R, T-SQL, PL/SQL; \\textit{Historical:} VB.NET, C++, FORTRAN, Perl, IDL,
+    Ruby, Bash/Zsh; \\textit{Working Knowledge:} JavaScript, C\\#, Swift,
+    Java, R; \\textit{Historical:} VB.NET, C++, FORTRAN, Perl, IDL,
     MQL, XPath, XQuery, JSONPath, Jaql\\\\\n"
 - id: application-development
   kind: raw
@@ -32,13 +32,13 @@ blocks:
   kind: raw
   tex: "\\textbf{Databases and Query Engines:} \\textit{Current/Core:} Snowflake,
     PostgreSQL, Amazon Athena, Amazon Redshift; \\textit{Working Knowledge:} Azure
-    Synapse Analytics, Microsoft SQL Server, MySQL, MongoDB/PyMongo, SQL query tuning
-    and indexing, partitioning and clustering; \\textit{Historical:} Oracle, Hive,
+    Synapse Analytics, Microsoft SQL Server and T-SQL, MySQL, MongoDB/PyMongo, SQL query tuning
+    and indexing, partitioning and clustering; \\textit{Historical:} Oracle and PL/SQL, Hive,
     Impala, Greenplum\\\\\n"
 - id: data-architecture-and-engineering
   kind: raw
   tex: "\\textbf{Data Architecture and Engineering:} \\textit{Current/Core:} dbt,
-    SQLMesh, Snowpark, ETL/ELT, data integration and transformation, data warehouses
+    SQLMesh, Jinja-templated SQL, Snowpark, ETL/ELT, data integration and transformation, data warehouses
     and lakes, greenfield data-platform architecture, proof-of-concept development
     and productionization, source-system discovery and feasibility analysis, source-to-target
     mapping, dimensional modeling, business-grain definition, natural/composite/surrogate

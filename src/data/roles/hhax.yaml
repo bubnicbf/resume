@@ -11,7 +11,7 @@ summary_tex:  Brought in to unify two distinct data environments following the
   then identified and remediated data-quality defects affecting hundreds of millions of 
   EVV records. Led healthcare source analysis, data-quality investigation and remediation, 
   and Snowflake modeling to produce trusted, standardized datasets for reporting and 
-  downstream use.
+  downstream use. Contract via Health Data Movers.
 achievement_ids:
 - hhax-01
 - hhax-11

@@ -2,7 +2,7 @@
 id: adonis
 kind: role
 employer: Adonis
-title_tex: Data Engineer
+title_tex: Senior Data Engineer
 dates: Mar. 2025 - Jul. 2025
 tools_tex: AWS S3, Snowflake, SQLMesh, SQL, Python, Docker, GitHub Actions
 summary_tex:  Joined a short-turnaround engagement to onboard Hopebridge Autism Therapy 
@@ -10,7 +10,7 @@ summary_tex:  Joined a short-turnaround engagement to onboard Hopebridge Autism 
   into 54 tested Snowflake models, resolved fundamental key usage problems, and delivered 
   a reusable onboarding and validation framework. Translated payer and revenue-cycle 
   source data into standardized Snowflake models for repeatable client onboarding, 
-  analytics, and reporting. 
+  analytics, and reporting. Contract via Veersa Technologies.
 achievement_ids:
 - adonis-01
 - adonis-02

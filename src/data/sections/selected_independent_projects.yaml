@@ -71,19 +71,6 @@ blocks:
     that validate generated Patient, Encounter, Observation, Practitioner, and AllergyIntolerance
     resources.
   tail_tex: "\n\n"
-- id: quality-measures-engine
-  kind: record
-  leading_tex: ''
-  name_tex: "\\href{https://github.com/bubnicbf/quality_measures_engine}{quality\\_measures\\_engine}"
-  dates_tex: '2023'
-  description_tex: Python/PyMongo prototype for defining and evaluating population
-    health quality measures from normalized patient records. It represents measure
-    metadata, parameters, calculated dates, initial populations, denominators, numerators,
-    exceptions, and exclusions as reusable JSON definitions, then translates those
-    definitions into MongoDB queries or map reduce operations. Fixtures and automated
-    tests demonstrate the design using sample NQF cervical cancer screening and pneumonia
-    vaccination measures.
-  tail_tex: "\n\n"
 - id: detl-design-challenge
   kind: record
   leading_tex: ''
@@ -102,7 +89,7 @@ blocks:
   kind: record
   leading_tex: ''
   name_tex: "\\href{https://github.com/bubnicbf/covid-dataset}{covid-dataset}"
-  dates_tex: '2022'
+  dates_tex: 2020 - 2022
   description_tex: Azure Data Factory data engineering project that ingests public
     ECDC COVID-19 and population data over HTTP and Blob Storage, lands raw data in
     ADLS Gen2, transforms cases, deaths, and hospital admissions with mapping data
@@ -125,6 +112,19 @@ blocks:
     It then traces candidate cluster sequences with kernel density contours and compares
     them with zero age main sequence and isochrone models across age and metallicity
     ranges, producing per cluster and aggregate diagnostic plots.
+  tail_tex: "\n\n"
+- id: quality-measures-engine
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/quality_measures_engine}{quality\\_measures\\_engine}"
+  dates_tex: 2018 - 2019
+  description_tex: Python/PyMongo prototype for defining and evaluating population
+    health quality measures from normalized patient records. It represents measure
+    metadata, parameters, calculated dates, initial populations, denominators, numerators,
+    exceptions, and exclusions as reusable JSON definitions, then translates those
+    definitions into MongoDB queries or map reduce operations. Fixtures and automated
+    tests demonstrate the design using sample NQF cervical cancer screening and pneumonia
+    vaccination measures.
   tail_tex: "\n\n"
 - id: gamma-rays
   kind: record

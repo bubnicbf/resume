@@ -6,9 +6,10 @@ title_tex: Senior Data Scientist
 dates: Jul. 2022 - Mar. 2023
 tools_tex: Microsoft Azure, Azure Data Factory, Blob Storage, Azure Functions, SQL
   Database, Synapse Analytics, Python, SQL, Azure DevOps
-summary_tex: Validated a large-scale healthcare-data migration from HDFS to Azure,
-  combining automated reconciliation, deidentification testing, and governance controls
-  across data representing approximately 300 million patient lives.
+summary_tex: Served as the quality and acceptance layer for a large scale healthcare 
+  platform migration from HDFS to Azure. Built automated reconciliation, regression, 
+  deidentification, and governance controls that brought the tested data to sign-off 
+  with no unresolved discrepancies.
 achievement_ids:
 - merative-01
 - merative-02

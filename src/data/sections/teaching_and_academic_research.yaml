@@ -11,7 +11,13 @@ blocks:
 - id: text
   kind: raw
   tex: "Across these institutions, used interactive, peer-led, and just-in-time teaching
-    methods.\n\n"
+    Built an interdisciplinary foundation in scientific research, quantitative analysis, 
+    and education before entering the technology industry. Conducted published astrophysics 
+    and experimental printmaking research, developed calibrated and reproducible data 
+    products, and taught physics and astronomy across laboratory, technical, general education, 
+    and online settings. Established a teaching practice centered on evidence, accessibility, 
+    interactive learning, and continuous improvement—skills later applied to technical 
+    leadership, documentation, mentoring, and stakeholder communication.\n\n"
 - id: lorain-county-community-college
   kind: record
   leading_tex: ''

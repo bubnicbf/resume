@@ -55,8 +55,9 @@ sections:
   - education
 roles:
   - id: hhax
-    achievement_order: [hhax-01, hhax-05, hhax-04, hhax-07, hhax-06,
-      hhax-02, hhax-03, hhax-09, hhax-08, hhax-10]
+    achievement_order: [hhax-01, hhax-11, hhax-12, hhax-13, hhax-05,
+      hhax-04, hhax-07, hhax-06, hhax-02, hhax-03, hhax-09, hhax-08,
+      hhax-10]
   - id: growdata
     achievement_order: [growdata-01, growdata-02, growdata-04, growdata-03,
       growdata-06, growdata-09, growdata-07, growdata-05, growdata-08]
@@ -64,9 +65,10 @@ roles:
     achievement_order: [adonis-03, adonis-01, adonis-02, adonis-05,
       adonis-08, adonis-04, adonis-06, adonis-07]
   - id: arkos
-    achievement_order: [arkos-01, arkos-16, arkos-10, arkos-11, arkos-14,
-      arkos-12, arkos-13, arkos-15, arkos-17, arkos-02, arkos-03, arkos-06,
-      arkos-09, arkos-04, arkos-08, arkos-05, arkos-07]
+    achievement_order: [arkos-01, arkos-19, arkos-20, arkos-18, arkos-16,
+      arkos-10, arkos-11, arkos-14, arkos-12, arkos-13, arkos-15, arkos-17,
+      arkos-02, arkos-03, arkos-06, arkos-09, arkos-04, arkos-08, arkos-05,
+      arkos-07]
   - id: merative
     achievement_order: [merative-02, merative-01, merative-07, merative-05,
       merative-04, merative-03, merative-06]

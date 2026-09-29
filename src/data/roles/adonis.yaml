@@ -2,11 +2,15 @@
 id: adonis
 kind: role
 employer: Adonis
-title_tex: Healthcare Revenue Cycle Data Consultant - Contract via Health Data Movers
+title_tex: Senior Data Engineer
 dates: Mar. 2025 - Jul. 2025
 tools_tex: AWS S3, Snowflake, SQLMesh, SQL, Python, Docker, GitHub Actions
-summary_tex: Translated payer and revenue-cycle source data into standardized Snowflake
-  models for repeatable client onboarding, analytics, and reporting.
+summary_tex:  Joined a short-turnaround engagement to onboard Hopebridge Autism Therapy 
+  Center onto a revenue-cycle data platform. Transformed poorly documented source data 
+  into 54 tested Snowflake models, resolved fundamental key usage problems, and delivered 
+  a reusable onboarding and validation framework. Translated payer and revenue-cycle 
+  source data into standardized Snowflake models for repeatable client onboarding, 
+  analytics, and reporting. Contract via Veersa Technologies.
 achievement_ids:
 - adonis-01
 - adonis-02

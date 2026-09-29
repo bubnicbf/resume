@@ -6,9 +6,11 @@ title_tex: Senior Data Analyst
 dates: Jun. 2023 - Jan. 2025
 tools_tex: AWS S3, Athena, Redshift, Glue, SNS, dbt, PySpark, Docker, Jupyter, Power
   BI, Tableau
-summary_tex: Delivered healthcare analytics and risk-capture SQL/dbt engineering while
-  supporting RAF notebook, workbook, and Tableau dashboard assets and improving the
-  governed data foundation used by the BI team.
+summary_tex: Joined as a senior data analyst supporting Medicare risk capture, then 
+  grew into the data engineer and platform builder the team needed. Built a greenfield 
+  AWS data-lake proof of concept using Glue, Athena, event notifications, and SNS. After 
+  validating the approach, designed and built the final architecture spanning the data 
+  lake and Redshift, using dbt as the transformation and modeling layer.
 achievement_ids:
 - arkos-01
 - arkos-19

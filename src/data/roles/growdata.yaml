@@ -6,8 +6,11 @@ title_tex: Independent Data Automation and Analytics Consultant
 dates: Sep. 2024 - Oct. 2025
 tools_tex: Python, Ruby, RubyLLM, RSpec, RuboCop, Tesseract OCR, LLM APIs, Docker,
   AWS, GitHub Actions
-summary_tex: Built and operated an independent consultancy focused on converting semi-structured
-  documents into validated, auditable data products.
+summary_tex: Founded GrowData Analytics to explore how AI led analytics could help 
+  small local farms make better operational decisions. The work exposed the more 
+  fundamental obstacle that the source data was trapped in inconsistent invoices. 
+  I built a preproduction document-to-data product with OCR, validation, audit 
+  trails, operational analytics, and a lightweight AWS deployment.
 achievement_ids:
 - growdata-01
 - growdata-02

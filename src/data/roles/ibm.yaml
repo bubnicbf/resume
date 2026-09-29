@@ -7,8 +7,11 @@ dates: Jun. 2015 - Jul. 2022
 tools_tex: Spark, Hadoop/HDFS, Hive, Impala, Kafka, Python, SQL, T-SQL, MySQL, PostgreSQL,
   PL/SQL, MQL, XPath, XQuery, Apache Pig, Jaql, JSONPath, Docker, Jenkins, Tableau,
   HL7
-summary_tex: Advanced through five roles delivering healthcare analytics, data architecture,
-  client integration, data-quality improvement, and large-scale migration validation.
+summary_tex: Progressed through five increasingly senior roles over seven years, evolving 
+  from hands on healthcare data integration into technical leadership across platform 
+  engineering, data architecture, governance, analytics, and cloud migration validation. 
+  Repeatedly converted bespoke client problems into reusable tooling, governed platforms, 
+  validation frameworks, and team practices.
 achievement_ids:
 - ibm-01
 - ibm-02

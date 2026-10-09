@@ -1,37 +1,145 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ibm-senior-data-architect-01
   text_tex: Served as a senior member of Data Onboarding \& Governance, integrating
     healthcare data, enriching metadata, and configuring data models, analytics, reports,
     and visualizations.
+  story_tex: >-
+    \textbf{Situation:} New healthcare datasets had to become usable across models,
+    analytics, reports, and visualizations while meeting governance expectations.
+    \textbf{Task:} As a senior Data Onboarding and Governance member, I needed to connect
+    technical ingestion with downstream meaning. \textbf{Action:} I profiled sources,
+    mapped entities and metadata, configured data models and analytical outputs, documented
+    lineage and constraints, and validated results with delivery and analytics teams.
+    \textbf{Result:} Onboarded data arrived with a clearer contract and provenance, giving
+    downstream teams a more reliable foundation for reporting and analysis.
 - id: ibm-senior-data-architect-02
   text_tex: Served as a subject-matter expert to project data architects and delivery,
     analytics, and integration teams; directed configuration of the data-onboarding
     platform and supporting infrastructure.
+  story_tex: >-
+    \textbf{Situation:} Project architects and delivery, analytics, and integration teams
+    made interconnected configuration decisions across the onboarding platform.
+    \textbf{Task:} I needed to provide a consistent technical point of view and direct
+    configurations toward reusable patterns. \textbf{Action:} I reviewed source designs,
+    clarified grains and mappings, identified infrastructure dependencies, resolved
+    cross-team questions, and required validation evidence before configurations advanced.
+    \textbf{Result:} Teams made faster decisions with fewer contradictory assumptions,
+    and onboarding configurations aligned more consistently with platform standards.
 - id: ibm-senior-data-architect-03
   text_tex: Led a cross-functional team as the clinical data analyst for the 2020/2021
     measure-updates project.
+  story_tex: >-
+    \textbf{Situation:} Annual 2020/2021 measure updates changed clinical definitions,
+    value sets, and data requirements across products and teams. \textbf{Task:} As the
+    clinical data analyst, I needed to coordinate the impact from specification through
+    validated release. \textbf{Action:} I decomposed measure changes, mapped them to
+    source fields and existing logic, organized work across engineering and clinical
+    stakeholders, reviewed edge cases, and reconciled updated outputs against expected
+    populations. \textbf{Result:} The cross-functional team delivered the update with a
+    shared interpretation of the specifications and traceable validation for changed
+    measures.
 - id: ibm-senior-data-architect-04
   text_tex: Created an exploratory machine-learning COVID-19 prototype to surface
     hospitalization-risk signals for retrospective analyst review.
+  story_tex: >-
+    \textbf{Situation:} Early in the COVID-19 response, analysts needed a rapid way to
+    explore which historical patient characteristics were associated with hospitalization.
+    \textbf{Task:} I needed to create an exploratory prototype without presenting it as a
+    clinical decision system. \textbf{Action:} I defined a retrospective cohort and
+    outcome, prepared candidate features, trained baseline classification models, examined
+    performance and important signals, and documented limitations such as bias, missingness,
+    and temporal instability. \textbf{Result:} Analysts gained a structured set of risk
+    signals for further review and a clear boundary between exploratory evidence and a
+    deployable clinical model.
 - id: ibm-senior-data-architect-05
   text_tex: Developed a topic-modeling project using nearly six million semi-structured
     provider notes.
+  story_tex: >-
+    \textbf{Situation:} Nearly six million provider notes contained useful themes that
+    were difficult to discover through manual review or fixed keyword searches.
+    \textbf{Task:} I needed to test whether topic modeling could organize the corpus for
+    analyst exploration. \textbf{Action:} I cleaned and normalized note text, created a
+    modeling sample and representation, compared topic counts and stability, reviewed
+    representative terms and documents, and worked with domain users to label useful
+    themes and reject incoherent ones. \textbf{Result:} The project produced an exploratory
+    map of recurring clinical themes and demonstrated where unsupervised methods could
+    assist, but not replace, expert review.
 - id: ibm-senior-data-architect-06
   text_tex: Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction
     proof of concept that was being evaluated as a potential new offering.
+  story_tex: >-
+    \textbf{Situation:} Surgical teams faced schedule inefficiency and uncertainty about
+    the supplies or case-card content needed for upcoming procedures. \textbf{Task:} I
+    needed to test whether optimization and sequence models could improve planning enough
+    to justify a product offering. \textbf{Action:} I modeled scheduling constraints and
+    objectives, prepared historical procedure and case-card sequences, built an optimizer
+    plus CNN/RNN prediction prototypes, and evaluated feasibility, accuracy, and operational
+    tradeoffs with stakeholders. \textbf{Result:} The proof of concept gave product leaders
+    concrete performance evidence and implementation risks for deciding whether to invest
+    in a new offering.
 - id: ibm-senior-data-architect-07
   text_tex: Architected Spark and Hadoop pipelines integrating more than 100 billion
     structured and semi-structured clinical records, supporting four EPM applications,
     30+ risk models, and hundreds of measures and registries.
+  story_tex: >-
+    \textbf{Situation:} Four EPM applications, more than 30 risk models, and hundreds of
+    measures depended on over 100 billion clinical records from heterogeneous sources.
+    \textbf{Task:} I needed to design pipelines that could scale without losing lineage or
+    consistent analytical meaning. \textbf{Action:} I defined layered Spark and Hadoop
+    processing, partition and schema strategies, metadata and identity rules, and
+    validation gates for structured and semi-structured inputs; I then tuned heavy stages
+    using observed execution behavior. \textbf{Result:} The platform supplied reusable,
+    governed datasets at the scale required by applications, models, measures, and
+    registries.
 - id: ibm-senior-data-architect-08
   text_tex: Led a HIPAA patient-deidentification project drawing from more than 100
     data sources for content analytics and measures.
+  story_tex: >-
+    \textbf{Situation:} Content analytics and measures required data from more than 100
+    sources, each with different identifiers and potential protected-health-information
+    exposure. \textbf{Task:} I needed to lead a common deidentification approach that
+    protected privacy while preserving analytical relationships. \textbf{Action:} I
+    inventoried sensitive fields, translated policy into source-specific transformations,
+    standardized pseudonymous identities, tested for residual identifiers and broken
+    linkages, and coordinated exceptions with governance and engineering. \textbf{Result:}
+    The project delivered a consistent deidentified foundation for downstream analytics
+    with documented controls and traceability.
 - id: ibm-senior-data-architect-09
   text_tex: Replaced static mappings with metadata-driven instruction sets across
     approximately 200 source integrations, standardizing EDI batch schemas while enabling
     Python/Jupyter lineage tracing and end-to-end validation gates.
+  story_tex: >-
+    \textbf{Situation:} Approximately 200 integrations used static source mappings that
+    were expensive to update and difficult to audit consistently. \textbf{Task:} I needed
+    to separate integration instructions from execution logic. \textbf{Action:} I designed
+    metadata-driven instruction sets, standardized EDI batch schemas, built reusable
+    transformation behavior around that metadata, and added Python/Jupyter lineage tools
+    and validation gates from source through output. \textbf{Result:} New and changed
+    mappings could be delivered through governed configuration, reducing duplicated code
+    and making lineage and validation more consistent across integrations.
 - id: ibm-senior-data-architect-10
   text_tex: Served in an advisory capacity for development of a new data platform.
+  story_tex: >-
+    \textbf{Situation:} A new data platform was being designed while teams still depended
+    on legacy integration patterns and healthcare-specific workflows. \textbf{Task:} In an
+    advisory role, I needed to bring practical delivery constraints into architecture
+    decisions without owning the entire build. \textbf{Action:} I reviewed proposals,
+    translated legacy lessons into requirements, identified migration and governance
+    risks, challenged assumptions with representative workloads, and recommended validation
+    and lineage capabilities. \textbf{Result:} The platform team could evaluate design
+    choices against real operating needs and address important compatibility and control
+    gaps earlier.
 - id: ibm-senior-data-architect-11
   text_tex: Closed project-documentation gaps by organizing material from more than
     100 past projects.
+  story_tex: >-
+    \textbf{Situation:} Useful decisions, mappings, and troubleshooting knowledge from
+    more than 100 projects were scattered across inconsistent locations and formats.
+    \textbf{Task:} I needed to preserve what was reusable and make it discoverable.
+    \textbf{Action:} I inventoried available material, grouped it by workflow and subject,
+    removed duplication, identified missing context, established naming and navigation
+    conventions, and highlighted patterns and lessons that applied across clients.
+    \textbf{Result:} Teams gained a more usable project knowledge base, reduced repeated
+    investigation, and had better starting material for onboarding and future delivery.

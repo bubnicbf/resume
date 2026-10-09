@@ -1,32 +1,124 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: amtrust-01
   text_tex: Designed, developed, tested, and maintained full-stack commercial-insurance
     applications spanning VB.NET and ASP.NET interfaces, multi-tier components, Web
     APIs, and SQL data services.
+  story_tex: >-
+    \textbf{Situation:} Commercial-insurance quoting and policy generation crossed web
+    forms, application services, rating logic, APIs, and database procedures, so a change
+    in one tier could create defects elsewhere. \textbf{Task:} I needed to deliver features
+    end to end while preserving consistent behavior across the application. \textbf{Action:}
+    I traced requirements through the VB.NET and ASP.NET interfaces, multi-tier components,
+    Web APIs, and SQL services; implemented the coordinated changes; added unit and
+    integration coverage; and validated representative quote and policy scenarios before
+    release. \textbf{Result:} The team could deliver commercial-insurance capabilities
+    through a controlled full-stack process with clearer traceability and fewer handoff gaps.
 - id: amtrust-02
   text_tex: Implemented a new line of business in VB.NET and Microsoft SQL Server,
     served as principal developer for a new product offering, and contributed to two
     major software-architecture initiatives in 2015.
+  story_tex: >-
+    \textbf{Situation:} AmTrust wanted to introduce a new commercial-insurance offering
+    whose rating rules, forms, and policy workflow did not fit the existing product
+    unchanged. \textbf{Task:} As principal developer, I needed to turn the product concept
+    into a maintainable VB.NET and SQL Server implementation. \textbf{Action:} I decomposed
+    the line of business into shared and product-specific rules, designed the data and
+    service changes, coordinated form and API delivery, reviewed implementation decisions,
+    and carried lessons into two broader architecture initiatives. \textbf{Result:} The
+    new offering gained a working technical foundation while its design contributed to
+    more reusable platform architecture in 2015.
 - id: amtrust-03
   text_tex: Evaluated the advantages, risks, and implementation costs of requested
     features and recommended maintainable solutions grounded in object-oriented design
     principles.
+  story_tex: >-
+    \textbf{Situation:} Feature requests often arrived with an expected interface change
+    but hidden consequences for rating logic, data, integrations, and future maintenance.
+    \textbf{Task:} I needed to help stakeholders choose solutions based on total impact,
+    not only initial coding effort. \textbf{Action:} I clarified the business outcome,
+    traced affected components, estimated implementation and support costs, compared
+    alternatives and failure risks, and recommended designs that used clear responsibilities,
+    encapsulation, and reusable abstractions. \textbf{Result:} Product decisions had an
+    explicit technical rationale, and the team avoided short-term changes that would have
+    created disproportionate complexity later.
 - id: amtrust-04
   text_tex: Served as the working liaison between business analysts and developers,
     translating requirements, reporting progress, and helping prioritize delivery
     needs.
+  story_tex: >-
+    \textbf{Situation:} Business analysts understood insurance rules while developers
+    understood the application, but ambiguous translation between them created scope and
+    acceptance risk. \textbf{Task:} I needed to maintain a shared understanding throughout
+    delivery. \textbf{Action:} I walked analysts through examples and edge cases, translated
+    decisions into technical behavior and acceptance criteria, explained constraints to
+    both groups, reported progress and blockers, and helped sequence work by customer and
+    implementation impact. \textbf{Result:} Questions were resolved earlier, developers
+    worked from clearer requirements, and stakeholders had a more reliable view of what
+    would be delivered and when.
 - id: amtrust-05
   text_tex: Coordinated developer schedules and troubleshot production problems across
     multiple application environments.
+  story_tex: >-
+    \textbf{Situation:} Multiple application environments and concurrent releases created
+    coordination risk, while production issues could involve code, configuration, data,
+    or deployment differences. \textbf{Task:} I needed to keep planned work moving while
+    restoring service safely when incidents occurred. \textbf{Action:} I coordinated
+    developer assignments and dependencies, compared behavior across environments,
+    reviewed logs and database state, reproduced failures with representative cases,
+    organized the appropriate fix and validation, and documented follow-up actions.
+    \textbf{Result:} Production problems reached the right owner faster, releases had
+    clearer sequencing, and fixes were validated across environments before closure.
 - id: amtrust-06
   text_tex: Created a unit- and integration-test suite for multi-tier MVC components,
     improving regression coverage and establishing stronger team testing practices.
+  story_tex: >-
+    \textbf{Situation:} Changes to multi-tier MVC components were difficult to verify
+    without repeatedly exercising entire quote and policy workflows by hand. \textbf{Task:}
+    I needed to create a safety net that covered both isolated logic and important tier
+    interactions. \textbf{Action:} I separated testable responsibilities, wrote unit tests
+    for rating and application behavior, built integration tests across controllers,
+    services, and data access, created representative fixtures, and used failures to refine
+    team review expectations. \textbf{Result:} Regression coverage improved, developers
+    received faster feedback on changes, and automated testing became a stronger part of
+    normal delivery practice.
 - id: amtrust-07
   text_tex: Developed more than 65 ISO rating-based web forms and analyzed page timings
     in R to identify optimization targets and improve application performance.
+  story_tex: >-
+    \textbf{Situation:} A new commercial product required more than 65 web forms derived
+    from ISO rating rules, and the resulting pages varied in complexity and response time.
+    \textbf{Task:} I needed to deliver the rule-driven forms while identifying where users
+    experienced avoidable delay. \textbf{Action:} I translated rating requirements into
+    reusable form and validation patterns, implemented the supporting services and data
+    calls, captured page-timing observations, and used R to compare distributions and
+    locate slow outliers before profiling their rendering or query paths. \textbf{Result:}
+    The product received broad ISO-based form coverage and a data-driven set of performance
+    improvements rather than ad hoc optimization.
 - id: amtrust-08
   text_tex: Refactored and maintained the existing VB.NET insurance-rating codebase
     to improve readability, performance, and long-term maintainability.
+  story_tex: >-
+    \textbf{Situation:} The existing VB.NET rating code had accumulated intertwined rules,
+    duplicated logic, and performance-sensitive paths that made changes risky.
+    \textbf{Task:} I needed to improve maintainability without changing valid insurance
+    outcomes. \textbf{Action:} I identified duplication and complex dependencies, separated
+    calculation, presentation, and data responsibilities, introduced clearer interfaces and
+    naming, expanded regression tests around representative ratings, and profiled the most
+    expensive paths before optimizing them. \textbf{Result:} The code became easier to
+    review and extend, high-use paths performed more efficiently, and future rating changes
+    could be made with a stronger regression safety net.
 - id: amtrust-09
   text_tex: Supported the technical integration of acquired businesses into the commercial
     policy platform.
+  story_tex: >-
+    \textbf{Situation:} Acquired businesses brought policy products, data, users, and
+    operating workflows that differed from AmTrust's commercial platform. \textbf{Task:}
+    I needed to help incorporate those businesses without interrupting active policy work.
+    \textbf{Action:} I inventoried source applications and dependencies, mapped products
+    and policy data to platform concepts, identified functional and technical gaps,
+    supported interface and migration changes, and validated representative transactions
+    through a phased integration plan. \textbf{Result:} The acquired operations gained a
+    defined route onto the commercial-policy platform while material differences and
+    continuity risks were addressed before broader rollout.

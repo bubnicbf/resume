@@ -3,26 +3,139 @@
   text_tex: Built, documented, validated, and maintained 54 SQLMesh models that delivered
     standardized revenue-cycle datasets for a provider whose network served 4,598
     families across 113 locations and processed 86,388 annual authorizations.
+  story_tex: >-
+    \textbf{Situation:} Hopebridge needed a new Practice Suite integration on a short
+    timeline, but the source arrived as a poorly documented maze of database tables
+    whose fields did not map cleanly to the Adonis revenue-cycle model.
+    \textbf{Task:} As the engineer doing the main ETL and coding work, I needed to turn
+    that raw source into a complete, supportable data product for claims, worklists,
+    reporting, and downstream analytics. \textbf{Action:} I built, documented, tested,
+    and maintained 54 SQLMesh models---32 intermediate transformations, 14 core
+    entities, and eight intelligence aggregates---covering patients, providers,
+    organizations, claims, service lines, transactions, remittances, and balances. I
+    reconciled the outputs to source records and to workflows reviewed with the client
+    and product team. \textbf{Result:} I delivered standardized Snowflake datasets for
+    a network serving 4,598 families across 113 locations and processing 86,388 annual
+    authorizations, with a structure another engineer could operate and extend.
 - id: adonis-02
   text_tex: Implemented automated row-count, uniqueness, and not-null audits across
     54 models, achieving a 100\% pass rate across 117+ configured audit applications
     at final delivery.
+  story_tex: >-
+    \textbf{Situation:} A successful SQLMesh plan only proved that the transformations
+    executed; it did not prove that they preserved the intended population, respected
+    each model's grain, or populated required fields. \textbf{Task:} I needed an
+    objective release gate that would expose data defects before Hopebridge used the
+    integration in production workflows. \textbf{Action:} I attached reusable
+    uniqueness, not-null, composite-key, and source-to-target row-count audits to the
+    Practice Suite models, including a threshold-based comparison audit for complex
+    transformations. I also created a model-by-model QA runbook covering field
+    population, referential integrity, allowed values, dates, and representative
+    business rules, then investigated failures and reran the same checks after each
+    correction. \textbf{Result:} At final delivery, all 117+ configured audit
+    applications passed, providing reproducible evidence that the 54-model integration
+    met its structural and completeness expectations.
 - id: adonis-03
   text_tex: Diagnosed undocumented source-key versioning and implemented composite
     business grains with surrogate keys across 10 charge and payment models, eliminating
     duplicate-key failures.
+  story_tex: >-
+    \textbf{Situation:} Practice Suite reused or regenerated identifiers as claims were
+    rebilled and payments were posted, but that versioning behavior was not documented;
+    identifiers that appeared unique at first produced duplicate-key failures when the
+    full history was modeled. \textbf{Task:} I needed to establish the true business
+    grain for charge and payment data without dropping legitimate activity.
+    \textbf{Action:} I profiled the duplicate cohorts, traced claim numbers back to the
+    stable accession number, and tested combinations of claim, line, charge, payment,
+    payer, balance, and transaction attributes. I encoded the resulting composite
+    grains and deterministic SHA-256 surrogate keys across 10 charge, payment,
+    remittance, and transaction models, then propagated the keys through downstream
+    relationships and reran uniqueness and reconciliation checks. \textbf{Result:} The
+    changes eliminated the duplicate-key failures while preserving distinct rebills
+    and payment events, giving downstream joins stable claim-, service-line-, and
+    transaction-level identities.
 - id: adonis-04
   text_tex: Authored implementation playbooks, technical handoff documentation, and
     a QA runbook for a repeatable healthcare-data validation workflow.
+  story_tex: >-
+    \textbf{Situation:} The engagement combined a compressed delivery schedule with a
+    source system that required extensive discovery, so undocumented knowledge about
+    setup, mappings, validation, and recovery would have made the integration difficult
+    to support after handoff. \textbf{Task:} I needed to make both the implementation
+    process and its quality checks repeatable for teammates working on Practice Suite
+    and other integrations. \textbf{Action:} I documented the SQLMesh project setup,
+    layered model conventions, key and audit patterns, plan and run workflow, and
+    troubleshooting steps. I created a detailed QA runbook for 14 core subject areas
+    with required audits, field-population checks, referential-integrity tests, business
+    rules, and items to preserve for future maintainers, and I used the same structure
+    during peer review and handoff. \textbf{Result:} The team received an executable
+    validation and support playbook rather than tribal knowledge, improving the
+    consistency of reviews, onboarding, and post-delivery troubleshooting.
 - id: adonis-05
   text_tex: Built a reusable SQLMesh/Snowflake ingestion and transformation framework
     using templated models, data contracts, CI checks, and promotion gates.
+  story_tex: >-
+    \textbf{Situation:} The broader integration repository was moving from legacy,
+    client-specific implementations toward a shared SQLMesh structure, while Practice
+    Suite still required source-specific mappings and client schemas. \textbf{Task:} I
+    needed to implement Hopebridge in a way that fit the common framework and could be
+    reused instead of becoming another isolated pipeline. \textbf{Action:} I organized
+    the work into intermediate, core-entity, and intelligence layers; parameterized
+    database and client schemas; reused macros for identifiers and aggregates; declared
+    grains, column contracts, and audits with the models; and exercised SQLMesh plans
+    in isolated environments before promotion. I also reviewed patterns used by other
+    integrations and fed implementation lessons back into the shared approach.
+    \textbf{Result:} Practice Suite became a repeatable SQLMesh/Snowflake project with
+    source-specific logic localized behind a consistent contract, allowing safer CI
+    checks and promotion while giving later client work a practical reference design.
 - id: adonis-06
   text_tex: Added schema-drift alerts, parity checks, reconciliation logs, deterministic
     rerun procedures, and incident-handling guidance for UNIX-like environments.
+  story_tex: >-
+    \textbf{Situation:} Practice Suite data and SQLMesh plans could change independently,
+    and a rerun after an upstream schema change or partial failure risked producing
+    inconsistent results without a clear recovery path. \textbf{Task:} I needed to make
+    the integration observable and safe to rerun in a UNIX-like operating environment.
+    \textbf{Action:} I added schema and contract checks, source-to-target parity tests,
+    and reconciliation logging around model execution; used deterministic composite and
+    surrogate keys so the same inputs recreated the same identities; and documented how
+    to inspect SQLMesh logs, isolate the failed model or audit, correct the cause, rerun
+    in a development environment, and promote only after the checks passed. I coupled
+    those controls with alerts for material drift and failed validation. \textbf{Result:}
+    Schema changes and incidents became diagnosable events with a repeatable recovery
+    sequence, reducing the risk that a partial rerun or silent drift would reach
+    downstream reporting.
 - id: adonis-07
   text_tex: Packaged a lightweight operations forecasting and alerting pattern as
     a tested Python and Docker service with GitHub Actions deployment automation.
+  story_tex: >-
+    \textbf{Situation:} The team needed earlier warning when operational volume or
+    processing behavior moved outside expected ranges, but a heavyweight platform
+    change was not appropriate for the engagement. \textbf{Task:} I needed to create a
+    small, portable forecasting and alerting capability that could be tested and
+    deployed consistently. \textbf{Action:} I implemented the pattern as a Python
+    service that derived an expected operating range from historical observations,
+    compared new results with that baseline, and emitted actionable alerts for material
+    deviations or failed runs. I added automated tests for normal, threshold, and
+    failure paths, packaged the service in Docker, and configured GitHub Actions to
+    validate and deploy the same artifact. \textbf{Result:} The team gained a reusable,
+    low-overhead monitoring component that converted operational variance into an early
+    signal and could be promoted without environment-specific manual steps.
 - id: adonis-08
   text_tex: Standardized transformation logic across clients and translated business
     requirements into technical specifications to improve delivery predictability.
+  story_tex: >-
+    \textbf{Situation:} Important Practice Suite behavior was encoded in client
+    workflows rather than the database documentation: collection status carried
+    different meaning from claim status, rebills received new claim numbers, accession
+    numbers remained stable, and requested fields such as taxonomy were not always in
+    the delivered source. \textbf{Task:} I needed to convert those discoveries into
+    precise implementation rules while keeping them compatible with shared Adonis data
+    contracts. \textbf{Action:} In client and product working sessions, I used concrete
+    records and screens to ask how rebills, submission dates, worklists, and identifiers
+    were actually used. I translated the answers into model grains, mappings, filters,
+    required-field gaps, audit criteria, and technical specifications, and compared the
+    approach with peer integrations during review. \textbf{Result:} Business ambiguity
+    became testable transformation logic, the team could identify missing vendor data
+    early, and shared patterns improved delivery predictability without erasing the
+    source-specific rules Hopebridge depended on.

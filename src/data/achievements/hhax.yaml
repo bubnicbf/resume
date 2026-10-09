@@ -3,49 +3,213 @@
   text_tex: Engineered unified and analytics Snowflake/dbt models spanning 55 tables
     across two organizations and two source-system configurations, establishing reusable
     patterns for faster client onboarding.
+  story_tex: >-
+    \textbf{Situation:} Following the HHAeXchange-Sandata merger, reporting depended on
+    two organizations and two source configurations whose entities, keys, data types,
+    and lifecycle rules did not line up. \textbf{Task:} I was asked to create a shared
+    warehouse and analytics pattern without disrupting the established HHA reporting
+    path. \textbf{Action:} I inventoried the source structures, aligned 55 staging,
+    core, and BI tables, preserved application identifiers alongside stable warehouse
+    keys, normalized field types, and used paired source-specific CTEs plus a common
+    source-system tag so both implementations could feed the same downstream contract.
+    \textbf{Result:} The two environments could be consumed through one consistent set
+    of Snowflake/dbt models, and the repeatable structure gave later source and client
+    onboarding a proven starting point instead of another one-off build.
 - id: hhax-02
   text_tex: Implemented reusable SQL/Jinja transformation logic for lifecycle states,
     null handling, sentinel dates, and source-system variations across organization,
     office, caregiver, and patient domains.
+  story_tex: >-
+    \textbf{Situation:} The HHA and Sandata EVV feeds represented the same business
+    concepts differently: deletion and active-state flags varied, optional fields were
+    inconsistently populated, date ranges used different conventions, and local keys
+    only made sense inside a source account. \textbf{Task:} I needed to make those
+    differences predictable before the data reached shared organization, office,
+    caregiver, and patient models. \textbf{Action:} I built reusable SQL/Jinja patterns
+    around explicit casts, CASE and COALESCE rules, deterministic row ranking, sentinel
+    dates, lifecycle filters, and source-specific branches that converged on a common
+    column contract. I kept application IDs and source labels visible so exceptions
+    remained traceable. \textbf{Result:} The same transformation approach could be
+    applied across domains, reducing special-case logic and making cross-source results
+    easier to test, explain, and extend.
 - id: hhax-03
   text_tex: Created or materially redesigned 30 automated SQL/dbt data-quality tests
     covering nulls, duplicates, referential integrity, business rules, lifecycle logic,
     and source-to-target reconciliation.
+  story_tex: >-
+    \textbf{Situation:} A large set of new EVV models was moving through multiple
+    environments, but failures such as duplicate keys, orphaned relationships, bad
+    lifecycle states, and quoted-column behavior were not covered consistently.
+    \textbf{Task:} I needed repeatable checks that would catch structural and business
+    defects before promotion. \textbf{Action:} I created or redesigned 30 SQL/dbt tests,
+    including custom generic tests for quoted identifiers, and combined them with model
+    assertions for not-null and uniqueness rules, referential integrity, accepted
+    values, deletion logic, and source-to-target counts. I reran the focused checks
+    after each mapping or key change so fixes were regression-tested rather than merely
+    spot-checked. \textbf{Result:} The integration gained an automated quality gate that
+    made failures reproducible, localized defects earlier, and provided objective
+    evidence for review and release decisions.
 - id: hhax-04
   text_tex: Translated ambiguous business requirements into documented mappings, acceptance
     criteria, onboarding standards, and 12 data-quality investigation runbooks.
+  story_tex: >-
+    \textbf{Situation:} Many requirements arrived as broad requests to make Sandata
+    data behave like existing HHA analytics, while the intended grain, join behavior,
+    lifecycle rules, and acceptable variance were not always explicit.
+    \textbf{Task:} I needed to turn that ambiguity into instructions that engineers,
+    reviewers, and downstream users could evaluate the same way. \textbf{Action:} I
+    documented source-to-target mappings and acceptance criteria for schema, key
+    uniqueness, referential integrity, row parity, null distributions, filters, and
+    derived fields. I organized those methods into 12 investigation runbooks with
+    executable queries, expected relationships, issue logs, severity, remediation,
+    status, and sign-off sections. \textbf{Result:} Reviews moved from subjective checks
+    to repeatable evidence, and the same documentation became an onboarding standard
+    for diagnosing later data-quality problems.
 - id: hhax-05
   text_tex: Conducted feasibility analysis of source-system structures and implementation
     constraints to shape integration scope, modeling strategy, and delivery approach.
+  story_tex: >-
+    \textbf{Situation:} Before committing to a unified EVV design, the team needed to
+    know whether the Sandata snapshots contained the entities, history, keys, and
+    relationships required to reproduce established analytics. \textbf{Task:} I was
+    responsible for separating what could be modeled reliably from what required a
+    different scope or an explicit limitation. \textbf{Action:} I profiled raw tables,
+    compared them with the existing HHA contracts, traced candidate joins, tested
+    cardinality and completeness, examined delete and update behavior, and identified
+    where source grain or type differences would affect implementation. I used those
+    findings to choose staging boundaries, source-specific CTEs, identity rules, and
+    validation criteria before full development. \textbf{Result:} The delivery plan was
+    grounded in actual source behavior, reducing avoidable redesign and making known
+    constraints visible to stakeholders early.
 - id: hhax-06
   text_tex: Structured target models using FHIR-like concepts where appropriate to
     improve consistency and extensibility for downstream integration and analytics.
+  story_tex: >-
+    \textbf{Situation:} The merged environment represented related healthcare concepts
+    through source-specific tables and names, which made it difficult for downstream
+    consumers to reason consistently about patients, caregivers, organizations,
+    locations, addresses, and their relationships. \textbf{Task:} I needed a target
+    structure that was understandable across systems and could evolve without claiming
+    full FHIR conformance. \textbf{Action:} I used FHIR-like resource boundaries where
+    they fit the data, separated core entities from relationships and supporting
+    attributes, preserved source provenance, and aligned identifiers so the same
+    conceptual entity had a consistent role across the warehouse. I validated the
+    approach against the actual reporting fields and join paths rather than forcing the
+    source into an abstract standard. \textbf{Result:} The models became easier to map,
+    document, and extend for both analytics and future integration use cases.
 - id: hhax-07
   text_tex: Defined surrogate-key, natural-key, and crosswalk strategies supporting
     stable identity resolution across related source systems.
+  story_tex: >-
+    \textbf{Situation:} HHA and Sandata reused local numeric identifiers across
+    accounts, payers, and environments, so a patient, provider, office, service code,
+    or authorization ID was not globally meaningful by itself. \textbf{Task:} I needed
+    stable keys for shared facts and dimensions while retaining enough lineage to trace
+    a record back to its source. \textbf{Action:} I identified the business grain for
+    each entity, formed composite natural keys from the necessary account and domain
+    identifiers, retained application IDs, mapped them to warehouse-level identifiers,
+    and propagated those rules through parent-child relationships and crosswalks. I
+    then used uniqueness and referential-integrity checks to expose collisions and
+    missing links. \textbf{Result:} Related records could be resolved consistently
+    across source systems, and later corrections to key logic could be made centrally
+    without losing source traceability.
 - id: hhax-08
   text_tex: Resolved data-quality and mapping issues through targeted test-case analysis
     and review of failing source and target records.
+  story_tex: >-
+    \textbf{Situation:} Integration failures appeared as symptoms in downstream tables,
+    including missing records, duplicate service codes, orphaned relationships, and a
+    production data-type error, while the actual defect could originate in raw data,
+    staging logic, a join, or a cast. \textbf{Task:} I needed to isolate each failure
+    quickly without rewriting working portions of the pipeline. \textbf{Action:} I built
+    narrow test cohorts, compared the same keys across raw, staging, core, and BI layers,
+    decomposed joins one at a time, inspected representative failing records, and used
+    count and null deltas to confirm the responsible transformation. I changed only the
+    affected filters, joins, deduplication, or type handling and reran the same test case
+    as a regression check. \textbf{Result:} The defects were corrected with traceable
+    evidence and focused changes that limited risk to the broader integration.
 - id: hhax-09
   text_tex: Collaborated with client and internal stakeholders to resolve source ambiguity,
     refine requirements, and translate business needs into production-ready data assets.
+  story_tex: >-
+    \textbf{Situation:} Several EVV behaviors could not be inferred from column names
+    alone, including which address source was authoritative, how usage tags should be
+    populated, and which keys or lifecycle rules downstream reports expected.
+    \textbf{Task:} I needed to obtain decisions from the right stakeholders and convert
+    them into deployable logic. \textbf{Action:} I brought concrete record examples,
+    join counts, and alternative mappings to client and internal review discussions,
+    captured the decisions in model mappings and QA issue logs, incorporated peer-review
+    feedback, and verified the revised behavior in Snowflake before promotion.
+    \textbf{Result:} Ambiguous business questions became explicit technical rules, the
+    resulting models were reviewable against shared acceptance criteria, and stakeholders
+    had a documented explanation of why the production logic behaved as it did.
 - id: hhax-10
   text_tex: Established reusable patterns for onboarding additional sources and extending
     integration workflows.
+  story_tex: >-
+    \textbf{Situation:} The merger integration would not be the last source added to the
+    platform, so a solution built around hard-coded, table-by-table exceptions would
+    create the same onboarding problem again. \textbf{Task:} I needed to leave an
+    extension path that another engineer could follow. \textbf{Action:} I standardized
+    the layered staging-to-core-to-BI pattern, source-specific CTE plus common-union
+    structure, application and warehouse key fields, source labels, dbt tests, QA
+    runbooks, and versioned Snowflake changes through Liquibase and GitHub workflows.
+    I kept source differences localized so a new adapter could reuse the common contract
+    and quality checks. \textbf{Result:} Additional sources could be onboarded by
+    implementing a known set of mappings and tests rather than redesigning the downstream
+    model, improving consistency and reducing integration risk.
 - id: hhax-11
   text_tex: Diagnosed and remediated a multi-payer EVV dashboard data-loss defect
     by tracing fact-to-dimension joins across 1.12 billion visit records; quantified
     214.5 million records (19.2\%) excluded by missing patient, service-code, and
     payer mappings, isolated 99.2\% of in-scope missing-patient visits to the CareSource
     feed, and corrected the underlying integration defects.
+  story_tex: >-
+    \textbf{Situation:} A multi-payer EVV dashboard was undercounting visits, and it was
+    unclear whether the loss came from dashboard filters or from the warehouse joins.
+    \textbf{Task:} I needed to quantify the loss, identify the responsible dimension,
+    and isolate the affected feed before changing production logic. \textbf{Action:} I
+    started with 1,117,470,531 fact rows, measured survival after each inner join, and
+    showed that only 903,000,825 rows survived: 214,469,706 visits, or 19.2\%, were
+    excluded. I then scoped the analysis to the dashboard's payer and one-year window,
+    traced missing patient matches by payer and source, and found that CareSource
+    represented 757,897 of 764,073 missing-patient visits, or 99.2\%. I corrected the
+    patient, service-code, and payer integration defects. \textbf{Result:} The dashboard
+    issue had a measured root cause and a targeted remediation rather than an unverified
+    filter change.
 - id: hhax-12
   text_tex: Executed structural, row-level, transformation, and completeness QA for
     a 156-field Snowflake/dbt EVV visit model; uncovered and corrected defects associated
     with a 52.23\% source-to-target row-count gap, 73.6\% null patient identifiers,
     and 105.6 million orphaned visit relationships.
+  story_tex: >-
+    \textbf{Situation:} A new Sandata EVV visit model with 156 output fields was being
+    prepared for the shared analytics layer, but a successful dbt run did not prove that
+    the transformation preserved the source population or relationships.
+    \textbf{Task:} I needed to validate its structure, row grain, transformations, and
+    completeness before it could be trusted downstream. \textbf{Action:} I compared the
+    schema and every output field, tested visit-key uniqueness, reconciled source and
+    target counts, measured null distributions, validated deletion logic, and joined the
+    target back to the patient model. That exposed a 221,074,458-to-105,617,693 row gap
+    of 52.23\%, 73.6\% null patient identifiers, and 105,601,156 orphaned visits. I traced
+    the failures to specific joins and mappings and corrected the associated defects.
+    \textbf{Result:} The model moved forward with quantified risks, reproducible QA, and
+    corrected logic rather than relying on superficial row samples.
 - id: hhax-13
   text_tex: Validated and remediated an EVV patient-address model, resolving six
     documented defects involving deletion handling, multi-address coverage, usage-tag
     logic, and production data types; verified 1.31 million unique keys, zero missing
     parent references, and exact 158,084-row parity for the deduplicated parent-matched
     population.
+  story_tex: >-
+    \textbf{Situation:} The initial EVV patient-address model did not cover multiple
+    addresses correctly, omitted deletion and usage-tag behavior, and later produced a
+    production type failure when its source changed. \textbf{Task:} I needed to remediate
+    the model and prove both its logical and production correctness. \textbf{Action:} I
+    documented six issues, changed the model to reuse the patient entity, incorporated
+    the appropriate supplemental and address sources, added deletion and usage-tag
+    logic, aligned the key convention with HHA, and shipped a production hotfix for the
+    type error. I then tested key uniqueness, parent references, mandatory-field nulls,
+    join coverage, filters, and source-to-target parity. \textbf{Result:} All six issues
+    were closed, 1,313,744 keys were unique, no parent references were missing, and the
+    deduplicated parent-matched population reconciled exactly at 158,084 rows.

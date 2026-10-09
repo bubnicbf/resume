@@ -31,9 +31,9 @@ def apply_order(ids, order, context)
   order
 end
 
-def selected_items(role, selection)
+def selected_achievements(role, selection)
   records = load_yaml(File.join(DATA, 'achievements', "#{role.fetch('id')}.yaml"))
-  by_id = records.to_h { |record| [record.fetch('id'), record.fetch('text_tex')] }
+  by_id = records.to_h { |record| [record.fetch('id'), record] }
   ids = selection.fetch('achievements', 'all')
   ids = role.fetch('achievement_ids') if ids == 'all'
   raise "Duplicate achievements in #{role['id']}" unless ids.uniq == ids
@@ -42,6 +42,10 @@ def selected_items(role, selection)
     raise "#{id} does not belong to #{role['id']}" unless role.fetch('achievement_ids').include?(id)
     by_id.fetch(id) { raise "Missing achievement #{id}" }
   end
+end
+
+def selected_items(role, selection)
+  selected_achievements(role, selection).map { |record| record.fetch('text_tex') }
 end
 
 def ats_entry(role, selection)
@@ -67,7 +71,7 @@ def ats_entry(role, selection)
 end
 
 def master_entry(role, selection)
-  texts = selected_items(role, selection)
+  achievements = selected_achievements(role, selection)
   lines = case role.fetch('kind')
           when 'company'
             ["\\textbf{#{role.fetch('employer')}} \\hfill #{role.fetch('dates')}\\\\",
@@ -81,9 +85,13 @@ def master_entry(role, selection)
              role.fetch('summary_tex')]
           end
   lines.reject!(&:empty?)
-  unless texts.empty?
+  unless achievements.empty?
     lines << "\\begin{itemize}"
-    texts.each { |text| lines << "  \\item #{text}" }
+    achievements.each do |achievement|
+      lines << "  \\item #{achievement.fetch('text_tex')}"
+      story = achievement['story_tex']
+      lines << "  \\par\\smallskip\\textbf{STAR:} #{story}" if story && !story.empty?
+    end
     lines << "\\end{itemize}"
   end
   lines

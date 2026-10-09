@@ -1,41 +1,174 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ppg-01
   text_tex: Improved color-matching classification accuracy using numerical integration
     methods.
+  story_tex: >-
+    \textbf{Situation:} Automotive-refinish color matching depended on classifying candidate
+    formulas from spectral and colorimetric data, but the existing calculation lost useful
+    information when it approximated continuous response curves. \textbf{Task:} I needed to
+    improve classification accuracy without making the production workflow impractically
+    slow. \textbf{Action:} I reviewed the mathematical assumptions, implemented numerical
+    integration over the measured curves, compared alternative integration schemes on
+    representative panels, and validated the classifications against known matches and
+    expert review. \textbf{Result:} The revised method separated close candidates more
+    reliably and gave the matching team a stronger quantitative basis for selecting formulas.
 - id: ppg-02
   text_tex: Built cross-instrument correlation software in VB.NET and JMP to improve
     measurement consistency and support statistical risk analysis.
+  story_tex: >-
+    \textbf{Situation:} Spectrophotometers at different laboratories and customer locations
+    could report small but operationally important differences for the same color sample.
+    \textbf{Task:} I needed to quantify those differences and make measurements more
+    comparable across instruments. \textbf{Action:} I built a VB.NET workflow to ingest and
+    align instrument readings, used JMP to model bias and variation by device and color
+    region, generated correlation adjustments, and summarized residual risk for technical
+    stakeholders. \textbf{Result:} Teams could identify out-of-family instruments, apply a
+    consistent correlation approach, and make color decisions with a clearer understanding
+    of measurement uncertainty.
 - id: ppg-03
   text_tex: Debugged a VB.NET and FORTRAN optimization routine for a numerical radiative-transfer
     solution.
+  story_tex: >-
+    \textbf{Situation:} A radiative-transfer optimizer combined a VB.NET application with a
+    legacy FORTRAN numerical routine, and some inputs produced unstable or nonconvergent
+    formulation results. \textbf{Task:} I needed to determine whether the problem came from
+    interlanguage data exchange, numerical assumptions, or the optimization logic itself.
+    \textbf{Action:} I traced representative cases across the VB.NET/FORTRAN boundary,
+    verified array dimensions and parameter units, instrumented intermediate values,
+    reproduced edge conditions, and corrected the faulty convergence and input-handling
+    behavior. \textbf{Result:} The solver produced stable results across a broader operating
+    range and became easier for the team to diagnose when unusual samples were encountered.
 - id: ppg-04
   text_tex: Wrote a Visual C++ and VB.NET DLL wrapper for a loaned spectroscopic instrument
     and developed formulation methods for an automated color-matching facility.
+  story_tex: >-
+    \textbf{Situation:} PPG was evaluating a loaned spectroscopic instrument for an
+    automated color-matching facility, but its native interface did not integrate with the
+    existing VB.NET formulation environment. \textbf{Task:} I needed to establish reliable
+    software control of the instrument and turn its measurements into usable formulation
+    inputs. \textbf{Action:} I studied the vendor interface, wrote a Visual C++ DLL wrapper,
+    exposed a stable VB.NET contract, handled connection and error states, and developed and
+    tested formulation methods using controlled samples. \textbf{Result:} The team could
+    exercise the instrument through the planned automation stack and evaluate an end-to-end
+    measurement-to-formulation workflow before making a larger equipment commitment.
 - id: ppg-05
   text_tex: Led cross-functional color-science and marketing initiatives from concept
     through on-time, in-full delivery for the Automotive Refinish business.
+  story_tex: >-
+    \textbf{Situation:} Automotive Refinish initiatives often combined technical color
+    claims, customer-facing materials, software behavior, and launch deadlines owned by
+    different functions. \textbf{Task:} I needed to keep the scientific content accurate
+    while moving the complete initiative to an agreed delivery date. \textbf{Action:} I
+    defined the technical scope with color scientists and marketing partners, converted the
+    work into milestones and owners, reviewed claims and demonstrations against the data,
+    surfaced dependencies early, and coordinated final readiness checks. \textbf{Result:}
+    The initiative was delivered on time and in full with aligned technical evidence,
+    customer messaging, and operational support.
 - id: ppg-06
   text_tex: Served as technical voice for color data-management software, supporting
     its global development, launch, training, adoption, and application.
+  story_tex: >-
+    \textbf{Situation:} A global color data-management product had to serve laboratories,
+    operations, and customer-facing teams with different terminology and workflows.
+    \textbf{Task:} I needed to represent the underlying color science throughout product
+    development and help users apply the software correctly after launch. \textbf{Action:}
+    I translated scientific requirements into software behavior, reviewed prototypes and
+    test cases, resolved questions from regional teams, developed technical training and
+    examples, and incorporated launch feedback into guidance and enhancements.
+    \textbf{Result:} The product launched with a more consistent scientific model and users
+    had a technical resource for training, adoption, and difficult application questions.
 - id: ppg-07
   text_tex: Managed a portfolio of color-related intellectual property and supported
     the translation of research into operational tools and practices.
+  story_tex: >-
+    \textbf{Situation:} Color research generated algorithms, methods, and experimental
+    findings whose value could be lost if ownership, novelty, and practical application were
+    not tracked. \textbf{Task:} I needed to help manage that portfolio while moving useful
+    ideas from research into operations. \textbf{Action:} I cataloged candidate inventions
+    and supporting evidence, coordinated technical review with research and IP stakeholders,
+    distinguished protectable concepts from implementation know-how, and helped translate
+    selected methods into software requirements, procedures, and training. \textbf{Result:}
+    PPG had clearer visibility into its color-related intellectual assets and a more direct
+    path from promising research to repeatable operational use.
 - id: ppg-08
   text_tex: Served as the global liaison among Color, Technical, Operations, and IT
     teams, translating color-science requirements into consistent systems, workflows,
     and communications.
+  story_tex: >-
+    \textbf{Situation:} Regional Color, Technical, Operations, and IT groups used different
+    vocabulary, priorities, and local practices, creating inconsistent interpretations of
+    the same color-science requirement. \textbf{Task:} I needed to establish a shared
+    understanding that could be implemented globally without ignoring local constraints.
+    \textbf{Action:} I facilitated cross-functional discussions, documented the scientific
+    intent and decision rules, mapped regional workflows and system impacts, resolved
+    conflicting assumptions, and circulated examples and decisions in a common format.
+    \textbf{Result:} Teams worked from more consistent requirements and could coordinate
+    system changes, operating practices, and communications with fewer regional surprises.
 - id: ppg-09
   text_tex: Cowrote color workflows and best practices for internal operations and
     external customers, supported the change-management efforts required for adoption.
+  story_tex: >-
+    \textbf{Situation:} New color tools and analytical methods would not improve results if
+    internal teams and customers continued to follow inconsistent measurement and matching
+    practices. \textbf{Task:} I needed to turn technical knowledge into usable workflows
+    and support the behavior change required for adoption. \textbf{Action:} I cowrote
+    step-by-step practices with operational experts, added decision points and troubleshooting
+    examples, tested the guidance with representative users, supported training and rollout
+    communications, and refined the material from field feedback. \textbf{Result:} Users
+    received a clearer, repeatable way to apply the tools, and adoption discussions focused
+    on observable practices rather than abstract scientific concepts.
 - id: ppg-10
   text_tex: Evaluated color processes, instrumentation, and data flows to identify
     technical and operational risks and develop practical mitigation strategies.
+  story_tex: >-
+    \textbf{Situation:} Color results could drift because of instrument condition, sample
+    preparation, environmental effects, data transformations, or inconsistent operating
+    steps. \textbf{Task:} I needed to identify where those risks entered the workflow and
+    recommend controls that operations could realistically sustain. \textbf{Action:} I
+    mapped the process from sample preparation through measurement, data transfer, and
+    decision-making; reviewed failure modes and available evidence; ranked risks by impact
+    and detectability; and proposed calibration, validation, monitoring, and escalation
+    controls. \textbf{Result:} Stakeholders gained a practical risk view of the end-to-end
+    color process and a prioritized set of mitigations rather than isolated equipment fixes.
 - id: ppg-11
   text_tex: Developed statistical models from established theory, experimental data,
     and novel approaches to improve color measurement, matching, and process decisions.
+  story_tex: >-
+    \textbf{Situation:} Established color theory explained much of the measurement process,
+    but real production data also contained instrument, material, and process variation that
+    theory alone did not capture. \textbf{Task:} I needed to build models that remained
+    scientifically grounded while being useful for operational decisions. \textbf{Action:}
+    I combined theoretical predictors with designed experiments and historical observations,
+    explored additional features and interactions, validated performance on held-out or
+    repeated measurements, and translated model limitations into decision thresholds.
+    \textbf{Result:} The models provided more actionable estimates for measurement quality,
+    match selection, and process control while making uncertainty explicit.
 - id: ppg-12
   text_tex: Championed a more science-centered organizational approach to color by
     introducing analytical methods, shared standards, and evidence-based decision-making.
+  story_tex: >-
+    \textbf{Situation:} Color decisions were sometimes driven by local custom or individual
+    experience, making it difficult to compare results and scale improvements across teams.
+    \textbf{Task:} I wanted to strengthen the role of reproducible evidence without
+    discounting the expertise of experienced practitioners. \textbf{Action:} I introduced
+    common measurement and analysis methods, demonstrated them on active business questions,
+    encouraged teams to document assumptions and acceptance criteria, and used shared
+    standards to connect expert judgment with quantitative evidence. \textbf{Result:} Teams
+    gained a more consistent language for evaluating color performance and a stronger basis
+    for repeating, reviewing, and communicating technical decisions.
 - id: ppg-13
   text_tex: Informed marketing strategy and communications by connecting customer
     needs with technical capabilities and broad operational insight.
+  story_tex: >-
+    \textbf{Situation:} Marketing needed to describe color capabilities in terms that
+    mattered to refinish customers without overstating what the technology or operating
+    network could deliver. \textbf{Task:} I needed to connect customer problems, scientific
+    capabilities, and operational realities into credible positioning. \textbf{Action:} I
+    gathered questions from customer-facing and regional teams, mapped them to product and
+    process capabilities, reviewed proposed claims against technical evidence, and supplied
+    examples that explained the practical value and boundaries of the solution.
+    \textbf{Result:} Marketing communications were better aligned with customer needs and
+    technical reality, giving commercial teams a more credible story and clearer guidance
+    on where the offering fit.

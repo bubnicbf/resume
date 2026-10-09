@@ -1,12 +1,45 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: explorys-01
   text_tex: Diagnosed Hadoop and Oracle production-ingestion failures and implemented
     Jenkins-backed scheduling and recovery controls across 10+ client data warehouses.
+  story_tex: >-
+    \textbf{Situation:} Rapid client growth left more than 10 data warehouses dependent
+    on ingestion jobs that could fail at the Oracle source, during transfer, or in Hadoop,
+    with inconsistent recovery steps. \textbf{Task:} I needed to make failures diagnosable
+    and restore feeds without rerunning more work than necessary. \textbf{Action:} I traced
+    failed loads through source queries, transfer logs, HDFS landing data, and downstream
+    jobs; documented recurring causes; and implemented Jenkins scheduling, dependency,
+    restart, and notification controls around the ingestion workflow. \textbf{Result:}
+    Production support gained a consistent way to identify the failed stage and recover
+    client feeds, reducing reliance on ad hoc manual restarts.
 - id: explorys-02
   text_tex: Identified and extracted data from heterogeneous client systems; led technical
     requirements gathering, discovery, documentation, and implementation; and coordinated
     acquisition, installation, and configuration of VPN hardware supporting client
     integrations.
+  story_tex: >-
+    \textbf{Situation:} Each new healthcare client exposed different databases, schemas,
+    network constraints, and operational contacts, so onboarding could not begin with a
+    standard extract alone. \textbf{Task:} I needed to carry integrations from technical
+    discovery through a secure, validated initial data flow. \textbf{Action:} I led source
+    and requirements sessions, inventoried tables and refresh behavior, wrote extraction
+    and mapping documentation, implemented and validated the data pull, and coordinated
+    procurement, installation, configuration, and connectivity testing for required VPN
+    hardware. \textbf{Result:} Client teams and Explorys had a shared integration contract,
+    secure connectivity, and a repeatable path from heterogeneous source data to the
+    onboarding platform.
 - id: explorys-03
   text_tex: Developed a cron-based control for defining blackout periods around client
     data pulls.
+  story_tex: >-
+    \textbf{Situation:} Scheduled data pulls could overlap client maintenance, backups,
+    or other restricted periods, creating avoidable source contention and failed loads.
+    \textbf{Task:} I needed a lightweight way to respect client-specific blackout windows
+    without manually disabling and re-enabling each integration. \textbf{Action:} I built
+    a cron-based control that read configured blackout periods before starting a pull,
+    skipped or deferred ineligible runs, logged the decision, and resumed the normal
+    schedule afterward. I tested boundary times and representative client schedules.
+    \textbf{Result:} The platform could honor operating constraints consistently, reducing
+    preventable collisions while preserving an auditable schedule for production support.

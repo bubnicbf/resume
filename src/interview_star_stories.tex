@@ -1,0 +1,104 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,left=0.68in,right=0.68in,top=0.72in,bottom=0.62in]{geometry}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+\setmainfont[
+  Path=/System/Library/Fonts/Supplemental/,
+  UprightFont=Arial.ttf,
+  BoldFont=Arial Bold.ttf,
+  ItalicFont=Arial Italic.ttf,
+  BoldItalicFont=Arial Bold Italic.ttf
+]{Arial}
+
+\definecolor{accent}{HTML}{174A6E}
+\definecolor{accentlight}{HTML}{E8F1F7}
+\definecolor{muted}{HTML}{566573}
+\definecolor{rulecolor}{HTML}{C7D3DC}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+\input{../build/generated/interview-star-stories-meta.tex}
+\newcommand{\documentversion}{1.0}
+\newcommand{\lastupdated}{\today}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\fontsize{8}{9}\selectfont \contactname\ \textbar\ Interview STAR Story Bank}
+\fancyhead[R]{\fontsize{8}{9}\selectfont\textcolor{muted}{\rightmark}}
+\fancyfoot[C]{\fontsize{8}{9}\selectfont \thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{11pt}
+\setlength{\headsep}{7pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3.5em}
+\hyphenpenalty=700
+\exhyphenpenalty=100
+
+\titleformat{\section}
+  {\Large\bfseries\color{accent}}
+  {}
+  {0pt}
+  {}
+  [\vspace{2pt}\color{rulecolor}\titlerule]
+\titlespacing*{\section}{0pt}{0pt}{5pt}
+
+\newcommand{\storybadge}[1]{%
+  \colorbox{accentlight}{\makebox[1.45em][c]{\textcolor{accent}{\bfseries #1}}}%
+}
+
+\newcommand{\rolebreak}{%
+  \ifdim\pagetotal>0pt\clearpage\fi
+}
+
+\newcommand{\storyitem}[2]{%
+  \item[\storybadge{#1}]\begin{minipage}[t]{\linewidth}#2\end{minipage}%
+}
+
+\newcommand{\story}[6]{%
+  \par\addvspace{7pt}%
+  \begin{minipage}[t]{\linewidth}%
+    \hypertarget{#1}{}%
+    {\footnotesize\textcolor{muted}{\texttt{#1}}}\par\nobreak
+    {\bfseries #2}\par\nobreak
+    \begin{description}[leftmargin=0.45in,labelwidth=0.30in,labelsep=0.08in,itemsep=2.4pt,topsep=3pt,parsep=0pt,partopsep=0pt]
+      \storyitem{S}{#3}
+      \storyitem{T}{#4}
+      \storyitem{A}{#5}
+      \storyitem{R}{#6}
+    \end{description}
+  \end{minipage}%
+  \par
+}
+
+\begin{document}
+
+{\LARGE\bfseries\textcolor{accent}{\contactname}}\\[2pt]
+{\Large\bfseries Interview STAR Story Bank}\\[5pt]
+{\small Version \documentversion\ \textbar\ Updated \lastupdated\ \textbar\ \storycount\ stories}
+
+\medskip
+This is a searchable interview reference. Use the accomplishment as the prompt, then scan
+the highlighted \textbf{S}, \textbf{T}, \textbf{A}, and \textbf{R} rows. Use the role index
+or PDF search to move directly to the relevant story.
+
+\section*{Role Index}
+\input{../build/generated/interview-star-stories-index.tex}
+
+\input{../build/generated/interview-star-stories-content.tex}
+
+\end{document}

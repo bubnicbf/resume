@@ -7,12 +7,13 @@ DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
 
-.PHONY: all resume master-career-history clean distclean open
+.PHONY: all resume master-career-history interview-star-stories clean distclean open
 
 all: resume master-career-history
 
 resume: $(OUT_DIR)/resume.pdf
 master-career-history: $(OUT_DIR)/master_career_history.pdf
+interview-star-stories: $(OUT_DIR)/interview_star_stories.pdf
 
 open: $(OUT_DIR)/resume.pdf
 	open "$(OUT_DIR)/resume.pdf"
@@ -33,6 +34,14 @@ $(OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DAT
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "master_career_history.tex"
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "master_career_history.tex"
 	@echo "==> Wrote $(OUT_DIR)/master_career_history.pdf"
+
+$(OUT_DIR)/interview_star_stories.pdf: $(SRC_DIR)/interview_star_stories.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/profiles/master-career-history.yaml scripts/render_interview_star_stories.rb
+	@mkdir -p "$(OUT_DIR)"
+	@ruby scripts/render_interview_star_stories.rb
+	@echo "==> Building interview STAR story bank"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "interview_star_stories.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "interview_star_stories.tex"
+	@echo "==> Wrote $(OUT_DIR)/interview_star_stories.pdf"
 
 clean:
 	@echo "==> Cleaning aux/log files from $(OUT_DIR)"

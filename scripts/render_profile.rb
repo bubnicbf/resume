@@ -70,6 +70,34 @@ def ats_entry(role, selection)
   lines
 end
 
+def star_items(story, context)
+  labels = %w[Situation Task Action Result]
+  pattern = /\\textbf\{(Situation|Task|Action|Result):\}\s*/
+  matches = []
+  cursor = 0
+  while (match = pattern.match(story, cursor))
+    matches << match
+    cursor = match.end(0)
+  end
+
+  actual_labels = matches.map { |match| match[1] }
+  raise "Malformed STAR story for #{context}: expected #{labels.join(', ')}" unless actual_labels == labels
+  raise "Unexpected text before Situation for #{context}" unless story[0...matches.first.begin(0)].strip.empty?
+
+  abbreviations = %w[S T A R]
+  items = matches.each_with_index.map do |match, index|
+    ending = index + 1 < matches.length ? matches[index + 1].begin(0) : story.length
+    text = story[match.end(0)...ending].strip
+    raise "Empty #{match[1]} text for #{context}" if text.empty?
+    "    \\item[\\textbf{#{abbreviations[index]}}] #{text}"
+  end
+
+  ["  \\begin{itemize}[leftmargin=0.25in,labelsep=0.06in,itemsep=0.5pt,topsep=1pt,parsep=0pt,partopsep=0pt]",
+   "    \\exhyphenpenalty=50"] +
+    items +
+    ["  \\end{itemize}"]
+end
+
 def master_entry(role, selection)
   achievements = selected_achievements(role, selection)
   lines = case role.fetch('kind')
@@ -88,9 +116,15 @@ def master_entry(role, selection)
   unless achievements.empty?
     lines << "\\begin{itemize}"
     achievements.each do |achievement|
-      lines << "  \\item #{achievement.fetch('text_tex')}"
       story = achievement['story_tex']
-      lines << "  \\par\\smallskip\\textbf{STAR:} #{story}" if story && !story.empty?
+      if story && !story.empty?
+        lines << "  \\item \\begin{minipage}[t]{\\linewidth}"
+        lines << "    #{achievement.fetch('text_tex')}"
+        lines.concat(star_items(story, achievement.fetch('id')))
+        lines << "  \\end{minipage}"
+      else
+        lines << "  \\item #{achievement.fetch('text_tex')}"
+      end
     end
     lines << "\\end{itemize}"
   end

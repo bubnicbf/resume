@@ -3,27 +3,120 @@
   text_tex: Built and validated a preproduction document-to-data MVP that converted
     semi-structured invoices into auditable transaction records, achieving 95\% field-level
     accuracy across a stratified 500-invoice test suite.
+  story_tex: >-
+    \textbf{Situation:} Small local farms had valuable purchasing and operating data
+    trapped in handwritten and printed invoices whose layouts and image quality varied
+    widely. \textbf{Task:} I needed to prove that a document-to-data product could
+    produce useful records without sacrificing accuracy or auditability. \textbf{Action:}
+    I assembled a stratified 500-invoice test suite across representative vendors,
+    layouts, and quality levels; combined image preprocessing, OCR, language-model
+    extraction, a versioned JSON schema, and arithmetic reconciliation; and compared
+    outputs field by field while iterating on prompts and post-processing rules.
+    \textbf{Result:} The preproduction MVP achieved 95\% field-level accuracy and produced
+    structured transaction records that retained enough context for review and correction.
 - id: growdata-02
   text_tex: Instrumented the MVP with automated tests, audit logging, retry controls,
     and confidence routing, achieving 88\% straight-through processing and under 1\%
     system failure.
+  story_tex: >-
+    \textbf{Situation:} High average extraction accuracy was not sufficient for an
+    operational product because uncertain invoices and transient provider failures still
+    needed safe handling. \textbf{Task:} I needed to maximize unattended processing while
+    ensuring questionable records were reviewed rather than silently accepted.
+    \textbf{Action:} I added automated tests and audit events, bounded retry controls for
+    transient failures, validation and reconciliation signals, and confidence-based
+    routing that separated clean records from invoices requiring human review. I tracked
+    system failures independently from data-quality exceptions so each could be improved
+    appropriately. \textbf{Result:} The MVP reached 88\% straight-through processing
+    while holding system failure below 1\%, with an explicit review path for the remainder.
 - id: growdata-03
   text_tex: Productized Tesseract OCR and rule-based post-processing as a small Python/Ruby
     service with containerized deployments and versioned configuration.
+  story_tex: >-
+    \textbf{Situation:} Early OCR experiments worked as isolated scripts but were
+    sensitive to machine setup, image preparation, and unrecorded parameter changes.
+    \textbf{Task:} I needed to turn that experimentation into a reproducible component
+    that could be operated and improved like a product. \textbf{Action:} I wrapped
+    Tesseract behind an extraction interface, added repeatable image orientation,
+    grayscale, contrast, and normalization steps, applied rule-based cleanup, exposed the
+    workflow through a small Python/Ruby service, and packaged its dependencies and
+    versioned settings in containers. \textbf{Result:} The same invoice and configuration
+    produced consistent behavior across environments, making OCR changes easier to test,
+    deploy, and roll back.
 - id: growdata-04
   text_tex: Added schema checks, cross-field validation, reconciliation, idempotent
     reruns, fixtures, golden-file tests, linting, and release automation.
+  story_tex: >-
+    \textbf{Situation:} Changes to OCR, prompts, or post-processing could improve one
+    invoice while breaking required fields, totals, or previously correct layouts.
+    \textbf{Task:} I needed a release gate that protected the transaction contract and
+    made reprocessing safe. \textbf{Action:} I enforced a versioned JSON schema, added
+    cross-field and line-to-total reconciliation, designed idempotent reruns, built
+    representative fixtures and golden-file regression tests, and connected tests and
+    linting to release automation. \textbf{Result:} Changes could be evaluated against
+    known invoices before release, malformed or inconsistent records were stopped early,
+    and failed work could be rerun without creating duplicate transactions.
 - id: growdata-05
   text_tex: Documented runbooks and failure modes covering timeouts, low-confidence
     OCR, and retries.
+  story_tex: >-
+    \textbf{Situation:} The pipeline depended on image quality, local OCR, and external
+    model APIs, so failures ranged from slow requests to readable but low-confidence
+    results. \textbf{Task:} I needed predictable recovery procedures that did not depend
+    on remembering how a particular failure had been solved before. \textbf{Action:} I
+    cataloged timeout, malformed-response, low-confidence OCR, validation, reconciliation,
+    and exhausted-retry scenarios; documented the relevant logs and checks; and defined
+    when to retry, preprocess again, route to review, reprocess, or escalate. \textbf{Result:}
+    Incidents could be classified and handled consistently, limiting blind retries and
+    reducing the chance that an uncertain invoice would enter the transaction dataset.
 - id: growdata-06
   text_tex: Built a lightweight analytics layer tracking usage, error categories,
     latency, and throughput to guide feature tuning and cost control.
+  story_tex: >-
+    \textbf{Situation:} Without operational measurements, I could not tell whether a
+    feature improved customer value or merely added latency and model cost. \textbf{Task:}
+    I needed enough observability to guide a small product without creating a large data
+    platform. \textbf{Action:} I captured usage, latency, throughput, review routing, and
+    categorized error events; summarized them by workflow and configuration version; and
+    compared quality and processing behavior before and after changes. \textbf{Result:}
+    The lightweight analytics layer exposed bottlenecks and recurring failure patterns,
+    gave me evidence for feature and configuration tuning, and kept infrastructure and
+    model-spend decisions tied to actual use.
 - id: growdata-07
   text_tex: Managed infrastructure as code for a minimal AWS footprint using S3, Lambda
     or scheduled jobs, and CloudWatch alerts through Bash/Zsh and Makefile workflows.
+  story_tex: >-
+    \textbf{Situation:} As a self-funded preproduction product, GrowData needed reliable
+    execution and monitoring without the cost or operational burden of a large platform.
+    \textbf{Task:} I needed to deploy the pipeline in a minimal, reproducible AWS footprint.
+    \textbf{Action:} I managed the infrastructure as code, used S3 for controlled document
+    and result storage, selected Lambda or scheduled execution according to workload
+    needs, configured least-privilege access and CloudWatch alerts, and wrapped common
+    deployment and operating steps in Bash/Zsh and Makefile workflows. \textbf{Result:}
+    The service could be recreated and monitored consistently, remained inexpensive at
+    preproduction volume, and avoided manual environment configuration.
 - id: growdata-08
   text_tex: Managed the business's bookkeeping, accounting, and tax obligations.
+  story_tex: >-
+    \textbf{Situation:} Building the product as a solo principal also made me responsible
+    for the financial records and compliance work behind the business. \textbf{Task:} I
+    needed to maintain an accurate view of cash activity and meet filing obligations while
+    continuing product development. \textbf{Action:} I separated and categorized business
+    income and expenses, reconciled accounts, retained source documents, maintained
+    bookkeeping records, monitored upcoming obligations, and prepared the information
+    needed for accounting and tax filings. \textbf{Result:} The business maintained
+    organized, current records and met its administrative obligations without requiring
+    a separate operations team.
 - id: growdata-09
   text_tex: Led marketing and client acquisition, including creating promotional materials
     for the business.
+  story_tex: >-
+    \textbf{Situation:} A technically viable invoice parser still needed a clear value
+    proposition and direct feedback from the small farms it was intended to serve.
+    \textbf{Task:} I needed to explain the product in practical terms, create interest,
+    and turn outreach into product learning and client opportunities. \textbf{Action:} I
+    translated the workflow into benefits such as reduced data entry and better expense
+    visibility, created promotional and demonstration materials, conducted outreach and
+    product conversations, and used objections and requests to refine positioning and the
+    roadmap. \textbf{Result:} GrowData established an initial acquisition process and a
+    feedback loop connecting market conversations to product priorities.

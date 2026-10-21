@@ -4,40 +4,151 @@
     18 source systems through approximately 200 scheduled data assets and 200 dbt
     models, supporting six analysts across six state markets; CI/CD automation and
     targeted model refactoring accelerated deployments and improved query performance.
+  story_tex: >-
+    \textbf{Situation:} Arkos needed to replace fragmented, source-specific reporting
+    with a governed platform that could support six analysts and six state markets.
+    \textbf{Task:} I was responsible for proving the architecture and turning it into
+    a production data lake that could absorb 18 operational, clinical, and payer
+    sources. \textbf{Action:} I designed the S3 raw, bronze, staging, silver, and gold
+    layers; built Glue, Athena, Redshift, and dbt processing; standardized configuration
+    and scheduling; and introduced CI/CD and targeted refactoring as the model estate
+    grew. \textbf{Result:} The platform scaled to roughly 200 scheduled assets and 200
+    dbt models, gave analysts repeatable governed datasets, and made releases and
+    performance improvements safer to deliver.
 - id: arkos-19
   text_tex: Configured event notifications for the greenfield data-lake CI/CD workflows,
     routing workflow status and failure events through Amazon SNS for centralized
     tracking.
+  story_tex: >-
+    \textbf{Situation:} As automated deployments expanded, workflow outcomes were
+    visible in individual AWS or CI/CD consoles but were not collected in one place.
+    \textbf{Task:} I needed to make deployment and failure states observable without
+    requiring analysts to continually inspect each workflow. \textbf{Action:} I wired
+    workflow status and failure events into Amazon SNS, standardized the event details
+    needed for triage, and validated that successful and failed executions produced
+    usable notifications and audit records. \textbf{Result:} The team gained a central
+    signal for CI/CD activity, could identify failed runs more quickly, and had the
+    context needed to begin follow-up without first reconstructing the execution path.
 - id: arkos-20
   text_tex: Established SNS topics and subscriptions for CI/CD workflow notifications,
     giving the analytics team timely visibility into deployment outcomes and supporting
     follow-up on failed runs.
+  story_tex: >-
+    \textbf{Situation:} Producing workflow events alone did not ensure that the right
+    people would receive actionable information at the right time. \textbf{Task:} I
+    needed to turn those events into a dependable notification channel for the analytics
+    team. \textbf{Action:} I created and organized SNS topics and subscriptions for
+    CI/CD outcomes, connected publishers and consumers, tested delivery and failure
+    behavior, and documented how the team should use the notifications during support.
+    \textbf{Result:} Analysts received timely deployment and failed-run visibility,
+    reducing the chance that a broken workflow would go unnoticed and establishing a
+    repeatable path from alert to investigation.
 - id: arkos-02
   text_tex: Integrated existing Jupyter-based analytics and authored platform, architecture,
     and operating documentation, enabling six analysts to independently use the governed
     data lake for recurring, executive, and BI reporting.
+  story_tex: >-
+    \textbf{Situation:} Analysts already had valuable Jupyter-based work, but it depended
+    on individual knowledge and was disconnected from the new governed lakehouse.
+    \textbf{Task:} I needed to preserve that analytical value while making the platform
+    understandable and usable without constant engineering assistance. \textbf{Action:}
+    I integrated reusable notebook workflows with governed data, documented the platform
+    architecture, environments, model layers, operating procedures, and lineage, and
+    supplied examples for recurring, executive, and BI reporting. \textbf{Result:} Six
+    analysts could independently find, query, and extend trusted datasets, which reduced
+    one-off handoffs and made the new platform part of their normal reporting workflow.
 - id: arkos-03
   text_tex: Instrumented scheduled pipelines with monitoring, alerting, and more than
     10 failure classifications; authored three AWS/dbt incident runbooks supporting
     rapid detection and recovery.
+  story_tex: >-
+    \textbf{Situation:} A growing schedule of AWS and dbt jobs could fail for very
+    different reasons, and raw error messages did not provide a consistent response.
+    \textbf{Task:} I needed to shorten the time from a failed run to a correct recovery
+    action. \textbf{Action:} I instrumented execution history, logs, data-freshness
+    checks, and alerts; grouped recurring failures into more than 10 operational
+    classifications; and wrote three incident runbooks covering detection, diagnosis,
+    remediation, and escalation. \textbf{Result:} The team could distinguish source,
+    infrastructure, transformation, and data-quality failures more quickly and recover
+    scheduled pipelines through a repeatable process instead of ad hoc troubleshooting.
 - id: arkos-04
   text_tex: Mentored engineers on code review, testing, and pipeline design and authored
     internal delivery standards.
+  story_tex: >-
+    \textbf{Situation:} As more contributors added pipelines and models, inconsistent
+    grains, tests, naming, and review practices increased maintenance risk. \textbf{Task:}
+    I needed to raise delivery consistency while helping engineers make sound design
+    decisions themselves. \textbf{Action:} I coached teammates through code reviews,
+    explained the reasoning behind test and modeling feedback, paired on pipeline
+    design, and documented standards for naming, model contracts, validation,
+    documentation, and pull-request readiness. \textbf{Result:} Reviews became more
+    predictable, defects were caught earlier, and engineers had a shared set of
+    expectations they could apply before requesting review.
 - id: arkos-05
   text_tex: Implemented Jira and GitHub workflows to centralize task tracking and
     improve coordination across the analytics team.
+  story_tex: >-
+    \textbf{Situation:} Requests, implementation details, and review status were spread
+    across conversations and tools, making priorities and ownership difficult to track.
+    \textbf{Task:} I needed to create a visible path from a business request to reviewed
+    production code. \textbf{Action:} I organized work into Jira epics and issues,
+    connected tickets to GitHub branches and pull requests, introduced consistent issue
+    and review expectations, and aligned workflow states with the team's delivery
+    process. \textbf{Result:} The analytics team gained clearer ownership and status,
+    reviewers could trace changes back to their requirements, and handoffs involved less
+    searching and follow-up.
 - id: arkos-06
   text_tex: Expanded cross-departmental collaboration to bring operational context
     into analytics decisions.
+  story_tex: >-
+    \textbf{Situation:} Technically correct models could still miss how risk, quality,
+    clinical, operations, finance, and BI teams used the data in practice. \textbf{Task:}
+    I needed to bring that operational context into design decisions before logic became
+    embedded in production. \textbf{Action:} I held working sessions with stakeholders,
+    brought sample records and reconciliation results into the discussion, translated
+    business rules into explicit model logic, and documented decisions and exceptions
+    for reviewers. \textbf{Result:} Models reflected real workflows, stakeholders could
+    validate the logic in familiar terms, and downstream teams had greater confidence in
+    the resulting measures and datasets.
 - id: arkos-07
   text_tex: Mentored junior team members in code review, testing, pipeline design,
     and delivery practices.
+  story_tex: >-
+    \textbf{Situation:} Junior team members were taking on increasingly complex SQL,
+    dbt, and AWS work and needed support beyond one-time corrections. \textbf{Task:} I
+    wanted to help them develop an independent method for designing, testing, and
+    shipping reliable changes. \textbf{Action:} I paired on model and pipeline design,
+    used reviews to explain grain, edge cases, and test strategy, demonstrated structured
+    debugging, and gradually shifted implementation and review ownership back to them.
+    \textbf{Result:} They became more confident diagnosing failures and preparing changes,
+    required less step-by-step support, and contributed work that aligned more consistently
+    with team delivery standards.
 - id: arkos-08
   text_tex: Led goal-setting sessions to establish shared objectives and a consistent
     tracking cadence.
+  story_tex: >-
+    \textbf{Situation:} The team was balancing platform construction, production support,
+    and stakeholder deliverables, but priorities were not always expressed as shared,
+    measurable outcomes. \textbf{Task:} I needed to help the group turn competing work
+    into an aligned plan. \textbf{Action:} I facilitated goal-setting sessions, grouped
+    work by business and platform outcome, clarified owners, dependencies, and completion
+    criteria, and introduced a recurring cadence for checking progress and revising the
+    plan. \textbf{Result:} Team members had a common view of priorities and tradeoffs,
+    blockers surfaced earlier, and status conversations focused on outcomes rather than
+    disconnected task lists.
 - id: arkos-09
   text_tex: Initiated recurring stakeholder-feedback sessions to refine deliverables
     against business needs.
+  story_tex: >-
+    \textbf{Situation:} Requirements for risk and operational reporting continued to
+    evolve after initial delivery, creating a risk of late rework. \textbf{Task:} I
+    needed a reliable way to validate assumptions while the work was still inexpensive
+    to change. \textbf{Action:} I initiated recurring feedback sessions, demonstrated
+    prototypes and reconciliations, walked stakeholders through edge cases, captured
+    decisions and open questions, and fed the results back into model and delivery
+    priorities. \textbf{Result:} Misunderstandings surfaced earlier, deliverables stayed
+    closer to current business needs, and stakeholders had a regular forum for shaping
+    the work rather than waiting for a final handoff.
 # Risk-adjustment provenance: Ben built the SQL/dbt models. Three RAF notebooks and
 # their companion workbook, along with the Tableau Risk Dashboard, were built by other
 # team members and are described only as work Ben supported.
@@ -47,41 +158,132 @@
     factors with medical claims, signed EHR diagnoses, and payer encounter and MAO
     diagnoses; generated member and diagnosis inputs supporting CMS-HCC scoring and
     pre-/post-wellness-visit RAF analysis.
+  story_tex: >-
+    \textbf{Situation:} Arizona, North Dakota, and Illinois had different payer feeds and
+    operational patterns, while RAF analysis required a consistent view of member
+    eligibility, demographics, and diagnoses. \textbf{Task:} I needed to prepare reliable
+    member and diagnosis inputs for CMS-HCC scoring and pre-/post-wellness analysis.
+    \textbf{Action:} I built SQL/dbt models that joined enrollment and MMR factors to
+    claims, signed EHR diagnoses, payer encounter data, and MAO results; aligned member,
+    contract, and service-date keys; and reconciled market-specific exceptions.
+    \textbf{Result:} The risk team received comparable multi-market inputs and could
+    evaluate RAF movement using a documented data chain instead of separate ad hoc
+    extracts.
 - id: arkos-11
   text_tex: Built SQL/dbt models implementing diagnosis-submission lineage and acceptance
     logic covering add/delete activity, repeated submissions, encounter disposition,
     source and date-of-service preservation, and selection of the latest accepted
     diagnosis state.
+  story_tex: >-
+    \textbf{Situation:} A diagnosis could be submitted repeatedly, added or deleted,
+    and receive different encounter dispositions over time, making a simple latest-row
+    query unreliable. \textbf{Task:} I needed to determine the defensible current state
+    without losing the history required for audit. \textbf{Action:} I defined the
+    diagnosis grain and ordering rules, preserved source and date of service, modeled
+    add/delete and repeated-submission activity, incorporated encounter disposition,
+    and selected the latest accepted state while retaining lineage. \textbf{Result:}
+    Analysts could explain why a diagnosis was counted or excluded and trace the answer
+    back through each submission event.
 - id: arkos-12
   text_tex: Built SQL/dbt models for diagnosis-level HHS-HCC capture analytics that
     mapped ICD-10 diagnoses from signed face-to-face visits, reconciled them with
     payer gap reports, classified existing, new, and net-new capture, identified
     the first capture source, and produced monthly capture and HCC-per-visit measures.
+  story_tex: >-
+    \textbf{Situation:} Marketplace risk teams needed to know whether diagnoses from
+    signed face-to-face visits actually closed payer-identified HHS-HCC gaps and which
+    encounters created new value. \textbf{Task:} I needed to turn visit and gap data into
+    diagnosis-level capture measures. \textbf{Action:} I mapped ICD-10 diagnoses to HCCs,
+    reconciled signed visits with payer gap reports, classified existing, new, and
+    net-new capture, identified the first capture source, and aggregated monthly capture
+    and HCC-per-visit measures. \textbf{Result:} Stakeholders could distinguish activity
+    from true incremental capture and evaluate performance with traceable diagnosis-level
+    evidence.
 - id: arkos-13
   text_tex: Built SQL/dbt models and datasets for supplemental diagnosis, claims,
     and member-enrollment workflows serving Allwell, NextBlue, Humana, Allymar, and
     Reveleer, joining claims to the appropriate member, MBI, enrollment period, contract,
     demographic segment, and member-month and formatting outputs to downstream specifications.
+  story_tex: >-
+    \textbf{Situation:} Allwell, NextBlue, Humana, Allymar, and Reveleer each required
+    different supplemental diagnosis, claims, or enrollment outputs, but all depended on
+    accurate member and coverage alignment. \textbf{Task:} I needed to make those
+    deliveries repeatable without duplicating core business logic for every recipient.
+    \textbf{Action:} I built shared SQL/dbt preparation models, joined claims to the
+    correct member, MBI, enrollment period, contract, demographic segment, and member
+    month, then applied recipient-specific formatting and validation rules. \textbf{Result:}
+    The team could produce multiple downstream files from a consistent foundation, with
+    clearer QA and less manual reassembly for each delivery.
 - id: arkos-14
   text_tex: Built SQL/dbt reconciliation models that traced diagnoses from signed
     EHR encounters through Waystar claims, supplemental files, and MAO-004-style
     payer and CMS responses, enabling the risk team to isolate where diagnoses dropped
     from the submission path.
+  story_tex: >-
+    \textbf{Situation:} When a diagnosis appeared in a signed EHR encounter but not in a
+    payer or CMS result, the risk team could not readily see where it left the submission
+    chain. \textbf{Task:} I needed to make each handoff reconcilable. \textbf{Action:} I
+    built SQL/dbt models that linked signed EHR diagnoses to Waystar claims, supplemental
+    outputs, payer responses, and MAO-004-style CMS responses; standardized matching keys
+    and assigned stage-specific statuses for missing and accepted records. \textbf{Result:}
+    The risk team could isolate the point of failure, investigate the appropriate owner
+    or file, and explain the final disposition with end-to-end lineage.
 - id: arkos-15
   text_tex: Built a dbt-based Reveleer chart-chase data product across three Medicare
     contracts, covering eligible-member and encounter selection, market-specific
     rules, provider and chart-location resolution, stable chase identifiers, and
     generation of separate chase and diagnosis files.
+  story_tex: >-
+    \textbf{Situation:} Reveleer chart-chase submissions spanned three Medicare contracts
+    with different eligibility, encounter, provider, and chart-location rules.
+    \textbf{Task:} I needed to produce compliant files while keeping every selected
+    member and diagnosis traceable across markets. \textbf{Action:} I built a dbt model
+    chain for eligible-member and encounter selection, encoded market-specific exclusions,
+    resolved providers and chart locations, created stable chase identifiers, and
+    generated separate chase and diagnosis outputs with validation checks. \textbf{Result:}
+    Arkos had a repeatable multi-contract chart-chase product whose records could be
+    reconciled from source data through the delivered files.
 - id: arkos-16
   text_tex: Built the SQL/dbt ingestion and normalization layer used by version-aware
     AWS Glue and Athena pipelines for evolving MAO, HCC, MOR, and related payer files,
     preserving source lineage and standardizing downstream datasets in partitioned
     Parquet across the lakehouse.
+  story_tex: >-
+    \textbf{Situation:} MAO, HCC, MOR, and payer files arrived in changing layouts and
+    versions, which could break downstream risk models or silently shift field meaning.
+    \textbf{Task:} I needed to absorb those variations while presenting stable analytical
+    datasets. \textbf{Action:} I built source- and version-aware Glue and Athena ingestion,
+    normalized the outputs through SQL/dbt contracts, preserved file and row lineage,
+    handled latest-record logic, and wrote partitioned Parquet into governed lakehouse
+    layers. \textbf{Result:} Downstream models consumed consistent structures despite
+    upstream format changes, and analysts could trace normalized records back to the
+    originating file and version.
 - id: arkos-17
   text_tex: Built multi-market SQL/dbt datasets combining member, diagnosis, MOR,
     payer-gap, and ICD-to-HCC mapping data to support analysis of the CMS-HCC V24-to-V28
     transition.
+  story_tex: >-
+    \textbf{Situation:} The CMS-HCC transition from V24 to V28 changed diagnosis mappings
+    and risk categories, so leadership needed to understand the effect across markets.
+    \textbf{Task:} I needed to create a comparable analytical foundation for both model
+    versions. \textbf{Action:} I built SQL/dbt datasets joining member, diagnosis, MOR,
+    payer-gap, and ICD-to-HCC mapping data, calculated version-specific classifications,
+    and reconciled records that moved, disappeared, or emerged under V28. \textbf{Result:}
+    Analysts could evaluate the transition with consistent multi-market inputs, explain
+    category-level changes, and focus follow-up on the members and diagnoses driving the
+    differences.
 - id: arkos-18
   text_tex: Built and maintained the risk-adjustment SQL/dbt model inventory; supported
     three RAF notebooks, their companion workbook, and the Tableau Risk Dashboard
     while preserving an auditable record of workflow logic, inputs, outputs, and provenance.
+  story_tex: >-
+    \textbf{Situation:} Risk-adjustment logic was distributed across SQL/dbt models,
+    three team-authored RAF notebooks, a companion workbook, and a Tableau dashboard,
+    which made dependencies and ownership easy to blur. \textbf{Task:} I needed to make
+    the backend model estate supportable while preserving accurate provenance.
+    \textbf{Action:} I built and maintained the SQL/dbt inventory, documented inputs,
+    outputs, dependencies, and business rules, and helped notebook, workbook, and
+    dashboard owners reconcile their results to the governed models. \textbf{Result:}
+    The team had an auditable chain from source data to analytical output, could diagnose
+    mismatches more quickly, and retained a clear distinction between my model work and
+    the presentation assets built by others.

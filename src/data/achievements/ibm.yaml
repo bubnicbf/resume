@@ -1,14 +1,56 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ibm-01
   text_tex: Supported employee onboarding from 2016 to 2018, helping new colleagues
     learn team practices, systems, and technical workflows.
+  story_tex: >-
+    \textbf{Situation:} Rapid growth brought new colleagues into a complex healthcare
+    data environment where platform conventions and delivery practices were largely
+    learned through experience. \textbf{Task:} I needed to help new hires become useful
+    contributors without relying on unstructured shadowing. \textbf{Action:} I explained
+    the platform and team workflow, paired on representative integration tasks, reviewed
+    early work, connected people with domain experts, and used recurring questions to
+    improve onboarding material between 2016 and 2018. \textbf{Result:} New colleagues
+    had a clearer path from orientation to independent delivery, and the team spent less
+    time repeatedly reconstructing the same foundational knowledge.
 - id: ibm-02
   text_tex: Served on tiger teams supporting the HDFS-to-Azure data-platform upgrade
     and participated on the data-governance team.
+  story_tex: >-
+    \textbf{Situation:} The HDFS-to-Azure upgrade affected shared clinical data,
+    downstream applications, and governance controls across multiple teams. \textbf{Task:}
+    I was asked to help resolve cross-cutting migration risks and preserve trusted data
+    behavior. \textbf{Action:} On tiger teams, I traced source-to-target dependencies,
+    analyzed validation failures, documented platform constraints, and brought findings
+    into governance discussions about lineage, access, retention, and quality. I then
+    retested changes against affected workflows. \textbf{Result:} The program could make
+    architecture and governance decisions from concrete data evidence, and high-risk
+    issues were surfaced before they reached migration sign-off.
 - id: ibm-03
   text_tex: Participated in internal coding jams, hackathons, and cross-team delivery
     initiatives.
+  story_tex: >-
+    \textbf{Situation:} Teams working on different products often encountered similar
+    ingestion, analytics, and workflow problems but had few opportunities to experiment
+    together outside committed delivery. \textbf{Task:} I wanted to test ideas quickly
+    and build connections across specialties. \textbf{Action:} I joined coding jams,
+    hackathons, and cross-team initiatives, helped narrow broad ideas into demonstrable
+    use cases, contributed data preparation and analytical code, and presented results and
+    limitations to colleagues. \textbf{Result:} The events produced reusable technical
+    approaches and working relationships that informed later project delivery, even when
+    a prototype itself did not become a production product.
 - id: ibm-04
   text_tex: Played a central role in the REACH cross-team training initiative, teaching
     SQL fundamentals to nontechnical colleagues and ETL, architecture, data-science,
     and predictive-modeling practices to technical colleagues.
+  story_tex: >-
+    \textbf{Situation:} IBM colleagues needed different levels of data fluency, from
+    basic SQL interpretation to practical ETL, architecture, data-science, and modeling
+    skills. \textbf{Task:} I needed to make cross-team instruction useful to both
+    nontechnical and technical audiences. \textbf{Action:} Through REACH, I separated the
+    curriculum by audience, built examples around familiar healthcare-data problems,
+    combined explanation with hands-on exercises, and adjusted later sessions from
+    participant questions and observed gaps. \textbf{Result:} Colleagues gained a shared
+    vocabulary and practical techniques they could apply in project discussions, analysis,
+    and delivery rather than receiving one generic training course.

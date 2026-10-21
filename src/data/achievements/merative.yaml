@@ -1,24 +1,103 @@
 ---
+# Provisional STAR reconstructions: the user has not yet verified the implementation
+# details, examples, ownership boundaries, or outcomes beyond the resume bullets.
 - id: merative-01
   text_tex: Engineered a seven-layer Python and SQL migration-acceptance suite with
     zero unresolved discrepancies at sign-off across tested record counts, partitions,
     schemas, nulls, duplicates, field values, aggregates, and business rules.
+  story_tex: >-
+    \textbf{Situation:} Merative was moving a large healthcare data platform from HDFS
+    to Azure, and successful job completion alone could not prove that the new platform
+    preserved the source data's meaning. \textbf{Task:} I needed to create a repeatable
+    acceptance framework that could support a defensible migration sign-off.
+    \textbf{Action:} I built a seven-layer Python and SQL suite that compared source and
+    target record counts, partitions, schemas, null and duplicate behavior, field-level
+    values, aggregates, and business rules. I recorded expected tolerances, produced
+    rerunnable discrepancy reports, and worked each unexplained variance through defect,
+    retest, and closure. \textbf{Result:} The tested migration scope reached sign-off with
+    zero unresolved discrepancies and a reproducible evidence trail for the decision.
 - id: merative-02
   text_tex: Led HIPAA-compliant deidentification validation across demographic, encounter,
     and coded clinical data representing approximately 300 million patient lives,
     achieving a 100\% pass rate before sign-off.
+  story_tex: >-
+    \textbf{Situation:} The migration included demographic, encounter, and coded clinical
+    data representing approximately 300 million patient lives, so a deidentification defect
+    could create both privacy exposure and analytical breakage. \textbf{Task:} I needed to
+    validate that protected fields were transformed correctly while required relationships
+    and clinical utility remained intact. \textbf{Action:} I translated deidentification
+    requirements into field-level tests, checked representative known values and edge
+    cases, scanned for residual identifying patterns, verified consistency across related
+    records, and traced every failure back to its transformation or configuration.
+    \textbf{Result:} All in-scope deidentification checks passed before sign-off, providing
+    evidence that the migrated data met the defined HIPAA-compliant handling requirements.
 - id: merative-03
   text_tex: Designed and implemented automated ETL testing and regression suites that
     detected schema drift and transformation errors early in the migration lifecycle.
+  story_tex: >-
+    \textbf{Situation:} Source schemas and migration transformations continued to change
+    while the Azure platform was being built, so defects discovered only during final
+    acceptance would be expensive to isolate. \textbf{Task:} I needed to move quality
+    checks earlier in the delivery cycle. \textbf{Action:} I established versioned schema
+    and data-profile baselines, automated checks for columns, types, keys, nulls,
+    duplicates, distributions, and derived fields, and connected the regression suite to
+    repeatable pipeline test runs. Material differences generated focused evidence for the
+    responsible engineering team rather than a generic failed comparison. \textbf{Result:}
+    Schema drift and transformation errors were detected closer to the change that caused
+    them, reducing late-cycle investigation and protecting the final acceptance schedule.
 - id: merative-04
   text_tex: Validated end-to-end Azure Data Factory pipelines, Blob Storage configurations,
     and downstream Synapse integrations during the transition from HDFS to Azure.
+  story_tex: >-
+    \textbf{Situation:} Individual transformations could pass while an end-to-end workflow
+    still lost a partition, used the wrong storage path, or delivered incomplete data to
+    Synapse. \textbf{Task:} I needed to validate the complete path from HDFS extraction
+    through the Azure analytical target. \textbf{Action:} I ran controlled cohorts through
+    Azure Data Factory, verified triggers, dependencies, parameters, retries, and failure
+    behavior, reconciled Blob Storage paths and file or partition counts, and queried the
+    resulting Synapse tables for completeness and transformation accuracy. I repeated the
+    checks after configuration and code changes. \textbf{Result:} The team had evidence
+    that each handoff worked as a connected system, not merely as independently successful
+    components.
 - id: merative-05
   text_tex: Collaborated with multidisciplinary engineering teams to refine architectural
     designs and preserve workflow continuity and data fidelity.
+  story_tex: >-
+    \textbf{Situation:} The migration crossed teams responsible for the HDFS source,
+    Azure services, data engineering, security, and downstream healthcare analytics, and
+    a local design improvement could disrupt another team's workflow. \textbf{Task:} I
+    needed to use validation evidence to help refine the architecture without losing
+    continuity or fidelity. \textbf{Action:} I joined design and defect reviews, mapped
+    dependencies and source-to-target contracts, presented concrete reconciliation results
+    and failing examples, clarified acceptable differences, and retested proposed changes
+    across upstream and downstream boundaries. \textbf{Result:} Architectural issues were
+    resolved before cutover, teams made decisions from shared evidence, and existing
+    analytical workflows retained the data relationships and behavior they depended on.
 - id: merative-06
   text_tex: Documented test plans, platform-migration procedures, and onboarding guidance
     for future quality-assurance engineers.
+  story_tex: >-
+    \textbf{Situation:} The acceptance process accumulated detailed knowledge about source
+    behavior, Azure configuration, expected differences, and recovery steps that could
+    easily remain with the original migration team. \textbf{Task:} I needed to make that
+    process repeatable for future quality-assurance engineers. \textbf{Action:} I documented
+    test scope and prerequisites, source-to-target mappings, execution steps, expected
+    results and tolerances, discrepancy triage, rerun and escalation procedures, and the
+    evidence required for sign-off. I organized the material into onboarding guidance that
+    followed the actual validation workflow. \textbf{Result:} A new engineer could
+    understand the platform and execute the core checks from documented procedures rather
+    than reconstructing the migration logic from code and conversations.
 - id: merative-07
   text_tex: Enforced data-governance and security protocols supporting audit-risk
     reduction and HITRUST readiness.
+  story_tex: >-
+    \textbf{Situation:} Moving regulated healthcare data to Azure changed where data was
+    stored, who could access it, and which controls had to be evidenced for internal review
+    and HITRUST readiness. \textbf{Task:} I needed to incorporate governance and security
+    checks into migration acceptance rather than treat them as a separate final review.
+    \textbf{Action:} I verified that sensitive datasets followed approved storage and
+    handling patterns, checked role-based access and least-privilege expectations,
+    confirmed encryption and logging controls, reviewed retention and movement rules, and
+    maintained evidence and exception records through remediation. \textbf{Result:} The
+    migration closed control gaps before sign-off, reduced audit risk, and produced a more
+    complete evidence set for the organization's HITRUST-readiness work.

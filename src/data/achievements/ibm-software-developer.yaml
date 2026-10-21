@@ -1,16 +1,63 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ibm-software-developer-01
   text_tex: Engineered an HL7 v2/v3 parsing pipeline in Pig for approximately 30 internal
     users, replacing a Mirth-based workflow and eliminating \$30,000 in annual vendor
     costs.
+  story_tex: >-
+    \textbf{Situation:} Approximately 30 internal users depended on a Mirth-based process
+    to parse HL7 v2 and v3 data, creating licensing cost and limiting control over changes.
+    \textbf{Task:} I needed to replace the workflow without disrupting existing consumers.
+    \textbf{Action:} I documented supported message structures, built a Pig pipeline to
+    parse and normalize segments and fields, compared outputs against the Mirth results,
+    added malformed-message handling, and supported a controlled transition with user
+    guidance. \textbf{Result:} Internal users retained the required HL7 data while IBM
+    eliminated approximately \$30,000 in annual vendor costs.
 - id: ibm-software-developer-02
   text_tex: Rewrote and reorganized project documentation to streamline knowledge
     transfer.
+  story_tex: >-
+    \textbf{Situation:} Project documentation had accumulated around components and
+    historical decisions rather than the workflow a new contributor needed to follow.
+    \textbf{Task:} I needed to make knowledge transfer faster and less dependent on the
+    original developers. \textbf{Action:} I inventoried existing material, removed stale
+    or duplicate guidance, reorganized it around setup, architecture, operating tasks,
+    troubleshooting, and escalation, and validated the instructions by following them from
+    a new-user perspective. \textbf{Result:} Contributors could find the right procedure
+    more quickly, and handoffs required less repeated explanation from experienced team
+    members.
 - id: ibm-software-developer-03
   text_tex: Redeveloped the employee education program to make new-hire training more
     efficient and repeatable.
+  story_tex: >-
+    \textbf{Situation:} New-hire education varied by mentor and project assignment, so
+    important platform concepts were taught inconsistently. \textbf{Task:} I needed to
+    turn training into a repeatable program that still prepared people for real delivery.
+    \textbf{Action:} I organized role-based modules, sequenced foundational and advanced
+    topics, created hands-on exercises and reference material, added checkpoints and a
+    representative capstone task, and incorporated learner and mentor feedback.
+    \textbf{Result:} New hires received a clearer progression, mentors could reuse the
+    same structure, and the team spent less time rebuilding training for each cohort.
 - id: ibm-software-developer-04
   text_tex: Received the Eminence and Excellence Award in 2017 for an analytics project.
+  story_tex: >-
+    \textbf{Situation:} A project team had a large operational dataset but lacked a concise
+    analytical view of the patterns driving a client problem. \textbf{Task:} I needed to
+    turn the data into a defensible analysis that stakeholders could act on. \textbf{Action:}
+    I clarified the business question, prepared and validated the analytical dataset,
+    tested alternative explanations, presented the important patterns with their limits,
+    and packaged the method so the analysis could be repeated. \textbf{Result:} The work
+    informed the project team's decisions and was recognized with IBM's 2017 Eminence and
+    Excellence Award.
 - id: ibm-software-developer-05
   text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
     1.17\%.
+  story_tex: >-
+    \textbf{Situation:} Repeated integration and support effort constrained how much value
+    the team could deliver per SaaS client. \textbf{Task:} I needed to reduce avoidable
+    effort and expand capacity for billable work. \textbf{Action:} I automated a recurring
+    technical workflow, strengthened documentation and training, and standardized delivery
+    steps so specialists spent less time on manual setup and repeated troubleshooting.
+    \textbf{Result:} The recovered capacity contributed to at least a 1.17\% improvement in
+    revenue per SaaS client and was recognized through a GDP bonus.

@@ -1,27 +1,102 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ibm-data-architect-01
   text_tex: Designed SQL validation frameworks and client-review gates across approximately
     100 integrations, reducing Jira-tracked validation rework by 25\% and mapping
     rework by 45\%.
+  story_tex: >-
+    \textbf{Situation:} Client integrations repeatedly reached review with preventable
+    mapping and validation defects, creating Jira rework late in delivery. \textbf{Task:}
+    I needed to move consistent checks ahead of client review across approximately 100
+    integrations. \textbf{Action:} I built reusable SQL validation patterns for counts,
+    keys, required fields, mappings, and business rules, defined review gates and evidence,
+    and fed recurring defects back into templates and guidance. \textbf{Result:} Jira-
+    tracked validation rework fell 25\% and mapping rework fell 45\%, giving teams faster,
+    more predictable client review cycles.
 - id: ibm-data-architect-02
   text_tex: Led a multi-organization healthcare integration spanning 70+ EHR sources,
     implementing provider-scoped patient filtering to enforce data-sharing rules and
     coordinating delivery with engineering teams.
+  story_tex: >-
+    \textbf{Situation:} A multi-organization integration combined more than 70 EHR
+    sources, but data-sharing rules permitted patient data only within appropriate provider
+    relationships. \textbf{Task:} I needed to enforce that scope without omitting eligible
+    patients. \textbf{Action:} I mapped provider and patient attribution rules, implemented
+    provider-scoped filtering early in the pipeline, built leakage and completeness tests,
+    reviewed edge cases with stakeholders, and coordinated changes across engineering
+    teams. \textbf{Result:} The integration applied a consistent data-sharing boundary
+    across heterogeneous sources while preserving traceable evidence for included and
+    excluded records.
 - id: ibm-data-architect-03
   text_tex: Built the data-onboarding platform and associated infrastructure, remediated
     UAT data issues, and reported on data health during onboarding.
+  story_tex: >-
+    \textbf{Situation:} New clients needed a repeatable route from raw source delivery to
+    usable platform data, while UAT defects and unclear data health slowed acceptance.
+    \textbf{Task:} I needed to establish the onboarding foundation and make readiness
+    visible. \textbf{Action:} I configured platform and infrastructure components, defined
+    source-to-target stages and checks, triaged UAT examples to the responsible mapping or
+    transformation, and summarized completeness, quality, and open issues in data-health
+    reporting. \textbf{Result:} Stakeholders could see what was ready, what was blocked,
+    and why, and the team had a more repeatable process for moving integrations through UAT.
 - id: ibm-data-architect-04
   text_tex: Earned AI certification and peer-reviewed patient-matching algorithm tuning
     across the project portfolio.
+  story_tex: >-
+    \textbf{Situation:} Patient-matching changes could reduce duplicates but also create
+    harmful false matches across many client projects. \textbf{Task:} I needed to apply
+    stronger AI knowledge and an independent review discipline to tuning decisions.
+    \textbf{Action:} After completing AI certification, I reviewed proposed features,
+    thresholds, training or test cohorts, and error examples; compared precision and recall
+    tradeoffs; and required project teams to document why a change was appropriate for
+    their data. \textbf{Result:} Tuning decisions received a consistent peer review and
+    clearer evidence before being applied across the portfolio.
 - id: ibm-data-architect-05
   text_tex: Curated 25 pages of AI-workflow documentation and mentored new hires in
     the AI-tuning process.
+  story_tex: >-
+    \textbf{Situation:} Patient-matching tuning depended on specialized knowledge that
+    new hires could not safely learn from parameter names alone. \textbf{Task:} I needed
+    to make the workflow teachable without oversimplifying its risk. \textbf{Action:} I
+    curated 25 pages covering data preparation, tuning steps, evaluation measures, error
+    review, approval points, and common failure modes, then paired with new hires on
+    representative cases and reviewed their reasoning. \textbf{Result:} New team members
+    gained a structured path into AI tuning and could contribute with better consistency
+    and awareness of matching tradeoffs.
 - id: ibm-data-architect-06
   text_tex: Spearheaded a new-hire mentoring program that standardized technical ramp-up
     and prepared colleagues to contribute to billable client delivery.
+  story_tex: >-
+    \textbf{Situation:} New hires entered with varied healthcare and platform experience,
+    and informal mentoring produced uneven readiness for client work. \textbf{Task:} I
+    needed to standardize technical ramp-up while preserving individualized support.
+    \textbf{Action:} I organized a mentoring program with role-based learning objectives,
+    guided exercises, shadowing, code and design reviews, and readiness checkpoints tied
+    to representative delivery tasks. \textbf{Result:} Managers had a clearer signal of
+    when colleagues were ready, and new hires reached billable work with a more consistent
+    foundation and support network.
 - id: ibm-data-architect-07
   text_tex: Received the Lab Services Award for coordinating internal project teams
     to deliver client needs on time.
+  story_tex: >-
+    \textbf{Situation:} A client delivery depended on several internal teams with separate
+    priorities, creating schedule and handoff risk. \textbf{Task:} I needed to coordinate
+    the work so the client received the required outcome on time. \textbf{Action:} I
+    translated needs into shared milestones, clarified owners and dependencies, surfaced
+    blockers early, connected technical decisions to client impact, and maintained a
+    focused cadence through delivery and validation. \textbf{Result:} The teams delivered
+    the client need on schedule, and IBM recognized the coordination and client impact
+    with the Lab Services Award.
 - id: ibm-data-architect-08
   text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
     1.34\%.
+  story_tex: >-
+    \textbf{Situation:} SaaS client delivery included recurring effort that limited the
+    team's capacity to provide additional billable value. \textbf{Task:} I needed to
+    improve the economics of each client without reducing service quality. \textbf{Action:}
+    I reviewed where onboarding and support effort was being consumed, standardized
+    repeatable validation and configuration work, and helped redirect recovered capacity
+    toward higher-value client services and timely delivery. \textbf{Result:} Revenue per
+    SaaS client improved by at least 1.34\%, and the contribution was recognized through
+    a GDP bonus.

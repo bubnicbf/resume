@@ -1,16 +1,64 @@
 ---
+# Provisional STAR reconstructions: implementation details, examples, ownership,
+# and outcomes must be verified against the user's recollection and source records.
 - id: ibm-data-scientist-01
   text_tex: Directed technical delivery across 36 client data integrations, coordinating
     12 remote contractors and establishing code-review, QA, and issue-resolution standards.
+  story_tex: >-
+    \textbf{Situation:} Thirty-six client integrations were being delivered with 12 remote
+    contractors, making quality, communication, and issue ownership inconsistent.
+    \textbf{Task:} I needed to coordinate parallel delivery without becoming the only
+    person who could resolve every problem. \textbf{Action:} I clarified work packages and
+    owners, established code-review and QA expectations, introduced a common issue-
+    resolution path, reviewed high-risk mappings, and used recurring defects to improve
+    standards. \textbf{Result:} Contractors could deliver against shared expectations,
+    issues reached the right owner faster, and integrations progressed with more consistent
+    technical quality.
 - id: ibm-data-scientist-02
   text_tex: Served as principal integration specialist on more than 60 projects for
     20 clients across the broader 2015--2018 data-ingestion period.
+  story_tex: >-
+    \textbf{Situation:} More than 60 projects for 20 clients brought different systems,
+    healthcare workflows, and delivery schedules, but many integration problems repeated.
+    \textbf{Task:} As principal specialist, I needed to solve the immediate client issue
+    while building reusable expertise. \textbf{Action:} I led discovery, profiled source
+    data, defined mappings and acceptance checks, diagnosed ingestion failures, and turned
+    recurring patterns into tools, documentation, and review guidance. \textbf{Result:}
+    Teams could apply proven approaches across clients, reducing reinvention while
+    retaining the source-specific analysis each integration required.
 - id: ibm-data-scientist-03
   text_tex: Authored 125+ technical knowledge-base articles, approximately 30\% of
     the team's published content, to standardize integration development and troubleshooting
     practices.
+  story_tex: >-
+    \textbf{Situation:} Integration developers repeatedly asked the same setup, mapping,
+    and troubleshooting questions because answers were scattered in tickets and personal
+    notes. \textbf{Task:} I needed to make operational knowledge searchable and reusable.
+    \textbf{Action:} I identified recurring questions, wrote articles with context,
+    prerequisites, steps, examples, expected results, and failure paths, linked related
+    topics, and updated guidance when platform behavior changed. \textbf{Result:} I
+    produced more than 125 articles—about 30\% of the team's published content—giving the
+    organization a consistent reference for development and incident resolution.
 - id: ibm-data-scientist-04
   text_tex: Built a Python, Ruby, and SQL extraction tool that eliminated unnecessary
     story points and reduced average engineering hours per client integration.
+  story_tex: >-
+    \textbf{Situation:} Engineers spent repeated effort inspecting source systems and
+    assembling the same metadata and extracts before integration work could begin.
+    \textbf{Task:} I needed to remove avoidable manual steps from each client onboarding.
+    \textbf{Action:} I built a Python, Ruby, and SQL tool that connected to supported
+    sources, extracted required structures and sample information, normalized the output,
+    and produced artifacts developers could use for mapping and estimation. \textbf{Result:}
+    The tool eliminated unnecessary story points and lowered average engineering hours per
+    integration while making discovery output more consistent.
 - id: ibm-data-scientist-05
   text_tex: Eliminated an average of three weeks from employee onboarding.
+  story_tex: >-
+    \textbf{Situation:} New integration specialists spent too long locating documentation,
+    gaining system access, and learning the sequence from source discovery to delivery.
+    \textbf{Task:} I needed to shorten ramp-up without skipping essential practice.
+    \textbf{Action:} I reorganized onboarding around a defined learning path, consolidated
+    reference material, introduced guided exercises and a representative integration,
+    paired new hires with reviewers, and used checkpoints to target remaining gaps.
+    \textbf{Result:} Employees reached productive project work an average of three weeks
+    sooner, while managers retained a structured way to assess readiness.

@@ -8,6 +8,21 @@ prefix_tex: |+
   \label{sec:outputs}
 
 blocks:
+- id: ql2-sixt-canada-analysis
+  kind: record
+  leading_tex: ''
+  name_tex: "\\href{https://github.com/bubnicbf/ql2-sixt-canada-analysis}{ql2-sixt-canada-analysis}"
+  dates_tex: '2026'
+  description_tex: Python and Jupyter analytical project evaluating whether an hourly
+    Sixt Canada rental-car rate feed is trustworthy enough to support customer
+    decisions. Builds reusable ingestion and governance contracts, fail-closed data-quality
+    and pricing-readiness gates, authority-backed location canonicalization, and temporal
+    reconciliation before analyzing matched airport-versus-downtown premiums, hourly
+    price-change events, and visible-assortment stability. Protects proprietary source
+    data and derived results, validates the implementation with synthetic-data pytest
+    suites, and delivers six reproducible notebooks culminating in a final report, a monitoring blueprint,
+    and a six-slide presentation with value-level traceability.
+  tail_tex: "\n\n"
 - id: iphone-cam-lite
   kind: record
   leading_tex: ''

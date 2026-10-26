@@ -12,8 +12,4 @@ summary_tex: Progressed through five increasingly senior roles over seven years,
   engineering, data architecture, governance, analytics, and cloud migration validation. 
   Repeatedly converted bespoke client problems into reusable tooling, governed platforms, 
   validation frameworks, and team practices.
-achievement_ids:
-- ibm-01
-- ibm-02
-- ibm-03
-- ibm-04
+achievement_ids: []

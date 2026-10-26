@@ -63,7 +63,7 @@ roles = selections.map do |selection|
   raise "Invalid role ID: #{id}" unless id.match?(/\A[a-z0-9-]+\z/)
   role = load_yaml(File.join(DATA, 'roles', "#{id}.yaml"))
   [role, selected_achievements(role, selection)]
-end
+end.reject { |_role, achievements| achievements.empty? }
 
 story_count = roles.sum { |_role, achievements| achievements.length }
 FileUtils.mkdir_p(GENERATED)

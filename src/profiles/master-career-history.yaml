@@ -73,7 +73,8 @@ roles:
     achievement_order: [merative-02, merative-01, merative-07, merative-05,
       merative-04, merative-03, merative-06]
   - id: ibm
-    achievement_order: [ibm-02, ibm-04, ibm-01, ibm-03]
+    achievements: []
+    achievement_order: []
   - id: ibm-senior-data-scientist
     achievement_order: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-04,
       ibm-senior-data-scientist-06, ibm-senior-data-scientist-13,
@@ -92,10 +93,12 @@ roles:
   - id: ibm-data-architect
     achievement_order: [ibm-data-architect-02, ibm-data-architect-01,
       ibm-data-architect-03, ibm-data-architect-04, ibm-data-architect-08,
-      ibm-data-architect-07, ibm-data-architect-05, ibm-data-architect-06]
+      ibm-data-architect-07, ibm-data-architect-05, ibm-data-architect-06,
+      ibm-data-architect-09, ibm-data-architect-10, ibm-data-architect-11]
   - id: ibm-software-developer
     achievement_order: [ibm-software-developer-01, ibm-software-developer-05,
-      ibm-software-developer-04, ibm-software-developer-02, ibm-software-developer-03]
+      ibm-software-developer-04, ibm-software-developer-02, ibm-software-developer-03,
+      ibm-software-developer-06]
   - id: ibm-data-scientist
     achievement_order: [ibm-data-scientist-01, ibm-data-scientist-02,
       ibm-data-scientist-04, ibm-data-scientist-03, ibm-data-scientist-05]

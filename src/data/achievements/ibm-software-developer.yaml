@@ -61,3 +61,16 @@
     steps so specialists spent less time on manual setup and repeated troubleshooting.
     \textbf{Result:} The recovered capacity contributed to at least a 1.17\% improvement in
     revenue per SaaS client and was recognized through a GDP bonus.
+- id: ibm-software-developer-06
+  text_tex: Participated in internal coding jams, hackathons, and cross-team delivery
+    initiatives.
+  story_tex: >-
+    \textbf{Situation:} Teams working on different products often encountered similar
+    ingestion, analytics, and workflow problems but had few opportunities to experiment
+    together outside committed delivery. \textbf{Task:} I wanted to test ideas quickly
+    and build connections across specialties. \textbf{Action:} I joined coding jams,
+    hackathons, and cross-team initiatives, helped narrow broad ideas into demonstrable
+    use cases, contributed data preparation and analytical code, and presented results and
+    limitations to colleagues. \textbf{Result:} The events produced reusable technical
+    approaches and working relationships that informed later project delivery, even when
+    a prototype itself did not become a production product.

@@ -54,10 +54,11 @@ blocks:
   leading_tex: ''
   name_tex: Lab Services Award, IBM - Cross-Team Delivery Coordination
   dates_tex: Jul. 2018
-  description_tex: Recognized for leading a multi-organization healthcare integration
-    spanning more than 70 EHR sources, implementing provider-scoped patient filtering
-    to enforce data-sharing rules, and coordinating engineering and delivery teams
-    to meet client commitments.
+  description_tex: Recognized for architecting data onboarding for the Central New
+    York Care Collaborative on IBM Watson Health's Explorys platform, integrating
+    75+ EHR, HIE, and other source systems across six counties, implementing provider-scoped
+    patient filtering to enforce data-sharing rules, and coordinating engineering
+    and delivery teams to meet client commitments.
   tail_tex: "\n"
 - id: eminence-and-excellence-award-ibm-data-curation-tool-development
   kind: record

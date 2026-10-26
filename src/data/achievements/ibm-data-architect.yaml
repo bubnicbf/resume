@@ -15,19 +15,26 @@
     tracked validation rework fell 25\% and mapping rework fell 45\%, giving teams faster,
     more predictable client review cycles.
 - id: ibm-data-architect-02
-  text_tex: Led a multi-organization healthcare integration spanning 70+ EHR sources,
-    implementing provider-scoped patient filtering to enforce data-sharing rules and
-    coordinating delivery with engineering teams.
+  text_tex: Architected data onboarding for the Central New York Care Collaborative
+    on IBM Watson Health's Explorys platform, integrating 75+ EHR, HIE, and other
+    source systems across six counties; implemented provider-scoped patient filtering
+    to enforce data-sharing rules and coordinated delivery across engineering teams,
+    earning promotion to Senior Data Architect.
   story_tex: >-
-    \textbf{Situation:} A multi-organization integration combined more than 70 EHR
-    sources, but data-sharing rules permitted patient data only within appropriate provider
-    relationships. \textbf{Task:} I needed to enforce that scope without omitting eligible
-    patients. \textbf{Action:} I mapped provider and patient attribution rules, implemented
-    provider-scoped filtering early in the pipeline, built leakage and completeness tests,
-    reviewed edge cases with stakeholders, and coordinated changes across engineering
-    teams. \textbf{Result:} The integration applied a consistent data-sharing boundary
-    across heterogeneous sources while preserving traceable evidence for included and
-    excluded records.
+    \textbf{Situation:} The Central New York Care Collaborative was building a regional
+    population-health platform for more than 2,000 providers across six counties, with
+    data arriving from 75+ EHR, HIE, and other source systems. Data-sharing rules required
+    patient information to remain within valid provider relationships. \textbf{Task:} As
+    the data architect, I needed to establish a scalable onboarding architecture that
+    normalized heterogeneous sources, preserved traceability, and enforced provider-level
+    sharing boundaries. \textbf{Action:} I defined source contracts and canonical mapping
+    patterns, modeled organization-provider-patient relationships, placed provider-scoped
+    filtering early in the pipeline, built leakage, completeness, and reconciliation tests,
+    documented reusable implementation patterns, and coordinated edge cases and delivery
+    across engineering teams. \textbf{Result:} The architecture provided a consistent,
+    auditable pattern for onboarding diverse healthcare sources while enforcing data-sharing
+    constraints. My technical leadership and architectural ownership on the project earned
+    me a promotion to Senior Data Architect.
 - id: ibm-data-architect-03
   text_tex: Built the data-onboarding platform and associated infrastructure, remediated
     UAT data issues, and reported on data health during onboarding.

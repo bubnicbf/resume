@@ -102,7 +102,8 @@ roles.each do |role, achievements|
   achievements.each do |achievement|
     story = achievement.fetch('story_tex') { raise "Missing story for #{achievement.fetch('id')}" }
     parts = star_parts(story, achievement.fetch('id'))
-    content_lines << "\\story{#{achievement.fetch('id')}}{#{achievement.fetch('text_tex')}}{#{parts[0]}}{#{parts[1]}}{#{parts[2]}}{#{parts[3]}}"
+    notes = achievement.fetch('notes_tex', '')
+    content_lines << "\\story{#{achievement.fetch('id')}}{#{achievement.fetch('text_tex')}}{#{parts[0]}}{#{parts[1]}}{#{parts[2]}}{#{parts[3]}}{#{notes}}"
   end
 end
 File.write(File.join(GENERATED, 'interview-star-stories-content.tex'), content_lines.join("\n") + "\n")

@@ -18,15 +18,18 @@
   text_tex: Rewrote and reorganized project documentation to streamline knowledge
     transfer.
   story_tex: >-
-    \textbf{Situation:} Project documentation had accumulated around components and
-    historical decisions rather than the workflow a new contributor needed to follow.
-    \textbf{Task:} I needed to make knowledge transfer faster and less dependent on the
-    original developers. \textbf{Action:} I inventoried existing material, removed stale
-    or duplicate guidance, reorganized it around setup, architecture, operating tasks,
-    troubleshooting, and escalation, and validated the instructions by following them from
-    a new-user perspective. \textbf{Result:} Contributors could find the right procedure
-    more quickly, and handoffs required less repeated explanation from experienced team
-    members.
+    \textbf{Situation:} More than 200 client integrations each required project-specific
+    knowledge, but documentation was inconsistent and often written after delivery, making
+    support and handoff depend on the original developer. \textbf{Task:} I needed to make
+    documentation a maintained part of the ETL lifecycle for every integration rather than
+    an optional closeout activity. \textbf{Action:} I created a standard project structure
+    covering source inventory, mappings, transformation rules, job configuration, validation
+    evidence, deployment, operations, troubleshooting, and client-specific exceptions. I
+    wrote and maintained the documentation for each integration I touched, embedded review
+    and update checkpoints into the team's ETL process, and promoted the structure across
+    the 200+ integration portfolio. \textbf{Result:} Documentation became a delivery
+    artifact that stayed aligned with implementation, improving knowledge transfer,
+    production support, and reuse across client projects.
 - id: ibm-software-developer-03
   text_tex: Redeveloped the employee education program to make new-hire training more
     efficient and repeatable.
@@ -50,6 +53,16 @@
     and packaged the method so the analysis could be repeated. \textbf{Result:} The work
     informed the project team's decisions and was recognized with IBM's 2017 Eminence and
     Excellence Award.
+  notes_tex: >-
+    A plausible client problem was an apparent drop in the number of patients reaching
+    downstream quality and population-health cohorts even though inbound encounter volume
+    remained stable. The analysis may have reconciled source files, rejected records,
+    identity matches, provider attribution, and cohort eligibility by facility and load
+    date, revealing that a small set of changed source codes or provider mappings caused a
+    disproportionate share of exclusions. The deliverable would have turned an ambiguous
+    ``missing patients'' complaint into a ranked remediation plan and repeatable monitoring.
+    Audit point: confirm the client, affected workflow, and whether the award recognized
+    this type of cohort-loss analysis or a different analytics project.
 - id: ibm-software-developer-05
   text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
     1.17\%.

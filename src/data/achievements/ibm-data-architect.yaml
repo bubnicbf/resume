@@ -47,6 +47,16 @@
     transformation, and summarized completeness, quality, and open issues in data-health
     reporting. \textbf{Result:} Stakeholders could see what was ready, what was blocked,
     and why, and the team had a more repeatable process for moving integrations through UAT.
+  notes_tex: >-
+    On HDFS, this likely meant landing immutable client extracts in secured raw directories;
+    registering file, partition, and schema metadata in Hive; using Pig, Spark, or MapReduce
+    jobs to standardize records into staged and curated zones; and maintaining project-level
+    configuration for source layouts, mappings, and run parameters. UAT defects would be
+    reproduced against known patient or encounter examples, traced through raw, staged,
+    normalized, and application-ready outputs, and rerun after correction. Data-health
+    reporting likely summarized delivery freshness, file and row counts, rejected records,
+    missing required fields, duplicate keys, code-mapping coverage, referential integrity,
+    and unresolved defects by source and processing stage.
 - id: ibm-data-architect-04
   text_tex: Earned AI certification and peer-reviewed patient-matching algorithm tuning
     across the project portfolio.
@@ -63,44 +73,52 @@
   text_tex: Curated 25 pages of AI-workflow documentation and mentored new hires in
     the AI-tuning process.
   story_tex: >-
-    \textbf{Situation:} Patient-matching tuning depended on specialized knowledge that
-    new hires could not safely learn from parameter names alone. \textbf{Task:} I needed
-    to make the workflow teachable without oversimplifying its risk. \textbf{Action:} I
-    curated 25 pages covering data preparation, tuning steps, evaluation measures, error
-    review, approval points, and common failure modes, then paired with new hires on
-    representative cases and reviewed their reasoning. \textbf{Result:} New team members
-    gained a structured path into AI tuning and could contribute with better consistency
-    and awareness of matching tradeoffs.
+    \textbf{Situation:} The AI-tuning workflow depended on aging legacy documentation,
+    and significant steps, decision criteria, and failure modes were either incomplete or
+    undocumented. New hires therefore relied too heavily on oral guidance. \textbf{Task:}
+    I needed to repair the existing material, close the major gaps, and make the workflow
+    teachable without oversimplifying patient-matching risk. \textbf{Action:} I reviewed
+    the legacy pages against the actual process, corrected obsolete instructions and
+    screenshots, reorganized fragmented content, and wrote new sections covering data
+    preparation, parameter effects, evaluation measures, false-match and missed-match
+    review, approval points, rollback, and common failure modes. I curated the result into
+    25 pages and mentored new hires through representative tuning cases. \textbf{Result:}
+    The team gained a current end-to-end reference instead of relying on tribal knowledge,
+    and new hires could contribute with greater consistency and awareness of matching
+    tradeoffs.
 - id: ibm-data-architect-06
   text_tex: Spearheaded a new-hire mentoring and onboarding program from 2016 to 2018,
     standardizing team practices, systems, and technical workflows to prepare colleagues
     for independent, billable client delivery.
   story_tex: >-
-    \textbf{Situation:} Rapid growth brought new colleagues with varied healthcare and
-    platform experience into a complex data environment where team conventions and
-    delivery practices were largely learned through informal mentoring and shadowing.
-    \textbf{Task:} I needed to standardize technical ramp-up from 2016 to 2018 while
-    preserving individualized support and preparing new hires for independent client work.
-    \textbf{Action:} I organized role-based learning objectives, guided exercises,
-    shadowing, and readiness checkpoints; explained the platform and team workflows;
-    paired with colleagues on representative integration tasks; reviewed early code and
-    designs; connected people with domain experts; and used recurring questions to improve
-    the onboarding material. \textbf{Result:} New colleagues gained a clearer path from
-    orientation to independent, billable delivery, managers had a more consistent signal
-    of readiness, and the team spent less time repeatedly reconstructing foundational
-    knowledge.
+    \textbf{Situation:} The existing new-hire plan stretched across five loosely structured
+    weeks and repeatedly pulled senior architects and developers away from client delivery
+    to reteach the same material. \textbf{Task:} From 2016 to 2018, I needed to shorten
+    ramp-up, improve consistency, and return senior staff to day-to-day project work.
+    \textbf{Action:} I redesigned the five-week plan as an intensive two-week curriculum,
+    took primary responsibility for instruction, sequenced platform, healthcare-data,
+    mapping, validation, and delivery exercises, and used practical checkpoints to confirm
+    readiness. I then added a structured three-week mentorship phase in which each new hire
+    applied the material to representative integration work with targeted review rather
+    than continuous senior-led training. \textbf{Result:} New employees reached productive,
+    billable work faster, senior architects and developers recovered time for client and
+    production issues, and the team reduced the labor cost of onboarding while preserving
+    three weeks of supported practice.
 - id: ibm-data-architect-07
   text_tex: Received the Lab Services Award for coordinating internal project teams
     to deliver client needs on time.
   story_tex: >-
-    \textbf{Situation:} A client delivery depended on several internal teams with separate
-    priorities, creating schedule and handoff risk. \textbf{Task:} I needed to coordinate
-    the work so the client received the required outcome on time. \textbf{Action:} I
-    translated needs into shared milestones, clarified owners and dependencies, surfaced
-    blockers early, connected technical decisions to client impact, and maintained a
-    focused cadence through delivery and validation. \textbf{Result:} The teams delivered
-    the client need on schedule, and IBM recognized the coordination and client impact
-    with the Lab Services Award.
+    \textbf{Situation:} The Central New York Care Collaborative engagement spanned 75+
+    EHR, HIE, and other source systems and depended on IBM onboarding, platform, engineering,
+    and delivery teams with separate priorities. Provider-scoped data-sharing rules made
+    handoffs especially sensitive. \textbf{Task:} I needed to coordinate the internal work
+    so CNYCC received the required integration behavior and evidence on schedule.
+    \textbf{Action:} I translated the CNYCC requirements into shared milestones, mapped
+    owners and dependencies, coordinated provider-attribution and filtering changes,
+    surfaced blockers and edge cases early, and kept engineering, validation, and delivery
+    teams aligned through implementation and client review. \textbf{Result:} The teams met
+    the CNYCC delivery commitment with auditable provider-scoped controls, and IBM recognized
+    my cross-team coordination and client impact with the Lab Services Award.
 - id: ibm-data-architect-08
   text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
     1.34\%.

@@ -31,54 +31,64 @@
   text_tex: Led a cross-functional team as the clinical data analyst for the 2020/2021
     measure-updates project.
   story_tex: >-
-    \textbf{Situation:} Annual 2020/2021 measure updates changed clinical definitions,
-    value sets, and data requirements across products and teams. \textbf{Task:} As the
-    clinical data analyst, I needed to coordinate the impact from specification through
-    validated release. \textbf{Action:} I decomposed measure changes, mapped them to
-    source fields and existing logic, organized work across engineering and clinical
-    stakeholders, reviewed edge cases, and reconciled updated outputs against expected
-    populations. \textbf{Result:} The cross-functional team delivered the update with a
-    shared interpretation of the specifications and traceable validation for changed
-    measures.
+    \textbf{Situation:} The 2020/2021 HEDIS release changed measure specifications, value
+    sets, look-back windows, exclusions, and continuous-enrollment rules used across
+    products. Inconsistent interpretation could change eligible populations and reported
+    rates. \textbf{Task:} As the clinical data analyst leading a cross-functional team, I
+    needed to translate the annual HEDIS changes into implementable data logic and validated
+    outputs. \textbf{Action:} I compared specifications year over year, decomposed changes
+    into denominator, numerator, exclusion, enrollment, and event-date rules, mapped new
+    value sets to clinical fields, assigned work across engineering and clinical reviewers,
+    and built test cohorts for boundary dates, enrollment gaps, exclusions, and numerator
+    compliance. I reconciled old and new rates and explained expected population movement.
+    \textbf{Result:} The team delivered the HEDIS update with a shared interpretation of
+    each changed rule and traceable evidence for resulting rate and population differences.
 - id: ibm-senior-data-architect-04
   text_tex: Created an exploratory machine-learning COVID-19 prototype to surface
     hospitalization-risk signals for retrospective analyst review.
   story_tex: >-
     \textbf{Situation:} Early in the COVID-19 response, analysts needed a rapid way to
     explore which historical patient characteristics were associated with hospitalization.
-    \textbf{Task:} I needed to create an exploratory prototype without presenting it as a
-    clinical decision system. \textbf{Action:} I defined a retrospective cohort and
-    outcome, prepared candidate features, trained baseline classification models, examined
-    performance and important signals, and documented limitations such as bias, missingness,
-    and temporal instability. \textbf{Result:} Analysts gained a structured set of risk
-    signals for further review and a clear boundary between exploratory evidence and a
-    deployable clinical model.
+    \textbf{Task:} On a three-person team, I helped build a retrospective prototype while
+    keeping it clearly separate from a clinical decision system. \textbf{Action:} We
+    defined the cohort, index date, and hospitalization outcome; engineered demographic,
+    comorbidity, utilization, and laboratory features; and compared regularized logistic
+    regression, random forest, and gradient-boosted tree models. I contributed feature
+    preparation, cross-validation, precision-recall and ROC analysis, calibration review,
+    and feature-importance interpretation while documenting bias, missingness, and temporal
+    instability. \textbf{Result:} The prototype gave analysts an interpretable comparison
+    of candidate risk signals and a documented basis for deciding what merited further
+    study, without presenting exploratory output as deployable clinical guidance.
 - id: ibm-senior-data-architect-05
   text_tex: Developed a topic-modeling project using nearly six million semi-structured
     provider notes.
   story_tex: >-
     \textbf{Situation:} Nearly six million provider notes contained useful themes that
     were difficult to discover through manual review or fixed keyword searches.
-    \textbf{Task:} I needed to test whether topic modeling could organize the corpus for
-    analyst exploration. \textbf{Action:} I cleaned and normalized note text, created a
-    modeling sample and representation, compared topic counts and stability, reviewed
-    representative terms and documents, and worked with domain users to label useful
-    themes and reject incoherent ones. \textbf{Result:} The project produced an exploratory
-    map of recurring clinical themes and demonstrated where unsupervised methods could
-    assist, but not replace, expert review.
+    \textbf{Task:} As the sole contributor, I needed to determine whether topic modeling
+    could organize the corpus for analyst exploration. \textbf{Action:} I built the full
+    NLP workflow: deidentified and normalized text, removed boilerplate and low-information
+    terms, created bag-of-words and TF-IDF representations, and compared Latent Dirichlet
+    Allocation and non-negative matrix factorization across topic counts. I evaluated
+    coherence, stability, top terms, and representative notes, then used dimensionality
+    reduction and clustering views to inspect overlap and worked with domain reviewers to
+    label useful topics. \textbf{Result:} My solo project produced an exploratory map of
+    recurring clinical themes and documented where LDA and NMF could assist, but not
+    replace, expert review.
 - id: ibm-senior-data-architect-06
   text_tex: Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction
     proof of concept that was being evaluated as a potential new offering.
   story_tex: >-
     \textbf{Situation:} Surgical teams faced schedule inefficiency and uncertainty about
-    the supplies or case-card content needed for upcoming procedures. \textbf{Task:} I
-    needed to test whether optimization and sequence models could improve planning enough
-    to justify a product offering. \textbf{Action:} I modeled scheduling constraints and
-    objectives, prepared historical procedure and case-card sequences, built an optimizer
-    plus CNN/RNN prediction prototypes, and evaluated feasibility, accuracy, and operational
-    tradeoffs with stakeholders. \textbf{Result:} The proof of concept gave product leaders
-    concrete performance evidence and implementation risks for deciding whether to invest
-    in a new offering.
+    the supplies or case-card content needed for upcoming procedures. \textbf{Task:} On a
+    three-person team, I needed to test whether optimization and sequence models could
+    improve planning enough to justify a product offering. \textbf{Action:} We divided the
+    work across clinical-data preparation, scheduling optimization, and case-card prediction.
+    I helped define constraints and objectives, engineered historical procedure and item
+    sequences, implemented and evaluated CNN/RNN prediction experiments, and integrated
+    results with the optimizer for stakeholder review. \textbf{Result:} The three-person
+    team produced a working proof of concept with performance evidence and implementation
+    risks that product leaders could use to evaluate a potential offering.
 - id: ibm-senior-data-architect-07
   text_tex: Architected Spark and Hadoop pipelines integrating more than 100 billion
     structured and semi-structured clinical records, supporting four EPM applications,
@@ -93,6 +103,16 @@
     using observed execution behavior. \textbf{Result:} The platform supplied reusable,
     governed datasets at the scale required by applications, models, measures, and
     registries.
+  notes_tex: >-
+    The 30+ models most likely included combinations of: \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item HCC/RAF and other prospective cost-risk models;
+    \item LACE, Charlson, and Elixhauser risk or comorbidity scores;
+    \item 30-day readmission, inpatient-admission, and emergency-department utilization risk;
+    \item mortality, length-of-stay, and avoidable-utilization models;
+    \item disease-specific deterioration or complication models for conditions such as
+    heart failure, COPD, diabetes, and sepsis; and
+    \item care-gap, rising-risk, and high-cost claimant stratification.
+    \end{itemize}
 - id: ibm-senior-data-architect-08
   text_tex: Led a HIPAA patient-deidentification project drawing from more than 100
     data sources for content analytics and measures.
@@ -106,19 +126,39 @@
     linkages, and coordinated exceptions with governance and engineering. \textbf{Result:}
     The project delivered a consistent deidentified foundation for downstream analytics
     with documented controls and traceability.
+  notes_tex: >-
+    A likely HDFS implementation began by choosing the approved HIPAA path---Safe Harbor
+    or a documented Expert Determination---then inventorying identifiers in structured and
+    free-text fields. Spark, Hive, or MapReduce transformations may have removed direct
+    identifiers; tokenized patient, provider, account, and encounter keys; generalized or
+    suppressed geography and ages; shifted dates consistently within each patient; and
+    redacted recognizable identifiers from notes. Deterministic crosswalks would have been
+    stored separately in restricted HDFS locations, while deidentified Hive views preserved
+    clinical relationships for measures. Validation likely combined pattern scans,
+    referential-integrity checks, uniqueness or reidentification-risk review, access-control
+    tests, and lineage evidence. Audit point: confirm whether the governing method was Safe
+    Harbor, Expert Determination, or a limited-data-set policy rather than describing all
+    three interchangeably.
 - id: ibm-senior-data-architect-09
   text_tex: Replaced static mappings with metadata-driven instruction sets across
     approximately 200 source integrations, standardizing EDI batch schemas while enabling
     Python/Jupyter lineage tracing and end-to-end validation gates.
   story_tex: >-
-    \textbf{Situation:} Approximately 200 integrations used static source mappings that
-    were expensive to update and difficult to audit consistently. \textbf{Task:} I needed
-    to separate integration instructions from execution logic. \textbf{Action:} I designed
-    metadata-driven instruction sets, standardized EDI batch schemas, built reusable
-    transformation behavior around that metadata, and added Python/Jupyter lineage tools
-    and validation gates from source through output. \textbf{Result:} New and changed
-    mappings could be delivered through governed configuration, reducing duplicated code
-    and making lineage and validation more consistent across integrations.
+    \textbf{Situation:} Approximately 200 integrations were mapped through source-controlled
+    Excel workbooks. The files mixed requirements, field mappings, transformations, and
+    comments in layouts that were difficult to validate automatically or execute consistently.
+    \textbf{Task:} I needed to preserve the subject-matter knowledge in those workbooks
+    while separating declarative integration instructions from reusable execution code.
+    \textbf{Action:} I defined versioned, machine-readable instruction sets---normalized
+    CSV or JSON manifests loaded into metadata tables---with one record per
+    target field and attributes for source path, datatype, cardinality, default or null
+    handling, lookup, transformation expression, terminology mapping, dependency, and
+    validation rule. Python converted approved workbook content into the instruction
+    schema, Spark/Hadoop jobs interpreted it against standardized EDI batches, and Jupyter
+    notebooks traced each target field back through the applied instructions and validation
+    results. \textbf{Result:} Teams retained governed, reviewable mapping content while
+    gaining reusable execution, automated checks, and consistent lineage across roughly
+    200 integrations.
 - id: ibm-senior-data-architect-10
   text_tex: Served in an advisory capacity for development of a new data platform.
   story_tex: >-

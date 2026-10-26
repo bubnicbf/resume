@@ -2,9 +2,9 @@
 # Provisional STAR reconstructions: implementation details, examples, ownership,
 # and outcomes must be verified against the user's recollection and source records.
 - id: ibm-senior-data-scientist-01
-  text_tex: Served as a lead member of Provider Analytics, performing source discovery,
-    data profiling, and exploratory analysis while integrating disparate EHR and
-    centralized data sources into analytics-ready data marts.
+  text_tex: Led Provider Analytics data engineering, profiling disparate EHR and
+    centralized sources, resolving identity and grain conflicts, and building analytics-ready
+    data marts for exploratory and statistical analysis.
   story_tex: >-
     \textbf{Situation:} Provider Analytics depended on clinical, claims, and operational
     sources that used different identifiers, grains, and refresh schedules. \textbf{Task:}
@@ -18,14 +18,22 @@
   text_tex: Worked with senior leaders and colleagues to identify opportunities, define
     objectives, and formulate analytics strategies that produced measurable impact.
   story_tex: >-
-    \textbf{Situation:} Senior leaders had multiple promising analytics ideas, but their
-    value, feasibility, and measures of success were not always explicit. \textbf{Task:}
-    I needed to turn broad opportunities into executable analytical work. \textbf{Action:}
-    I facilitated discovery conversations, translated business concerns into testable
-    questions, identified available data and constraints, defined outcome measures and
-    decision points, and proposed phased strategies. \textbf{Result:} Stakeholders could
-    compare opportunities on a common basis, and the team focused on analyses with clear
-    objectives, owners, and a credible path to measurable impact.
+    \textbf{Situation:} Senior leaders saw a growing care-gap backlog for a client even
+    though encounter volume and the size of the attributed population appeared stable.
+    They initially proposed a predictive model to prioritize outreach. \textbf{Task:} I
+    needed to determine whether modeling was the right intervention and define a measurable
+    analytics strategy. \textbf{Action:} I brought clinical, product, and data colleagues
+    together, profiled the attribution and care-gap pipelines, and found that delayed
+    provider-roster refreshes were retaining inactive relationships and inflating the
+    apparent backlog. I reframed the work around roster reconciliation, freshness metrics,
+    and exception reporting before model development. \textbf{Result:} The team addressed
+    the data-quality cause first, restored trust in the backlog measure, and avoided
+    investing in a model that would have optimized against a distorted population.
+  notes_tex: >-
+    Assumed example for audit: confirm whether the triggering incident involved a care-gap
+    backlog, delayed provider-roster refreshes, and inactive attribution relationships. If
+    the actual leadership engagement concerned another domain, retain the strategy pattern
+    but replace the client problem, root cause, and resulting decision.
 - id: ibm-senior-data-scientist-03
   text_tex: Served as technical lead across electronic health records, insurance claims,
     scheduling and financial data, social determinants of health, and other relevant
@@ -66,6 +74,12 @@
     changes, and coordinated corrections across support and engineering. \textbf{Result:}
     Operational issues were resolved with a documented cause, and recurring defects could
     be prevented through targeted configuration or data changes.
+  notes_tex: >-
+    Typical issues may have included inactive or duplicate provider records, patients
+    attributed to the wrong panel, delayed or rejected clinical feeds, missing diagnosis
+    or procedure mappings, care gaps opening or closing incorrectly, outreach queues not
+    refreshing, measure value sets using the wrong version, user permissions hiding a
+    population, and dashboard totals disagreeing with patient-level detail.
 - id: ibm-senior-data-scientist-06
   text_tex: Supported data and integration work for Pennsylvania's statewide P3N health-information
     exchange, encompassing master patient identity, provider directories, clinical-document
@@ -79,6 +93,14 @@
     consent and document-discovery behavior, traced ADT events end to end, and documented
     exceptions. \textbf{Result:} The exchange gained clearer evidence that workflows
     preserved identity, authorization, and event continuity across boundaries.
+  notes_tex: >-
+    P3N is the Pennsylvania Patient \& Provider Network, the Commonwealth's statewide
+    health-information exchange. It connects certified regional HIOs through a shared hub
+    so participating providers can locate and exchange records across organizational
+    boundaries. The network supports functions such as patient and provider matching,
+    consent or opt-out enforcement, clinical-document discovery, and encounter-event
+    notifications; it routes information between connected organizations rather than
+    serving as a central longitudinal record repository.
 - id: ibm-senior-data-scientist-07
   text_tex: Supported the controlled decommissioning of legacy Explorys capabilities
     by analyzing downstream dependencies and validating continuity across normalized
@@ -97,27 +119,33 @@
     from MySQL to Greenplum by assessing dashboard dependencies and defining the changes
     required to preserve reporting continuity.
   story_tex: >-
-    \textbf{Situation:} Cleveland Clinic Foundation needed to accelerate a SuperMart
-    migration from MySQL to Greenplum while dashboards depended on database-specific
-    tables and SQL behavior. \textbf{Task:} I needed to define the compatibility work
-    required to preserve reporting. \textbf{Action:} I inventoried dashboard queries and
-    source objects, identified differences in types, functions, joins, and performance,
-    mapped dependencies to target changes, and prioritized validation by criticality.
-    \textbf{Result:} The team received an actionable conversion plan and avoided finding
-    essential dashboard dependencies only after cutover.
+    \textbf{Situation:} A senior-leadership pivot compressed Cleveland Clinic Foundation's
+    SuperMart migration from MySQL to Greenplum into a five-week window. Preserving the
+    long-standing client relationship also required IBM to modernize the Tableau dashboards
+    that depended on the legacy mart. \textbf{Task:} I owned my SuperMart migration work
+    and was solely responsible for converting the Tableau layer, despite not having prior
+    Tableau experience. \textbf{Action:} I learned Tableau while inventorying workbook,
+    extract, calculation, filter, and SQL dependencies; translated MySQL-specific logic
+    to Greenplum; rebuilt data connections and dashboards; prioritized the most critical
+    reports; and reconciled visual totals and drill paths against legacy results in tight
+    daily cycles. \textbf{Result:} I completed both my migration responsibilities and the
+    Tableau modernization within five weeks, preserving reporting continuity and helping
+    IBM meet the accelerated commitment to Cleveland Clinic.
 - id: ibm-senior-data-scientist-09
   text_tex: Created and delivered Phytel configuration training covering provider
     activation, system changes, support procedures, and the clinical-data workflows
     underlying proactive population-health management.
   story_tex: >-
-    \textbf{Situation:} Phytel administrators needed to understand how configuration
-    changes affected care-gap, outreach, and population-health workflows. \textbf{Task:}
-    I needed to teach both the procedure and its downstream data consequences.
-    \textbf{Action:} I built scenario-based training, demonstrated activation and change
-    procedures, traced examples into clinical workflows, covered common failure paths,
-    and used exercises to confirm understanding. \textbf{Result:} Learners could perform
-    routine configuration more confidently and recognize when an issue required data,
-    application, or engineering support.
+    \textbf{Situation:} Explorys developers were being asked to support integrations and
+    workflows that crossed into Phytel, but they had not worked with Phytel's provider,
+    patient, care-gap, and outreach data before. \textbf{Task:} I needed to give those
+    developers enough domain and data-model context to diagnose cross-product issues
+    safely. \textbf{Action:} I created training that mapped familiar Explorys concepts to
+    Phytel entities and workflows, traced provider activation and clinical data through
+    care-gap calculation and outreach, demonstrated common configuration failures, and
+    used realistic support cases as exercises. \textbf{Result:} Explorys developers could
+    follow Phytel data end to end, distinguish configuration defects from ingestion or
+    application defects, and collaborate more effectively on cross-product support.
 - id: ibm-senior-data-scientist-10
   text_tex: Performed postmigration validation for an enterprise Jira transition,
     reconciling projects, issues, workflows, custom fields, permissions, histories,
@@ -144,27 +172,47 @@
     revised material from participant questions. \textbf{Result:} Colleagues gained a
     working mental model for evaluating Azure designs and could participate more
     effectively in migration discussions.
+  notes_tex: >-
+    Likely topics included Azure landing-zone and subscription structure; Blob Storage
+    and ADLS Gen2; Azure Data Factory pipelines, triggers, parameters, and integration
+    runtimes; Synapse SQL and Spark workloads; managed identities, Key Vault, RBAC, and
+    private networking; monitoring with Azure Monitor and Log Analytics; schema drift,
+    partitioning, and migration reconciliation; cost controls; and CI/CD through Azure
+    DevOps.
 - id: ibm-senior-data-scientist-12
   text_tex: Led delivery of a tailored analytics and reporting project using client
     administrative data.
   story_tex: >-
-    \textbf{Situation:} A client had administrative data but lacked reporting tied to the
-    operational decisions it needed to make. \textbf{Task:} I needed to lead a tailored
-    delivery without imposing a generic dashboard. \textbf{Action:} I clarified the
-    decisions and audience, profiled the fields, defined the reporting grain and measures,
-    built a validated analytical dataset, and iterated on reports using examples and
-    reconciliation totals. \textbf{Result:} The client received reporting aligned to its
-    workflow, with documented metrics and a traceable path back to source data.
+    \textbf{Situation:} Cleveland Clinic Foundation had administrative scheduling and
+    encounter data but lacked a unified view of appointment demand, cancellations,
+    no-shows, provider capacity, and time to next available appointment across departments.
+    \textbf{Task:} I needed to turn the operational question into a tailored, traceable
+    reporting product rather than a generic utilization dashboard. \textbf{Action:} I
+    profiled appointment and encounter status histories, resolved department and provider
+    mappings, defined measures and reporting grains with stakeholders, built a validated
+    analytical mart, and iterated on views that separated patient-driven cancellations
+    from operational rescheduling. \textbf{Result:} Leaders gained a consistent way to
+    identify access bottlenecks and distinguish unused capacity from scheduling-process
+    problems, with every metric reconcilable to client administrative records.
+  notes_tex: >-
+    Assumed example for audit: Cleveland Clinic Foundation, ambulatory scheduling and
+    encounter data, and the access-capacity measures are a plausible reconstruction rather
+    than a verified project record. Confirm the client, administrative subject area,
+    audience, and decisions supported.
 - id: ibm-senior-data-scientist-13
   text_tex: Engineered a Spark, Hive, and Impala analytics framework powering 50+
     prior-authorization lag-time and approval-bottleneck reports with daily operational
     and periodic regulatory and financial snapshots.
   story_tex: >-
-    \textbf{Situation:} Prior-authorization teams lacked a consistent view of where
-    requests waited and which stages created bottlenecks. \textbf{Task:} I needed to turn
-    large workflow histories into reusable timing measures. \textbf{Action:} I built a
-    Spark, Hive, and Impala framework that normalized status events, calculated stage and
-    end-to-end lag, preserved historical snapshots, and exposed shared dimensions and
-    measures to more than 50 reports. \textbf{Result:} Operations received daily
-    bottleneck visibility while regulatory and financial users received consistent
-    periodic snapshots from the same governed logic.
+    \textbf{Situation:} Prior-authorization status events arrived from multiple systems,
+    sometimes late or out of order, while operations needed current bottleneck visibility
+    and regulatory and financial users needed reproducible historical snapshots.
+    \textbf{Task:} I needed one architecture that could calculate request-stage timing
+    continuously and still support governed batch reporting. \textbf{Action:} I published
+    authorization events to Kafka, used Flink event-time processing, watermarks, keyed
+    state, and status-transition rules to reconstruct each request and calculate stage and
+    end-to-end lag, and persisted curated results to Hive. Spark jobs reconciled backfills
+    and produced daily and period-end snapshots, while Impala exposed shared dimensions
+    and measures to more than 50 reports. \textbf{Result:} Operations received timely,
+    consistent bottleneck signals, and regulatory and financial reports used the same
+    traceable logic and reproducible history.

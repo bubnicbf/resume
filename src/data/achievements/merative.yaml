@@ -16,6 +16,16 @@
     rerunnable discrepancy reports, and worked each unexplained variance through defect,
     retest, and closure. \textbf{Result:} The tested migration scope reached sign-off with
     zero unresolved discrepancies and a reproducible evidence trail for the decision.
+  notes_tex: >-
+    The seven layers were most likely: \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item record-count parity by table, file, and load cohort;
+    \item partition completeness and boundary coverage;
+    \item schema parity for names, types, lengths, and required columns;
+    \item nullability and missing-value behavior;
+    \item primary-key, uniqueness, and duplicate checks;
+    \item field-level and aggregate-value reconciliation; and
+    \item business-rule and end-to-end workflow validation.
+    \end{itemize}
 - id: merative-02
   text_tex: Led HIPAA-compliant deidentification validation across demographic, encounter,
     and coded clinical data representing approximately 300 million patient lives,
@@ -31,6 +41,21 @@
     records, and traced every failure back to its transformation or configuration.
     \textbf{Result:} All in-scope deidentification checks passed before sign-off, providing
     evidence that the migrated data met the defined HIPAA-compliant handling requirements.
+  notes_tex: >-
+    Plausible field-level tests included: \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item direct identifiers such as names, MRNs, account numbers, phone numbers, email
+    addresses, and Social Security numbers were removed, masked, or tokenized;
+    \item dates were shifted or generalized consistently for the same patient while age
+    and encounter intervals remained analytically usable;
+    \item ZIP codes and other geographic fields followed the approved suppression or
+    generalization rules;
+    \item pseudonymous patient and encounter keys remained deterministic across related
+    tables without exposing source identifiers;
+    \item diagnosis, procedure, medication, and laboratory codes retained valid formats
+    and source-to-target meaning;
+    \item free-text and residual-value scans found no recognizable identifiers; and
+    \item null, edge-case, and referential-integrity behavior matched the specification.
+    \end{itemize}
 - id: merative-03
   text_tex: Designed and implemented automated ETL testing and regression suites that
     detected schema drift and transformation errors early in the migration lifecycle.
@@ -45,6 +70,13 @@
     responsible engineering team rather than a generic failed comparison. \textbf{Result:}
     Schema drift and transformation errors were detected closer to the change that caused
     them, reducing late-cycle investigation and protecting the final acceptance schedule.
+  notes_tex: >-
+    Likely Azure-era tooling included Python with pytest and pandas or PySpark for reusable
+    assertions, SQL reconciliation queries in Synapse, Azure Data Factory debug and test
+    runs, Azure DevOps pipelines for scheduled regression execution, Git for versioned
+    baselines, and Blob or ADLS test fixtures. ADF metadata and schema-drift behavior could
+    be compared with approved contracts, with failures published as pipeline artifacts or
+    work items for engineering review.
 - id: merative-04
   text_tex: Validated end-to-end Azure Data Factory pipelines, Blob Storage configurations,
     and downstream Synapse integrations during the transition from HDFS to Azure.
@@ -101,3 +133,13 @@
     maintained evidence and exception records through remediation. \textbf{Result:} The
     migration closed control gaps before sign-off, reduced audit risk, and produced a more
     complete evidence set for the organization's HITRUST-readiness work.
+  notes_tex: >-
+    Plausible protocols included: \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item role-based access with least-privilege group assignments and periodic review;
+    \item encryption in transit and at rest with managed key and secret handling;
+    \item approved storage zones, data classification, and restricted PHI movement;
+    \item centralized logging, access monitoring, and retained audit evidence;
+    \item documented change control, peer review, and separation of duties; and
+    \item retention, exception, incident-response, and remediation tracking aligned to
+    organizational security policy and HITRUST-readiness evidence needs.
+    \end{itemize}

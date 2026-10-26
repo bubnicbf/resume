@@ -27,7 +27,7 @@
     Teams could apply proven approaches across clients, reducing reinvention while
     retaining the source-specific analysis each integration required.
 - id: ibm-data-scientist-03
-  text_tex: Authored 125+ technical knowledge-base articles, approximately 30\% of
+  text_tex: Authored 125+ technical knowledge-base articles, approximately 80\% of
     the team's published content, to standardize integration development and troubleshooting
     practices.
   story_tex: >-
@@ -37,7 +37,7 @@
     \textbf{Action:} I identified recurring questions, wrote articles with context,
     prerequisites, steps, examples, expected results, and failure paths, linked related
     topics, and updated guidance when platform behavior changed. \textbf{Result:} I
-    produced more than 125 articles—about 30\% of the team's published content—giving the
+    produced more than 125 articles---about 80\% of the team's published content---giving the
     organization a consistent reference for development and incident resolution.
 - id: ibm-data-scientist-04
   text_tex: Built a Python, Ruby, and SQL extraction tool that eliminated unnecessary

@@ -65,17 +65,23 @@
     gained a structured path into AI tuning and could contribute with better consistency
     and awareness of matching tradeoffs.
 - id: ibm-data-architect-06
-  text_tex: Spearheaded a new-hire mentoring program that standardized technical ramp-up
-    and prepared colleagues to contribute to billable client delivery.
+  text_tex: Spearheaded a new-hire mentoring and onboarding program from 2016 to 2018,
+    standardizing team practices, systems, and technical workflows to prepare colleagues
+    for independent, billable client delivery.
   story_tex: >-
-    \textbf{Situation:} New hires entered with varied healthcare and platform experience,
-    and informal mentoring produced uneven readiness for client work. \textbf{Task:} I
-    needed to standardize technical ramp-up while preserving individualized support.
-    \textbf{Action:} I organized a mentoring program with role-based learning objectives,
-    guided exercises, shadowing, code and design reviews, and readiness checkpoints tied
-    to representative delivery tasks. \textbf{Result:} Managers had a clearer signal of
-    when colleagues were ready, and new hires reached billable work with a more consistent
-    foundation and support network.
+    \textbf{Situation:} Rapid growth brought new colleagues with varied healthcare and
+    platform experience into a complex data environment where team conventions and
+    delivery practices were largely learned through informal mentoring and shadowing.
+    \textbf{Task:} I needed to standardize technical ramp-up from 2016 to 2018 while
+    preserving individualized support and preparing new hires for independent client work.
+    \textbf{Action:} I organized role-based learning objectives, guided exercises,
+    shadowing, and readiness checkpoints; explained the platform and team workflows;
+    paired with colleagues on representative integration tasks; reviewed early code and
+    designs; connected people with domain experts; and used recurring questions to improve
+    the onboarding material. \textbf{Result:} New colleagues gained a clearer path from
+    orientation to independent, billable delivery, managers had a more consistent signal
+    of readiness, and the team spent less time repeatedly reconstructing foundational
+    knowledge.
 - id: ibm-data-architect-07
   text_tex: Received the Lab Services Award for coordinating internal project teams
     to deliver client needs on time.
@@ -127,16 +133,3 @@
     participant questions and observed gaps. \textbf{Result:} Colleagues gained a shared
     vocabulary and practical techniques they could apply in project discussions, analysis,
     and delivery rather than receiving one generic training course.
-- id: ibm-data-architect-11
-  text_tex: Supported employee onboarding from 2016 to 2018, helping new colleagues
-    learn team practices, systems, and technical workflows.
-  story_tex: >-
-    \textbf{Situation:} Rapid growth brought new colleagues into a complex healthcare
-    data environment where platform conventions and delivery practices were largely
-    learned through experience. \textbf{Task:} I needed to help new hires become useful
-    contributors without relying on unstructured shadowing. \textbf{Action:} I explained
-    the platform and team workflow, paired on representative integration tasks, reviewed
-    early work, connected people with domain experts, and used recurring questions to
-    improve onboarding material between 2016 and 2018. \textbf{Result:} New colleagues
-    had a clearer path from orientation to independent delivery, and the team spent less
-    time repeatedly reconstructing the same foundational knowledge.

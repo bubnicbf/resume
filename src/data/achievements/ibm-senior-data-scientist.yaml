@@ -2,17 +2,17 @@
 # Provisional STAR reconstructions: implementation details, examples, ownership,
 # and outcomes must be verified against the user's recollection and source records.
 - id: ibm-senior-data-scientist-01
-  text_tex: Served as a lead member of Provider Analytics, integrating disparate and
-    centralized sources into data marts and supporting data mining, statistical-model
-    development, and advanced analytics.
+  text_tex: Served as a lead member of Provider Analytics, performing source discovery,
+    data profiling, and exploratory analysis while integrating disparate EHR and
+    centralized data sources into analytics-ready data marts.
   story_tex: >-
     \textbf{Situation:} Provider Analytics depended on clinical, claims, and operational
     sources that used different identifiers, grains, and refresh schedules. \textbf{Task:}
     As a lead member, I needed to create dependable data marts for analysts and modelers.
     \textbf{Action:} I clarified analytical grains, mapped source identities to conformed
     entities, standardized measures and time windows, built reconciliation checks, and
-    worked with analysts to validate that the marts supported mining and statistical-model
-    use cases. \textbf{Result:} The team gained reusable, traceable datasets instead of
+    worked with analysts to validate that the marts supported exploratory analysis and
+    statistical-model use cases. \textbf{Result:} The team gained reusable, traceable datasets instead of
     rebuilding source logic for each analysis, shortening the path from question to result.
 - id: ibm-senior-data-scientist-02
   text_tex: Worked with senior leaders and colleagues to identify opportunities, define

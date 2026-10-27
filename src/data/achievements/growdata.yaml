@@ -14,6 +14,19 @@
     outputs field by field while iterating on prompts and post-processing rules.
     \textbf{Result:} The preproduction MVP achieved 95\% field-level accuracy and produced
     structured transaction records that retained enough context for review and correction.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{MVP (minimum viable product):} the smallest end-to-end implementation
+    that can test whether the proposed product creates real value.
+    \item \textbf{OCR (optical character recognition):} converts pixels in an invoice
+    image into machine-readable text; it is analogous to an ingestion parser for documents.
+    \item \textbf{Language-model extraction:} maps noisy OCR text into named business
+    fields such as vendor, date, line item, quantity, and total. The model proposes values;
+    deterministic validation decides whether they are acceptable.
+    \item \textbf{Stratified test suite:} a benchmark deliberately sampled across vendors,
+    layouts, handwriting, printing, and image quality so one easy document type cannot
+    dominate the accuracy result.
+    \end{itemize}
 - id: growdata-02
   text_tex: Instrumented the MVP with automated tests, audit logging, retry controls,
     and confidence routing, achieving 88\% straight-through processing and under 1\%
@@ -29,6 +42,21 @@
     system failures independently from data-quality exceptions so each could be improved
     appropriately. \textbf{Result:} The MVP reached 88\% straight-through processing
     while holding system failure below 1\%, with an explicit review path for the remainder.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Straight-through processing (STP):} a document completes ingestion,
+    extraction, validation, and persistence without human intervention.
+    \item \textbf{Confidence routing:} combines extraction confidence and deterministic
+    checks to send reliable records forward and questionable ones to a review queue. It is
+    comparable to routing invalid or suspect data into quarantine instead of a trusted table.
+    \item \textbf{Bounded retry:} retries a transient failure only a limited number of
+    times, usually with delay or backoff, so a failing dependency cannot create an endless loop.
+    \item \textbf{System failure versus data-quality exception:} a timeout or unavailable
+    provider means the pipeline failed to execute; an implausible total or missing vendor
+    means it executed but produced data that should not be accepted automatically.
+    \item \textbf{Audit event:} a structured record of what ran, which versions were used,
+    what checks passed, and why the invoice was accepted, retried, or routed for review.
+    \end{itemize}
 - id: growdata-03
   text_tex: Productized Tesseract OCR and rule-based post-processing as a small Python/Ruby
     service with containerized deployments and versioned configuration.
@@ -43,6 +71,22 @@
     versioned settings in containers. \textbf{Result:} The same invoice and configuration
     produced consistent behavior across environments, making OCR changes easier to test,
     deploy, and roll back.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Tesseract:} an open-source OCR engine that recognizes characters but does
+    not by itself understand invoice fields or business meaning.
+    \item \textbf{Image preprocessing:} deterministic transformations such as rotation,
+    grayscale conversion, contrast adjustment, resizing, and noise reduction that improve
+    the input before recognition.
+    \item \textbf{Rule-based post-processing:} ordinary code that normalizes dates,
+    currency, whitespace, vendor spellings, or common OCR substitutions after recognition.
+    \item \textbf{Service wrapper:} a stable interface around the OCR workflow so callers
+    do not need to know its command-line arguments, temporary files, or implementation details.
+    \item \textbf{Container:} packages the runtime, libraries, OCR binary, and configuration
+    so the same build can run consistently on a laptop, CI worker, or cloud host.
+    \item \textbf{Versioned configuration:} preprocessing and OCR settings are reviewed
+    and released like code, making behavioral changes traceable and reversible.
+    \end{itemize}
 - id: growdata-04
   text_tex: Added schema checks, cross-field validation, reconciliation, idempotent
     reruns, fixtures, golden-file tests, linting, and release automation.
@@ -56,6 +100,19 @@
     linting to release automation. \textbf{Result:} Changes could be evaluated against
     known invoices before release, malformed or inconsistent records were stopped early,
     and failed work could be rerun without creating duplicate transactions.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Cross-field validation:} checks relationships between fields, such as a
+    due date following an invoice date or a line amount agreeing with quantity times price.
+    \item \textbf{Reconciliation:} independently recomputes subtotals, tax, and totals to
+    detect plausible-looking extraction errors.
+    \item \textbf{Idempotent rerun:} processing the same invoice again produces or updates
+    the same logical transaction rather than inserting a duplicate.
+    \item \textbf{Fixture:} a controlled test input with known characteristics. A
+    \textbf{golden file} is the reviewed expected output used for regression comparison.
+    \item \textbf{Linting and release automation:} static checks and CI steps that prevent
+    inconsistent code or failed tests from being promoted into a release.
+    \end{itemize}
 - id: growdata-05
   text_tex: Documented runbooks and failure modes covering timeouts, low-confidence
     OCR, and retries.
@@ -69,6 +126,20 @@
     when to retry, preprocess again, route to review, reprocess, or escalate. \textbf{Result:}
     Incidents could be classified and handled consistently, limiting blind retries and
     reducing the chance that an uncertain invoice would enter the transaction dataset.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Runbook:} an operational decision tree describing symptoms, evidence to
+    inspect, recovery steps, escalation conditions, and how to verify resolution.
+    \item \textbf{Timeout:} the dependency did not respond within the allowed duration;
+    this is often transient and may justify a bounded retry.
+    \item \textbf{Malformed response:} the provider returned content that could not be
+    parsed or did not match the expected schema; retrying unchanged input may not help.
+    \item \textbf{Low-confidence OCR:} the text is readable enough to produce candidates
+    but too uncertain for unattended acceptance, so the document should be preprocessed
+    differently or routed to human review.
+    \item \textbf{Exhausted retry:} all permitted attempts failed; the work is moved to a
+    visible failure state rather than silently dropped or retried forever.
+    \end{itemize}
 - id: growdata-06
   text_tex: Built a lightweight analytics layer tracking usage, error categories,
     latency, and throughput to guide feature tuning and cost control.
@@ -82,6 +153,21 @@
     The lightweight analytics layer exposed bottlenecks and recurring failure patterns,
     gave me evidence for feature and configuration tuning, and kept infrastructure and
     model-spend decisions tied to actual use.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Observability:} structured evidence about what the system is doing,
+    usually through metrics, logs, traces, and categorized events.
+    \item \textbf{Latency:} elapsed time to process one request or document.
+    \item \textbf{Throughput:} the amount of work completed in a time window, such as
+    invoices per hour.
+    \item \textbf{Error taxonomy:} stable categories separating OCR, validation,
+    provider, infrastructure, and user-input failures so trends are actionable.
+    \item \textbf{Configuration-version comparison:} the ML equivalent of comparing
+    pipeline releases: quality, cost, and runtime are measured before and after a prompt,
+    model, preprocessing, or rule change.
+    \item \textbf{Model spend:} variable cost from external inference calls, tracked per
+    document or workflow so accuracy improvements can be weighed against operating cost.
+    \end{itemize}
 - id: growdata-07
   text_tex: Managed infrastructure as code for a minimal AWS footprint using S3, Lambda
     or scheduled jobs, and CloudWatch alerts through Bash/Zsh and Makefile workflows.
@@ -95,6 +181,21 @@
     deployment and operating steps in Bash/Zsh and Makefile workflows. \textbf{Result:}
     The service could be recreated and monitored consistently, remained inexpensive at
     preproduction volume, and avoided manual environment configuration.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{IaC (infrastructure as code):} cloud resources and configuration are
+    declared in versioned files or repeatable scripts instead of being created manually.
+    \item \textbf{S3 (Simple Storage Service):} AWS object storage used for source images,
+    intermediate artifacts, and results; conceptually similar to a cloud data-lake landing zone.
+    \item \textbf{Lambda:} an event-driven AWS compute service suited to short, isolated
+    jobs. Scheduled execution is preferable when work is batch-oriented or exceeds Lambda limits.
+    \item \textbf{CloudWatch:} AWS logging, metrics, dashboards, and alerting used to make
+    failures and unusual runtime behavior visible.
+    \item \textbf{Least privilege:} each process receives only the permissions it needs,
+    such as access to a specific bucket path rather than broad account access.
+    \item \textbf{Makefile and shell workflows:} thin, repeatable operator commands for
+    building, testing, deploying, and inspecting the service.
+    \end{itemize}
 - id: growdata-08
   text_tex: Managed the business's bookkeeping, accounting, and tax obligations.
   story_tex: >-
@@ -107,6 +208,10 @@
     needed for accounting and tax filings. \textbf{Result:} The business maintained
     organized, current records and met its administrative obligations without requiring
     a separate operations team.
+  notes_tex: >-
+    \item For a data engineer, the analogy is a governed financial pipeline: source
+    evidence, classified transactions, balancing controls, traceability, and period-end outputs.
+    \end{itemize}
 - id: growdata-09
   text_tex: Led marketing and client acquisition, including creating promotional materials
     for the business.
@@ -120,3 +225,17 @@
     product conversations, and used objections and requests to refine positioning and the
     roadmap. \textbf{Result:} GrowData established an initial acquisition process and a
     feedback loop connecting market conversations to product priorities.
+  notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Value proposition:} a concise explanation of the customer problem, the
+    benefit delivered, and why the product is preferable to the current process.
+    \item \textbf{Client acquisition:} the path from identifying a prospective user through
+    outreach, qualification, demonstration, follow-up, and a decision to pilot or buy.
+    \item \textbf{Positioning:} the language and comparison that help a specific audience
+    understand what the product is for; farmers may care more about saved data-entry time
+    and expense visibility than the underlying OCR or model architecture.
+    \item \textbf{Feedback loop:} objections, requests, and observed workflow friction are
+    categorized and fed into prioritization rather than treated as isolated conversations.
+    \item \textbf{Roadmap:} an ordered set of product outcomes and experiments, not merely
+    a feature list; market evidence helps determine what should be built next.
+    \end{itemize}

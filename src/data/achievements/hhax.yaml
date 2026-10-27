@@ -169,14 +169,13 @@
     unclear whether the loss came from dashboard filters or from the warehouse joins.
     \textbf{Task:} I needed to quantify the loss, identify the responsible dimension,
     and isolate the affected feed before changing production logic. \textbf{Action:} I
-    started with 1,117,470,531 fact rows, measured survival after each inner join, and
-    showed that only 903,000,825 rows survived: 214,469,706 visits, or 19.2\%, were
+    started with 1.1 billion fact rows, measured survival after each inner join, and
+    showed that only 900 million rows survived: 200 million visits, about 19.2\%, were
     excluded. I then scoped the analysis to the dashboard's payer and one-year window,
     traced missing patient matches by payer and source, and found that CareSource
-    represented 757,897 of 764,073 missing-patient visits, or 99.2\%. I corrected the
-    patient, service-code, and payer integration defects. \textbf{Result:} The dashboard
-    issue had a measured root cause and a targeted remediation rather than an unverified
-    filter change.
+    represented 99.2\% missing-patient visits. I corrected the patient, service-code, and 
+    payer integration defects. \textbf{Result:} The dashboard issue had a measured root 
+    cause and a targeted remediation rather than an unverified filter change.
 - id: hhax-12
   text_tex: Executed structural, row-level, transformation, and completeness QA for
     a 156-field Snowflake/dbt EVV visit model; uncovered and corrected defects associated

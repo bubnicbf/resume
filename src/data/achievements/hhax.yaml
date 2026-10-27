@@ -13,8 +13,8 @@
     keys, normalized field types, and used paired source-specific CTEs plus a common
     source-system tag so both implementations could feed the same downstream contract.
     \textbf{Result:} The two environments could be consumed through one consistent set
-    of Snowflake/dbt models, and the repeatable structure gave later source and client
-    onboarding a proven starting point instead of another one-off build.
+    of Snowflake/dbt models, and the repeatable structure gave later source onboarding 
+    a proven starting point instead of another one-off build.
 - id: hhax-02
   text_tex: Implemented reusable SQL/Jinja transformation logic for lifecycle states,
     null handling, sentinel dates, and source-system variations across organization,

@@ -47,7 +47,9 @@ end
 def ats_entry(role, selection)
   raise "ATS profile requires individual roles: #{role['id']}" if role.fetch('kind') == 'company'
   raise "ATS technologies must come from the role record: #{role['id']}" if selection.key?('tools_tex')
-  lines = ["\\atsrole#{braces(role.fetch('employer'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}"]
+  lines = []
+  lines << '\\newpage' if selection.fetch('page_break_before', false)
+  lines << "\\atsrole#{braces(role.fetch('employer'))}#{braces(role.fetch('title_tex'))}#{braces(role.fetch('dates'))}"
   tools = role.fetch('tools_tex')
   lines << "\\textit{Technologies: #{tools}}\\par" unless tools.empty?
   if selection.key?('company_technologies_from')
@@ -191,6 +193,11 @@ entries = selections.map do |selection|
 end
 
 if kind == 'ats'
+  metadata = <<~TEX
+    % Generated from src/profiles/#{name}.yaml; do not edit.
+    \\newcommand{\\resumeheadline}{#{profile.fetch('headline_tex', 'Healthcare Data Consultant - Architecture, Governance, Integration')}}
+    \\newcommand{\\resumecredentialsheading}{#{profile.fetch('credentials_heading_tex', 'Certifications')}}
+  TEX
   skills = profile.fetch('skills').map do |skill|
     "\\textbf{#{skill.fetch('label_tex')}:} #{skill.fetch('text_tex')}\\par"
   end
@@ -217,10 +224,17 @@ if kind == 'ats'
              "\\section{Professional Experience}", entries.join("\n\n")].join("\n\n")
   File.write(File.join(GENERATED, "#{name}-content.tex"),
              "% Generated from src/data and src/profiles/#{name}.yaml; do not edit.\n#{content}\n")
+  File.write(File.join(GENERATED, "#{name}-metadata.tex"), metadata)
   File.write(File.join(GENERATED, "#{name}-education.tex"),
              "% Generated from src/data/sections/education.yaml and src/profiles/#{name}.yaml; do not edit.\n#{education_lines.join("\n")}\n")
   File.write(File.join(GENERATED, "#{name}-certifications.tex"),
              "% Generated from src/data/sections/credentials_and_continuing_education.yaml and src/profiles/#{name}.yaml; do not edit.\n#{certification_lines.join("\n")}\n")
+  template = File.read(File.join(ROOT, 'src/resume.tex'))
+  %w[metadata content education certifications].each do |fragment|
+    template = template.sub("resume-#{fragment}.tex", "#{name}-#{fragment}.tex")
+  end
+  File.write(File.join(GENERATED, "#{name}.tex"),
+             "% Generated from src/resume.tex; do not edit.\n#{template}")
   puts "Rendered #{name} (#{selections.length} role records)."
   exit
 end

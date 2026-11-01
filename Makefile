@@ -3,6 +3,7 @@ SRC_DIR  := src
 OUT_DIR  := build/pdf
 ROLE_DATA_YAML := $(wildcard src/data/roles/*.yaml) $(wildcard src/data/achievements/*.yaml)
 DATA_YAML := $(ROLE_DATA_YAML) $(wildcard src/data/sections/*.yaml)
+ATS_SHARED := $(SRC_DIR)/resume.tex $(ROLE_DATA_YAML) src/data/contact.yaml src/data/sections/education.yaml src/data/sections/credentials_and_continuing_education.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb scripts/check_resume.rb scripts/extract_pdf_text.swift
 
 XELATEX_FLAGS := -synctex=1 -interaction=nonstopmode -file-line-error \
                  -output-directory=../$(OUT_DIR)
@@ -26,6 +27,15 @@ $(OUT_DIR)/resume.pdf: $(SRC_DIR)/resume.tex $(ROLE_DATA_YAML) src/data/contact.
 	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "resume.tex"
 	@ruby scripts/check_resume.rb
 	@echo "==> Wrote $(OUT_DIR)/resume.pdf"
+
+$(OUT_DIR)/%.pdf: $(SRC_DIR)/profiles/%.yaml $(ATS_SHARED)
+	@mkdir -p "$(OUT_DIR)"
+	@ruby scripts/render_profile.rb "$*"
+	@echo "==> Building $*"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "../build/generated/$*.tex"
+	@cd "$(SRC_DIR)" && $(ENGINE) $(XELATEX_FLAGS) "../build/generated/$*.tex"
+	@ruby scripts/check_resume.rb "$*"
+	@echo "==> Wrote $(OUT_DIR)/$*.pdf"
 
 $(OUT_DIR)/master_career_history.pdf: $(SRC_DIR)/master_career_history.tex $(DATA_YAML) src/data/contact.yaml src/profiles/master-career-history.yaml scripts/render_profile.rb
 	@mkdir -p "$(OUT_DIR)"

@@ -24,10 +24,10 @@ sections:
       engineering-teaching-assistant: [engineering-teaching-assistant-02,
         engineering-teaching-assistant-03, engineering-teaching-assistant-01]
       ohio-university: [ohio-university-02, ohio-university-01, ohio-university-03]
+  - volunteer_and_community_experience
   - publications_and_research_outputs
   - speaking_engagements
   - creative_and_visual_arts
-  - volunteer_and_community_experience
   - id: leadership_memberships_and_activities
     item_order:
       sigma-theta-epsilon-beta-gamma-chapter: [sigma-theta-epsilon-beta-gamma-chapter-02,

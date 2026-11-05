@@ -2,7 +2,7 @@
 id: arkos
 kind: role
 employer: Arkos Health
-title_tex: Senior Data Analyst
+title_tex: Senior Data Engineer
 dates: Jun. 2023 - Jan. 2025
 tools_tex: AWS S3, Athena, Redshift, Glue, SNS, dbt, PySpark, Docker, Jupyter, Power
   BI, Tableau

@@ -30,17 +30,17 @@ roles:
     achievements: [arkos-01, arkos-02]
   - id: merative
     achievements: [merative-02, merative-01]
-  - id: ibm-senior-data-scientist
+  - id: ibm-senior-data-engineer
     company_technologies_from: ibm
-    achievements: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-13]
-  - id: ibm-senior-data-architect
-    achievements: [ibm-senior-data-architect-02, ibm-senior-data-architect-09,
-      ibm-senior-data-architect-07]
-  - id: ibm-data-architect
-    achievements: [ibm-data-architect-02, ibm-data-architect-01]
+    achievements: [ibm-senior-data-engineer-03, ibm-senior-data-engineer-13]
+  - id: ibm-senior-data-integration-engineer
+    achievements: [ibm-senior-data-integration-engineer-02, ibm-senior-data-integration-engineer-09,
+      ibm-senior-data-integration-engineer-07]
+  - id: ibm-data-integration-engineer
+    achievements: [ibm-data-integration-engineer-02, ibm-data-integration-engineer-01]
   - id: ibm-software-developer
     achievements: [ibm-software-developer-01]
-  - id: ibm-data-scientist
-    achievements: [ibm-data-scientist-01, ibm-data-scientist-04]
+  - id: ibm-etl-developer
+    achievements: [ibm-etl-developer-01, ibm-etl-developer-04]
   - id: explorys
     achievements: [explorys-02]

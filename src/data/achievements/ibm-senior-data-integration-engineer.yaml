@@ -1,7 +1,7 @@
 ---
 # Provisional STAR reconstructions: implementation details, examples, ownership,
 # and outcomes must be verified against the user's recollection and source records.
-- id: ibm-senior-data-architect-01
+- id: ibm-senior-data-integration-engineer-01
   text_tex: Served as a senior member of Data Onboarding \& Governance, integrating
     healthcare data, enriching metadata, and configuring data models, analytics, reports,
     and visualizations.
@@ -14,7 +14,7 @@
     lineage and constraints, and validated results with delivery and analytics teams.
     \textbf{Result:} Onboarded data arrived with a clearer contract and provenance, giving
     downstream teams a more reliable foundation for reporting and analysis.
-- id: ibm-senior-data-architect-02
+- id: ibm-senior-data-integration-engineer-02
   text_tex: Served as a subject-matter expert to project data architects and delivery,
     analytics, and integration teams; directed configuration of the data-onboarding
     platform and supporting infrastructure.
@@ -27,7 +27,7 @@
     cross-team questions, and required validation evidence before configurations advanced.
     \textbf{Result:} Teams made faster decisions with fewer contradictory assumptions,
     and onboarding configurations aligned more consistently with platform standards.
-- id: ibm-senior-data-architect-03
+- id: ibm-senior-data-integration-engineer-03
   text_tex: Led a cross-functional team as the clinical data analyst for the 2020/2021
     measure-updates project.
   story_tex: >-
@@ -43,7 +43,7 @@
     compliance. I reconciled old and new rates and explained expected population movement.
     \textbf{Result:} The team delivered the HEDIS update with a shared interpretation of
     each changed rule and traceable evidence for resulting rate and population differences.
-- id: ibm-senior-data-architect-04
+- id: ibm-senior-data-integration-engineer-04
   text_tex: Created an exploratory machine-learning COVID-19 prototype to surface
     hospitalization-risk signals for retrospective analyst review.
   story_tex: >-
@@ -59,7 +59,7 @@
     instability. \textbf{Result:} The prototype gave analysts an interpretable comparison
     of candidate risk signals and a documented basis for deciding what merited further
     study, without presenting exploratory output as deployable clinical guidance.
-- id: ibm-senior-data-architect-05
+- id: ibm-senior-data-integration-engineer-05
   text_tex: Developed a topic-modeling project using nearly six million semi-structured
     provider notes.
   story_tex: >-
@@ -75,7 +75,7 @@
     label useful topics. \textbf{Result:} My solo project produced an exploratory map of
     recurring clinical themes and documented where LDA and NMF could assist, but not
     replace, expert review.
-- id: ibm-senior-data-architect-06
+- id: ibm-senior-data-integration-engineer-06
   text_tex: Developed a surgical-scheduling optimizer and CNN/RNN case-card prediction
     proof of concept that was being evaluated as a potential new offering.
   story_tex: >-
@@ -89,7 +89,7 @@
     results with the optimizer for stakeholder review. \textbf{Result:} The three-person
     team produced a working proof of concept with performance evidence and implementation
     risks that product leaders could use to evaluate a potential offering.
-- id: ibm-senior-data-architect-07
+- id: ibm-senior-data-integration-engineer-07
   text_tex: Architected Spark and Hadoop pipelines integrating more than 100 billion
     structured and semi-structured clinical records, supporting four EPM applications,
     30+ risk models, and hundreds of measures and registries.
@@ -113,7 +113,7 @@
     heart failure, COPD, diabetes, and sepsis; and
     \item care-gap, rising-risk, and high-cost claimant stratification.
     \end{itemize}
-- id: ibm-senior-data-architect-08
+- id: ibm-senior-data-integration-engineer-08
   text_tex: Led a HIPAA patient-deidentification project drawing from more than 100
     data sources for content analytics and measures.
   story_tex: >-
@@ -139,7 +139,7 @@
     tests, and lineage evidence. Audit point: confirm whether the governing method was Safe
     Harbor, Expert Determination, or a limited-data-set policy rather than describing all
     three interchangeably.
-- id: ibm-senior-data-architect-09
+- id: ibm-senior-data-integration-engineer-09
   text_tex: Replaced static mappings with metadata-driven instruction sets across
     approximately 200 source integrations, standardizing EDI batch schemas while enabling
     Python/Jupyter lineage tracing and end-to-end validation gates.
@@ -159,7 +159,7 @@
     results. \textbf{Result:} Teams retained governed, reviewable mapping content while
     gaining reusable execution, automated checks, and consistent lineage across roughly
     200 integrations.
-- id: ibm-senior-data-architect-10
+- id: ibm-senior-data-integration-engineer-10
   text_tex: Served in an advisory capacity for development of a new data platform.
   story_tex: >-
     \textbf{Situation:} A new data platform was being designed while teams still depended
@@ -171,7 +171,7 @@
     and lineage capabilities. \textbf{Result:} The platform team could evaluate design
     choices against real operating needs and address important compatibility and control
     gaps earlier.
-- id: ibm-senior-data-architect-11
+- id: ibm-senior-data-integration-engineer-11
   text_tex: Closed project-documentation gaps by organizing material from more than
     100 past projects.
   story_tex: >-

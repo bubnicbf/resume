@@ -24,10 +24,10 @@ sections:
       engineering-teaching-assistant: [engineering-teaching-assistant-02,
         engineering-teaching-assistant-03, engineering-teaching-assistant-01]
       ohio-university: [ohio-university-02, ohio-university-01, ohio-university-03]
+  - volunteer_and_community_experience
   - publications_and_research_outputs
   - speaking_engagements
   - creative_and_visual_arts
-  - volunteer_and_community_experience
   - id: leadership_memberships_and_activities
     item_order:
       sigma-theta-epsilon-beta-gamma-chapter: [sigma-theta-epsilon-beta-gamma-chapter-02,
@@ -75,33 +75,33 @@ roles:
   - id: ibm
     achievements: []
     achievement_order: []
-  - id: ibm-senior-data-scientist
-    achievement_order: [ibm-senior-data-scientist-03, ibm-senior-data-scientist-04,
-      ibm-senior-data-scientist-06, ibm-senior-data-scientist-13,
-      ibm-senior-data-scientist-02, ibm-senior-data-scientist-01,
-      ibm-senior-data-scientist-07, ibm-senior-data-scientist-08,
-      ibm-senior-data-scientist-12, ibm-senior-data-scientist-05,
-      ibm-senior-data-scientist-09, ibm-senior-data-scientist-11,
-      ibm-senior-data-scientist-10]
-  - id: ibm-senior-data-architect
-    achievement_order: [ibm-senior-data-architect-02, ibm-senior-data-architect-09,
-      ibm-senior-data-architect-07, ibm-senior-data-architect-08,
-      ibm-senior-data-architect-03, ibm-senior-data-architect-01,
-      ibm-senior-data-architect-10, ibm-senior-data-architect-05,
-      ibm-senior-data-architect-06, ibm-senior-data-architect-04,
-      ibm-senior-data-architect-11]
-  - id: ibm-data-architect
-    achievement_order: [ibm-data-architect-02, ibm-data-architect-01,
-      ibm-data-architect-03, ibm-data-architect-04, ibm-data-architect-08,
-      ibm-data-architect-07, ibm-data-architect-05, ibm-data-architect-06,
-      ibm-data-architect-09, ibm-data-architect-10]
+  - id: ibm-senior-data-engineer
+    achievement_order: [ibm-senior-data-engineer-03, ibm-senior-data-engineer-04,
+      ibm-senior-data-engineer-06, ibm-senior-data-engineer-13,
+      ibm-senior-data-engineer-02, ibm-senior-data-engineer-01,
+      ibm-senior-data-engineer-07, ibm-senior-data-engineer-08,
+      ibm-senior-data-engineer-12, ibm-senior-data-engineer-05,
+      ibm-senior-data-engineer-09, ibm-senior-data-engineer-11,
+      ibm-senior-data-engineer-10]
+  - id: ibm-senior-data-integration-engineer
+    achievement_order: [ibm-senior-data-integration-engineer-02, ibm-senior-data-integration-engineer-09,
+      ibm-senior-data-integration-engineer-07, ibm-senior-data-integration-engineer-08,
+      ibm-senior-data-integration-engineer-03, ibm-senior-data-integration-engineer-01,
+      ibm-senior-data-integration-engineer-10, ibm-senior-data-integration-engineer-05,
+      ibm-senior-data-integration-engineer-06, ibm-senior-data-integration-engineer-04,
+      ibm-senior-data-integration-engineer-11]
+  - id: ibm-data-integration-engineer
+    achievement_order: [ibm-data-integration-engineer-02, ibm-data-integration-engineer-01,
+      ibm-data-integration-engineer-03, ibm-data-integration-engineer-04, ibm-data-integration-engineer-08,
+      ibm-data-integration-engineer-07, ibm-data-integration-engineer-05, ibm-data-integration-engineer-06,
+      ibm-data-integration-engineer-09, ibm-data-integration-engineer-10]
   - id: ibm-software-developer
     achievement_order: [ibm-software-developer-01, ibm-software-developer-05,
       ibm-software-developer-04, ibm-software-developer-02, ibm-software-developer-03,
       ibm-software-developer-06]
-  - id: ibm-data-scientist
-    achievement_order: [ibm-data-scientist-01, ibm-data-scientist-02,
-      ibm-data-scientist-04, ibm-data-scientist-03, ibm-data-scientist-05]
+  - id: ibm-etl-developer
+    achievement_order: [ibm-etl-developer-01, ibm-etl-developer-02,
+      ibm-etl-developer-04, ibm-etl-developer-03, ibm-etl-developer-05]
   - id: explorys
     achievement_order: [explorys-02, explorys-01, explorys-03]
   - id: amtrust

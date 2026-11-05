@@ -6,8 +6,10 @@ require 'fileutils'
 require 'date'
 
 root = File.expand_path('..', __dir__)
-pdf = File.join(root, 'build/pdf/resume.pdf')
-profile = YAML.load_file(File.join(root, 'src/profiles/resume.yaml'))
+name = ARGV.fetch(0, 'resume')
+abort 'Profile name must use lowercase letters, numbers and hyphens' unless name.match?(/\A[a-z0-9-]+\z/)
+pdf = File.join(root, "build/pdf/#{name}.pdf")
+profile = YAML.load_file(File.join(root, "src/profiles/#{name}.yaml"))
 cache = File.join(root, 'build/generated/swift-cache')
 FileUtils.mkdir_p(cache)
 env = { 'CLANG_MODULE_CACHE_PATH' => cache, 'SWIFT_MODULECACHE_PATH' => cache }
@@ -80,4 +82,4 @@ expected_bullets = profile.fetch('roles').sum { |selection| selection.fetch('ach
 actual_bullets = lines.count { |line| line.start_with?('•') }
 abort "Expected #{expected_bullets} bullets, extracted #{actual_bullets}" unless actual_bullets == expected_bullets
 
-puts "Verified resume PDF: 2 pages, #{profile.fetch('roles').length} ordered roles, #{actual_bullets} bullets, clean extraction."
+puts "Verified #{name} PDF: 2 pages, #{profile.fetch('roles').length} ordered roles, #{actual_bullets} bullets, clean extraction."

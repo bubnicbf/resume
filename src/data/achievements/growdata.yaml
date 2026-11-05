@@ -197,7 +197,8 @@
     building, testing, deploying, and inspecting the service.
     \end{itemize}
 - id: growdata-08
-  text_tex: Managed the business's bookkeeping, accounting, and tax obligations.
+  text_tex: Directed end-to-end financial operations, including general ledger accounting, 
+    cash flow forecasting, payroll administration, and federal/state tax compliance.
   story_tex: >-
     \textbf{Situation:} Building the product as a solo principal also made me responsible
     for the financial records and compliance work behind the business. \textbf{Task:} I
@@ -209,6 +210,15 @@
     organized, current records and met its administrative obligations without requiring
     a separate operations team.
   notes_tex: >-
+    \begin{itemize}[leftmargin=*,itemsep=0pt,topsep=1pt]
+    \item \textbf{Bookkeeping:} maintaining the detailed transaction ledger for income,
+    expenses, assets, liabilities, and owner activity.
+    \item \textbf{Account reconciliation:} comparing the ledger with bank, card, and
+    payment-provider statements and resolving every difference.
+    \item \textbf{Source document:} the receipt, invoice, statement, or filing that supports
+    a ledger entry and provides an audit trail.
+    \item \textbf{Accounting versus bookkeeping:} bookkeeping maintains accurate records;
+    accounting interprets them for financial statements, decisions, and filings.
     \item For a data engineer, the analogy is a governed financial pipeline: source
     evidence, classified transactions, balancing controls, traceability, and period-end outputs.
     \end{itemize}

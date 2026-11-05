@@ -1,7 +1,7 @@
 ---
 # Provisional STAR reconstructions: implementation details, examples, ownership,
 # and outcomes must be verified against the user's recollection and source records.
-- id: ibm-data-architect-01
+- id: ibm-data-integration-engineer-01
   text_tex: Designed SQL validation frameworks and client-review gates across approximately
     100 integrations, reducing Jira-tracked validation rework by 25\% and mapping
     rework by 45\%.
@@ -14,12 +14,12 @@
     and fed recurring defects back into templates and guidance. \textbf{Result:} Jira-
     tracked validation rework fell 25\% and mapping rework fell 45\%, giving teams faster,
     more predictable client review cycles.
-- id: ibm-data-architect-02
+- id: ibm-data-integration-engineer-02
   text_tex: Architected data onboarding for the Central New York Care Collaborative
     on IBM Watson Health's Explorys platform, integrating 75+ EHR, HIE, and other
     source systems across six counties; implemented provider-scoped patient filtering
     to enforce data-sharing rules and coordinated delivery across engineering teams,
-    earning promotion to Senior Data Architect.
+    earning promotion to Senior Data Integration Engineer.
   story_tex: >-
     \textbf{Situation:} The Central New York Care Collaborative was building a regional
     population-health platform for more than 2,000 providers across six counties, with
@@ -35,7 +35,7 @@
     auditable pattern for onboarding diverse healthcare sources while enforcing data-sharing
     constraints. My technical leadership and architectural ownership on the project earned
     me a promotion to Senior Data Architect.
-- id: ibm-data-architect-03
+- id: ibm-data-integration-engineer-03
   text_tex: Built the data-onboarding platform and associated infrastructure, remediated
     UAT data issues, and reported on data health during onboarding.
   story_tex: >-
@@ -57,7 +57,7 @@
     reporting likely summarized delivery freshness, file and row counts, rejected records,
     missing required fields, duplicate keys, code-mapping coverage, referential integrity,
     and unresolved defects by source and processing stage.
-- id: ibm-data-architect-04
+- id: ibm-data-integration-engineer-04
   text_tex: Earned AI certification and peer-reviewed patient-matching algorithm tuning
     across the project portfolio.
   story_tex: >-
@@ -69,7 +69,7 @@
     tradeoffs; and required project teams to document why a change was appropriate for
     their data. \textbf{Result:} Tuning decisions received a consistent peer review and
     clearer evidence before being applied across the portfolio.
-- id: ibm-data-architect-05
+- id: ibm-data-integration-engineer-05
   text_tex: Curated 25 pages of AI-workflow documentation and mentored new hires in
     the AI-tuning process.
   story_tex: >-
@@ -86,7 +86,7 @@
     The team gained a current end-to-end reference instead of relying on tribal knowledge,
     and new hires could contribute with greater consistency and awareness of matching
     tradeoffs.
-- id: ibm-data-architect-06
+- id: ibm-data-integration-engineer-06
   text_tex: Spearheaded a new-hire mentoring and onboarding program from 2016 to 2018,
     standardizing team practices, systems, and technical workflows to prepare colleagues
     for independent, billable client delivery.
@@ -104,7 +104,7 @@
     billable work faster, senior architects and developers recovered time for client and
     production issues, and the team reduced the labor cost of onboarding while preserving
     three weeks of supported practice.
-- id: ibm-data-architect-07
+- id: ibm-data-integration-engineer-07
   text_tex: Received the Lab Services Award for coordinating internal project teams
     to deliver client needs on time.
   story_tex: >-
@@ -119,7 +119,7 @@
     teams aligned through implementation and client review. \textbf{Result:} The teams met
     the CNYCC delivery commitment with auditable provider-scoped controls, and IBM recognized
     my cross-team coordination and client impact with the Lab Services Award.
-- id: ibm-data-architect-08
+- id: ibm-data-integration-engineer-08
   text_tex: Received a GDP bonus for improving revenue per SaaS client by at least
     1.34\%.
   story_tex: >-
@@ -131,7 +131,7 @@
     toward higher-value client services and timely delivery. \textbf{Result:} Revenue per
     SaaS client improved by at least 1.34\%, and the contribution was recognized through
     a GDP bonus.
-- id: ibm-data-architect-09
+- id: ibm-data-integration-engineer-09
   text_tex: Served on tiger teams supporting the HDFS-to-Azure data-platform upgrade
     and participated on the data-governance team.
   story_tex: >-
@@ -144,7 +144,7 @@
     retested changes against affected workflows. \textbf{Result:} The program could make
     architecture and governance decisions from concrete data evidence, and high-risk
     issues were surfaced before they reached migration sign-off.
-- id: ibm-data-architect-10
+- id: ibm-data-integration-engineer-10
   text_tex: Played a central role in the REACH cross-team training initiative, teaching
     SQL fundamentals to nontechnical colleagues and ETL, architecture, data-science,
     and predictive-modeling practices to technical colleagues.

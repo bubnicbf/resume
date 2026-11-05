@@ -1,16 +1,16 @@
 ---
-id: ibm-data-scientist
+id: ibm-etl-developer
 kind: subrole
 employer: IBM
-title_tex: Data Scientist
+title_tex: ETL Developer
 dates: Nov. 2015 - Sep. 2016
 tools_tex: ''
 summary_tex: Directed client data-integration delivery and built reusable extraction
   and QA practices that reduced implementation effort and standardized onboarding
   across dozens of healthcare projects.
 achievement_ids:
-- ibm-data-scientist-01
-- ibm-data-scientist-02
-- ibm-data-scientist-03
-- ibm-data-scientist-04
-- ibm-data-scientist-05
+- ibm-etl-developer-01
+- ibm-etl-developer-02
+- ibm-etl-developer-03
+- ibm-etl-developer-04
+- ibm-etl-developer-05

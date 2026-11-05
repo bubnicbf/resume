@@ -1,7 +1,7 @@
 ---
 # Provisional STAR reconstructions: implementation details, examples, ownership,
 # and outcomes must be verified against the user's recollection and source records.
-- id: ibm-senior-data-scientist-01
+- id: ibm-senior-data-engineer-01
   text_tex: Led Provider Analytics data engineering, profiling disparate EHR and
     centralized sources, resolving identity and grain conflicts, and building analytics-ready
     data marts for exploratory and statistical analysis.
@@ -14,7 +14,7 @@
     worked with analysts to validate that the marts supported exploratory analysis and
     statistical-model use cases. \textbf{Result:} The team gained reusable, traceable datasets instead of
     rebuilding source logic for each analysis, shortening the path from question to result.
-- id: ibm-senior-data-scientist-02
+- id: ibm-senior-data-engineer-02
   text_tex: Worked with senior leaders and colleagues to identify opportunities, define
     objectives, and formulate analytics strategies that produced measurable impact.
   story_tex: >-
@@ -34,7 +34,7 @@
     backlog, delayed provider-roster refreshes, and inactive attribution relationships. If
     the actual leadership engagement concerned another domain, retain the strategy pattern
     but replace the client problem, root cause, and resulting decision.
-- id: ibm-senior-data-scientist-03
+- id: ibm-senior-data-engineer-03
   text_tex: Served as technical lead across electronic health records, insurance claims,
     scheduling and financial data, social determinants of health, and other relevant
     sources.
@@ -47,7 +47,7 @@
     coordinated implementation across owners, and required cross-source reconciliation.
     \textbf{Result:} Analysts received an integrated view they could use without hiding
     material differences in coverage, timing, or provenance.
-- id: ibm-senior-data-scientist-04
+- id: ibm-senior-data-engineer-04
   text_tex: Developed migration-validation analysis spanning more than 150 billion
     deidentified health records, reconciling source and target schemas, partitions,
     values, aggregates, and business rules during the transition from legacy HDFS
@@ -61,7 +61,7 @@
     by dataset and stage; and tracked unexplained variances through correction and rerun.
     \textbf{Result:} The team could distinguish expected platform differences from defects
     and make acceptance decisions using repeatable, documented evidence.
-- id: ibm-senior-data-scientist-05
+- id: ibm-senior-data-engineer-05
   text_tex: Provided production and configuration support for Phytel population-health
     applications, troubleshooting data and operational issues affecting provider configuration,
     care-gap identification, patient outreach, and quality-reporting workflows.
@@ -80,7 +80,7 @@
     or procedure mappings, care gaps opening or closing incorrectly, outreach queues not
     refreshing, measure value sets using the wrong version, user permissions hiding a
     population, and dashboard totals disagreeing with patient-level detail.
-- id: ibm-senior-data-scientist-06
+- id: ibm-senior-data-engineer-06
   text_tex: Supported data and integration work for Pennsylvania's statewide P3N health-information
     exchange, encompassing master patient identity, provider directories, clinical-document
     discovery, patient consent, and real-time ADT encounter notifications.
@@ -101,7 +101,7 @@
     consent or opt-out enforcement, clinical-document discovery, and encounter-event
     notifications; it routes information between connected organizations rather than
     serving as a central longitudinal record repository.
-- id: ibm-senior-data-scientist-07
+- id: ibm-senior-data-engineer-07
   text_tex: Supported the controlled decommissioning of legacy Explorys capabilities
     by analyzing downstream dependencies and validating continuity across normalized
     clinical, claims, laboratory, billing, and operational datasets.
@@ -114,7 +114,7 @@
     behavior, and supported staged validation before shutdown. \textbf{Result:} The program
     could decommission capabilities in a controlled sequence and expose unresolved
     dependencies before access disappeared.
-- id: ibm-senior-data-scientist-08
+- id: ibm-senior-data-engineer-08
   text_tex: Supported Cleveland Clinic Foundation's accelerated SuperMart migration
     from MySQL to Greenplum by assessing dashboard dependencies and defining the changes
     required to preserve reporting continuity.
@@ -131,7 +131,7 @@
     daily cycles. \textbf{Result:} I completed both my migration responsibilities and the
     Tableau modernization within five weeks, preserving reporting continuity and helping
     IBM meet the accelerated commitment to Cleveland Clinic.
-- id: ibm-senior-data-scientist-09
+- id: ibm-senior-data-engineer-09
   text_tex: Created and delivered Phytel configuration training covering provider
     activation, system changes, support procedures, and the clinical-data workflows
     underlying proactive population-health management.
@@ -146,7 +146,7 @@
     used realistic support cases as exercises. \textbf{Result:} Explorys developers could
     follow Phytel data end to end, distinguish configuration defects from ingestion or
     application defects, and collaborate more effectively on cross-product support.
-- id: ibm-senior-data-scientist-10
+- id: ibm-senior-data-engineer-10
   text_tex: Performed postmigration validation for an enterprise Jira transition,
     reconciling projects, issues, workflows, custom fields, permissions, histories,
     and relationships and documenting discrepancies for remediation before cutover.
@@ -159,7 +159,7 @@
     by severity; and documented reproducible defects for remediation and retest.
     \textbf{Result:} The team had acceptance evidence and a clear defect list, reducing
     the risk of missing access or broken work history after migration.
-- id: ibm-senior-data-scientist-11
+- id: ibm-senior-data-engineer-11
   text_tex: Developed and delivered peer-led Azure instruction through the REACH initiative,
     translating cloud architecture, storage, data integration, security, and analytics
     concepts into practical guidance for technical colleagues.
@@ -179,7 +179,7 @@
     private networking; monitoring with Azure Monitor and Log Analytics; schema drift,
     partitioning, and migration reconciliation; cost controls; and CI/CD through Azure
     DevOps.
-- id: ibm-senior-data-scientist-12
+- id: ibm-senior-data-engineer-12
   text_tex: Led delivery of a tailored analytics and reporting project using client
     administrative data.
   story_tex: >-
@@ -199,7 +199,7 @@
     encounter data, and the access-capacity measures are a plausible reconstruction rather
     than a verified project record. Confirm the client, administrative subject area,
     audience, and decisions supported.
-- id: ibm-senior-data-scientist-13
+- id: ibm-senior-data-engineer-13
   text_tex: Engineered a Spark, Hive, and Impala analytics framework powering 50+
     prior-authorization lag-time and approval-bottleneck reports with daily operational
     and periodic regulatory and financial snapshots.
